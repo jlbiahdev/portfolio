@@ -55,7 +55,7 @@ body {
     border: 1px solid red;*/
 }
 
-#presentation {
+.presentation {
     padding-right: 7%;
 }
 
@@ -260,6 +260,8 @@ footer img {
 }
 
 .group-env-title {
+    font-size: 15px;
+    font-weight: bolder;
     text-transform: capitalize;
 }
 
@@ -351,6 +353,50 @@ footer img {
     height: 15px;
     width: 15px;
 }
+
+/*
+** REGION LANGUAGE
+*/
+ul .flags {
+    list-style: none;
+
+}
+
+ul .flags li {
+    display: inline-block;
+}
+
+img:hover {
+  opacity:0.6;
+  cursor: pointer;
+}
+
+img:active {
+  opacity:0.4;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+
+  transition: display 0s linear 0.33s, opacity 0.33s linear;
+}
+    
+.show {
+  display: block;
+  opacity: 1;
+
+  transition: display 0s linear 0.33s, opacity 0.33s linear;
+}
+
+/*
+** ENDREGION LANGUAGE
+*/
 
 .more ul {
     list-style: none;
