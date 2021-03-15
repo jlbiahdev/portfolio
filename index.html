@@ -3,10 +3,11 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="resources/css/style.css">
-		<link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="vendors/css/Grid.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/responsive.css   ">
+		<link rel="stylesheet" type="text/css" href="resources/css/tools.css">
 		<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400">
         <script type="text/javascript" src="resources/js/modals.js"></script>
 		<meta charset="UTF-8"> 
 		<title>Profil de Jean Luc BIAH</title>
@@ -17,63 +18,47 @@
         <div id="background">
             <div id="global">
                 <header>
-                    <div id="head-content">
-                        <section class="header-left">
-                            <div id="cadrephoto">
+                    <div id="head-content" class="grid grid-3">
+                            <div class="head-left">
                                 <img id="photo" alt="photo" src="resources/img/photob.jpg">
                             </div>
-                        </section>
                         
-                        <section class="header-middle">
+                        <div class="head-middle">
                             <div class="name">jean luc biah</div>
                             <div class="french show title">ingénieur en s.i. et génie logiciel</div>
                             <div class="english hide title">software engineer</div>
-                        </section>
+                        </div>
 
-                        <section class="header-right">
-                            <ul>
-                                <li>
-                                    <div class="float-left margin-right10">
-                                        <img class="minor-icon rounded50" alt="voir le profil linkedin" src="vendors/images/if_linkedin_circle_gray.png" />
-                                        <a href="https://www.linkedin.com/in/jeanlucbiah/">Linkedin</a>
-                                    </div>
-                                    <br class="clear-both">
+                        <div class="head-right">
+                            <ul class="flex flex-col flex-stretch">
+                                <li class="social flex flex-flex-start my-1">
+                                    <a href="https://www.linkedin.com/in/jeanlucbiah/" class="mx0-1"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.viadeo.com/p/00284hpyic4my85"><i class="fab fa-viadeo-square"></i></a>
                                 </li>
-                                <li>
-                                    <div class="float-left">
-                                        <img class="minor-icon rounded50" alt="voir le profil linkedin" src="vendors/images/viadeo1.png" />
-                                        <a href="https://www.viadeo.com/p/00284hpyic4my85">Viadeo</a>
-                                    </div>
-                                    <br class="clear-both">
+                                <li class="my-1">
+                                    <i class="fas fa-at mx0-1"></i>job@jeanlucbiah.com
                                 </li>
-                                <li>
-                                    <div class="float-left"><ion-icon name="at"></ion-icon></div>
-                                    <div class="float-left ion-right">job@jeanlucbiah.com</div>
-                                    <br class="clear-both">
+                                <li class="my-1">
+                                    <i class="fas fa-home mx0-1"></i>Paris, France
                                 </li>
-                                <li>
-                                    <div class="float-left"><ion-icon name="mail"></ion-icon></div>
-                                    <div class="float-left ion-right">Paris, France</div>
-                                    <br class="clear-both">
-                                </li>
-                                <li>
-                                    <ul class="flags">
-                                        <li>
+                                <li class="my-1">
+                                    <ul class="flex flex-flex-start">
+                                        <li class="mx0-1">
                                             <input type="radio" id="flag-fr" name="flag" value="1">
                                             <label for="flag-fr">
-                                                <img src="vendors/images/if_flag-france.png" />
+                                                <img class="flag" src="vendors/images/france-flag-round-icon-128.png" />
                                             </label>
                                         </li>
-                                        <li>
+                                        <li class="mx0-1">
                                             <input type="radio" id="flag-en" name="flag" value="2">
                                             <label for="flag-en">
-                                                <img src="vendors/images/if_flag-uk.png" />
+                                                <img class="flag" src="vendors/images/england-flag-round-icon-128.png" />
                                             </label>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
-                        </section>
+                        </div>
                     </div>
                 </header>
 
