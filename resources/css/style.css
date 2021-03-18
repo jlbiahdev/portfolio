@@ -40,8 +40,22 @@ ul {
     /* width: 1500px; */
 }
 
+/* ----------------------------------------------------------------*/
+/* SECTIONS */
+/* ----------------------------------------------------------------*/
+
 .section {
+    margin-top: 20px;
     margin-bottom: 50px;
+    padding: 25px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 /* ----------------------------------------------------------------*/
@@ -153,14 +167,6 @@ header {
 /* RIGHT PART */
 /* ----------------------------------------------------------------*/
 
-.section-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-transform: capitalize;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
 /* ----------------------------------------------------------------*/
 /* PRESENTATION */
 /* ----------------------------------------------------------------*/
@@ -235,6 +241,23 @@ header {
 }
 
 /* ----------------------------------------------------------------*/
+/* PERSONALITY */
+/* ----------------------------------------------------------------*/
+
+#section-personality {
+    /* border: 1px solid green; */
+    align-items: start;
+    width: 1700px;
+    margin: 0 auto;
+}
+
+#section-personality h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+/* ----------------------------------------------------------------*/
 /* EDUCATION */
 /* ----------------------------------------------------------------*/
 
@@ -242,17 +265,85 @@ header {
 /* REFERENCES */
 /* ----------------------------------------------------------------*/
 
+#section-references {
+    /* border: 1px solid red; */
+    height: auto;
+    background-color: #eaecf4;
+}
+
+blockquote {
+	padding: 2%;
+	font-style: italic;
+	line-height: 145%;
+	margin-top: 5%;
+	position: relative;
+}
+
+blockquote::before {
+	content: "\201C";
+	font-size: 500%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -3px;
+}
+
+cite {
+	display: block;
+	font-size: 90%;
+	margin-top: 5%;
+}
+
+#references {
+    /* border: 1px solid orange; */
+    align-items: start;
+}
+
+.ref-quote {
+    min-height: 300px;
+}
+.ref-author ul {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.ref-author li {
+    margin-right: 15px;
+}
+
+.ref-author cite {
+    /* border: 1px solid green; */
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.ref-author-role {
+    text-transform: lowercase;
+    font-style: italic;
+    font-size: .9em;
+}
+
+.ref-date {
+    font-size: .8em;
+}
+
 /* ----------------------------------------------------------------*/
 /* LANGUAGES */
 /* ----------------------------------------------------------------*/
 
-.bar-title {
-    color: #7f8c8d;
-    font-size: 0.7em;
-    margin-top: 3%;
-    margin-bottom: 0.5%;
-    text-transform: capitalize
+#section-languages li {
+    /* border: 1px solid green; */
+    display: flex;
+    margin: 0.5rem 0;
+    align-items: center;
 }
+
+#section-languages li span:first-child {
+    width: 70px;
+}
+
 
 /* ----------------------------------------------------------------*/
 /* QUALITIES */
@@ -273,6 +364,18 @@ header {
 /* HOBBIES */
 /* ----------------------------------------------------------------*/
 
+#section-hobbies li {
+    display: flex;
+    margin: 0.5rem 0;
+}
+
+#section-hobbies li span:first-child {
+    width: 45px;
+}
+
+#section-hobbies li i {
+    height: 3px;
+}
 /* ----------------------------------------------------------------*/
 /* EXPERIENCE */
 /* ----------------------------------------------------------------*/
