@@ -255,6 +255,34 @@
     padding: 4rem;
   }
 
+
+
+/* ----- PROGRESS BAR ----- */
+
+.meter { 
+  height: 15px;  /* Can be anything */
+  position: relative;
+  background: #fff;
+  border: 1px solid #3867d6;
+}
+
+.meter-mini { 
+  width: 20%;
+  border: 1px solid #3867d6;
+}
+.meter > span {
+  display: block;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.meter > span:after, .animate > span > span {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  overflow: hidden;
+}
+
 /* ----- CONTAINER ----- */
 
 .container {
@@ -325,4 +353,24 @@
 .far,
 .fas {
   font-size: 1.5em;
+}
+
+.fa-file-word {
+  color: #4895ef;
+}
+
+.fa-file-pdf {
+  color: #d00000;
+}
+
+.fa-linkedin {
+  color: #2867b2;
+}
+
+.fa-viadeo-square {
+  color: #f07355;
+}
+
+.fa-google-plus-g {
+  color: #dd4b39;
 }
