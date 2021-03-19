@@ -263,24 +263,30 @@
   height: 15px;  /* Can be anything */
   position: relative;
   background: #fff;
-  border: 1px solid #3867d6;
+  border: 1px solid #2d3436;
 }
 
-.meter-mini { 
-  width: 20%;
-  border: 1px solid #3867d6;
-}
 .meter > span {
   display: block;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
+
 .meter > span:after, .animate > span > span {
   content: "";
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   overflow: hidden;
+}
+
+.meter-mini { 
+  width: 20%;
+  border: 1px solid #2d3436;
+}
+
+.progress > span {
+    background-color: #2d3436;
 }
 
 /* ----- CONTAINER ----- */

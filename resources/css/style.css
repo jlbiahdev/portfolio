@@ -9,9 +9,8 @@
 /* border-checker --> border: 1px solid #e74c3c; */
 
 html {
-	background-color: red;
-	/* background-color: #2f3640; */
-	color: #555;
+	background-color: #2f3640;
+	color: #2d3436;
 	font-family: 'Lato', Arial, sans-serif;
 	font-weight: 300;
 	font-size: 20px;
@@ -350,7 +349,6 @@ cite {
 /* ----------------------------------------------------------------*/
 
 #section-languages li {
-    /* border: 1px solid green; */
     display: flex;
     margin: 0.5rem 0;
     align-items: center;
@@ -405,7 +403,77 @@ cite {
 /* ----------------------------------------------------------------*/
 /* EXPERIENCE */
 /* ----------------------------------------------------------------*/
+#section-experience {
+    background-color: #eaecf4;
+    padding: 0;
+    margin-bottom: 0;
+}
 
+#section-experience ul {
+    flex-direction: column;
+    width: 100%;
+}
+
+#section-experience>ul>li {
+    /* border: 1px solid green; */
+    background-color: #eaecf4;
+    width: 100%;
+}
+
+#section-experience>ul>li:nth-child(odd) {
+    background-color: #f5f6fa;
+}
+
+#section-experience>ul>li:nth-child(even) {
+    background-color: #eaecf4;
+}
+
+.group-context {
+    /* margin-top: 1%; */
+    text-transform: capitalize;
+}
+
+.group-period {
+    /* margin-top: 1%; */
+    font-size: 0.8em;
+}
+
+.group-title {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    font-weight: bold;
+    /* margin-top: 3%; */
+    text-transform: capitalize
+}
+
+.group-detail {
+    font-size: 0.7em;
+    /* margin-top: 3%; */
+    text-align: justify;
+}
+
+.group-detail ul {
+    list-style-type: square;
+}
+
+.group-detail div {
+    /* margin-top: 1%; */
+}
+
+.group-env {
+    /* margin-top: 2%; */
+}
+
+.group-env-detail {
+    font-size: 0.8em;
+    text-transform: capitalize;
+}
+
+.group-env-title {
+    font-size: 15px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
 /* ----------------------------------------------------------------*/
 /* FOOTER */
 /* ----------------------------------------------------------------*/
@@ -443,53 +511,6 @@ footer .download-detailed ul {
 /* COMMON */
 /* ----------------------------------------------------------------*/
 
-.group-context {
-    margin-top: 1%;
-    text-transform: capitalize;
-}
-
-.group-period {
-    margin-top: 1%;
-    font-size: 0.8em;
-}
-
-.group-title {
-    color: #7f8c8d;
-    font-size: 0.9em;
-    font-weight: bold;
-    margin-top: 3%;
-    text-transform: capitalize
-}
-
-.group-detail {
-    font-size: 0.7em;
-    margin-top: 3%;
-    text-align: justify;
-}
-
-.group-detail ul {
-    list-style-type: square;
-}
-
-.group-detail div {
-    margin-top: 1%;
-}
-
-.group-env {
-    margin-top: 2%;
-}
-
-.group-env-detail {
-    font-size: 0.8em;
-    text-transform: capitalize;
-}
-
-.group-env-title {
-    font-size: 15px;
-    font-weight: bolder;
-    text-transform: capitalize;
-}
-
 /*
 ** REGION LANGUAGE
 */
@@ -522,10 +543,6 @@ footer .download-detailed ul {
     100% {
        background-position: 50px 50px;
     }
-}
-
-.progress > span {
-    background-color: #3867d6;
 }
 
 .nostripes > span > span, .nostripes > span:after {

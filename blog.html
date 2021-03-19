@@ -31,5 +31,198 @@
                         ?</span><span class="english hide">Why short missions?</span></a></li>
         </ul>
     </div>
+
+    <!-- The Modals -->
+    <div id="expMissions" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="closeMissions" class="close">&times;</span>
+            <h2>Retour d'expérience sur les missions</h2>
+        </div>
+    </div>
+    <div id="expMetiers" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="closeMetiers" class="close">&times;</span>
+            <h2>Retour d'expérience sur les métiers</h2>
+            <p>...</p>
+        </div>
+    </div>
+    <div id="expTechnos" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="closeTechnos" class="close">&times;</span>
+            <h2>Retour d'expérience sur mon métier</h2>
+            <h4>Le fil de ma carrière m’a permis de développer un profil full-stack</h4>
+            <p>J'ai tour à tour évolué en back (CA-CIB, CEGC par exemple), middle (SGIB par exemple) et front (Natixis,
+                BDF par exemple). J'ai fait du tactique (BPCE, CANDRIAM) ...</p>
+            <h4>Je suis parfaitement à l'aise avec tous les outils Microsoft, notamment .Net et MSBI</h4>
+            <p>Tout au long de ma carrière j'ai fait du client lourd (C-DESIGN, Natixis, CA-CIB, ...), du client léger
+                webform/webpage (BDF, CEGC, AG Insurance), j'ai fait des (web/)services (de .Net Remoting à WCF) (SG, AG
+                Insurance, ...)</p>
+            <h4>Ex aliquo vs Ex-nihilo</h4>
+            <p>J’ai pris des applications en cours et j’en ai aussi créée.<br />
+                J'ai pris en main des applications vieilles de plusieurs années (CEGC, AG Insurance, ...) comme j'en ai
+                aussi créé à partir de rien (CA-CIB, BDF, ...)</p>
+            <h4>Team vs Solo</h4>
+            <p>J'ai travaillé en équipe (Natixis, SGIB, ...), j'ai travaillé seul (CACIB, BDF, AG Insurance), j'ai fait
+                du lead (CEGC) ...</p>
+            <h4>Le Responsive Design</h4>
+            <p>Je suis au point, pour ce qui concerne (HTML 5, CSS3, Jquery, ...). Cette page sans être exceptionnelle,
+                témoigne de ce que je suis au fait de ces technologies.</p>
+            <h4>Les nouveaux outils (Angular et ses satellites) ?</h4>
+            <p>J'ai entrepris pour des travaux personnels de me mettre à niveau sur les dernières technologies web
+                (Angular6, Rest, Bootstrap,
+                Typescript, ...). Je travaille en suivant des formations payantes sur le web.<br /> <br />
+
+                Si j'ai mis du temps à basculer complètement, c'est parce que je voulais leur laisser du temps pour
+                mûrir et confirmer les promesses entrevues. Dans ce métier, tous les jours, il y a un petit génie de la
+                Silicon Valley qui crée “Le” nouveau truc qui va révolutionner le monde et souvent ça ne fait pas long
+                feu. Je n'ai pas été convaincu d'emblée par AngularJS.
+            </p>
+            <h4>Le métier</h4>
+            <p>Mon avis est que dans mon métier (<i>ingénieur spécialiste .Net</i>), avant <strong>Angular</strong>, il
+                y avait <strong>.Net 1.1</strong> comme première "révolution". Puis est
+                arrivé <strong>.Net 3.0/5</strong>. Enfin avec <strong>ASP MVC</strong>, on commençait à faire du "vrai"
+                développement web sous visual studio, parce que ASP. Net, ce n'était vraiment pas, <u>de mon point de
+                    vu</u>, du développement web, mais plutôt des winforms pour le web.<br /><br />
+
+                Aujourd'hui avec Angular2+, je pense qu'on tient la nouvelle révolution dans la façon de faire et
+                d'appréhender le métier, c'est pourquoi j'ai décidé de franchir le pas.
+            </p>
+        </div>
+    </div>
+    <div id="expFrance" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="closeFrance" class="close">&times;</span>
+            <h2>Expérience en France</h2>
+            <p>...</p>
+        </div>
+    </div>
+    <div id="expBelgium" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="closeBelgium" class="close">&times;</span>
+            <h2>Expérience en Belgique</h2>
+            <p>...</p>
+        </div>
+    </div>
+    <div id="missionsCourtes" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="closeMc" class="close">&times;</span>
+            <h2>Pourquoi des missions courtes ?</h2>
+            <p>...</p>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal expMissions
+        var modalExpMissions = document.getElementById('expMissions');
+        // Get the button that opens the modal
+        var lnkexpmiss = document.getElementById("expmiss");
+        // When the user clicks the button, open the modal 
+        lnkexpmiss.onclick = function () {
+            modalExpMissions.style.display = "block";
+        }
+
+        // Get the modal expMetiers
+        var modalExpMetiers = document.getElementById('expMetiers');
+        // Get the button that opens the modal
+        var lnkexpmetiers = document.getElementById("expmetiers");
+        // When the user clicks the button, open the modal 
+        lnkexpmetiers.onclick = function () {
+            modalExpMetiers.style.display = "block";
+        }
+
+        // Get the modal expMissions
+        var modalExpTechnos = document.getElementById('expTechnos');
+        // Get the button that opens the modal
+        var lnkexptechnos = document.getElementById("exptechnos");
+        // When the user clicks the button, open the modal 
+        lnkexptechnos.onclick = function () {
+            modalExpTechnos.style.display = "block";
+        }
+
+        // Get the modal expFrance
+        var modalExpFrance = document.getElementById('expFrance');
+        // Get the button that opens the modal
+        var lnkexpmiss = document.getElementById("expfrance");
+        // When the user clicks the button, open the modal 
+        lnkexpmiss.onclick = function () {
+            modalExpFrance.style.display = "block";
+        }
+
+        // Get the modal expBelgique
+        var modalExpBelgique = document.getElementById('expBelgium');
+        // Get the button that opens the modal
+        var lnkexpbelgique = document.getElementById("expbelgique");
+        // When the user clicks the button, open the modal 
+        lnkexpbelgique.onclick = function () {
+            modalExpBelgique.style.display = "block";
+        }
+
+        // Get the modal missionsCourtes
+        var modalMissionscourtes = document.getElementById('missionsCourtes');
+        // Get the button that opens the modal
+        var lnkmissionscourtes = document.getElementById("missionscourtes");
+        // When the user clicks the button, open the modal 
+        lnkmissionscourtes.onclick = function () {
+            modalMissionscourtes.style.display = "block";
+        }
+
+        // Get the <span> element that closes the modal
+        var spancloseMissions = document.getElementById("closeMissions");
+        // When the user clicks on <span> (x), close the modal
+        spancloseMissions.onclick = function () {
+            modalExpMissions.style.display = "none";
+        }
+
+        // Get the <span> element that closes the modal
+        var spancloseMetiers = document.getElementById("closeMetiers");
+        // When the user clicks on <span> (x), close the modal
+        spancloseMetiers.onclick = function () {
+            modalExpMetiers.style.display = "none";
+        }
+
+        // Get the <span> element that closes the modal
+        var spancloseTechnos = document.getElementById("closeTechnos");
+        // When the user clicks on <span> (x), close the modal
+        spancloseTechnos.onclick = function () {
+            modalExpTechnos.style.display = "none";
+        }
+
+        // Get the <span> element that closes the modal
+        var spancloseFrance = document.getElementById("closeFrance");
+        // When the user clicks on <span> (x), close the modal
+        spancloseFrance.onclick = function () {
+            modalExpFrance.style.display = "none";
+        }
+
+        // Get the <span> element that closes the modal
+        var spancloseBelgium = document.getElementById("closeBelgium");
+        // When the user clicks on <span> (x), close the modal
+        spancloseBelgium.onclick = function () {
+            modalExpBelgique.style.display = "none";
+        }
+
+        // Get the <span> element that closes the modal
+        var spancloseMc = document.getElementById("closeMc");
+        // When the user clicks on <span> (x), close the modal
+        spancloseMc.onclick = function () {
+            modalMissionscourtes.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modalExpMissions) { modalExpMissions.style.display = "none"; }
+            if (event.target == modalExpMetiers) { modalExpMetiers.style.display = "none"; }
+            if (event.target == modalExpTechnos) { modalExpTechnos.style.display = "none"; }
+            if (event.target == modalExpFrance) { modalExpFrance.style.display = "none"; }
+            if (event.target == modalExpBelgique) { modalExpBelgique.style.display = "none"; }
+            if (event.target == modalMissionscourtes) { modalMissionscourtes.style.display = "none"; }
+        }
+    </script>
 </body>
 </html>
