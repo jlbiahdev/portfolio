@@ -1,81 +1,57 @@
 @media(max-width: 768px)
 {
-    /* body{ display: none;} */
-    /* header {
-    } */
-
-    .slider .imgBox {
-        padding: 40px;
-    }
-
-    .slider .imgBox .content h2 {
-        font-size: 3em;
-    }
-
-    .slider .imgBox .content p {
-        font-size: 1em;
-        color: #fff;
-    }
-    .header .container {
-        height: 310px;
-        overflow: unset;
-    }
-    .navbar {
-        height: 180px;
-    }
-
-    .header .flex,
-    .navbar .flex {
-        flex-direction: column;
-    }
-
-    .navbar ul {
-        padding: 10px;
-        background-color: rgba(0, 0, 0, .1);
-    }
-
-    .section-new .flex,
-    .section-categories .flex,
-    .section-bestsellers .flex,
-    .section-offers .flex,
-    .section-gifts .flex {
-        flex-direction: column;
-    }
-
-    .header,
-    .section-new,
-    .section-categories,
-    .section-bestsellers,
-    .section-offers,
-    .section-gifts,
-    .section-testimonials,
-    .section-summary h2 {
-        text-align: center;
-    }
-
-    .section-testimonials .grid,
-    footer .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
+    /* body { border: 1px solid red; } */
     
+    /* HEAD */
+    
+    .address ul {
+        flex-direction: column;
+    }
+    .address ul li {
+        margin-top: .8em;
     }
 
-    .section-testimonials,
-    .section-summary,
-    .section-offers {
-        height: auto;
+    .title {
+        font-size: 1.5em;
+    }
+
+    /* SECTIONS */
+
+    #section-experience {
+        border: 1px solid blue;
+        margin: 0 auto;
+    }
+
+    #section-experience .card {
+        width: auto;
     }
 }
 
 /* ----- Mobiles : from 481 to 613 px ----- */
 @media(max-width: 613px) {
+
+    /* HEAD */
+    /* body { border: 1px solid orange; } */
+    header .flex {
+        flex-direction: column;
+    }
+
+    .fullname #firstname {
+        display: none;
+    }
+        .fullname:before {
+            content: 'JL';
+        }
+    
+    .title {
+        font-size: 1.5em;
+        margin: 0 auto;
+    }
 }
 
 /* Small Mobiles : from 0 to 480 px */
 @media(max-width: 480px) {
-    /* body{ display: none;} */
+    /* body { border: 1px solid green; } */
+    /* HEAD */
 }
 
