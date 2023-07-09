@@ -18,12 +18,32 @@
     /* SECTIONS */
 
     #section-experience {
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         margin: 0 auto;
     }
 
+    #section-experience .wrapper {
+        /* border: 1px solid cyan; */
+        padding: 0;
+    }
+
     #section-experience .card {
-        width: auto;
+        margin: 1rem;
+        max-width: 100%;
+    }
+
+    #section-experience .card-text,
+    #section-experience .card-footer {
+        min-height: 0;
+        height: auto;
+    }
+
+    #section-qualities #qualities {
+        flex-direction: column;
+    }
+
+    #section-personality .wrapper{
+        flex-direction: column;
     }
 }
 
@@ -47,11 +67,73 @@
         font-size: 1.5em;
         margin: 0 auto;
     }
+
+    /* SECTIONS */
+
+    #section-experience {
+        /* border: 1px solid blue; */
+        margin: 0 auto;
+    }
+
+    #section-experience .wrapper {
+        /* border: 1px solid cyan; */
+        padding: 0;
+    }
+
+    #section-experience .card {
+        margin: 1rem;
+        max-width: 100%;
+    }
+
+    #section-experience .card-text,
+    #section-experience .card-footer {
+        min-height: 0;
+        height: auto;
+    }
+
+    #section-qualities #qualities {
+        flex-direction: column;
+    }
+
+    #section-personality .wrapper{
+        flex-direction: column;
+    }
 }
 
 /* Small Mobiles : from 0 to 480 px */
 @media(max-width: 480px) {
     /* body { border: 1px solid green; } */
     /* HEAD */
+
+    /* SECTIONS */
+
+    #section-experience {
+        /* border: 1px solid blue; */
+        margin: 0 auto;
+    }
+
+    #section-experience .wrapper {
+        /* border: 1px solid cyan; */
+        padding: 0;
+    }
+
+    #section-experience .card {
+        margin: 1rem;
+        max-width: 100%;
+    }
+
+    #section-experience .card-text,
+    #section-experience .card-footer {
+        min-height: 0;
+        height: auto;
+    }
+
+    #section-qualities #qualities {
+        flex-direction: column;
+    }
+
+    #section-personality .wrapper{
+        flex-direction: column;
+    }
 }
 

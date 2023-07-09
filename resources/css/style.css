@@ -235,27 +235,6 @@ header .wrapper{
 }
 
 /* ----------------------------------------------------------------*/
-/* PERSONALITY */
-/* ----------------------------------------------------------------*/
-
-#section-personality {
-    background-color: var(--secondary-color);
-    /* border: 1px solid green; */
-}
-
-#section-personality .wrapper{
-    width: auto;
-    margin: 0 auto;
-}
-
-#section-personality h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-transform: capitalize;
-    margin-bottom: 10px;
-}
-
-/* ----------------------------------------------------------------*/
 /* REFERENCES */
 /* ----------------------------------------------------------------*/
 
@@ -332,10 +311,33 @@ cite {
 }
 
 /* ----------------------------------------------------------------*/
-/* EDUCATION */
+/* PERSONALITY */
 /* ----------------------------------------------------------------*/
-/* LANGUAGES */
 
+#section-personality {
+    background-color: var(--secondary-color);
+    /* border: 1px solid green; */
+}
+
+#section-personality .wrapper {
+    width: auto;
+    margin: 0 auto;
+}
+
+#section-personality .wrapper section {
+    min-height: 15rem;
+}
+
+#section-personality h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+/* EDUCATION */
+
+/* LANGUAGES */
 #section-languages li {
     display: flex;
     margin: 0.5rem 0;
@@ -371,22 +373,22 @@ cite {
 #section-qualities .wrapper {
     width: 100%;
     margin: 0 auto;
+    padding: 0 5rem;
 }
 
 #qualities {
-    justify-items: center;
-
+    justify-items: center;    
 }
 
 #section-qualities ul li {
     text-transform: capitalize;
+    margin-left: .3rem;
 }
 
 .list {
     border-left: 1px solid #a5b1c2;
-    padding-right: 5px;
-    padding-left: 5px;
     width: auto;
+    min-height: 5em;
 }
 /* ----------------------------------------------------------------*/
 /* EXPERIENCE */
@@ -399,13 +401,13 @@ cite {
 #section-experience .section-title {
     color: #fff;
 }
+
 #section-experience .wrapper {
     width: 100%;
     margin: 0 auto;
 }
 
 #section-experience ul {
-    /* flex-direction: column; */
     width: 100%;
 }
 

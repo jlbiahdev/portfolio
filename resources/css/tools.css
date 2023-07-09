@@ -351,7 +351,7 @@
 }
 
 .meter-mini { 
-  width: 20%;
+  width: 10em;
   border: 1px solid #2d3436;
 }
 
@@ -369,6 +369,10 @@
   column-gap: 10px;
 }
 
+.flex-col-gap {
+  column-gap: 50px;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -378,7 +382,7 @@
 }
 
 .flex-center {
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .flex-align-center {
@@ -395,6 +399,10 @@
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 
 /* ----- GRID ----- */
