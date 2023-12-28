@@ -507,26 +507,63 @@ footer .download-detailed ul {
 /* ----------------------------------------------------------------*/
 /* COMMON */
 /* ----------------------------------------------------------------*/
-
-/*
-** REGION LANGUAGE
-*/
 .hide {
-  display: none;
-  opacity: 0;
-
-  transition: display 0s linear 0.33s, opacity 0.33s linear;
-}
-    
+    display: none;
+    opacity: 0;
+  
+    transition: display 0s linear 0.33s, opacity 0.33s linear;
+  }
+.hide-fast {
+    display: none;
+    opacity: 0;
+  }
+      
 .show {
-  display: block;
-  opacity: 1;
+    display: block;
+    opacity: 1;
+  
+    transition: display 0s linear 0.33s, opacity 0.33s linear;
+  }
+  
+      
+  .show-fast {
+    display: block;
+    opacity: 1;
+  }
+  
+/*
+** REGION CONTACTME
+*/
 
-  transition: display 0s linear 0.33s, opacity 0.33s linear;
+#contactme {
+    width: 100%;
+}
+#contactme a {
+    font-size: medium;
 }
 
+#contactme a:active,
+#contactme a:hover {
+    color: var(--secondary-color);
+}
+
+#mailform input,
+#mailform textarea {
+    min-width: 20rem;
+}
+
+#mailform textarea {
+    min-height: 8rem;
+}
+
+.btn {
+    text-transform: capitalize;
+    border-radius: 2rem;
+    background-color: var(--primary-light-color);
+    color: red;
+}
 /*
-** ENDREGION LANGUAGE
+** ENDREGION CONTACTME
 */
 
 .animate > span:after {
