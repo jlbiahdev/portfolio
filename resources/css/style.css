@@ -549,19 +549,37 @@ footer .download-detailed ul {
 
 #mailform input,
 #mailform textarea {
+    min-height: 2rem;
     min-width: 20rem;
+    padding: .5rem;
+    border-radius: .2rem;
 }
 
+#mailform input::placeholder,
+#mailform textarea::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: red;
+    font-style: italic;
+  }
+  
 #mailform textarea {
+    font-size: .8rem;
     min-height: 8rem;
 }
 
-.btn {
+.button {
+    font-weight: bold;
     text-transform: capitalize;
     border-radius: 2rem;
-    background-color: var(--primary-light-color);
-    color: red;
+    background-color: var(--secondary-color);
+    color: #000;
 }
+
+.button:hover {
+    cursor: pointer;
+}
+
 /*
 ** ENDREGION CONTACTME
 */
