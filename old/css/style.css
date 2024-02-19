@@ -1,0 +1,650 @@
+
+* {
+	margin : 0;
+	padding : 0;
+	box-sizing: border-box;
+}
+
+
+/* border-checker --> border: 1px solid #e74c3c; */
+
+html {
+	background-color: #2f3640;
+	color: #2d3436;
+	font-family: 'Lato', Arial, sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	text-rendering: optimizelegibility;
+}
+
+a, a:visited {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: font-weight 0.2s, border 0.2s, color 0.2s;
+}
+
+a:hover, a:active  {
+    color: #0466c8;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img:hover {
+  opacity:0.6;
+  cursor: pointer;
+}
+
+img:active {
+  opacity:0.4;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+
+#wrapper {
+    background-color: #f5f6fa;
+    /* margin: 15px 15px; */
+    /* padding: 2% 2%; */
+    height: auto;
+    /* width: 1500px; */
+}
+
+/* ----------------------------------------------------------------*/
+/* SECTIONS */
+/* ----------------------------------------------------------------*/
+
+.section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-height: 400px;
+    width: auto;
+}
+
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ----------------------------------------------------------------*/
+/* HEADER */
+/* ----------------------------------------------------------------*/
+
+header {
+    background-color: var(--primary-color);
+    color: #ecf0f1;
+    margin: 0;
+    min-height: 500px;
+    height: auto;
+}
+
+header .wrapper{
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+#head-content {
+    margin: 0 auto;
+    height: auto;
+    padding: 10px;
+    /*
+    border: 1px solid red;
+    */
+}
+
+.back-color {
+    background-color: var(--secondary-color);
+}
+/*
+------------------------------------------------- LEFT PART
+*/
+
+.head-left {
+    /* position */
+    width: 50%;
+}
+
+/*
+----------------------------------------------- MIDDLE PART
+*/
+
+.head-right {
+    /* style */
+    padding: 1.5em;
+}
+
+.head-right .wrapper {
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.fullname {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: capitalize
+}
+
+#lastname {
+    text-transform: uppercase
+}
+
+.title {
+    color: #ecf0f1;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.flag {
+    height: 30px;
+    width: 40px;
+}
+
+.address {
+    font-size: medium;
+}
+
+/* ----------------------------------------------------------------*/
+/* PRESENTATION */
+/* ----------------------------------------------------------------*/
+
+#section-presentation {
+    background-color: var(--secondary-color);
+    text-align: justify;
+    padding: 1.5rem;
+}
+
+.job-description {
+    color: #34495e;
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.job-description ul {
+    list-style-type: "\2713";
+    margin: 10px;
+    margin-left: 30px;
+}
+
+.job-description ul li {
+    padding-left: 3px;
+}
+
+/* ----------------------------------------------------------------*/
+/* SKILLS */
+/* ----------------------------------------------------------------*/
+
+#section-skills {
+    /* border: 1px solid red; */
+    height: auto;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#section-skills .wrapper{
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.skills {
+    /* border: 1px solid green; */
+    height: auto;
+}
+
+.skill-group ul {
+    width: 90%;
+    margin: 0 1rem;
+}
+
+.skill-group li {
+    background-color: var(--secondary-color);
+    padding: .3rem;
+    border-radius: .3rem;
+    width: 7rem;
+    margin: .5rem 0;
+}
+
+.skill-group h2 {
+    color: var(--ternary-color);
+    font-size: 0.6em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: .3rem;
+}
+
+.skill {
+    color: #000;
+    font-size: 0.5em;
+    font-weight: bold;
+    margin-bottom: .8rem;
+    text-transform: uppercase
+}
+
+/* ----------------------------------------------------------------*/
+/* REFERENCES */
+/* ----------------------------------------------------------------*/
+
+#section-references {
+    /* border: 1px solid red; */
+    height: auto;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#section-references .wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+blockquote {
+	padding: 2%;
+	font-style: italic;
+	line-height: 145%;
+	margin-top: 5%;
+	position: relative;
+}
+
+blockquote::before {
+	content: "\201C";
+	font-size: 500%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -3px;
+}
+
+cite {
+	display: block;
+	font-size: 90%;
+	/* margin-top: 5%; */
+}
+
+#references {
+    /* border: 1px solid orange; */
+    align-items: start;
+}
+
+.ref-quote {
+    min-height: 5rem;
+}
+
+.ref-author ul {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: var(--secondary-color);
+}
+
+.ref-author li {
+    margin-right: 15px;
+}
+
+.ref-author cite {
+    /* border: 1px solid green; */
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.ref-author-role {
+    text-transform: lowercase;
+    font-style: italic;
+    font-size: .7em;
+}
+
+.ref-date {
+    font-size: .6em;
+}
+
+/* ----------------------------------------------------------------*/
+/* PERSONALITY */
+/* ----------------------------------------------------------------*/
+
+#section-personality {
+    background-color: var(--secondary-color);
+    /* border: 1px solid green; */
+}
+
+#section-personality .wrapper {
+    width: auto;
+    margin: 0 auto;
+}
+
+#section-personality .wrapper section {
+    min-height: 15rem;
+}
+
+#section-personality h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+/* EDUCATION */
+
+/* LANGUAGES */
+#section-languages li {
+    display: flex;
+    margin: 0.5rem 0;
+    align-items: center;
+}
+
+#section-languages li span:first-child {
+    width: 70px;
+}
+
+/* HOBBIES */
+#section-hobbies li {
+    display: flex;
+    margin: 0.5rem 0;
+}
+
+#section-hobbies li span:first-child {
+    width: 45px;
+}
+
+#section-hobbies li i {
+    height: 3px;
+}
+
+/* ----------------------------------------------------------------*/
+/* QUALITIES */
+/* ----------------------------------------------------------------*/
+
+#section-qualities {
+    background-color: var(--secondary-color);
+}
+
+#section-qualities .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5rem;
+}
+
+#qualities {
+    justify-items: center;    
+}
+
+#section-qualities ul li {
+    text-transform: capitalize;
+    margin-left: .3rem;
+}
+
+.list {
+    border-left: 1px solid #a5b1c2;
+    width: auto;
+    min-height: 5em;
+}
+/* ----------------------------------------------------------------*/
+/* EXPERIENCE */
+/* ----------------------------------------------------------------*/
+#section-experience {
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+#section-experience .section-title {
+    color: #fff;
+}
+
+#section-experience .wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#section-experience ul {
+    width: 100%;
+}
+
+#section-experience .wrapper>ul>li {
+    /* border: 1px solid green; */
+    background-color: #eaecf4;
+    width: 100%;
+}
+
+#section-experience .wrapper>ul>li:nth-child(odd) {
+    background-color: #f5f6fa;
+}
+
+#section-experience .wrapper>ul>li:nth-child(even) {
+    background-color: #eaecf4;
+}
+
+.group-context {
+    /* margin-top: 1%; */
+    text-transform: capitalize;
+}
+
+.group-period {
+    /* margin-top: 1%; */
+    font-size: 0.8em;
+}
+
+.group-title {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    font-weight: bold;
+    /* margin-top: 3%; */
+    text-transform: capitalize
+}
+
+.group-detail {
+    font-size: 0.7em;
+    /* margin-top: 3%; */
+    text-align: justify;
+}
+
+.group-detail ul {
+    list-style-type: square;
+}
+
+.group-detail div {
+    /* margin-top: 1%; */
+}
+
+.group-env {
+    /* margin-top: 2%; */
+}
+
+.group-env-detail {
+    font-size: 0.8em;
+    text-transform: capitalize;
+}
+
+.group-env-title {
+    font-size: 15px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+/* ----------------------------------------------------------------*/
+/* FOOTER */
+/* ----------------------------------------------------------------*/
+
+footer {
+    background-color: #2d3436;
+    color: #ecf0f1;
+	font-size: 0.8em;
+    margin: 0;
+    min-height: 300px;
+    height: auto;
+}
+
+footer .grid {
+    /* border: #fff solid 1px; */
+    justify-items: center;
+    align-content: center;
+    height: 50%;
+}
+
+footer .social ul,
+footer .download ul,
+footer .download-detailed ul {
+    justify-content: center;
+}
+
+.footer-header {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* ----------------------------------------------------------------*/
+/* COMMON */
+/* ----------------------------------------------------------------*/
+.hide {
+    display: none;
+    opacity: 0;
+  
+    transition: display 0s linear 0.33s, opacity 0.33s linear;
+  }
+.hide-fast {
+    display: none;
+    opacity: 0;
+  }
+      
+.show {
+    display: block;
+    opacity: 1;
+  
+    transition: display 0s linear 0.33s, opacity 0.33s linear;
+  }
+  
+      
+  .show-fast {
+    display: block;
+    opacity: 1;
+  }
+  
+/*
+** REGION CONTACTME
+*/
+
+#contactme {
+    width: 100%;
+}
+#contactme a {
+    font-size: medium;
+}
+
+#contactme a:active,
+#contactme a:hover {
+    color: var(--secondary-color);
+}
+
+#mailform input,
+#mailform textarea {
+    min-height: 2rem;
+    min-width: 20rem;
+    padding: .5rem;
+    border-radius: .2rem;
+}
+
+#mailform input::placeholder,
+#mailform textarea::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: red;
+    font-style: italic;
+  }
+  
+#mailform textarea {
+    font-size: .8rem;
+    min-height: 8rem;
+}
+
+.button {
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 2rem;
+    background-color: var(--secondary-color);
+    color: #000;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+/*
+** ENDREGION CONTACTME
+*/
+
+.animate > span:after {
+    display: none;
+}
+
+@-webkit-keyframes move {
+    0% {
+       background-position: 0 0;
+    }
+    100% {
+       background-position: 50px 50px;
+    }
+}
+
+.nostripes > span > span, .nostripes > span:after {
+    -webkit-animation: none;
+    background-image: none;
+}
+
+/*
+* MODAL BOXES
+*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    min-height: 100px;
+    height: 70%;
+    overflow-y: scroll;
+    text-align: justify;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
