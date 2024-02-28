@@ -787,6 +787,11 @@ blockquote::before {
     padding: 3rem;
 }
 
+.card-back .top a {
+    color: #dd4b39;
+    font-size: 1.8rem;
+}
+
 .card-back .bottom {
     height: 30%;
     background: var(--bg-color);
