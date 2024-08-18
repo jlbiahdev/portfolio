@@ -86,6 +86,10 @@ section {
     text-transform: capitalize;
 }
 
+.navbar .flags {
+    margin-left: 4rem;
+}
+
 .navbar a:hover,
 .navbar a:active {
     color: var(--text-color);
@@ -97,6 +101,16 @@ section {
     display: none;
 }
 
+.flags {
+    align-items: center;
+    align-content: center;
+}
+
+.flags img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
 /* ---------------------------------------------- home -------------------------------------------- */
 
 .home {

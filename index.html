@@ -22,14 +22,18 @@
             <i class="fa-solid fa-bars" id="menu-icon" onclick="menuIcononclick()"></i>
 
             <nav class="navbar">
-                <a href="#home" class="active">accueil</a>
-                <a href="#about">À propos</a>
-                <a href="#education">éducation</a>
-                <a href="#skills">skills</a>
-                <a href="#services">services</a>
-                <a href="#testimony">références</a>
-                <a href="#experiences">experiences</a>
-                <a href="#contact">contact</a>
+                <a id="mn-hom" href="#home" class="active">accueil</a>
+                <a id="mn-abo" href="#about">À propos</a>
+                <a id="mn-edu" href="#education">éducation</a>
+                <a id="mn-ski" href="#skills">skills</a>
+                <a id="mn-ser" href="#services">services</a>
+                <a id="mn-tes" href="#testimony">références</a>
+                <a id="mn-exp" href="#experiences">experiences</a>
+                <a id="mn-con" href="#contact">contact</a>
+                <span class="flags">
+                    <img src="resources/img/flag-france.png" id="flag-FR" alt="" srcset="">
+                    <img src="resources/img/flag-england.png" id="flag-EN" alt="" srcset="">
+                </span>
             </nav>
 
         </header>
@@ -47,8 +51,8 @@
                     <a href="https://github.com/jlbiahdev" target="_blank" rel="noopener" rel="noreferrer"><i class="fa-brands fa-github"></i></a>
                 </div>
                 <div>
-                    <a href="#cv" class="btn">Télécharger un CV</a>
-                    <a href="#contact" class="btn">Contactez moi</a>
+                    <a id="dwn_cv" href="#cv" class="btn">Télécharger un CV</a>
+                    <a id="cnt_me" href="#contact" class="btn">Contactez moi</a>
                 </div>
             </div>
 
@@ -587,7 +591,7 @@
                     <div class="portfolio-layer">
                         <h4>AutoStock</h4>
                         <p>Boutique de ventes de pièces détachées auto/moto/trucks</p>
-                        <a href="#"target="_blank" rel="noopener" rel="noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="#" target="_blank" rel="noopener" rel="noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
                 
@@ -1306,7 +1310,7 @@
 
         <footer class="footer">
             <div class="footer-top">
-                <div>
+                <div id="links">
                     <h2>Quelques liens</h2>
                     <ul>
                         <li><a href="http://www.cyrano-conseil.com" target="_blank" rel="noopener" rel="noreferrer">Cyrano Conseil</a></li>
@@ -1316,27 +1320,27 @@
                 <div id="cv">
                     <h2>Télécharger le CV</h2>
                     <ul class="cv">
-                        <li><a href="docs\biahprofile.docx"><i class="fa-solid fa-file-word"></i></a></li>
-                        <li><a href="docs\biahprofile.pdf"><i class="fa-solid fa-file-pdf"></i></a></li>
+                        <li><a class="doc" href="resources/docs/biahprofile.docx"><i class="fa-solid fa-file-word"></i></a></li>
+                        <li><a class="pdf" href="resources/docs/biahprofile.pdf"><i class="fa-solid fa-file-pdf"></i></a></li>
                     </ul>
                 </div>
-                <div>
+                <div id="cvplus">
                     <h2>Télécharger le CV détaillé</h2>
                     <ul class="cv">
-                        <li><a href="docs\biahprofile_detail.docx"><i class="fa-solid fa-file-word"></i></a></li>
-                        <li><a href="docs\biahprofile_detail.pdf"><i class="fa-solid fa-file-pdf"></i></a></li>
+                        <li><a class="doc" href="resources/docs/biahprofile_detail.docx"><i class="fa-solid fa-file-word"></i></a></li>
+                        <li><a class="pdf" href="resources/docs/biahprofile_detail.pdf"><i class="fa-solid fa-file-pdf"></i></a></li>
                     </ul>
                 </div>
-                <div>
+                <div id="references">
                     <h2>Quelques Références</h2>
                     <ul class="cv">
-                        <li><a href="docs/biahprofile_references.pdf"><i class="fa-solid fa-file-pdf"></i></a></li>
+                        <li><a href="resources/docs/biahprofile_references.pdf"><i class="fa-solid fa-file-pdf"></i></a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="footer-text">
-                    <p>&copy; 2021 Cyrano Conseil Tous droits réservés</p>
+                    <p>&copy; 2021 Cyrano Conseil <span>Tous droits réservés</span> </p>
                 </div>
     
                 <div class="footer-iconTop">
@@ -1344,8 +1348,13 @@
                 </div>
             </div>
         </footer>
+        <!-- JAVASCRIPTS -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.48.0/apexcharts.min.js" integrity="sha512-wqcdhB5VcHuNzKcjnxN9wI5tB3nNorVX7Zz9NtKBxmofNskRC29uaQDnv71I/zhCDLZsNrg75oG8cJHuBvKWGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script type="text/javascript" src="resources/js/mail.js"></script>
-        <script src="resources/js/main.js"></script>
+        <script type="module" src="resources/js/main.js"></script>
     </body>
 </html>
