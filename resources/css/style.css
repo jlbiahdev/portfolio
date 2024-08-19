@@ -84,6 +84,14 @@ section {
     margin-left: 4rem;
     font-weight: 700;
     text-transform: capitalize;
+
+    /* border: 1px solid yellow; */
+}
+
+.navbar {
+    align-content: center;
+    height: 4rem;
+    /* border: 1px solid green; */
 }
 
 .navbar .flags {
@@ -102,8 +110,20 @@ section {
 }
 
 .flags {
-    align-items: center;
+    display: inline-block;
     align-content: center;
+    height: 100%;
+
+    /* border: 1px solid red; */
+}
+
+.flags .inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+
+    align-content: center;
+    align-items: start;
 }
 
 .flags img {
@@ -989,10 +1009,24 @@ blockquote::before {
 
 /* ---------------------------------------------- responsive -------------------------------------- */
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     html {
         font-size: 55%;
     }
+
+    /* .logo {
+        border: 1px solid rebeccapurple;
+    } */
+}
+
+@media (max-width: 1085px) {
+    .navbar a {
+        margin-left: 3rem;
+    }
+
+    /* .logo {
+        border: 1px solid red;
+    } */
 }
 
 @media (max-width: 991px) {
@@ -1027,6 +1061,7 @@ blockquote::before {
         top: 100%;
         left: 0;
         width: 100%;
+        height: auto;
         padding: 1rem 3%;
         background: var(--bg-color);
         border-top: 1.rem solid rgba(0, 0, 0, .2);
@@ -1041,6 +1076,10 @@ blockquote::before {
     .navbar a {
         display: block;
         font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .navbar .flags {
         margin: 3rem 0;
     }
 

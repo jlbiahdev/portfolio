@@ -22,6 +22,10 @@ const KEYWORDS = {
 $(document).ready(() => {
 
     reset();
+
+/* ------------------------------------------- events --------------------------------------------- */
+    $( "#menu-icon" ).on( "click", function() { menuIcononclick(); });
+
     $('#flag-FR').click(function() { 
         setCookie(COOKIES.SelectedLanguage, LANGUAGES.French, 1); 
         reset();
