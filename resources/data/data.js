@@ -1,6 +1,7 @@
 export const identity = {
     "firstname": "Jean",
     "lastname": "BIAH",
+    "keywords": ['Chef de projet', 'TechLead', 'Développeur FullStack', 'Project Manager', 'TechLead', 'FullStack Developer'],
     "intro": [
         {
             "lang": "FR",
@@ -17,9 +18,13 @@ export const identity = {
         },
         {
             "lang": "EN",
-            "profile": ``,
-            "about": ``,
-            "qualities": [ `` ],
+            "profile": `Highly qualified software development professional with over 17 years of experience in software design, development, and integration`,
+            "about": `C # specialist (blazor -wasm-, webpage, webform, winform) in particular and in
+                            the .Net framework in general (wcf, wf). Specialist in relational database development, notably MS
+                            SQL Server, but also Oracle, Sybase, MySQL. Has various front-end, middle and back-end experiences
+                            as well as experiences in BI (IS, RS, AS). Demonstrates a great resistance to stress and knows how
+                            to meet deadlines and set objectives while offering high quality work.`,
+            "qualities": [ `Has analytical skills and a real attention to detail`, `Has some experience in team management`, `Dedicated to advancing the projects entrusted to it`, `as well as to guaranteeing quality work and on-time delivery`, `Responsible and autonomous`, `Ability to quickly master new software packages and new hardware technologies.` ],
         }
     ]
 };
@@ -296,7 +301,11 @@ export const education = {
                 {
                     "lang": "FR",
                     "name": "Ingénieur SIGL"
-                }
+                },
+                {
+                    "lang": "EN",
+                    "name": "Information System and Software Engineer"
+                },
             ],
             "place": {
                 "city": "Paris",
@@ -310,7 +319,11 @@ export const education = {
                 {
                     "lang": "FR",
                     "name": "Analyste-Programmeur"
-                }
+                },
+                {
+                    "lang": "EN",
+                    "name": "Analyst Programmer"
+                },
             ],
             "place": {
                 "city": "Libreville",
@@ -324,7 +337,11 @@ export const education = {
                 {
                     "lang": "FR",
                     "name": "Baccalauréat D"
-                }
+                },
+                {
+                    "lang": "EN",
+                    "name": "Scientific Baccalaureate"
+                },
             ],
             "place": {
                 "city": "Yaoundé",
@@ -334,150 +351,308 @@ export const education = {
     ],
     "languages": [
         {
-            "name": "French",
+            "lang": "FR",
+            "name": "Français",
             "icon": "flag-france.png",
-            "value": [
-                {
-                    "lang": "FR",
-                    "name": "Français",
-                    "wormanship": "Langue Maternelle"
-                }
-            ],
+            "wormanship": "Langue Maternelle",
         },
         {
-            "name": "English",
+            "lang": "FR",
+            "name": "Anglais",
+            "icon": "flag-england.png",
+            "wormanship": "Courant",
+        },
+        {
+            "lang": "EN",
+            "name": "French",
             "icon": "flag-france.png",
-            "value": [
-                {
-                    "name": "Anglais",
-                    "icon": "flag-england.png",
-                    "wormanship": "Langue Maternelle"
-                }
-            ]
+            "wormanship": "Mother tongue",
+        },
+        {
+            "lang": "EN",
+            "name": "English",
+            "icon": "flag-england.png",
+            "wormanship": "Fluent",
         },
     ]
 };
 
 export const services = [
     {
-        "name": "Développement Web",
-        "description": "Je développe des sites web basiques (html5, css3, js), des applications web (reactjs, vuejs, expressjs, blazor, mvc) avec ou sans bases de données (sql, no sql)",
+        "lang": "EN",
+        "name": "Web Development",
         "icon": "fa-solid fa-cloud",
+        "description": "I develop basic websites (html5, css3, js), web applications (reactjs, vuejs, expressjs, blazor, mvc) with or without databases (sql, no sql)",
     },
     {
-        "name": "Développement d'APIs",
-        "description": "Je développe des API que je déploie sur des marketplaces",
+        "lang": "FR",
+        "name": "Développement Web",
+        "icon": "fa-solid fa-cloud",
+        "description": "Je développe des sites web basiques (html5, css3, js), des applications web (reactjs, vuejs, expressjs, blazor, mvc) avec ou sans bases de données (sql, no sql)",
+    },
+    {
+        "lang": "EN",
+        "name": "APIs Development",
         "icon": "fa-solid fa-bookmark",
+        "description": "I develop APIs that I deploy on marketplaces",
     },
     {
-        "name": "Développement d'applications windows et de librairies",
-        "description": "Je développe des applications de bureau (clients lourds WPF, Winform) avec ou sans base de données ainsi que des librairies (dll)",
+        "lang": "FR",
+        "name": "Développement d'APIs",
+        "icon": "fa-solid fa-bookmark",
+        "description": "Je développe des API que je déploie sur des marketplaces",
+    },
+    {
+        "lang": "EN",
+        "name": "Development of Windows applications and libraries",
         "icon": "fa-brands fa-windows",
+        "description": "I develop desktop applications (WPF, Winforms) with or without database as well as libraries (dll)",
+    },
+    {
+        "lang": "FR",
+        "name": "Développement d'applications windows et de librairies",
+        "icon": "fa-brands fa-windows",
+        "description": "Je développe des applications de bureau (clients lourds WPF, Winform) avec ou sans base de données ainsi que des librairies (dll)",
     },
 ];
 
 export const web_portfolios = [
     {
-        "company_name": "Cyrano Conseil",
-        "company_description": "Cyrano Conseil est une société IT de conseil et d’ingénierie logicielle, spécialisée dans le développement de logiciels, la transformation digitale et la chefferie de projets.",
-        "company_image": "logo-cyrano.png",
-        "company_url": "http://www.cyrano-conseil.com",
+        "name": "Cyrano Conseil",
+        "image": "logo-cyrano.png",
+        "url": "http://www.cyrano-conseil.com",
+        "description": [
+            {
+                "lang": "FR",
+                "value": "Cyrano Conseil est une société IT de conseil et d’ingénierie logicielle, spécialisée dans le développement de logiciels, la transformation digitale et la chefferie de projets."
+            },
+            {
+                "lang": "EN",
+                "value": "Cyrano Conseil is an IT consulting and software engineering company, specializing in software development, digital transformation and project management."
+            },
+        ],
     },
     {
-        "company_name": "Dream Logistics",
-        "company_description": "La plus grande academie régionale de formation dans les métiers de la Logistique",
-        "company_image": "logo-dreamlog.png",
-        "company_url": "https://dreamlogistics.net/index.html",
+        "name": "Dream Logistics",
+        "image": "logo-dreamlog.png",
+        "url": "https://dreamlogistics.net/index.html",
+        "description": [
+            {
+                "lang": "FR",
+                "value": "La plus grande academie régionale de formation dans les métiers de la Logistique"
+            },
+            {
+                "lang": "EN",
+                "value": "The largest regional training academy in the Logistics sector"
+            },
+        ],
     },
     {
-        "company_name": "Ektare",
-        "company_description": "Entreprise immobilière <br>Une équipe expérimentée, disponible 24/7, vous propose un tracking automatisé de vos projets",
-        "company_image": "logo-ektare.png",
-        "company_url": "https://hektare-immo.com/",
+        "name": "Ektare",
+        "image": "logo-ektare.png",
+        "url": "https://hektare-immo.com/",
+        "description": [
+            {
+                "lang": "FR",
+                "value": "Entreprise immobilière <br>Une équipe expérimentée, disponible 24/7, vous propose un tracking automatisé de vos projets"
+            },
+            {
+                "lang": "EN",
+                "value": "Real estate company <br>An experienced team, available 24/7, offers you automated monitoring of your projects"
+            },
+        ],
     },
     {
-        "company_name": "Nzuane",
-        "company_description": "Association à but non lucratif d'aide à l'enfance à Ebolowa",
-        "company_image": "logo-nzuane.png",
-        "company_url": "https://nzuane.org/",
+        "name": "Nzuane",
+        "image": "logo-nzuane.png",
+        "url": "https://nzuane.org/",
+        "description": [
+            {
+                "lang": "FR",
+                "value": "Association à but non lucratif d'aide à l'enfance à Ebolowa"
+            },
+            {
+                "lang": "EN",
+                "value": "Non-profit association for helping children in Ebolowa"
+            },
+        ],
     },
     {
-        "company_name": "AutoStock",
-        "company_description": "Boutique de ventes de pièces détachées auto/moto/trucks",
-        "company_image": "logo-autostock.png",
-        "company_url": "#",
+        "name": "AutoStock",
+        "image": "logo-autostock.png",
+        "url": "#",
+        "description": [
+            {
+                "lang": "FR",
+                "value": "Boutique de ventes de pièces détachées auto/moto/trucks"
+            },
+            {
+                "lang": "EN",
+                "value": "Auto/motorcycle/truck spare parts sales store"
+            },
+        ],
     },
     {
-        "company_name": "Law For All",
-        "company_description": "Nobody is supposed to ignore the law !",
-        "company_image": "logo-lfa.png",
-        "company_url": "https://lawfor-all.com/",
+        "name": "Law For All",
+        "image": "logo-lfa.png",
+        "url": "https://lawfor-all.com/",
+        "description": [
+            {
+                "lang": "FR",
+                "value": "Nul n’est censé ignorer la loi !"
+            },
+            {
+                "lang": "EN",
+                "value": "Nobody is supposed to ignore the law !"
+            },
+        ],
     },
 ];
 
 export const api_portfolios = [
     {
-        "api_name": "Lyngwa",
-        "api_description": "Obtenez des données sur les pays, les villes et les îles du monde entier. Obtenez des données sur les pays, les villes et les îles du monde entier. Filtrer par nom, iso de pays, devises...",
-        "api_image": "logo-Lyngwa.png",
-        "api_url": "#",
+        "name": "Lyngwa",
+        "description": [
+            {
+                "lang": "FR",
+                "value": "Obtenez des données sur les pays, les villes et les îles du monde entier. Obtenez des données sur les pays, les villes et les îles du monde entier. Filtrer par nom, iso de pays, devises...",
+            },
+            {
+                "lang": "EN",
+                "value": "Get data on countries, cities and islands around the world. Get data on countries, cities and islands around the world. Filter by name, country iso, currencies..."
+            },
+        ],
+        "image": "logo-Lyngwa.png",
+        "url": "#",
     },
     {
-        "api_name": "Trello Scraper",
-        "api_description": "Le premier extracteur Trello, pas cher, rapide, stable. Notre API vous permet d'obtenir des données de Trello, notamment des tableaux, des listes, des cartes, des membres...",
-        "api_image": "logo-trello.png",
-        "api_url": "#",
+        "name": "Trello Scraper",
+        "description": [
+            {
+                "lang": "FR",
+                "value": "Le premier extracteur Trello, rapide, stable. Notre API vous permet d'obtenir des données de Trello, notamment des tableaux, des listes, des cartes, des membres..."
+            },
+            {
+                "lang": "EN",
+                "value": "The first Trello extractor, fast, stable. Our API allows you to get data from Trello, including boards, lists, cards, members..."
+            },
+        ],
+        "image": "logo-trello.png",
+        "url": "#",
     },
 ];
 
 export const pro_portfolios = [
     {
         "id": 1,
-        "company_name": "Groupe Société Générale",
-        "company_image": "logo-sg.png",
-        "keywords": "IDS, D2C, TFM, X-One, STYX, ...",
+        "name": "Groupe Société Générale",
+        "image": "logo-sg.png",
+        "keywords": [
+            {
+                "lang": "FR",
+                "value": "IDS, D2C, TFM, X-One, STYX, ..."
+            },
+            {
+                "lang": "EN",
+                "value": "IDS, D2C, TFM, X-One, STYX, ..."
+            },
+        ],
         "years": [ 2021, 2019, 2010,  ],
     },
     {
         "id": 2,
-        "company_name": "Betclic",
-        "company_image": "logo-betclic.png",
-        "keywords": "Diverses API, et Applications web (listing et recherches de matches)",
+        "name": "Betclic",
+        "image": "logo-betclic.png",
+        "keywords": [
+            {
+                "lang": "FR",
+                "value": "Diverses API, et Applications web (listing et recherches de matches)"
+            },
+            {
+                "lang": "EN",
+                "value": "Various APIs and web applications (match listing and searches)"
+            },
+        ],
         "years": [ 2019 ],
     },
     {
         "id": 3,
-        "company_name": "Crédit Agricole",
-        "company_image": "logo-ca.jpg",
-        "keywords": "Application SAFIR (Risque de crédit, taux, ...)",
+        "name": "Crédit Agricole",
+        "image": "logo-ca.jpg",
+        "keywords": [
+            {
+                "lang": "FR",
+                "value": "Application SAFIR (Risque de crédit, taux, ...)"
+            },
+            {
+                "lang": "EN",
+                "value": "SAFIR application (Credit risk, rates, etc.)"
+            },
+        ],
         "years": [ 2011 ],
     },
     {
         "id": 4,
-        "company_name": "Compagnie Européenne de Garanties et Cautions (filiale de Natixis)",
-        "company_image": "logo-cegc.jpg",
-        "keywords": "Application de gestion de garanties et cautionnements",
+        "name": "Compagnie Européenne de Garanties et Cautions (filiale de Natixis)",
+        "image": "logo-cegc.jpg",
+        "keywords": [
+            {
+                "lang": "FR",
+                "value": "Application de gestion de garanties et cautionnements"
+            },
+            {
+                "lang": "EN",
+                "value": "Guarantee and surety management application"
+            },
+        ],
         "years": [ 2014 ],
     },
     {
         "id": 5,
-        "company_name": "Newedge",
-        "company_image": "logo-newedge.jpg",
-        "keywords": "Application de reporting de risques",
+        "name": "Newedge",
+        "image": "logo-newedge.jpg",
+        "keywords": [
+            {
+                "lang": "FR",
+                "value": "Application de reporting de risques"
+            },
+            {
+                "lang": "EN",
+                "value": "Risk reporting application"
+            },
+        ],
         "years": [ 2007 ],
     },
     {
         "id": 6,
-        "company_name": "Banque de France, ACPR",
-        "company_image": "logo-bdf.png",
-        "keywords": "Application web de gestion de la Balance de Paiement, Application web PROTID2, Application web, GesOPCVM, ...",
+        "name": "Banque de France, ACPR",
+        "image": "logo-bdf.png",
+        "keywords": [
+            {
+                "lang": "FR",
+                "value": "Application web de gestion de la Balance de Paiement, Application web PROTID2, Application web, GesOPCVM, ..."
+            },
+            {
+                "lang": "EN",
+                "value": "Balance of Payment management web application, PROTID2 web application, GesOPCVM web application, ..."
+            },
+        ],
         "years": [ 2013 ],
     },
     {
         "id": 7,
-        "company_name": "Natixis",
-        "company_image": "logo-natixis.jpg",
-        "keywords": "MAPS, ...",
+        "name": "Natixis",
+        "image": "logo-natixis.jpg",
+        "keywords": [
+            {
+                "lang": "FR",
+                "value": "MAPS, ..."
+            },
+            {
+                "lang": "EN",
+                "value": "MAPS, ..."
+            },
+        ],
         "years": [ 2008 ],
     },
 ];

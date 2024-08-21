@@ -62,6 +62,14 @@ export const labels = {
             { "lang": "FR", "value": "Ma Formation_span_" },
             { "lang": "EN", "value": "My Training_span_" },
         ],
+        "education_label": [
+            { "lang": "FR", "value": "Éducation" },
+            { "lang": "EN", "value": "Education" },
+        ],
+        "language_label": [
+            { "lang": "FR", "value": "langues" },
+            { "lang": "EN", "value": "languages" },
+        ],
     },
     "services": {
         "header": [
@@ -73,19 +81,19 @@ export const labels = {
             { "lang": "EN", "value": "Learn more" }
         ]
     },
-    "portfolio_web": {
+    "web_portfolios": {
         "header": [
             { "lang": "FR", "value": "Projets Web_span_ Récents" },
             { "lang": "EN", "value": "Recents Web_span_ Projects" },
         ],
     },
-    "portfolio_api": {
+    "api_portfolios": {
         "header": [
             { "lang": "FR", "value": "Des API_span_ publiées" },
             { "lang": "EN", "value": "Published API_span_" },
         ],
     },
-    "portfolio_pro": {
+    "pro_portfolios": {
         "header": [
             { "lang": "FR", "value": "Des Applications_span_ réalisées chez des grands comptes" },
             { "lang": "EN", "value": "Applications_span_ produced for major companies" },

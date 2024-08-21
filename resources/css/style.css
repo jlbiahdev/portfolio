@@ -568,8 +568,10 @@ section {
 
 .education .education-row {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 5rem;
+    width: 60%;
 }
 
 .education-row .education-column {
