@@ -833,6 +833,10 @@ blockquote::before {
     font-size: 1.8rem;
 }
 
+.card-back .top div {
+    margin-bottom: 1rem;
+}
+
 .card-back .bottom {
     height: 30%;
     background: var(--bg-color);
@@ -852,6 +856,8 @@ blockquote::before {
 
 .card-back .bottom .tools span {
     color: var(--text-color);
+    overflow-wrap: break-word;
+    text-transform: capitalize;
 }
 
 .card-back .bottom .profession span {
@@ -1092,6 +1098,7 @@ blockquote::before {
 
     #menu-icon {
         display: block;
+        margin-right: 6rem;
     }
 }
 

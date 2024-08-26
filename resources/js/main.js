@@ -258,7 +258,7 @@ const shape_experiences = (items, labels, lang) => {
             .replace('{achievements}', achievements.value)
             .replace('{highlights}', e.highlights)
             .replace('{profession}', professions.value)
-            .replace('{tools}', e.tools)
+            .replace('{tools}', e.tools.join(', '))
             .replace('{lb_more}', labels.more)
             .replace('{lb_tools}', labels.tools)
             .replace('{lb_profession}', labels.professions)
