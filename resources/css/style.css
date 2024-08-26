@@ -131,6 +131,11 @@ section {
     width: 2rem;
     border-radius: 50%;
 }
+
+.flags img:hover {
+    cursor: pointer;
+}
+
 /* ---------------------------------------------- home -------------------------------------------- */
 
 .home {

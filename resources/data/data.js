@@ -664,7 +664,7 @@ export const testimonials = [
             {
                 "author_name": "Raphaël Q.",
                 "author_role": "Architecte",
-                "date": "2013/2014",
+                "work_period": "2013/2014",
                 "company_name": "Autorité de Contrôle Prudentiel et de Régulation",
                 "company_acronym": "ACPR",
                 "quote": `Jean Luc a fait preuve d'adaptabilité et a démontré sa capacité à relever les défis. Il
@@ -674,7 +674,7 @@ export const testimonials = [
             {
                 "author_name": "Jean Pierre R.",
                 "author_role": "Chef de Projet",
-                "date": "2014/2016",
+                "work_period": "2014/2016",
                 "company_name": "Compagnie Européenne de Garantie et Cautionnement",
                 "company_acronym": "CEGC",
                 "quote": `Jean-Luc est un collaborateur très professionnel, autonome, proactif, force de
@@ -687,7 +687,7 @@ export const testimonials = [
             {
                 "author_name": "Florian D.",
                 "author_role": "Chef de Projet",
-                "date": "2013/2014",
+                "work_period": "2013/2014",
                 "company_name": "Banque de France",
                 "company_acronym": "BdF",
                 "quote": `Collaborateur efficace et agréable, Jean Luc a fait preuve d'une grande autonomie sur le
@@ -706,27 +706,39 @@ export const testimonials = [
         "words": [
             {
                 "author_name": "Raphaël Q.",
-                "author_role": "Architecte",
-                "date": "2013/2014",
+                "author_role": "Architect",
+                "work_period": "2013/2014",
                 "company_name": "Autorité de Contrôle Prudentiel et de Régulation",
                 "company_acronym": "ACPR",
-                "quote": ``
+                "quote": `Jean Luc has shown adaptability and has demonstrated his ability to meet challenges. He
+                                    was a force for proposals in an innovative technical context. These professional skills allowed
+                                    us to complete this project on time while respecting the client's requirements.`
             },
             {
                 "author_name": "Jean Pierre R.",
-                "author_role": "Chef de Projet",
-                "date": "2014/2016",
+                "author_role": "Project Manager",
+                "work_period": "2014/2016",
                 "company_name": "Compagnie Européenne de Garantie et Cautionnement",
                 "company_acronym": "CEGC",
-                "quote": ``
+                "quote": `Jean-Luc is a very professional, autonomous, proactive collaborator, force of proposal
+                                    and knowing how to adapt easily to the sometimes fluctuating contexts of projects. His
+                                    intervention on the project is very effective and he dealt with complex functional problems with
+                                    method and organization. He is also an effective support for the other members of the team and
+                                    knows how to share his expertise and his mastery of the technologies implemented.`
             },
             {
                 "author_name": "Florian D.",
-                "author_role": "Chef de Projet",
-                "date": "2013/2014",
+                "author_role": "Project Manager",
+                "work_period": "2013/2014",
                 "company_name": "Banque de France",
                 "company_acronym": "BdF",
-                "quote": ``
+                "quote": `An efficient and pleasant collaborator, Jean Luc has shown great autonomy on the
+                                    project. He was able to easily take charge of the most technical subjects as well as ensure the
+                                    necessary communication with the various actors of the project. His .NET expertise allowed him
+                                    to carry out the requested work very quickly. This success led us to entrust it with a much
+                                    wider scope thereafter, proof of our confidence in its capabilities. He was also able to
+                                    intervene with the same efficiency on SSIS subjects, which makes his profile particularly
+                                    interesting.`
             },
         ]
     }

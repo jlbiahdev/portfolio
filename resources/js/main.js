@@ -57,7 +57,6 @@ const reset = () => {
     $('#dwn_cv').html(FormProperties.labels.home.download_profile.find(e => e.lang === lang).value);
     $('#cnt_me').html(FormProperties.labels.home.contact_me.find(e => e.lang === lang).value);
 
-    $('#testimony .heading').html(shape(FormProperties.labels.testimonials.header.find(e => e.lang === lang).value));
     $('#experiences .heading').html(shape(FormProperties.labels.experiences.header.find(e => e.lang === lang).value));
     $('#contact .heading').html(shape(FormProperties.labels.contact.header.find(e => e.lang === lang).value));
     $('.form-contact .btn').val(shape(FormProperties.labels.contact.btn.find(e => e.lang === lang).value));
@@ -84,7 +83,6 @@ const reset = () => {
     $('#education-label').html(shape(FormProperties.labels.education.education_label.find(e => e.lang === lang).value));
     $('#language-label').html(shape(FormProperties.labels.education.language_label.find(e => e.lang === lang).value));
 
-
     $('.services-container').html(shape_services(PortfolioData.services.filter(e => e.lang === lang)));
     $('#services .heading').html(shape(FormProperties.labels.services.header.find(e => e.lang === lang).value));
     $('#services .services-box .btn').html(shape(FormProperties.labels.services.btn.find(e => e.lang === lang).value));
@@ -98,7 +96,9 @@ const reset = () => {
     $('#portfolio-pro .portfolio-container').html(shape_pro_portfolios(PortfolioData.pro_portfolios, lang));
     $('#portfolio-pro .heading').html(shape(FormProperties.labels.pro_portfolios.header.find(e => e.lang === lang).value));
 
-    // reset_typed();
+    $('#testimony .heading').html(shape(FormProperties.labels.testimonials.header.find(e => e.lang === lang).value));
+    $('.testimony-container').html(shape_testimonials(PortfolioData.testimonials.find(e => e.lang === lang).words));
+    
 }
 
 const shape = (str) => {
@@ -215,6 +215,23 @@ const shape_pro_portfolios = (items, lang) => {
         .replace('{years}', e.years.join(', '))
         .replace('{keywords}', description.value);
     });
+    return result;
+}
+
+const shape_testimonials = (items) => {
+
+    var result = '';
+
+    items.forEach(e => {
+        result += testimony_box.replace('{testimony_quote}', e.quote)
+        .replace('{author_name}', e.author_name)
+        .replace('{author_role}', e.author_role)
+        .replace('{work_period}', e.work_period)
+        .replace('{company_name}', e.company_name)
+        .replace('{company_acronym}', e.company_acronym)
+        ;
+    });
+
     return result;
 }
 
@@ -382,4 +399,17 @@ const pro_portfolio_box = `
                         <p>{years}</p>
                     </div>
                 </div>
+`;
+
+const testimony_box = `
+<div class="testimony-box">
+    <div class="testimony-quote">
+        <blockquote>{testimony_quote}</blockquote>
+    </div>
+    <div class="testimony-author">
+        <span class="author-name"><cite>{author_name},</cite></span>
+        <span class="author-role">{author_role},</span>
+        <span class="date">{work_period} - </span><abbr title="{company_name}">{company_acronym}</abbr>
+    </div>
+</div>
 `;
