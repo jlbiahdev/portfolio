@@ -110,6 +110,20 @@ export const labels = {
             { "lang": "FR", "value": "Mes Expériences_span_" },
             { "lang": "EN", "value": "My Experiences_span_" },
         ],
+        "box": [
+            {
+                "lang": "FR",
+                "more": 'Les +',
+                "tools": 'outils',
+                "professions": 'métiers'
+            },
+            {
+                "lang": "EN",
+                "more": 'highlights',
+                "tools": 'tools',
+                "professions": 'profesions'
+            },
+        ]
     },
     "contact": {
         "header": [

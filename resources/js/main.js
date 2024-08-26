@@ -57,20 +57,19 @@ const reset = () => {
     $('#dwn_cv').html(FormProperties.labels.home.download_profile.find(e => e.lang === lang).value);
     $('#cnt_me').html(FormProperties.labels.home.contact_me.find(e => e.lang === lang).value);
 
-    $('#experiences .heading').html(shape(FormProperties.labels.experiences.header.find(e => e.lang === lang).value));
     $('#contact .heading').html(shape(FormProperties.labels.contact.header.find(e => e.lang === lang).value));
     $('.form-contact .btn').val(shape(FormProperties.labels.contact.btn.find(e => e.lang === lang).value));
 
-    $('#links h2').html(shape(FormProperties.labels.footer.links.find(e => e.lang === lang).value));
-    $('#cv h2').html(shape(FormProperties.labels.footer.cv.find(e => e.lang === lang).value));
-    $('#cvplus h2').html(shape(FormProperties.labels.footer.cv_plus.find(e => e.lang === lang).value));
-    $('#references h2').html(shape(FormProperties.labels.footer.references.find(e => e.lang === lang).value));
-    $('.footer-text span').html(shape(FormProperties.labels.footer.all_rights.find(e => e.lang === lang).value));
+    $('footer .footer-text span').html(shape(FormProperties.labels.footer.all_rights.find(e => e.lang === lang).value));
+    $('footer #links h2').html(shape(FormProperties.labels.footer.links.find(e => e.lang === lang).value));
+    $('footer #cv h2').html(shape(FormProperties.labels.footer.cv.find(e => e.lang === lang).value));
+    $('footer #cvplus h2').html(shape(FormProperties.labels.footer.cv_plus.find(e => e.lang === lang).value));
+    $('footer #references h2').html(shape(FormProperties.labels.footer.references.find(e => e.lang === lang).value));
 
-    $("#cv a.doc").attr("href", FormProperties.labels.footer.cv_doc.find(e => e.lang === lang).value);
-    $("#cv a.pdf").attr("href", FormProperties.labels.footer.cv_pdf.find(e => e.lang === lang).value);
-    $("#cvplus a.doc").attr("href", FormProperties.labels.footer.cv_plus_doc.find(e => e.lang === lang).value);
-    $("#cvplus a.pdf").attr("href", FormProperties.labels.footer.cv_plus_pdf.find(e => e.lang === lang).value);
+    $("footer #cv a.doc").attr("href", FormProperties.labels.footer.cv_doc.find(e => e.lang === lang).value);
+    $("footer #cv a.pdf").attr("href", FormProperties.labels.footer.cv_pdf.find(e => e.lang === lang).value);
+    $("footer #cvplus a.doc").attr("href", FormProperties.labels.footer.cv_plus_doc.find(e => e.lang === lang).value);
+    $("footer #cvplus a.pdf").attr("href", FormProperties.labels.footer.cv_plus_pdf.find(e => e.lang === lang).value);
     
     $('#about .about-content p').html(shape(PortfolioData.identity.intro.find(e => e.lang === lang).about));
     $('#about .about-content ul').html(doList(PortfolioData.identity.intro.find(e => e.lang === lang).qualities));
@@ -99,6 +98,8 @@ const reset = () => {
     $('#testimony .heading').html(shape(FormProperties.labels.testimonials.header.find(e => e.lang === lang).value));
     $('.testimony-container').html(shape_testimonials(PortfolioData.testimonials.find(e => e.lang === lang).words));
     
+    $('#experiences .heading').html(shape(FormProperties.labels.experiences.header.find(e => e.lang === lang).value));
+    $('#experiences .experiences-row').html(shape_experiences(PortfolioData.experiences, FormProperties.labels.experiences.box.find(e => e.lang === lang), lang));
 }
 
 const shape = (str) => {
@@ -232,6 +233,37 @@ const shape_testimonials = (items) => {
         ;
     });
 
+    return result;
+}
+
+const shape_experiences = (items, labels, lang) => {
+
+    var result = '';
+    console.log(items);
+    items.forEach(e => {
+        let place = e.place.find(k => k.lang === lang);
+        let role = e.role.find(k => k.lang === lang);
+        let achievements = e.achievements.find(k => k.lang === lang);
+        let professions = e.profession.find(k => k.lang === lang);
+
+        result += experience_box.replace('{company_image}', e.company_image)
+            .replace('{company_name}', e.company_name)
+            .replace('{company_city}', place.city)
+            .replace('{company_country}', place.country)
+            .replace('{from_year}', e.period.from_year)
+            .replace('{from_month}', e.period.from_month)
+            .replace('{to_year}', e.period.to_year)
+            .replace('{to_month}', e.period.to_month)
+            .replace('{role}', role.value)
+            .replace('{achievements}', achievements.value)
+            .replace('{highlights}', e.highlights)
+            .replace('{profession}', professions.value)
+            .replace('{tools}', e.tools)
+            .replace('{lb_more}', labels.more)
+            .replace('{lb_tools}', labels.tools)
+            .replace('{lb_profession}', labels.professions)
+        ;
+    });
     return result;
 }
 
@@ -410,6 +442,38 @@ const testimony_box = `
         <span class="author-name"><cite>{author_name},</cite></span>
         <span class="author-role">{author_role},</span>
         <span class="date">{work_period} - </span><abbr title="{company_name}">{company_acronym}</abbr>
+    </div>
+</div>
+`;
+
+const experience_box = `
+<div class="experiences-column">
+    <div class="card-container">
+        <div class="card">
+            <div class="card-front">
+                <img src="resources/img/{company_image}" alt="" srcset="">
+                <div class="company-name"><i class="fa-solid fa-building"></i>{company_name}</div>
+                <div class="company-location"><i class="fa-solid fa-location-pin"></i>{company_city}, {company_country}</div>
+                <div class="duration"><i class="fa-solid fa-calendar-days"></i><span>{from_year}/{from_month} - {to_year}/{to_month}</span></div>
+                <div class="role"><i class="fa-solid fa-user"></i><span>{role}</span></div>
+            </div>
+            <div class="card-back">
+                <div class="top">
+                    <div>{achievements}</div>
+                    <span class="plus">{lb_more} :</span>{highlights}
+                </div>
+                <div class="bottom">
+                    <div class="tools">
+                        <span class="key">{lb_tools}</span>
+                        <span class="value">{tools}</span>
+                    </div>
+                    <div class="profession">
+                        <span class="key">{lb_profession}</span>
+                        <span class="value">{profession}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 `;

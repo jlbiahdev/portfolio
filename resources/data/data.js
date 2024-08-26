@@ -769,12 +769,20 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Chef de Projet` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `Project Manager` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `Managing a team of 6, I modeled (front, middle, back) and implemented (middle, back) a real estate management application for the Kenyan diaspora. The components are :
+                                    <br><br>
+                                    <ul>
+                                        <li>A database <strong>mongodb</strong></li>
+                                        <li>A <strong>REST API</strong> for the back-end</li>
+                                        <li>A <strong>Reactjs</strong> application for the middle</li>
+                                    </ul>
+
+                                    I created the website<a href="https://hektare-immo.com/" target="_blank" rel="noopener" rel="noreferrer">hektare-immo.com</a>`
             },
             {
                 "lang": "FR", 
@@ -791,7 +799,10 @@ export const experiences = [
         ],
         "highlights": [ `ReactJs`, `nodejs`, `mongodb` ],
         "tools": [ `ReactJs`, `CSS3`, `HTML5`, `REST API`, `nodejs`, `Express`, `mongodb`, `Git`, `Github`, `SCRUM`, `KANBAN` ],
-        "profession": ["Gestion Immobilière"]
+        "profession": [ 
+            { "lang": "FR", "value": `Gestion Immobilière` }, 
+            { "lang": "EN", "value": `Real Estate` }
+        ]
     },
     {
         "company_name": "Sogecap S.A.",
@@ -816,12 +827,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Chef de Projet` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `Project Manager` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `Within a team of 7, I was project manager of the front team composed of 3 developers. We have been working on redesigning a calculation launcher application into an <strong>HPC grid</strong> into a <strong>web (ASP MVC)</strong> version. <br>I ensured the agility of the team on a <strong>SCRUM/Kanban</strong> model (backlog, daily meetings, poker planning, review, retro). <br>I was the interface with our software package suppliers (bugs, licences, ...), our system teams (worldwide) and our clients (actuaries).`
             },
             {
                 "lang": "FR", 
@@ -830,7 +841,10 @@ export const experiences = [
         ],
         "highlights": [ `SignalR`, `IndexedDb`, `Microsoft HPC`, `Moody's`, `Addactis` ],
         "tools": [ `.Net 4.8`, `C#`, `js`, `SignalR`, `IndexedDb`, `CSS3`, `HTML5`, `Bootstrap`, `Git`, `GitLab`, `Jenkins`, `SCRUM`, `KANBAN`, `Microsoft HPC`, `Moody's`, `Addactis` ],
-        "profession": [ `Assurance` ]
+        "profession": [ 
+            { "lang": "FR", "value": `Assurance` }, 
+            { "lang": "EN", "value": `Asset Management` }
+        ]
     },
     {
         "company_name": "Bina's Group",
@@ -855,12 +869,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Chef de Projet` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `Project Manager` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `Within a team of 3, I managed the development from scratch of a contact management PDM. A <strong>SQL Server</strong> database and a <strong>.Net Core API</strong> hosted on <strong>Azure</strong>, a <strong>WPF</strong> client app.`
             },
             {
                 "lang": "FR", 
@@ -869,7 +883,10 @@ export const experiences = [
         ],
         "highlights": [ `.Net Core`, `Rest API`, `WPF`, `Azure` ],
         "tools": [ `.Net Fmk 4.8`, `.Net Core 3.1`, `C#`, `T-sql`, `Rest Api`, `Git`, `GitHub`, `Caliburn Micro`, `NUnit`, `Microsoft.Identity`, `Kanban` ],
-        "profession": [ `Logistique`, `Fret` ]
+        "profession": [ 
+            { "lang": "FR", "value": `Logistique, Fret` }, 
+            { "lang": "EN", "value": `Logistics, Freight` }
+        ]
     },
 
     {
@@ -895,12 +912,14 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Spécialiste .Net` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `.Net Specialist` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `<p>As part of a team of 20, I was tech-lead of a group of 4 in charge of redesigning Windows services and <strong>web apis</strong>.</p>
+                <p>I have developed <strong>Nodejs</strong> applications to extract data from the <strong>jira</strong> API and others internal apis.</p>
+                <p>As a tech-lead, I participated in the <strong>(SCRUM)</strong> agile processes, I carried out “code reviews”, I was the interface between my team and the DBAs and the IS</p>`
             },
             {
                 "lang": "FR", 
@@ -911,7 +930,10 @@ export const experiences = [
         ],
         "highlights": [ `NodeJs`, `Ejs`, `Bootstrap`, `Rest Api` ],
         "tools": [ `.Net 4.5`, `C#`, `Nodejs`, `Ejs`, `Express`, `CSS3`, `BootStrap`, `MDBootsrap`, `T-sql`, `Rest Api`, `Git`, `GitHub`, `RabbitMq`, `Datadog`, `Kibana`, `Graylog`, `TeamCity`, `Jenkins`, `Octopus` ],
-        "profession": [ `jeux` ]
+        "profession": [ 
+            { "lang": "FR", "value": `jeux` }, 
+            { "lang": "EN", "value": `Gambling` }
+        ]
     },
     {
         "company_name": "Société Générale IB",
@@ -936,12 +958,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Spécialiste .Net` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `.Net Specialist` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `I worked as a .Net Specialist on the maintenance of the <strong>XOne</strong> application for <strong>Forex Cash</strong>.`
             },
             {
                 "lang": "FR", 
@@ -950,7 +972,10 @@ export const experiences = [
         ],
         "highlights": [ `TDD`, `Méthode Agile Scrum` ],
         "tools": [ `.NET 4.5`, `C#`, `Oracle 12i`, `Git`, `Gerrit`, `Jenkins` ],
-        "profession": [ "Trading Forex Cash" ]
+        "profession": [ 
+            { "lang": "FR", "value": `Trading Forex Cash` }, 
+            { "lang": "EN", "value": `Forex Trading` }
+        ]
     },
     {
         "company_name": "ag insurance",
@@ -975,12 +1000,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Spécialiste .Net` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `.Net Specialist` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `I worked as a .Net Specialist on the evolution of a web application that orders calculations from an <strong>AFM</strong> grid (Algo Financial Modeler). The calculations were previously managed via an Excel tool. The new version is web-oriented and acts as a single access point for the grid.`
             },
             {
                 "lang": "FR", 
@@ -989,7 +1014,10 @@ export const experiences = [
         ],
         "highlights": [ "Méthode Agile Kanban" ],
         "tools": [ `.net 4.5`, `tfs`, `c#`, `javascript`, `jquery`, `css3`, `wcf`, `wf`, `asp.net`, `sql server` ],
-        "profession": [ `iard`, `risque`, `solvabilité` ]
+        "profession": [ 
+            { "lang": "FR", "value": `iard, risque, solvabilité` }, 
+            { "lang": "EN", "value": `iard, risk, solvency` }
+        ]
     },
 
     {
@@ -1015,12 +1043,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Spécialiste .Net` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `.Net Specialist` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `I worked as a .Net Specialist on a project to migrate VB.Net applications to the .Net Framework 4 in preparation for the transition of the CANDRIAM IT application park to the new environment called CORP.`
             },
             {
                 "lang": "FR", 
@@ -1029,7 +1057,10 @@ export const experiences = [
         ],
         "highlights": [ "Méthode Agile Kanban" ],
         "tools": [ `.net 4.5`, `tfs`, `c#`, `soa`, `oracle 12c` ],
-        "profession": [ `asset management`, `référentiel de fonds` ]
+        "profession": [  
+            { "lang": "FR", "value": `asset management, référentiel de fonds` }, 
+            { "lang": "EN", "value": `asset management, fund repository` }
+        ]
     },
     {
         "company_name": "cegc (groupe bpce)",
@@ -1054,12 +1085,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Spécialiste .Net` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `.Net Specialist` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `As part of a team of 4, including 2 developers, I was responsible for developing upgrades to the guarantee and bond management application (two modules, WebForm (ASP.Net) and WinForm, WCF), I wrote technical specification documents, and I was responsible for the architecture and development of new needs.`
             },
             {
                 "lang": "FR", 
@@ -1071,7 +1102,10 @@ export const experiences = [
             `Développement d’une application (WinForm) d’assistance à la fusion de code`
         ],
         "tools": [`net 3.5`, ` 4`, ` c#`, ` asp.net mvc`, ` asp.net`, ` winforms`, ` wcf`, ` ssrs`, `entity framework`, `sql server 2012`],
-        "profession": [ "garantie &amp; cautionnement" ]
+        "profession": [ 
+            { "lang": "FR", "value": `garantie &amp; cautionnement` }, 
+            { "lang": "EN", "value": `guarantee & bond` }
+        ]
     },
     {
         "company_name": "bpce",
@@ -1096,12 +1130,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Spécialiste .Net` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `.Net Specialist` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `I audited a web application with major slowness issues and systematic failures of some use cases that were unexplained by the team in place. I did tracking to detect blocking nodes, explained the reasons for the blocking and proposed solutions.<br/><br/>The experiment lasted three weeks`
             },
             {
                 "lang": "FR", 
@@ -1110,7 +1144,10 @@ export const experiences = [
         ],
         "highlights": [ `` ],
         "tools": [ `.net 3.5`, `c#`, `asp.net`, `entity framework`, `sql server 2008` ],
-        "profession": [ `banque` ]
+        "profession": [  
+            { "lang": "FR", "value": `banque` }, 
+            { "lang": "EN", "value": `banking` }
+        ]
     },
 
     {
@@ -1136,12 +1173,18 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Spécialiste .Net` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `.Net Specialist` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `"Within a team of three (3) people on the <strong>Solvency II</strong> scope, I created a <strong>VSTO</strong> module for validating input data."
+<div class="centered">***</div>
+"Within a team of six (6) people, on the balance of payments, I did TMA on the Balance of Payments application."
+<div class="centered">***</div>
+"Within a team of three (3) people, I developed from scratch a mutual fund securities holding application."
+<div class="centered">***</div>
+"Within a team of three (3) people, I developed from scratch a securities referencing application."`
             },
             {
                 "lang": "FR", 
@@ -1156,7 +1199,10 @@ export const experiences = [
         ],
         "highlights": [ `` ],
         "tools": [ `sql server 2008 r2`, `ssis`, `ssas`, `c# 3.5-4.5`, `asp.net`, `asp.net mvc`, `winforms`, `vsto`, `visual source safe`, `kanban`, `windows 7`, `iis`, `uml` ],
-        "profession": [ `banque` ]
+        "profession": [ 
+            { "lang": "FR", "value": `banque` }, 
+            { "lang": "EN", "value": `banking` }
+        ]
     },
     {
         "company_name": "credit agricole cib",
@@ -1181,12 +1227,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Spécialiste .Net` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `.Net Specialist` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `“As part of a team of 3 people working on activities dedicated to counterparty risk, I worked on the integration of transaction data, their formatting and their delivery to the RISK teams via a Winform client developed by me”`
             },
             {
                 "lang": "FR", 
@@ -1195,7 +1241,10 @@ export const experiences = [
         ],
         "highlights": [ `Développement d’une application Web de suivi du support quotidien`, `Méthode agile KABAN` ],
         "tools": [ `c# 3.5`, `winform`, `asp.net`, `sql server 2008`, `ssis`, `ssas`, `linq`, `windows xp`, `uml`, `iis`, `visual source safe`, `kanban` ],
-        "profession": [ `finance`, `risque` ]
+        "profession": [ 
+            { "lang": "FR", "value": `finance, risque` }, 
+            { "lang": "EN", "value": `finance, risk` }
+        ]
     },
     {
         "company_name": "societe generale cib",
@@ -1220,12 +1269,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `Spécialiste .Net` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `.Net Specialist` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `“Within a team of 5 people (ATG) on activities dedicated to the American market and in particular to American government bonds (GOVIES). SCRUM pilot project within the Distribution Platform team”`
             },
             {
                 "lang": "FR", 
@@ -1234,7 +1283,10 @@ export const experiences = [
         ],
         "highlights": [ `` ],
         "tools": [ `windows xp`, `uml`, `iis`, `oracle 10i`, `c# 3.5`, `wcf`, `xml`, `tibco rdv`, `ion`, `tradeweb`, `bloomberg`, `marketaxess`, `clearcase`, `svn`, `cruisecontrol`, `scrum` ],
-        "profession": [ `finance`, `bonds gouvernementaux` ]
+        "profession": [ 
+            { "lang": "FR", "value": `finance, bonds gouvernementaux` }, 
+            { "lang": "EN", "value": `finance, government bonds` }
+        ]
     },
 
     
@@ -1261,12 +1313,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `ingenieur d’etudes et developpements` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `Studies & Development Engineer` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `“As part of a team of 5 people, I developed and maintained a synergy of applications aimed at negotiating financial products.”`
             },
             {
                 "lang": "FR", 
@@ -1275,7 +1327,10 @@ export const experiences = [
         ],
         "highlights": [ `` ],
         "tools": [ `uml`, `iis`, `sybase ase sql`, `c# 3.5`, `webservices`, `xml`, `microsoft message queuing`, `tibco rdv`, `infragistics 9.0`, `datasynapse gridserver`, `temps reel`, `synergie` ],
-        "profession": [ `produits dérivés`, `sophis`, `otc` ]
+        "profession": [ 
+            { "lang": "FR", "value": `produits dérivés, sophis, otc` }, 
+            { "lang": "EN", "value": `derivatives, sophis, otc` }
+        ]
     },
     {
         "company_name": "itron",
@@ -1300,12 +1355,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `ingenieur d’etudes et developpements` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `Studies & Development Engineer` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `“As part of a team of 4 people, I worked on the development of an application for configuring and maintaining industrial and domestic electricity meters.”`
             },
             {
                 "lang": "FR", 
@@ -1314,7 +1369,10 @@ export const experiences = [
         ],
         "highlights": [ `` ],
         "tools": [ `c# 3.5 (linq)`, `visual studio.net 3.5`, `infragistics 8.2`, `xml`, `visual source safe` ],
-        "profession": [ `industrie` ]
+        "profession": [ 
+            { "lang": "FR", "value": `industrie` }, 
+            { "lang": "EN", "value": `industry` }
+        ]
     },
     {
         "company_name": "newedge group",
@@ -1339,12 +1397,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `administrateur / développeur d’applications` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `Administrator / Application Developer` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `As part of a team of 2 people, I carried out the integration and development of applications, database administration, administration of a CRYSTAL REPORT XI server and carried out operational monitoring.`
             },
             {
                 "lang": "FR", 
@@ -1353,7 +1411,10 @@ export const experiences = [
         ],
         "highlights": [ `` ],
         "tools": [ `apache tomcat`, `iis`, `mssql server 2000-2005`, `sql`, `t/sql`, `visual studio.net (framework 2.0)`, `c# 2.0`, `asp.net 2.0`, `crystal report xi`, `sql`, `t/sql`, `visual source safe` ],
-        "profession": [ `finance`, `risque` ]
+        "profession": [ 
+            { "lang": "FR", "value": `finance, risque` }, 
+            { "lang": "EN", "value": `finance, risk` }
+        ]
     },
 
     {
@@ -1379,12 +1440,12 @@ export const experiences = [
         },
         "role": [
             { "lang": "FR", "value": `ingenieur d’etudes` }, 
-            { "lang": "EN", "value": `` }, 
+            { "lang": "EN", "value": `Studies & Development Engineer` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": ``
+                "value": `As part of a team of 2 people, I developed product management software (PDM) and WorkFlow software for monitoring production launches.`
             },
             {
                 "lang": "FR", 
@@ -1393,6 +1454,9 @@ export const experiences = [
         ],
         "highlights": [ `` ],
         "tools": [ `c#`, `asp.net`, `vb.net`, `visual studio.net (framework 2.0)`, `mysql 5`, `sql`, `cristal report`, `sql`, `merise`, `visual source safe` ],
-        "profession": [ `mode` ]
+        "profession": [ 
+            { "lang": "FR", "value": `mode` }, 
+            { "lang": "EN", "value": `fashion` }
+        ]
     },
 ];
