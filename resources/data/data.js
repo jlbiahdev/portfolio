@@ -900,9 +900,13 @@ export const experiences = [
         "achievements": [
             {
                 "lang": "EN", 
-                "value": `<p>Within a team of 3, I managed the development from scratch of a PDM for contact management. A <span class="bold">SQL Server</span> database and a <span class="bold">.Net Core API</span> hosted on <span class="bold">Azure</span>, a <span class="bold">WPF</span> client. <span class="bold">Github</span> for CI/CD<br></p>
+                "value": `<p>Within a team of 3, I managed the development from scratch of a PDM for managing contacts distributed as follows:<p>
+<p><ul><li>A <span class="bold">SQL Server</span> database</li>
+<li>A <span class="bold">.Net Core API</span> hosted on <span class="bold">Azure</span></li>
+<li>A <span class="bold">WPF</span> client.</li>
+<li><span class="bold">Github</span> for CI/CD</li></ul></p>
 <span class="bold">As a developer:</span>
-<p><ul><li>I created the solution architecture<span class="bold">(.Net Core, Rest API, WPF, Azure)</span></li>
+<p><ul><li>I created the architecture of the solution<span class="bold">(.Net Core, Rest API, WPF, Azure)</span></li>
 <li>I created the database <span class="bold">(SQL Server)</span> and some stored procedures and views</li>
 <li>I implemented the ORM <span class="bold">(Dapper)</span></li></ul></p>`
             },
@@ -910,8 +914,8 @@ export const experiences = [
                 "lang": "FR", 
                 "value": `<p>Au sein d'une équipe de 3, j’ai managé le développement ex-nihilo d'un PDM de gestion de contacts distribué comme suit:<p>
 <p><ul><li>Une base de données <span class="bold">SQL Server</span></li>
-<li>une <span class="bold">API .Net Core</span> hébergées sur <span class="bold">Azure</span></li>
-<li>un client <span class="bold">WPF</span>.</li>
+<li>Une <span class="bold">API .Net Core</span> hébergée sur <span class="bold">Azure</span></li>
+<li>Un client <span class="bold">WPF</span>.</li>
 <li><span class="bold">Github</span> pour la CI/CD</li></ul></p>
 <span class="bold">En tant que développeur :</span>
 <p><ul><li>J’ai créé l’architecture de la solution<span class="bold">(.Net Core, Rest API, WPF, Azure)</span></li>
