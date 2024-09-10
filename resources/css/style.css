@@ -56,6 +56,13 @@ section {
     background: #fff;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 1rem;
+}
 /* ---------------------------------------------- header ------------------------------------------ */
 
 .header {
@@ -826,11 +833,17 @@ blockquote::before {
 .card-back .top {
     height: 70%;
     padding: 3rem;
+    font-size: 1.2rem;
 }
 
 .card-back .top a {
-    color: #dd4b39;
-    font-size: 1.8rem;
+    color: #ffc300;
+    font-weight: bold;
+}
+
+.card-back .top a:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .card-back .top div {
@@ -849,7 +862,7 @@ blockquote::before {
 
 .card-back .plus {
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: bold;
     text-transform: capitalize;
     margin-right: 1rem;
 }

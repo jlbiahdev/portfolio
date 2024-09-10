@@ -460,7 +460,7 @@ const experience_box = `
             <div class="card-back">
                 <div class="top">
                     <div>{achievements}</div>
-                    <span class="plus">{lb_more} :</span>{highlights}
+                    {highlights}
                 </div>
                 <div class="bottom">
                     <div class="tools">

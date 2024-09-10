@@ -774,30 +774,36 @@ export const experiences = [
         "achievements": [
             {
                 "lang": "EN", 
-                "value": `Managing a team of 6, I modeled (front, middle, back) and implemented (middle, back) a real estate management application for the Kenyan diaspora. The components are :
-                                    <br><br>
-                                    <ul>
-                                        <li>A database <strong>mongodb</strong></li>
-                                        <li>A <strong>REST API</strong> for the back-end</li>
-                                        <li>A <strong>Reactjs</strong> application for the middle</li>
-                                    </ul>
-
-                                    I created the website<a href="https://hektare-immo.com/" target="_blank" rel="noopener" rel="noreferrer">hektare-immo.com</a>`
+                "value": `<p>Managing a team of 6, I modeled (front, middle, back) and implemented (middle, back) a property management application for the Kenyan diaspora. The components are:</p>
+                    <p><ul><li>A database</li>
+                    <li>A <span class="bold">REST API</span> for the back-end</li>
+                    <li>A <span class="bold">Reactjs</span> application for the middle</li>
+                    <li>The website <a href="https://hektare-immo.com/" target="_blank" rel="noopener" rel="noreferrer">hektare-immo.com</a></li>
+                    </ul></p>
+                    <span class="bold">As a developer:</span>
+                    <p><ul><li>Participated in the implementation of the <span class="bold">mongodb</span></li> database
+                    <li>I created controllers for the <span class="bold">API (OpenApi, Controller, Service, Repository)</span></li>
+                    <li>Developed views for the ReactJs application</li>
+                    <li>I created the website <span class="bold">hektare-immo.com (html5, css3, jQuery)</span></li>
+                    </ul></p>`
             },
             {
                 "lang": "FR", 
-                "value": `En gérant une équipe de 6, j’ai modélisé (front, middle, back) et implémenté (middle, back) une application de gestion immobilière à destination de la diaspora Kenyane. Les composantes sont :
-                                    <br><br>
-                                    <ul>
-                                        <li>Une base de données <strong>mongodb</strong></li>
-                                        <li>Une <strong>REST API</strong> pour back-end</li>
-                                        <li>Une application <strong>Reactjs</strong> pour le middle</li>
-                                    </ul>
-
-                                    J'ai crée le site web <a href="https://hektare-immo.com/" target="_blank" rel="noopener" rel="noreferrer">hektare-immo.com</a>`
+                "value": `<p>En gérant une équipe de 6, j’ai modélisé (front, middle, back) et implémenté (middle, back) une application de gestion immobilière à destination de la diaspora Kenyane. Les composantes sont :</p>
+                    <p><ul><li>Une base de données</li>
+                        <li>Une <span class="bold">REST API</span> pour back-end</li>
+                        <li>Une application <span class="bold">Reactjs</span> pour le middle</li>
+                        <li>Le site web <a href="https://hektare-immo.com/" target="_blank" rel="noopener" rel="noreferrer">hektare-immo.com</a></li>
+                    </ul></p>
+                    <span class="bold">En tant que développeur :</span>
+                    <p><ul><li>Participé à la mise en place de la base de données <span class="bold">mongodb</span></li>
+                        <li>J'ai créé des controleurs pour l'API <span class="bold">(OpenApi, Controller, Service, Repository)</span></li>
+                        <li>Développé des vues pour l'application ReactJs</li>
+                        <li>J'ai crée le site web <span class="bold">hektare-immo.com (html5, css3, jQuery)</span></li>
+                    </ul></p>`
             }
         ],
-        "highlights": [ `ReactJs`, `nodejs`, `mongodb` ],
+        "highlights": [ ],
         "tools": [ `ReactJs`, `CSS3`, `HTML5`, `REST API`, `nodejs`, `Express`, `mongodb`, `Git`, `Github`, `SCRUM`, `KANBAN` ],
         "profession": [ 
             { "lang": "FR", "value": `Gestion Immobilière` }, 
@@ -832,15 +838,35 @@ export const experiences = [
         "achievements": [
             {
                 "lang": "EN", 
-                "value": `Within a team of 7, I was project manager of the front team composed of 3 developers. We have been working on redesigning a calculation launcher application into an <strong>HPC grid</strong> into a <strong>web (ASP MVC)</strong> version. <br>I ensured the agility of the team on a <strong>SCRUM/Kanban</strong> model (backlog, daily meetings, poker planning, review, retro). <br>I was the interface with our software package suppliers (bugs, licences, ...), our system teams (worldwide) and our clients (actuaries).`
+                "value": `<p>Within a team of 7, I was project manager of the front team composed of 3 developers. We worked on the redesign of a calculation launch application to an <span class="bold">HPC grid</span> in a <span class="bold">web version (ASP MVC)</span>.</p>
+<span class="bold">As a project manager:</span>
+<p><ul><li>I ensured the agility of the team on a <span class="bold">SCRUM/Kanban</span> model.</li>
+<li>I was the interface with our customers (actuaries)</li>
+<li>I was the interface with our software suppliers (bugs, licenses, ...).</li>
+<li>I was the interface with the IT department (devops, servers, HPC, ...).</li></ul></p>
+<span class="bold">As a developer:</span>
+<p><ul><li>Architecture review + design patterns <span class="bold">(GoF, SOLID, Craft)</span>.</li>
+<li>Setting up TUs <span class="bold">(NUnit)</span> and code coverage.</li>
+<li>Monitoring review (backend, <span class="bold">real-time messages</span> HPC)</li>
+<li>Creation of the Monitoring view <span class="bold">(SignalR, Json, Js, JQuery, IndexedDb)</span>.</li></ul></p>`
             },
             {
                 "lang": "FR", 
-                "value": `Au sein d'une équipe de 7, j’étais chef de projet de l’équipe front composée de 3 développeurs.  Nous avons travaillé sur la refonte d'une application de lancement de calculs vers une <strong>grille HPC</strong> en une version <strong>web (ASP MVC)</strong>. <br>J'ai assuré l'agilité de l'équipe sur un modèle <strong>SCRUM/Kanban</strong> (backlog, daily meetings, poker planning, review, retro). <br>J'étais l'interface avec nos fournisseurs de progiciels (bugs, licences, ...), nos équipes système (worldwide) et nos clients (actuaires).`
+                "value": `<p>Au sein d'une équipe de 7, j’étais chef de projet de l’équipe front composée de 3 développeurs. Nous avons travaillé sur la refonte d'une application de lancement de calculs vers une <span class="bold">grille HPC</span> en une version <span class="bold">web (ASP MVC)</span>.</p>
+					<span class="bold">En tant que chef de projet :</span>
+                    <p><ul><li>J'ai assuré l'agilité de l'équipe sur un modèle <span class="bold">SCRUM/Kanban</span>.</li>
+                    <li>J'étais l'interface avec nos nos clients (actuaires)</li>
+                    <li>J'étais l'interface avec nos fournisseurs de progiciels (bugs, licences, ...).</li>
+                    <li>J'étais l'interface avec avec la DSI (devops, serveurs, HPC, …).</li></ul></p>
+                    <span class="bold">En tant que développeur :</span>
+                    <p><ul><li>Revue de l’architecture + design patterns <span class="bold">(GoF, SOLID, Craft)</span>.</li>
+                    <li>Mise en place des TU <span class="bold">(NUnit)</span> et couverture de code.</li>
+                    <li>Revue du Monitoring (backend, <span class="bold">messages temps réel</span> HPC)</li>
+                    <li>Création de la vue de Monitoring <span class="bold">(SignalR, Json, Js, JQuery, IndexedDb)</span>.</li></ul></p>`
             }
         ],
-        "highlights": [ `SignalR`, `IndexedDb`, `Microsoft HPC`, `Moody's`, `Addactis` ],
-        "tools": [ `.Net 4.8`, `C#`, `js`, `SignalR`, `IndexedDb`, `CSS3`, `HTML5`, `Bootstrap`, `Git`, `GitLab`, `Jenkins`, `SCRUM`, `KANBAN`, `Microsoft HPC`, `Moody's`, `Addactis` ],
+        "highlights": [ ],
+        "tools": [ `.Net 4.8`, `C#`, `js`, `jQuery, `, `SignalR`, `IndexedDb`, `CSS3`, `HTML5`, `Bootstrap`, `Git`, `GitLab`, `Jenkins`, `SCRUM`, `KANBAN`, `Microsoft HPC`, `Moody's`, `Addactis` ],
         "profession": [ 
             { "lang": "FR", "value": `Assurance` }, 
             { "lang": "EN", "value": `Asset Management` }
@@ -874,15 +900,27 @@ export const experiences = [
         "achievements": [
             {
                 "lang": "EN", 
-                "value": `Within a team of 3, I managed the development from scratch of a contact management PDM. A <strong>SQL Server</strong> database and a <strong>.Net Core API</strong> hosted on <strong>Azure</strong>, a <strong>WPF</strong> client app.`
+                "value": `<p>Within a team of 3, I managed the development from scratch of a PDM for contact management. A <span class="bold">SQL Server</span> database and a <span class="bold">.Net Core API</span> hosted on <span class="bold">Azure</span>, a <span class="bold">WPF</span> client. <span class="bold">Github</span> for CI/CD<br></p>
+<span class="bold">As a developer:</span>
+<p><ul><li>I created the solution architecture<span class="bold">(.Net Core, Rest API, WPF, Azure)</span></li>
+<li>I created the database <span class="bold">(SQL Server)</span> and some stored procedures and views</li>
+<li>I implemented the ORM <span class="bold">(Dapper)</span></li></ul></p>`
             },
             {
                 "lang": "FR", 
-                "value": `Au sein d'une équipe de 3, j’ai managé le développement ex-nihilo un PDM de gestion de contacts. Une base de données <strong>SQL Server</strong> et une <strong>API .Net Core</strong> hébergées sur <strong>Azure</strong>, un client <strong>WPF</strong>. <strong>Github</strong> pour la CI/CD`
+                "value": `<p>Au sein d'une équipe de 3, j’ai managé le développement ex-nihilo d'un PDM de gestion de contacts distribué comme suit:<p>
+<p><ul><li>Une base de données <span class="bold">SQL Server</span></li>
+<li>une <span class="bold">API .Net Core</span> hébergées sur <span class="bold">Azure</span></li>
+<li>un client <span class="bold">WPF</span>.</li>
+<li><span class="bold">Github</span> pour la CI/CD</li></ul></p>
+<span class="bold">En tant que développeur :</span>
+<p><ul><li>J’ai créé l’architecture de la solution<span class="bold">(.Net Core, Rest API, WPF, Azure)</span></li>
+<li>J’ai créé la base de données <span class="bold">(SQL Server)</span> et quelques procédures stockées et vues</li>
+<li>J’ai mis en place l’ORM <span class="bold">(Dapper)</span></li></ul></p>`
             }
         ],
-        "highlights": [ `.Net Core`, `Rest API`, `WPF`, `Azure` ],
-        "tools": [ `.Net Fmk 4.8`, `.Net Core 3.1`, `C#`, `T-sql`, `Rest Api`, `Git`, `GitHub`, `Caliburn Micro`, `NUnit`, `Microsoft.Identity`, `Kanban` ],
+        "highlights": [ ],
+        "tools": [ `.Net Core`, `C#`,`Dapper`, `T-sql`, `Rest Api`, `Git`, `GitHub`, `Caliburn Micro`, `NUnit`, `Microsoft.Identity`, `Kanban` ],
         "profession": [ 
             { "lang": "FR", "value": `Logistique, Fret` }, 
             { "lang": "EN", "value": `Logistics, Freight` }
@@ -917,18 +955,34 @@ export const experiences = [
         "achievements": [
             {
                 "lang": "EN", 
-                "value": `<p>As part of a team of 20, I was tech-lead of a group of 4 in charge of redesigning Windows services and <strong>web apis</strong>.</p>
-                <p>I have developed <strong>Nodejs</strong> applications to extract data from the <strong>jira</strong> API and others internal apis.</p>
-                <p>As a tech-lead, I participated in the <strong>(SCRUM)</strong> agile processes, I carried out “code reviews”, I was the interface between my team and the DBAs and the IS</p>`
+                "value": `<p>Within a team of 20, I was the tech-lead of a group of 4 in charge of redesigning Windows services and <span class="bold">REST APIs</span>.</p>
+                    <span class="bold">As a tech-lead:</span>
+                    <p><ul><li>I participated in agile processes <span class="bold">(SCRUM)</span>,</li>
+                    <li>I carried out "code reviews",</li>
+                    <li>I was the interface between my team and the DBAs and the IS</li></li></ul></p>
+                    <span class="bold">As a developer:</span>
+                    <p><ul><li>I developed applications <span class="bold">(CSS3, Mustache, EJS, Nodejs)</span> to extract data from the API <span class="bold">Jira</span> and internal APIs.</li>
+                    <li>I created APIs that received messages from Brokers in real time of matches <span class="bold">(Graylog, RabbitMq)</span></li>
+                    <li>I created stored procedures and set up the <span class="bold">ORM</span></li>
+                    <li>I monitored the application <span class="bold">(Kibana, Datadog)</span></li>
+                    <li>I published versions <span class="bold">(TeamCity, Jenkins, Octopus)</span> and performed MEP</li></ul></p>`
             },
             {
                 "lang": "FR", 
-                "value": `<p>Au sein d’une équipe de 20, j’étais tech-lead d’un groupe de 4 en charge de la refonte de services windows et de <strong>web apis</strong>.</p>
-                <p>J’ai développé des applications <strong>Nodejs</strong> pour extraire des données de l’api<strong>jira</strong> et d’apis internes.</p>
-                <p>En tant que tech-lead, j'ai participé aux process agile <strong>(SCRUM)</strong>, j’effectuais des « code reviews », j’étais l’interface entre mon équipe et les DBA et le SI</p>`
+                "value": `<p>Au sein d’une équipe de 20, j’étais tech-lead d’un groupe de 4 en charge de la refonte de services windows et d'<span class="bold">APIs REST</span>.</p>
+                    <span class="bold">En tant que tech-lead :</span>
+                    <p><ul><li>j'ai participé aux process agile <span class="bold">(SCRUM)</span>,</li>
+                    <li>j’effectuais des « code reviews »,</li>
+                    <li>j’étais l’interface entre mon équipe et les DBA et le SI</li></li></ul></p>
+                    <span class="bold">En tant que développeur :</span>
+                    <p><ul><li>J’ai développé des applications <span class="bold">(CSS3, Mustache, EJS, Nodejs)</span> pour extraire des données de l’api <span class="bold">Jira</span> et d’apis internes.</li>
+                    <li>J’ai créé des API qui recevaient des messages des Brokers en temps réels des matches <span class="bold">(Graylog, RabbitMq)</span></li>
+                    <li>J’ai créé des procédures stockées et mis en place l’<span class="bold">ORM</span></li>
+                    <li>J’ai monitoré l’application <span class="bold">(Kibana, Datadog)</span></li>
+                    <li>J’ai publié des versions <span class="bold">(TeamCity, Jenkins, Octopus)</span> et effectué des MEP</li></ul></p>`
             }
         ],
-        "highlights": [ `NodeJs`, `Ejs`, `Bootstrap`, `Rest Api` ],
+        "highlights": [ ],
         "tools": [ `.Net 4.5`, `C#`, `Nodejs`, `Ejs`, `Express`, `CSS3`, `BootStrap`, `MDBootsrap`, `T-sql`, `Rest Api`, `Git`, `GitHub`, `RabbitMq`, `Datadog`, `Kibana`, `Graylog`, `TeamCity`, `Jenkins`, `Octopus` ],
         "profession": [ 
             { "lang": "FR", "value": `jeux` }, 
@@ -963,14 +1017,18 @@ export const experiences = [
         "achievements": [
             {
                 "lang": "EN", 
-                "value": `I worked as a .Net Specialist on the maintenance of the <strong>XOne</strong> application for <strong>Forex Cash</strong>.`
+                "value": `<p>I worked as a .Net Specialist on the maintenance of the <span class="bold">XOne</span> application for <span class="bold">Forex Cash</span>.</p>
+                            <p>I worked mainly on the redesign of unit tests <span class="bold">(C#, Nunit, Moq)</span> and the creation of stored procedures <span class="bold">(Pl SQL)</span> and functionalities on the backend.</p>
+                            <p>We worked in Agile mode <span class="bold">SCRUM</span></p>`
             },
             {
                 "lang": "FR", 
-                "value": `Je suis intervenu en tant que Spécialiste .Net sur la maintenance de l’application <strong>XOne</strong> pour le <strong>Forex Cash</strong>.`
+                "value": `<p>Je suis intervenu en tant que Spécialiste .Net sur la maintenance de l’application <span class="bold">XOne</span> pour le <span class="bold">Forex Cash</span>.</p>
+                    <p>J’ai travaillé majoritairement sur la refonte des tests unitaires <span class="bold">(C#, Nunit, Moq)</span> et la création de procédures stockées <span class="bold">(Pl SQL)</span> et fonctionnalités sur le backend.</p>
+                    <p>Nous travaillions en mode Agile <span class="bold">SCRUM</span></p>`
             }
         ],
-        "highlights": [ `TDD`, `Méthode Agile Scrum` ],
+        "highlights": [ ],
         "tools": [ `.NET 4.5`, `C#`, `Oracle 12i`, `Git`, `Gerrit`, `Jenkins` ],
         "profession": [ 
             { "lang": "FR", "value": `Trading Forex Cash` }, 
@@ -1005,15 +1063,23 @@ export const experiences = [
         "achievements": [
             {
                 "lang": "EN", 
-                "value": `I worked as a .Net Specialist on the evolution of a web application that orders calculations from an <strong>AFM</strong> grid (Algo Financial Modeler). The calculations were previously managed via an Excel tool. The new version is web-oriented and acts as a single access point for the grid.`
+                "value": `<p>I worked as a .Net Specialist on the evolution of a web application that orders calculations from an <span class="bold">AFM</span> grid (Algo Financial Modeler). The calculations were previously managed via an Excel tool. The new version is web-oriented and acts as a single access point for the grid.</p>
+                    <span class="bold">As a developer:</span>
+                    <p><ul><li>Adding new features to the backend <span class="bold">(WCF)</span></li>
+                    <li>Creating new screens <span class="bold">(MVC, JQuery, CSS)</span></li></ul></p>
+                    <p>We worked in Agile mode <span class="bold">(SCRUM, Kanban)</span></p>`
             },
             {
                 "lang": "FR", 
-                "value": `Je suis intervenu en tant que Spécialiste .Net sur l'évolution d'une application web qui commande des calculs à une grille <strong>AFM</strong> (Algo Financial Modeler). Les calculs étaient auparavant gérés via un outil Excel. La nouvelle version est orientée Web et agit comme point d'accès unique pour la grille.`
+                "value": `<p>Je suis intervenu en tant que Spécialiste .Net sur l'évolution d'une application web qui commande des calculs à une grille <span class="bold">AFM</span> (Algo Financial Modeler). Les calculs étaient auparavant gérés via un outil Excel. La nouvelle version est orientée Web et agit comme point d'accès unique pour la grille.</p>
+                    <span class="bold">En tant que développeur :</span>
+                    <p><ul><li>Ajout de nouvelles fonctionnalités sur le backend <span class="bold">(WCF)</span></li>
+                    <li>Création de nouveaux écrans <span class="bold">(MVC, JQuery, CSS)</span></li></ul></p>
+                    <p>Nous travaillions en mode Agile <span class="bold">(SCRUM, Kanban)</span></p>`
             }
         ],
-        "highlights": [ "Méthode Agile Kanban" ],
-        "tools": [ `.net 4.5`, `tfs`, `c#`, `javascript`, `jquery`, `css3`, `wcf`, `wf`, `asp.net`, `sql server` ],
+        "highlights": [ ],
+        "tools": [ `.net 4.5`, `tfs`, `C#`, `MVC`, `js`, `jquery`, `css3`, `wcf`, `wf`, `sql server`, `Kanban` ],
         "profession": [ 
             { "lang": "FR", "value": `iard, risque, solvabilité` }, 
             { "lang": "EN", "value": `iard, risk, solvency` }
@@ -1048,15 +1114,39 @@ export const experiences = [
         "achievements": [
             {
                 "lang": "EN", 
-                "value": `I worked as a .Net Specialist on a project to migrate VB.Net applications to the .Net Framework 4 in preparation for the transition of the CANDRIAM IT application park to the new environment called CORP.`
+                "value": `<p>I worked as a .Net Specialist on a project to migrate VB.Net applications to the .Net Framework 4 in order to move the IT CANDRIAM application park to the new environment called CORP.</p>
+<span class="bold">As an architect:</span>
+<p><ul><li>Referencing applications</li>
+<li>Studying dependencies</li>
+<li>Producing KPIs</li>
+<li>Migrating batches to comply with new architecture standards.</li></ul>
+</p>
+<span class="bold">As a developer:</span>
+<p><ul><li>Translating batches from old versions of <span class="bold">VB, VB.Net</span> to <span class="bold">C#, .NET 4 Framework</span></li>
+<li>Development in <span class="bold">mode class="bold">TDD</span></li>
+<li>Writing test plans</li>
+<li>Deployment and Testing</li></ul></p>
+<p>I worked alone, but the team was Agile <span class="bold">(SCRUM, Kanban)</span></p>`
             },
             {
                 "lang": "FR", 
-                "value": `Je suis intervenu en tant que Spécialiste .Net sur un projet de migration d'applications VB.Net vers le .Net Framework 4 en vue du passage du parc d'application de l'IT CANDRIAM vers le nouvel environnement dénommé CORP.`
+                "value": `<p>Je suis intervenu en tant que Spécialiste .Net sur un projet de migration d'applications VB.Net vers le .Net Framework 4 en vue du passage du parc d'application de l'IT CANDRIAM vers le nouvel environnement dénommé CORP.</p>
+<span class="bold">En tant qu'architecte :</span>
+<p><ul><li>Référencement des applications</li>
+<li>Etude des dépendances</li>
+<li>Production de KPI</li>
+<li>Migration de batches pour mise en conformité aux nouveaux standards architecture.</li></ul>
+</p>
+<span class="bold">En tant que développeur :</span>
+<p><ul><li>Traduire des batches d'anciennes versions de <span class="bold">VB, VB.Net</span>  vers du <span class="bold">C#, .NET 4 Framework</span></li>
+<li>Développement en mode <span class="bold">TDD</span></li>
+<li>Rédaction de plans de tests</li>
+<li>Déploiement et Tests</li></ul></p>
+<p>Je travaillais seul, mais l'équipe était Agile <span class="bold">(SCRUM, Kanban)</span></p>`
             }
         ],
-        "highlights": [ "Méthode Agile Kanban" ],
-        "tools": [ `.net 4.5`, `tfs`, `c#`, `soa`, `oracle 12c` ],
+        "highlights": [ ],
+        "tools": [ `.net 4.5`, `tfs`, `c#`, `NUnit`, `soa`, `oracle 12c` ],
         "profession": [  
             { "lang": "FR", "value": `asset management, référentiel de fonds` }, 
             { "lang": "EN", "value": `asset management, fund repository` }
@@ -1178,7 +1268,7 @@ export const experiences = [
         "achievements": [
             {
                 "lang": "EN", 
-                "value": `"Within a team of three (3) people on the <strong>Solvency II</strong> scope, I created a <strong>VSTO</strong> module for validating input data."
+                "value": `"Within a team of three (3) people on the <span class="bold">Solvency II</span> scope, I created a <span class="bold">VSTO</span> module for validating input data."
 <div class="centered">***</div>
 "Within a team of six (6) people, on the balance of payments, I did TMA on the Balance of Payments application."
 <div class="centered">***</div>
@@ -1188,7 +1278,7 @@ export const experiences = [
             },
             {
                 "lang": "FR", 
-                "value": `« Au sein d'une équipe de trois (3) personnes sur le périmètre <strong>Solvency II</strong>, j'ai crée un module <strong>VSTO</strong> de validation des données d'entrée. »
+                "value": `« Au sein d'une équipe de trois (3) personnes sur le périmètre <span class="bold">Solvency II</span>, j'ai crée un module <span class="bold">VSTO</span> de validation des données d'entrée. »
                                     <br><center>***</center><br>
                                     « Au sein d’une équipe de six (6) personnes, sur la balance de paiement, j’ai fait de la TMA sur l'application Balance de Paiement. »
                                     <br><center>***</center><br>
