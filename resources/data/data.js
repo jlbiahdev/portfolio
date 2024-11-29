@@ -10,8 +10,9 @@ export const identity = {
             "about": `Spécialiste C# (blazor -wasm-, webpage, webform, winform) en particulier et dans le framework .Net en général (wcf, wf). <br>
                         Spécialiste frontend web (ReactJs, VueJs, nodejs et javascript, html5 & CSS3). <br>
                         Spécialiste développements de bases de données relationnelles notamment MS SQL Server, mais aussi
-                        Oracle, Sybase, MySQL. Possède diverses expériences front-end, middle et back-end ainsi que des
-                        expériences en BI (IS, RS, AS). <br><br>        
+                        Oracle, Sybase, MySQL. <br>
+                        Possède diverses expériences front-end, middle et back-end ainsi que des
+                        expériences en BI (IS, RS, AS). <br><br>
                         Fait preuve d'une grande résistance au stress et sait respecter les délais et les objectifs fixés
                         tout en proposant un travail de grande qualité.`,
             "qualities": [ "Possède une capacité d'analyse et un réel souci du détail", `Possède une certaine expérience en gestion d'équipes`, `Dédié à faire avancer les projets qui lui sont confiés, ainsi qu'à garantir un travail de qualité et une livraison dans les temps`, `Responsable et autonome`, `Aptitude à maîtriser rapidement de nouveaux packages logiciels et de nouvelles technologies.` ],
@@ -20,9 +21,13 @@ export const identity = {
             "lang": "EN",
             "profile": `Highly qualified software development professional with over 17 years of experience in software design, development, and integration`,
             "about": `C # specialist (blazor -wasm-, webpage, webform, winform) in particular and in
-                            the .Net framework in general (wcf, wf). Specialist in relational database development, notably MS
-                            SQL Server, but also Oracle, Sybase, MySQL. Has various front-end, middle and back-end experiences
-                            as well as experiences in BI (IS, RS, AS). Demonstrates a great resistance to stress and knows how
+                            the .Net framework in general (wcf, wf).  <br>
+                        Web Specialist (ReactJs, VueJs, nodejs et javascript, html5 & CSS3). <br>
+                        Specialist in relational database development, notably MS
+                            SQL Server, but also Oracle, Sybase, MySQL.<br>
+                        Has various front-end, middle and back-end experiences
+                            as well as experiences in BI (IS, RS, AS).<br>
+                        Demonstrates a great resistance to stress and knows how
                             to meet deadlines and set objectives while offering high quality work.`,
             "qualities": [ `Has analytical skills and a real attention to detail`, `Has some experience in team management`, `Dedicated to advancing the projects entrusted to it`, `as well as to guaranteeing quality work and on-time delivery`, `Responsible and autonomous`, `Ability to quickly master new software packages and new hardware technologies.` ],
         }
@@ -40,8 +45,8 @@ export const skills = [
             },
             {
                 "id": "htmlcss",
-                "topics": "html5, css3",
-                "workmanship": "80",
+                "topics": "html5, css3, Tailwind",
+                "workmanship": "90",
             },
             {
                 "id": "nodejs",
@@ -197,6 +202,21 @@ export const skills = [
                 "id": "octopus",
                 "topics": "octopus",
                 "workmanship": "80",
+            },
+            {
+                "id": "ansible",
+                "topics": "Ansible",
+                "workmanship": "50",
+            },
+            {
+                "id": "kubernetes",
+                "topics": "Kubernetes",
+                "workmanship": "50",
+            },
+            {
+                "id": "sonarqube",
+                "topics": "Sonarqube",
+                "workmanship": "50",
             },
         ]
     },
@@ -829,16 +849,16 @@ export const experiences = [
             "from_year": 2021,
             "from_month": 3,
             "to_year": 2024,
-            "to_month": 8
+            "to_month": 9
         },
         "role": [
-            { "lang": "FR", "value": `Chef de Projet` }, 
-            { "lang": "EN", "value": `Project Manager` }, 
+            { "lang": "FR", "value": `Chef de Projet, Lead Developer` }, 
+            { "lang": "EN", "value": `Project Manager, Lead Developer` }, 
         ],
         "achievements": [
             {
                 "lang": "EN", 
-                "value": `<p>Within a team of 7, I was project manager of the front team composed of 3 developers. We worked on the redesign of a calculation launch application to an <span class="bold">HPC grid</span> in a <span class="bold">web version (ASP MVC)</span>.</p>
+                "value": `<p>Within a team of 7, I was project manager of the front team composed of 3 developers. We worked on the redesign of a calculation launch application to an <span class="bold">HPC grid</span> in a <span class="bold">web version (React)</span>.</p>
 <span class="bold">As a project manager:</span>
 <p><ul><li>I ensured the agility of the team on a <span class="bold">SCRUM/Kanban</span> model.</li>
 <li>I was the interface with our customers (actuaries)</li>
@@ -847,12 +867,11 @@ export const experiences = [
 <span class="bold">As a developer:</span>
 <p><ul><li>Architecture review + design patterns <span class="bold">(GoF, SOLID, Craft)</span>.</li>
 <li>Setting up TUs <span class="bold">(NUnit)</span> and code coverage.</li>
-<li>Monitoring review (backend, <span class="bold">real-time messages</span> HPC)</li>
-<li>Creation of the Monitoring view <span class="bold">(SignalR, Json, Js, JQuery, IndexedDb)</span>.</li></ul></p>`
+<li>Monitoring review (backend, <span class="bold">real-time messages</span> HPC)</li></ul></p>`
             },
             {
                 "lang": "FR", 
-                "value": `<p>Au sein d'une équipe de 7, j’étais chef de projet de l’équipe front composée de 3 développeurs. Nous avons travaillé sur la refonte d'une application de lancement de calculs vers une <span class="bold">grille HPC</span> en une version <span class="bold">web (ASP MVC)</span>.</p>
+                "value": `<p>Au sein d'une équipe de 7, j’étais chef de projet de l’équipe front composée de 3 développeurs. Nous avons travaillé sur la refonte d'une application de lancement de calculs vers une <span class="bold">grille HPC</span> en une version <span class="bold">web (React)</span>.</p>
 					<span class="bold">En tant que chef de projet :</span>
                     <p><ul><li>J'ai assuré l'agilité de l'équipe sur un modèle <span class="bold">SCRUM/Kanban</span>.</li>
                     <li>J'étais l'interface avec nos nos clients (actuaires)</li>
@@ -861,12 +880,11 @@ export const experiences = [
                     <span class="bold">En tant que développeur :</span>
                     <p><ul><li>Revue de l’architecture + design patterns <span class="bold">(GoF, SOLID, Craft)</span>.</li>
                     <li>Mise en place des TU <span class="bold">(NUnit)</span> et couverture de code.</li>
-                    <li>Revue du Monitoring (backend, <span class="bold">messages temps réel</span> HPC)</li>
-                    <li>Création de la vue de Monitoring <span class="bold">(SignalR, Json, Js, JQuery, IndexedDb)</span>.</li></ul></p>`
+                    <li>Revue du Monitoring (backend, <span class="bold">messages temps réel</span> HPC)</li></ul></p>`
             }
         ],
         "highlights": [ ],
-        "tools": [ `.Net 4.8`, `C#`, `js`, `jQuery, `, `SignalR`, `IndexedDb`, `CSS3`, `HTML5`, `Bootstrap`, `Git`, `GitLab`, `Jenkins`, `SCRUM`, `KANBAN`, `Microsoft HPC`, `Moody's`, `Addactis` ],
+        "tools": [ `.Net Core`, `C#`, `js`, `jQuery`, `nodejs`, `Sequelize`, `postgresql`, `SignalR`, `IndexedDb`, `Tailwind`, `CSS3`, `HTML5`, `Bootstrap`, `Git`, `GitLab`, `Sonarqube`, `Ansible`, `Kubernetes`,`Jenkins`, `SCRUM`, `KANBAN`, `Microsoft HPC`, `Moody's`, `Addactis` ],
         "profession": [ 
             { "lang": "FR", "value": `Assurance` }, 
             { "lang": "EN", "value": `Asset Management` }

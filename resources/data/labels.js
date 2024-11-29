@@ -140,29 +140,29 @@ export const labels = {
             { "lang": "FR", "value": "Quelques liens" },
             { "lang": "EN", "value": "Links" },
         ],
-        "cv": [
-            { "lang": "FR", "value": "Télécharger le CV" },
-            { "lang": "EN", "value": "Download CV" },
+        "cv_cpr": [
+            { "lang": "FR", "value": "CV Chef de Projet" },
+            { "lang": "EN", "value": "Project Manager CV" },
         ],
-        "cv_doc": [
-            { "lang": "FR", "value": "resources/docs/biahprofile.docx" },
-            { "lang": "EN", "value": "resources/docs/biahprofile_en.docx" },
+        "cv_cpr_doc": [
+            { "lang": "FR", "value": "resources/docs/cpr/biahprofile.docx" },
+            { "lang": "EN", "value": "resources/docs/cpr/biahprofile_en.docx" },
         ],
-        "cv_pdf": [
-            { "lang": "FR", "value": "resources/docs/biahprofile.pdf" },
-            { "lang": "EN", "value": "resources/docs/biahprofile_en.pdf" },
+        "cv_cpr_pdf": [
+            { "lang": "FR", "value": "resources/docs/cpr/biahprofile.pdf" },
+            { "lang": "EN", "value": "resources/docs/cpr/biahprofile_en.pdf" },
         ],
         "cv_plus": [
-            { "lang": "FR", "value": "Télécharger le CV détaillé" },
-            { "lang": "EN", "value": "Download detailed CV" },
+            { "lang": "FR", "value": "CV détaillé Chef de Projet" },
+            { "lang": "EN", "value": "Detailed Project Manager CV" },
         ],
-        "cv_plus_doc": [
-            { "lang": "FR", "value": "resources/docs/biahprofile_detail.docx" },
-            { "lang": "EN", "value": "resources/docs/biahprofile_en_detail.docx" },
+        "cv_cpr_plus_doc": [
+            { "lang": "FR", "value": "resources/docs/cpr/biahprofile_detail.docx" },
+            { "lang": "EN", "value": "resources/docs/cpr/biahprofile_en_detail.docx" },
         ],
-        "cv_plus_pdf": [
-            { "lang": "FR", "value": "resources/docs/biahprofile_detail.pdf" },
-            { "lang": "EN", "value": "resources/docs/biahprofile_en_detail.pdf" },
+        "cv_cpr_plus_pdf": [
+            { "lang": "FR", "value": "resources/docs/cpr/biahprofile_detail.pdf" },
+            { "lang": "EN", "value": "resources/docs/cpr/biahprofile_en_detail.pdf" },
         ],
         "references": [
             { "lang": "FR", "value": "Quelques Références" },
