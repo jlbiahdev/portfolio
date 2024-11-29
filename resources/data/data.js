@@ -884,7 +884,7 @@ export const experiences = [
             }
         ],
         "highlights": [ ],
-        "tools": [ `.Net Core`, `C#`, `js`, `jQuery`, `nodejs`, `Sequelize`, `postgresql`, `SignalR`, `IndexedDb`, `Tailwind`, `CSS3`, `HTML5`, `Bootstrap`, `Git`, `GitLab`, `Sonarqube`, `Ansible`, `Kubernetes`,`Jenkins`, `SCRUM`, `KANBAN`, `Microsoft HPC`, `Moody's`, `Addactis` ],
+        "tools": [ `.Net Core`, `C#`, `js`, `jQuery`, `nodejs`, `React`, `Sequelize`, `postgresql`, `SignalR`, `IndexedDb`, `Tailwind`, `CSS3`, `HTML5`, `Bootstrap`, `Git`, `GitLab`, `Sonarqube`, `Ansible`, `Kubernetes`,`Jenkins`, `SCRUM`, `KANBAN`, `Microsoft HPC`, `Moody's`, `Addactis` ],
         "profession": [ 
             { "lang": "FR", "value": `Assurance` }, 
             { "lang": "EN", "value": `Asset Management` }
