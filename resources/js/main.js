@@ -64,12 +64,19 @@ const reset = () => {
     $('footer #links h2').html(shape(FormProperties.labels.footer.links.find(e => e.lang === lang).value));
     $('footer #cv h2').html(shape(FormProperties.labels.footer.cv_cpr.find(e => e.lang === lang).value));
     $('footer #cvplus h2').html(shape(FormProperties.labels.footer.cv_plus.find(e => e.lang === lang).value));
+    $('footer #cv-dev h2').html(shape(FormProperties.labels.footer.cv_dev.find(e => e.lang === lang).value));
+    $('footer #cvplus-dev h2').html(shape(FormProperties.labels.footer.cv_dev_plus.find(e => e.lang === lang).value));
     $('footer #references h2').html(shape(FormProperties.labels.footer.references.find(e => e.lang === lang).value));
 
     $("footer #cv a.doc").attr("href", FormProperties.labels.footer.cv_cpr_doc.find(e => e.lang === lang).value);
     $("footer #cv a.pdf").attr("href", FormProperties.labels.footer.cv_cpr_pdf.find(e => e.lang === lang).value);
     $("footer #cvplus a.doc").attr("href", FormProperties.labels.footer.cv_cpr_plus_doc.find(e => e.lang === lang).value);
     $("footer #cvplus a.pdf").attr("href", FormProperties.labels.footer.cv_cpr_plus_pdf.find(e => e.lang === lang).value);
+    
+    $("footer #cv-dev a.doc").attr("href", FormProperties.labels.footer.cv_dev_doc.find(e => e.lang === lang).value);
+    $("footer #cv-dev a.pdf").attr("href", FormProperties.labels.footer.cv_dev_pdf.find(e => e.lang === lang).value);
+    $("footer #cvplus-dev a.doc").attr("href", FormProperties.labels.footer.cv_dev_plus_doc.find(e => e.lang === lang).value);
+    $("footer #cvplus-dev a.pdf").attr("href", FormProperties.labels.footer.cv_dev_plus_pdf.find(e => e.lang === lang).value);
     
     $('#about .about-content p').html(shape(PortfolioData.identity.intro.find(e => e.lang === lang).about));
     $('#about .about-content ul').html(doList(PortfolioData.identity.intro.find(e => e.lang === lang).qualities));

@@ -172,6 +172,30 @@ export const labels = {
             { "lang": "FR", "value": "Tous droits réservés" },
             { "lang": "EN", "value": "All rights reserved" },
         ],
+        "cv_dev": [
+            { "lang": "FR", "value": "CV Lead Developer" },
+            { "lang": "EN", "value": "Lead Developer CV" },
+        ],
+        "cv_dev_doc": [
+            { "lang": "FR", "value": "resources/docs/dev/biahprofile.docx" },
+            { "lang": "EN", "value": "resources/docs/dev/biahprofile_en.docx" },
+        ],
+        "cv_dev_pdf": [
+            { "lang": "FR", "value": "resources/docs/dev/biahprofile.pdf" },
+            { "lang": "EN", "value": "resources/docs/dev/biahprofile_en.pdf" },
+        ],
+        "cv_dev_plus": [
+            { "lang": "FR", "value": "CV détaillé - Lead Developer" },
+            { "lang": "EN", "value": "Detailed Lead Developer CV" },
+        ],
+        "cv_dev_plus_doc": [
+            { "lang": "FR", "value": "resources/docs/dev/biahprofile_detail.docx" },
+            { "lang": "EN", "value": "resources/docs/dev/biahprofile_en_detail.docx" },
+        ],
+        "cv_dev_plus_pdf": [
+            { "lang": "FR", "value": "resources/docs/dev/biahprofile_detail.pdf" },
+            { "lang": "EN", "value": "resources/docs/dev/biahprofile_en_detail.pdf" },
+        ],
     }
 }
 
