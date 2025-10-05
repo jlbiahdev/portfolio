@@ -221,41 +221,91 @@ export const services = [
     "lang": "EN",
     "name": "Web Development",
     "icon": "fa-solid fa-cloud",
-    "description": "I develop basic websites (HTML5, CSS3, JS), web applications (ReactJs, VueJs, Express.js, Blazor, MVC) with or without databases (SQL, NoSQL)"
+    "description": "I develop basic websites (HTML5, CSS3, JS), web applications (ReactJs, VueJs, Express.js, Blazor, MVC) with or without databases (SQL, NoSQL)",
+    "link": "#portfolio-web"
   },
   {
     "lang": "FR",
     "name": "Développement Web",
     "icon": "fa-solid fa-cloud",
-    "description": "Je développe des sites web basiques (HTML5, CSS3, JS), des applications web (ReactJs, VueJs, Express.js, Blazor, MVC) avec ou sans bases de données (SQL, NoSQL)"
+    "description": "Je développe des sites web basiques (HTML5, CSS3, JS), des applications web (ReactJs, VueJs, Express.js, Blazor, MVC) avec ou sans bases de données (SQL, NoSQL)",
+    "link": "#portfolio-web"
+  },
+  {
+    "lang": "EN",
+    "name": "Mobile Applications Development",
+    "icon": "fa-solid fa-mobile-screen",
+    "description": "I develop mobile applications (React Native, Expo) for Android and iOS, published on stores.",
+    "link": "#portfolio-mobile"
+  },
+  {
+    "lang": "FR",
+    "name": "Développement d'Applications mobiles",
+    "icon": "fa-solid fa-mobile-screen",
+    "description": "Je développe des applications mobiles (React Native, Expo) pour Android et iOS, publiées sur les stores.",
+    "link": "#portfolio-mobile"
   },
   {
     "lang": "EN",
     "name": "APIs Development",
     "icon": "fa-solid fa-bookmark",
-    "description": "I develop APIs that I deploy on marketplaces"
+    "description": "I develop APIs that I deploy on marketplaces",
+    "link": "#portfolio-api"
   },
   {
     "lang": "FR",
     "name": "Développement d'API",
     "icon": "fa-solid fa-bookmark",
-    "description": "Je développe des API que je déploie sur des marketplaces"
+    "description": "Je développe des API que je déploie sur des marketplaces",
+    "link": "#portfolio-api"
   },
   {
     "lang": "EN",
-    "name": "Development of Windows applications and libraries",
+    "name": "Development of Windows apps and libs",
     "icon": "fa-brands fa-windows",
-    "description": "I develop desktop applications (WPF, WinForms) with or without database as well as libraries (DLL)"
+    "description": "I develop desktop applications (WPF, WinForms) with or without database as well as libraries (DLL)",
+    "link": "#portfolio-pro"
   },
   {
     "lang": "FR",
-    "name": "Développement d'applications Windows et de librairies",
+    "name": "Développement Windows et librairies",
     "icon": "fa-brands fa-windows",
-    "description": "Je développe des applications de bureau (clients lourds WPF, WinForms) avec ou sans base de données ainsi que des librairies (DLL)"
+    "description": "Je développe des applications de bureau (clients lourds WPF, WinForms) avec ou sans base de données ainsi que des librairies (DLL)",
+    "link": "#portfolio-pro"
   }
 ];
 
 export const web_portfolios = [
+  {
+    "name": "Lissen Forge",
+    "image": "logo-lissenforge.png",
+    "url": "#",
+    "description": [
+      {
+        "lang": "FR",
+        "value": "Site web backup de l'application Android Lissen. Permet la saisie et la gestion des commentaires bibliques, méditations, blogs et informations utilisateurs."
+      },
+      {
+        "lang": "EN",
+        "value": "Website backup for the Lissen Android app. Enables input and management of Bible comments, meditations, blogs, and user information."
+      }
+    ]
+  },
+  {
+    "name": "Lissen",
+    "image": "logo-lissen.png",
+    "url": "https://lissenapp.com/",
+    "description": [
+      {
+        "lang": "FR",
+        "value": "Une application conçue pour vous accompagner chaque jour dans votre cheminement spirituel grâce à la Parole de Dieu et de bonnes pratiques spirituelles."
+      },
+      {
+        "lang": "EN",
+        "value": "An application designed to accompany you every day in your spiritual journey through the Word of God and good spiritual practices."
+      }
+    ]
+  },
   {
     "name": "Cyrano Conseil",
     "image": "logo-cyrano.png",
@@ -348,6 +398,18 @@ export const api_portfolios = [
     ],
     "image": "logo-trello.png",
     "url": "#"
+  }
+];
+
+export const mobile_portfolios = [
+  {
+    "name": "Lissen (application mobile)",
+    "image": "logo-lissen.png",
+    "url": "https://lissenapp.com/",
+    "description": [
+      { "lang": "FR", "value": "Application mobile « Lissen » (Expo / React Native). Publication Google Play Console." },
+      { "lang": "EN", "value": "“Lissen” mobile app (Expo / React Native). Published via Google Play Console." }
+    ]
   }
 ];
 
@@ -518,6 +580,65 @@ export const testimonials = [
 ];
 
 export const experiences = [
+  {
+    "company_name": "L'association Les Rappelés",
+    "company_image": "logo-lissen.png",
+    "place": [
+      { "lang": "FR", "city": "Tallinn", "country": "Estonie" },
+      { "lang": "EN", "city": "Tallinn", "country": "Estonia" }
+    ],
+    "period": {
+      "from_year": 2024, "from_month": 1,   // TODO: ajuste
+      "to_year": 0, "to_month": 0           // 0/0 = en cours si tu veux rester cohérent avec ton modèle
+    },
+    "role": [
+      { "lang": "FR", "value": "Chef de Projet, Tech Lead, Développeur FullStack" },
+      { "lang": "EN", "value": "Project Manager, Tech Lead, Full-Stack Developer" }
+    ],
+    "achievements": [
+      {
+        "lang": "FR",
+        "value": `
+          <p>Conception et réalisation de la plateforme <span class="bold">Lissen</span> :</p>
+          <ul>
+            <li>Application mobile (Expo / React Native) – publication via <span class="bold">Google Play Console</span></li>
+            <li>Site web (Next.js/React) – hébergé sur <span class="bold">Vercel</span></li>
+            <li>Back-end « Forge » (Node.js/Express, REST) – hébergé sur <span class="bold">Railway</span></li>
+            <li>Automatisations et assistance IA (<span class="bold">OpenAI / ChatGPT</span>)</li>
+          </ul>
+        `
+      },
+      {
+        "lang": "EN",
+        "value": `
+          <p>Designed and built the <span class="bold">Lissen</span> platform:</p>
+          <ul>
+            <li>Mobile app (Expo / React Native) – published via <span class="bold">Google Play Console</span></li>
+            <li>Website (Next.js/React) – hosted on <span class="bold">Vercel</span></li>
+            <li>“Forge” backend (Node.js/Express, REST) – hosted on <span class="bold">Railway</span></li>
+            <li>Automation & AI assistance (<span class="bold">OpenAI / ChatGPT</span>)</li>
+          </ul>
+        `
+      }
+    ],
+    "highlights": [
+      "CI/CD simple (Vercel / Railway)",
+      "Suivi crash & perf (Sentry/Crashlytics)"
+    ],
+    "tools": [
+      "Expo", "React Native", "React", "Next.js",
+      "Node.js", "Express", "REST API",
+      "PostgreSQL", "IndexedDB",
+      "Railway", "Vercel",
+      "Git", "GitHub",
+      "Google Play Console",
+      "OpenAI / ChatGPT"
+    ],
+    "profession": [
+      { "lang": "FR", "value": "Application mobile, Web, Back-end" },
+      { "lang": "EN", "value": "Mobile app, Web, Back-end" }
+    ]
+  },
   {
     "company_name": "EKTARE IMMO",
     "company_image": "logo-ektare.png",

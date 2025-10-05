@@ -3,7 +3,6 @@ import * as FormProperties from '../data/labels.js';
 import './extensions.string.js';
 import './extensions.array.js';
 import { transformLabel } from './labels.helpers.js';
-import { normalizeSkills } from './skills-normalize.js';
 
 const COOKIES = {
     SelectedLanguage: "SELECTED_LANG",
@@ -123,6 +122,9 @@ const reset = () => {
     $('#portfolio-web .portfolio-container').html(shape_portfolios(PortfolioData.web_portfolios, lang));
     $('#portfolio-web .heading').html(shape(FormProperties.labels.web_portfolios.header.find(e => e.lang === lang).value, lang));
 
+    $('#portfolio-mobile .portfolio-container').html(shape_portfolios(PortfolioData.mobile_portfolios, lang));
+    $('#portfolio-mobile .heading').html(shape(FormProperties.labels.mobile_portfolios.header.find(e => e.lang === lang).value, lang));
+
     $('#portfolio-api .portfolio-container').html(shape_portfolios(PortfolioData.api_portfolios, lang));
     $('#portfolio-api .heading').html(shape(FormProperties.labels.api_portfolios.header.find(e => e.lang === lang).value, lang));
 
@@ -133,7 +135,7 @@ const reset = () => {
     $('.testimony-container').html(shape_testimonials(PortfolioData.testimonials.find(e => e.lang === lang).words));
 
     $('#experiences .heading').html(shape(FormProperties.labels.experiences.header.find(e => e.lang === lang).value, lang));
-    $('#experiences .experiences-row').html(shape_experiences(PortfolioData.experiences, FormProperties.labels.experiences.box.find(e => e.lang === lang), lang));
+    $('#experiences .experiences-row').html(shape_experiences(PortfolioData.experiences, FormProperties.labels.experiences.box.find(e => e.lang === lang), FormProperties.labels.dico, lang));
 }
 
 const shape = (str, currentLang) => {
@@ -240,6 +242,7 @@ const shape_services = (items) => {
     items.forEach(e => {
         result += service_box.replace('{icon}', e.icon)
         .replace('{name}', e.name)
+        .replace('{link}', e.link)
         .replace('{description}', e.description);
     });
 
@@ -288,7 +291,7 @@ const shape_testimonials = (items) => {
     return result;
 }
 
-const shape_experiences = (items, labels, lang) => {
+const shape_experiences = (items, labels, dico, lang) => {
     var result = '';
     console.log(items);
     items.forEach(e => {
@@ -296,15 +299,20 @@ const shape_experiences = (items, labels, lang) => {
         let role = e.role.find(k => k.lang === lang);
         let achievements = e.achievements.find(k => k.lang === lang);
         let professions = e.profession.find(k => k.lang === lang);
+        let encoursWord = dico.Encours.find(k => k.lang === lang).value;
 
+        let toPeriod;
+        if (e.period.to_year === 0 || e.period.to_month === 0) {
+            toPeriod = encoursWord;
+        } else {
+            toPeriod = `${e.period.to_year}/${e.period.to_month}`;
+        }
         result += experience_box.replace('{company_image}', e.company_image)
             .replace('{company_name}', e.company_name)
             .replace('{company_city}', place.city)
             .replace('{company_country}', place.country)
-            .replace('{from_year}', e.period.from_year)
-            .replace('{from_month}', e.period.from_month)
-            .replace('{to_year}', e.period.to_year)
-            .replace('{to_month}', e.period.to_month)
+            .replace('{from_period}', `${e.period.from_year}/${e.period.from_month}`)
+            .replace('{to_period}', `${toPeriod}`)
             .replace('{role}', role.value)
             .replace('{achievements}', achievements.value)
             .replace('{highlights}', e.highlights)
@@ -447,7 +455,7 @@ const service_box = `
                     <i class="{icon}"></i>
                     <h3>{name}</h3>
                     <p>{description}</p>
-                    <a href="#portfolio-web" class="btn"></a>
+                    <a href="{link}" class="btn"></a>
                 </div>
 `;
 
@@ -496,7 +504,7 @@ const experience_box = `
                 <img src="resources/img/{company_image}" alt="" srcset="">
                 <div class="company-name"><i class="fa-solid fa-building"></i>{company_name}</div>
                 <div class="company-location"><i class="fa-solid fa-location-pin"></i>{company_city}, {company_country}</div>
-                <div class="duration"><i class="fa-solid fa-calendar-days"></i><span>{from_year}/{from_month} - {to_year}/{to_month}</span></div>
+                <div class="duration"><i class="fa-solid fa-calendar-days"></i><span>{from_period} - {to_period}</span></div>
                 <div class="role"><i class="fa-solid fa-user"></i><span>{role}</span></div>
             </div>
             <div class="card-back">

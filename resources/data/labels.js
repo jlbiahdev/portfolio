@@ -89,26 +89,33 @@ export const labels = {
     ]
   },
 
-  "web_portfolios": {
-    "header": [
-      { "lang": "FR", "value": "Projets Web_span_ Récents" },
-      { "lang": "EN", "value": "Recent Web_span_ Projects" }
-    ]
+    "web_portfolios": {
+        "header": [
+            { "lang": "FR", "value": "Projets Web_span_ Récents" },
+            { "lang": "EN", "value": "Recent Web_span_ Projects" }
+        ]
+    },
+
+    "api_portfolios": {
+        "header": [
+            { "lang": "FR", "value": "API_span_ publiées" },
+            { "lang": "EN", "value": "Published API_span_s" }
+        ]
   },
 
-  "api_portfolios": {
-    "header": [
-      { "lang": "FR", "value": "API_span_ publiées" },
-      { "lang": "EN", "value": "Published API_span_s" }
-    ]
-  },
+    "pro_portfolios": {
+        "header": [
+            { "lang": "FR", "value": "Applications_span_ réalisées pour de grands comptes" },
+            { "lang": "EN", "value": "Applications_span_ built for major companies" }
+        ]
+    },
 
-  "pro_portfolios": {
-    "header": [
-      { "lang": "FR", "value": "Applications_span_ réalisées pour de grands comptes" },
-      { "lang": "EN", "value": "Applications_span_ built for major companies" }
-    ]
-  },
+    "mobile_portfolios": {
+        "header": [
+            { "lang": "FR", "value": "Applications_span_ mobiles" },
+            { "lang": "EN", "value": "Mobile_span_ apps" }
+        ]
+    },
 
   "testimonials": {
     "header": [
@@ -209,6 +216,16 @@ export const labels = {
     "cv_dev_plus_pdf": [
       { "lang": "FR", "value": "resources/docs/dev/biahprofile_detail.pdf" },
       { "lang": "EN", "value": "resources/docs/dev/biahprofile_en_detail.pdf" }
+    ]
+  },
+  "dico": {
+    "months": [
+      { "lang": "FR", "values": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"] },
+      { "lang": "EN", "values": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] }
+    ],
+    "Encours": [
+      { "lang": "FR", "value": "En Cours" },
+      { "lang": "EN", "value": "Current" }
     ]
   }
 };
