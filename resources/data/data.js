@@ -11,7 +11,7 @@ export const identity = {
   "intro": [
     {
       "lang": "FR",
-      "profile": `Professionnel du développement logiciel hautement qualifié, possédant plus de 17 années d'expérience
+      "profile": `Professionnel du développement logiciel hautement qualifié, possédant plus de 17 années d'expérience <br>
                         dans le domaine de la conception, du développement et de l'intégration de logiciels et applications webs.`,
       "about": `Spécialiste C# (Blazor -wasm-, WebPage, WebForm, WinForm) en particulier et du framework .NET en général (WCF, WF). <br>
                         Spécialiste front-end web (ReactJs, VueJs, Node.js et JavaScript, HTML5 & CSS3). <br>
@@ -31,7 +31,7 @@ export const identity = {
     },
     {
       "lang": "EN",
-      "profile": `Highly qualified software development professional with over 17 years of experience in software design, development, and integration`,
+      "profile": `Highly qualified software development professional with over 17 years of experience <br> in software design, development, and integration`,
       "about": `C# specialist (Blazor -wasm-, WebPage, WebForm, WinForm) in particular and in
                             the .NET framework in general (WCF, WF).  <br>
                         Web Specialist (ReactJs, VueJs, Node.js and JavaScript, HTML5 & CSS3). <br>

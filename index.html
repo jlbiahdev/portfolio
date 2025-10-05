@@ -1,18 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Jean Luc</title>
-    <meta
-      name="description"
-      content="Ceci est ma vitrine professionnelle. Vous pouvez y télécharger mon CV sous différents formats."
-    />
-
-    <!-- Styles -->
     <link rel="stylesheet" href="resources/css/style.css" />
-
-    <!-- Icons & Fonts -->
     <script src="https://kit.fontawesome.com/9f91a51f96.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,17 +11,19 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Libs (aligné avec main.js) -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <title>Portfolio | Jean Luc</title>
+    <meta
+      name="description"
+      content="Ceci est ma vitrine professionnelle. Vous pouvez y télécharger mon CV sous différents formats"
+    />
   </head>
-
   <body>
     <header class="header">
       <a href="#" class="logo">Portfolio</a>
 
-      <i class="fa-solid fa-bars" id="menu-icon" aria-label="Menu"></i>
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
 
       <nav class="navbar">
         <a id="mn-hom" href="#home" class="active">accueil</a>
@@ -40,19 +33,14 @@
         <a id="mn-ser" href="#services">services</a>
         <a id="mn-tes" href="#testimony">références</a>
         <a id="mn-exp" href="#experiences">experiences</a>
-        <!-- Contact : ouvre le client mail -->
-        <a
-          id="mn-con"
-          href="mailto:jeanlucbiah.pro@outlook.com?subject=%5BPortfolio%5D%20Contact&body=Bonjour%20Jean%20Luc%2C%0D%0A%0D%0A"
-          >contact</a
-        >
-
+        <a id="mn-con" href="mailto:jeanlucbiah.pro@outlook.com?subject=%5BPortfolio%5D%20Contact&body=Bonjour%20Jean%20Luc%2C%0D%0A%0D%0A">contact</a>
         <div class="flags">
           <div class="inner">
-            <img src="resources/img/flag-france.png" id="flag-FR" alt="Français" role="button" />
-            <img src="resources/img/flag-england.png" id="flag-EN" alt="English" role="button" />
+            <img src="resources/img/flag-france.png" id="flag-FR" alt="" srcset="" />
+            <img src="resources/img/flag-england.png" id="flag-EN" alt="" srcset="" />
           </div>
         </div>
+        <button id="theme-toggle" class="btn" style="margin-left:2rem" aria-pressed="false" aria-label="Basculer le thème">🌓</button>
       </nav>
     </header>
 
@@ -60,539 +48,80 @@
       <div class="home-content">
         <h1>Jean Luc BIAH</h1>
         <h3><span id="profiles"></span></h3>
-        <p>
-          Professionnel du développement logiciel hautement qualifié, possédant plus de 17 années d'expérience
-          dans le domaine de la conception, du développement et de l'intégration de logiciels et applications webs.
-        </p>
+        <p></p>
         <div class="social-media">
-          <a href="https://www.linkedin.com/in/jeanlucbiah" target="_blank" rel="noopener noreferrer"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://twitter.com/bitojelx" target="_blank" rel="noopener noreferrer"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-          <a href="https://github.com/jlbiahdev" target="_blank" rel="noopener noreferrer"
-            ><i class="fa-brands fa-github"></i
-          ></a>
+          <a href="https://www.linkedin.com/in/jeanlucbiah" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://twitter.com/bitojelx" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://github.com/jlbiahdev" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
         </div>
         <div>
-          <a id="dwn_cv" href="#cv" class="btn">Télécharger un CV</a>
-          <!-- Bouton Contact = mailto -->
-          <a
-            id="cnt_me"
-            class="btn"
-            href="mailto:jeanlucbiah.pro@outlook.com?subject=%5BPortfolio%5D%20Contact&body=Bonjour%20Jean%20Luc%2C%0D%0A%0D%0A"
-            >Contactez moi</a
-          >
+          <a id="dwn_cv" href="#cv" class="btn"></a>
+          <a id="cnt_me" href="#contact" class="btn"></a>
         </div>
       </div>
 
       <div class="home-img">
-        <img src="resources/img/photob.jpg" alt="Photo de Jean Luc BIAH" loading="lazy" />
+        <img src="resources/img/photob.jpg" alt="" srcset="" />
       </div>
     </section>
 
     <section id="about" class="about">
       <div class="about-content">
-        <h2 class="heading">À propos de <span>moi</span></h2>
-        <p>
-          Spécialiste C# (blazor -wasm-, webpage, webform, winform) en particulier et dans le framework .Net en général (wcf, wf). <br />
-          Spécialiste frontend web (ReactJs, VueJs, nodejs et javascript, html5 &amp; CSS3). <br />
-          Spécialiste développements de bases de données relationnelles notamment MS SQL Server, mais aussi
-          Oracle, Sybase, MySQL. Possède diverses expériences front-end, middle et back-end ainsi que des
-          expériences en BI (IS, RS, AS). <br /><br />
-          Fait preuve d'une grande résistance au stress et sait respecter les délais et les objectifs fixés
-          tout en proposant un travail de grande qualité.
-        </p>
-        <ul>
-          <li>Possède une capacité d'analyse et un réel souci du détail</li>
-          <li>Possède une certaine expérience en gestion d'équipes</li>
-          <li>Dédié à faire avancer les projets qui lui sont confiés, ainsi qu'à garantir un travail de
-            qualité et une livraison dans les temps</li>
-          <li>Responsable et autonome</li>
-          <li>Aptitude à maîtriser rapidement de nouveaux packages logiciels et de nouvelles technologies
-            matérielles.</li>
-        </ul>
+        <h2 class="heading"></h2>
+        <p></p>
+        <ul></ul>
       </div>
     </section>
 
     <section id="skills" class="skills">
-      <h2 class="heading">Mes <span>Compétences</span></h2>
-
-      <!-- Les IDs correspondent à data.js (pour rester cohérent) -->
-      <div class="skills-row">
-        <div class="skills-columns">
-          <h3 class="title">Web</h3>
-
-          <div id="js" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>javascript, jquery <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="htmlcss" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>html5, css3, Tailwind <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="nodejs" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>Nodejs <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="vuejs" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>VueJs <span>80%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="reactjs" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>ReactJs <span>80%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="bootstrap" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>Bootstrap <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-columns">
-          <h3 class="title">SQL &amp; Database</h3>
-
-          <div id="tsql" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>sql, t-sql, sql server <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="plsql" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>plsql, pgsql, oracle <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="mysql" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>mysql <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="sybase" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>sybase (ase isql) <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="mongodb" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>mongodb <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-row">
-        <div class="skills-columns">
-          <h3 class="title">.Net Back</h3>
-
-          <div id="cs" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>c# <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="vb" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>VB.Net <span>70%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="api" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>rest api <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="wcf" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>wcf <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- id corrigé : wf (au lieu de wwf) -->
-          <div id="wf" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>wf <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-columns">
-          <h3 class="title">.Net Front</h3>
-
-          <div id="mvc" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>mvc <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="blaz" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>blazor <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="wpf" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>wpf <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="win" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>winform <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="asp" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>asp.net <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-row">
-        <div class="skills-columns">
-          <h3 class="title">Business Intelligence</h3>
-
-          <div id="ssis" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>ssis <span>80%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-        <div id="ssas" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>ssas <span>70%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="ssrs" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>ssrs <span>70%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-columns">
-          <h3 class="title">CI/CD</h3>
-
-          <div id="azure" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>azure <span>75%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="jenkins" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>jenkins <span>80%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="teamcity" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>teamCity <span>80%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="octopus" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>octopus <span>80%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-row">
-        <div class="skills-columns">
-          <h3 class="title">Agilité &amp; Analyse</h3>
-
-          <div id="kanban" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>kanban, scrum <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="merise" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>merise, uml <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-columns">
-          <h3 class="title">Collaboration</h3>
-
-          <div id="git" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>git/github/gitlab <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="tfs" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>tfs <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="gerrit" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>gerrit <span>70%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-row">
-        <div class="skills-columns">
-          <h3 class="title">Serveurs web</h3>
-
-          <div id="apache" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>apache <span>60%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="iis" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3 class="uppercase">iis <span>70%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- id corrigé : azurecloud (évite le doublon avec CI/CD) -->
-          <div id="azurecloud" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>azure cloud <span>80%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-columns">
-          <h3 class="title">OS</h3>
-
-          <div id="linux" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>linux <span>60%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="mac" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>mac os <span>80%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="mswin" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>windows <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-row">
-        <div class="skills-columns">
-          <h3 class="title">Divers</h3>
-
-          <div id="infrag" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>infragistics <span>90%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="crystrep" class="skills-box">
-            <div class="skills-content">
-              <div class="progress">
-                <h3>crystal report <span>100%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-columns">&nbsp;</div>
-      </div>
+      <h2 class="heading"></h2>
+      <div id="skills-root"></div>
     </section>
 
     <section id="education" class="education">
-      <h2 class="heading">Ma <span>Formation</span></h2>
+      <h2 class="heading"></h2>
 
       <div class="education-row">
         <div class="education-column">
-          <h3 id="education-label" class="title">Education</h3>
+          <h3 id="education-label" class="title"></h3>
           <div id="school-box" class="education-box"></div>
         </div>
 
         <div class="education-column">
-          <h3 id="language-label" class="title">langues</h3>
+          <h3 id="language-label" class="title"></h3>
           <div id="language-box" class="education-box"></div>
         </div>
       </div>
     </section>
 
     <section id="services" class="services">
-      <h2 class="heading">Mes <span>Services</span></h2>
+      <h2 class="heading"></span></h2>
       <div class="services-container"></div>
     </section>
 
     <section id="portfolio-web" class="portfolio">
-      <h2 class="heading">Projets <span>Web</span> Récents</h2>
+      <h2 class="heading"></h2>
       <div class="portfolio-container"></div>
     </section>
 
     <section id="portfolio-api" class="portfolio mt-5">
-      <h2 class="heading">Des <span>API</span> publiées</h2>
+      <h2 class="heading"></h2>
       <div class="portfolio-container"></div>
     </section>
 
     <section id="portfolio-pro" class="portfolio mt-5">
-      <h2 class="heading">Des <span>Applications</span> réalisées chez des grands comptes</h2>
+      <h2 class="heading"></h2>
       <div class="portfolio-container"></div>
     </section>
 
     <section id="testimony" class="testimony">
-      <h2 class="heading">Mes <span>Références</span></h2>
+      <h2 class="heading"></h2>
       <div class="testimony-container"></div>
     </section>
 
     <section id="experiences" class="experiences">
-      <h2 class="heading">Mes <span>Experiences</span></h2>
+      <h2 class="heading"></h2>
+
       <div class="experiences-row"></div>
     </section>
 
@@ -605,7 +134,6 @@
             <li><a class="pdf" href="#"><i class="fa-solid fa-file-pdf"></i></a></li>
           </ul>
         </div>
-
         <div id="cvplus">
           <h2></h2>
           <ul class="cv">
@@ -613,7 +141,6 @@
             <li><a class="pdf" href="#"><i class="fa-solid fa-file-pdf"></i></a></li>
           </ul>
         </div>
-
         <div id="cv-dev">
           <h2>CV - Lead Dev</h2>
           <ul class="cv">
@@ -621,7 +148,6 @@
             <li><a class="pdf" href="#"><i class="fa-solid fa-file-pdf"></i></a></li>
           </ul>
         </div>
-
         <div id="cvplus-dev">
           <h2>CV détaillé - Lead Dev</h2>
           <ul class="cv">
@@ -629,14 +155,12 @@
             <li><a class="pdf" href="#"><i class="fa-solid fa-file-pdf"></i></a></li>
           </ul>
         </div>
-
         <div id="references">
           <h2></h2>
           <ul class="cv">
-            <li><a href="resources/docs/biahprofile_references.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i></a></li>
+            <li><a href="resources/docs/biahprofile_references.pdf"><i class="fa-solid fa-file-pdf"></i></a></li>
           </ul>
         </div>
-
         <div id="links">
           <h2></h2>
           <ul>
@@ -645,21 +169,26 @@
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
         <div class="footer-text">
           <p>&copy; 2021 Cyrano Conseil <span>Tous droits réservés</span></p>
         </div>
 
         <div class="footer-iconTop">
-          <a href="#home" aria-label="Retour en haut"><i class="fa-solid fa-angle-up"></i></a>
+          <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
         </div>
       </div>
     </footer>
 
     <!-- JAVASCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- (Les plugins jQuery mask / apexcharts ont été retirés car non utilisés) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.48.0/apexcharts.min.js"
+      integrity="sha512-wqcdhB5VcHuNzKcjnxN9wI5tB3nNorVX7Zz9NtKBxmofNskRC29uaQDnv71I/zhCDLZsNrg75oG8cJHuBvKWGw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="module" src="resources/js/main.js"></script>
   </body>
 </html>

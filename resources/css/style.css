@@ -1,3 +1,5 @@
+/* ============================== RESET & BASE ============================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,27 +20,10 @@
     --text-color: #fff;
     --main-color:#135267;
 
-    /* ===== Point 5: spacing, radii, shadows, accents ===== */
-    --space-1: .5rem;
-    --space-2: 1rem;
-    --space-3: 1.5rem;
-    --space-4: 2rem;
-    --space-5: 2.5rem;
-    --space-6: 3rem;
-    --space-8: 4rem;
-    --space-10: 5rem;
-    --space-12: 6rem;
-    --space-16: 8rem;
-    --space-20: 10rem;
-
-    --radius-md: .8rem;
-    --radius-xl: 1.2rem;
-    --radius-2xl: 2rem;
-
-    --shadow-main: 0 0 1rem var(--main-color);
-    --shadow-bg:   0 0 1rem var(--bg-color);
-
-    --link-accent: #ffc300;
+    /* Accessibility focus variables */
+    --focus-outline-width: 3px;
+    --focus-outline-color: var(--main-color);
+    --focus-ring: 0 0 0 3px rgba(19, 82, 103, 0.55);
 }
 
 html {
@@ -52,7 +37,7 @@ body {
 }
 
 section {
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 10rem 9% 2rem;
 }
 
@@ -85,7 +70,8 @@ section {
 p {
     margin-bottom: 1rem;
 }
-/* ---------------------------------------------- header ------------------------------------------ */
+
+/* ============================== HEADER ============================== */
 
 .header {
     position: fixed;
@@ -159,12 +145,13 @@ p {
     cursor: pointer;
 }
 
-/* ---------------------------------------------- home -------------------------------------------- */
+/* ============================== HOME ============================== */
 
 .home {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    /* border: 1px solid yellow; */
 }
 
 .home-content h1 {
@@ -192,8 +179,8 @@ p {
 }
 
 @keyframes floatImage {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-2.4rem); }
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-2.4rem); }
     100% { transform: translateY(0); }
 }
 
@@ -214,7 +201,7 @@ p {
 
 .social-media a:hover {
     background-color: var(--main-color);
-    box-shadow: var(--shadow-main);
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
 .btn {
@@ -222,24 +209,33 @@ p {
     padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
-    box-shadow: var(--shadow-main);
+    box-shadow: 0 0 1rem var(--main-color);
     font-size: 1.6rem;
     color: var(--text-color);
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
+    cursor: pointer;
 }
 
-.btn:hover { box-shadow: none; }
+.btn:hover {
+    box-shadow: none;
+}
 
-/* ---------------------------------------------- about ------------------------------------------- */
+/* ============================== ABOUT ============================== */
+
+/* .about {
+    border: 1px solid red;
+} */
 
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
 }
 
-.about-content h3 { font-size: 2.6rem; }
+.about-content h3 {
+    font-size: 2.6rem;
+}
 
 .about-content p {
     font-size: 1.6rem;
@@ -252,9 +248,11 @@ p {
     padding-left: 2.5rem;
 }
 
-/* ---------------------------------------------- services ---------------------------------------- */
+/* ============================== SERVICES ============================== */
 
-.services h2 { margin-bottom: 5rem; }
+.services h2 {
+    margin-bottom: 5rem;
+}
 
 .services-container {
     display: flex;
@@ -267,8 +265,8 @@ p {
 .services-container .services-box {
     flex: 1 1 30rem;
     background: var(--snd-bg-color);
-    padding:  var(--space-6) var(--space-4) var(--space-8);
-    border-radius: var(--radius-2xl);
+    padding:  3rem 2rem 4rem;
+    border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
@@ -279,14 +277,28 @@ p {
     transform: scale(1.02);
 }
 
-.services-box i { font-size: 7rem; }
-.services-box h3 { font-size: 2.6rem; }
-.services-box p  { font-size: 1.6rem; margin: 1rem 0 3rem; }
+.services-box i {
+    font-size: 7rem;
+}
 
-/* ---------------------------------------------- portfolio --------------------------------------- */
+.services-box h3 {
+    font-size: 2.6rem;
+}
 
-.portfolio { background: var(--snd-bg-color); }
-.portfolio h2 { margin-bottom: 4rem; }
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+/* ============================== PORTFOLIO ============================== */
+
+.portfolio {
+    background: var(--snd-bg-color);
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
 
 .portfolio-container {
     display: grid;
@@ -297,8 +309,8 @@ p {
 
 .portfolio-container .portfolio-box {
     position: relative;
-    border-radius: var(--radius-2xl);
-    box-shadow: var(--shadow-bg);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
 }
@@ -306,15 +318,18 @@ p {
 .portfolio-box img {
     width: 100%;
     opacity: .7;
-    transition: transform .5s ease; /* smoother hover zoom */
 }
 
-.portfolio-box:hover img { transform: scale(1.1); }
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
 
 .portfolio-box .portfolio-layer {
     position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
     display: flex;
     justify-content: center;
@@ -326,39 +341,60 @@ p {
     transition: .5s ease;
 }
 
-.portfolio-box:hover .portfolio-layer { transform: translateY(0); }
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
 
-.portfolio-layer h4 { font-size: 3rem; }
-.portfolio-layer p { font-size: 1.6rem; margin: .3rem 0 1rem; }
+.portfolio-layer h4 {
+    font-size: 3rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
 
 .portfolio-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 5rem; height: 5rem;
+    width: 5rem;
+    height: 5rem;
     background: var(--text-color);
     border-radius: 50%;
 }
 
-.portfolio-layer a i { font-size: 2rem; color: var(--snd-bg-color); }
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--snd-bg-color);
+}
 
-/* ---------------------------------------------- skills ------------------------------------------ */
+/* ============================== SKILLS ============================== */
 
 .skills {
     background: var(--snd-bg-color);
     min-height: auto;
-    padding-bottom: var(--space-12);
+    padding-bottom: 7rem;
 }
 
-.skills .skills-row { display: flex; flex-wrap: wrap; gap: 5rem; }
-.skills-row .skills-columns { flex: 1 1 40rem; }
+.skills .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
 
-.skills-columns .title { font-size: 2.5rem; margin: 0 0 1.5rem; }
+.skills-row .skills-columns {
+    flex: 1 1 40rem;
+}
+
+.skills-columns .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
 
 .skills-box .skills-content {
     position: relative;
     border: .2rem solid var(--main-color);
-    /* border-radius: .6rem; */
     padding: .5rem 1.5rem;
     margin-bottom: 1.5rem;
     z-index: 1;
@@ -368,15 +404,18 @@ p {
 .skills-box .skills-content::before {
     content: '';
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 0;
     height: 100%;
     background: var(--bg-color);
-    z-index: 0; /* restore hover sweep visibility under text */
-    transition: width .5s ease;
+    z-index: -1;
+    transition: .5s ease;
 }
 
-.skills-content .progress { padding: 1rem 0; position: relative; z-index: 1; }
+.skills-content .progress {
+    padding: 1rem 0;
+}
 
 .skills-content .progress h3 {
     font-size: 1.7rem;
@@ -385,7 +424,9 @@ p {
     text-transform: capitalize;
 }
 
-.skills-content .progress h3 span { color: var(--text-color); }
+.skills-content .progress h3 span {
+    color: var(--text-color);
+}
 
 .skills-content .progress .bar {
     height: 2.5rem;
@@ -402,130 +443,66 @@ p {
     background: var(--main-color);
 }
 
-#js .bar span { width: 90%; }
-#js .skills-content:hover:before { width: 90%; }
+/* ---- Progress widths + effet hover (IDs alignés au JSON) ---- */
+#js .bar span { width: 90%; }              #js .skills-content:hover:before { width: 90%; }
+#htmlcss .bar span { width: 90%; }         #htmlcss .skills-content:hover:before { width: 90%; }
+#nodejs .bar span { width: 90%; }          #nodejs .skills-content:hover:before { width: 90%; }
+#vuejs .bar span { width: 80%; }           #vuejs .skills-content:hover:before { width: 80%; }
+#reactjs .bar span { width: 80%; }         #reactjs .skills-content:hover:before { width: 80%; }
+#bootstrap .bar span { width: 90%; }       #bootstrap .skills-content:hover:before { width: 90%; }
 
-#htmlcss .bar span { width: 80%; }
-#htmlcss .skills-content:hover:before { width: 80%; }
+#tsql .bar span { width: 90%; }            #tsql .skills-content:hover:before { width: 90%; }
+#plsql .bar span { width: 90%; }           #plsql .skills-content:hover:before { width: 90%; }
+#mysql .bar span { width: 90%; }           #mysql .skills-content:hover:before { width: 90%; }
+#sybase .bar span { width: 90%; }          #sybase .skills-content:hover:before { width: 90%; }
+#mongodb .bar span { width: 90%; }         #mongodb .skills-content:hover:before { width: 90%; }
 
-#nodejs .bar span { width: 90%; }
-#nodejs .skills-content:hover:before { width: 90%; }
+#cs .bar span { width: 90%; }              #cs .skills-content:hover:before { width: 90%; }
+#vb .bar span { width: 70%; }              #vb .skills-content:hover:before { width: 70%; }
+#api .bar span { width: 90%; }             #api .skills-content:hover:before { width: 90%; }
+#wcf .bar span { width: 90%; }             #wcf .skills-content:hover:before { width: 90%; }
+/* Corrigé : WF (Windows Workflow) */
+#wf .bar span { width: 90%; }              #wf .skills-content:hover:before { width: 90%; }
 
-#vuejs .bar span { width: 80%; }
-#vuejs .skills-content:hover:before { width: 80%; }
+#mvc .bar span { width: 90%; }             #mvc .skills-content:hover:before { width: 90%; }
+#blaz .bar span { width: 90%; }            #blaz .skills-content:hover:before { width: 90%; }
+#wpf .bar span { width: 90%; }             #wpf .skills-content:hover:before { width: 90%; }
+#win .bar span { width: 90%; }             #win .skills-content:hover:before { width: 90%; }
+#asp .bar span { width: 90%; }             #asp .skills-content:hover:before { width: 90%; }
 
-#reactjs .bar span { width: 80%; }
-#reactjs .skills-content:hover:before { width: 80%; }
+#ssis .bar span { width: 80%; }            #ssis .skills-content:hover:before { width: 80%; }
+#ssas .bar span { width: 70%; }            #ssas .skills-content:hover:before { width: 70%; }
+#ssrs .bar span { width: 70%; }            #ssrs .skills-content:hover:before { width: 70%; }
 
-#bootstrap .bar span { width: 90%; }
-#bootstrap .skills-content:hover:before { width: 90%; }
+/* CI/CD */
+#azure .bar span { width: 75%; }           #azure .skills-content:hover:before { width: 75%; }
+#jenkins .bar span { width: 80%; }         #jenkins .skills-content:hover:before { width: 80%; }
+#teamcity .bar span { width: 80%; }        #teamcity .skills-content:hover:before { width: 80%; }
+#octopus .bar span { width: 80%; }         #octopus .skills-content:hover:before { width: 80%; }
+#ansible .bar span { width: 50%; }         #ansible .skills-content:hover:before { width: 50%; }
+#kubernetes .bar span { width: 50%; }      #kubernetes .skills-content:hover:before { width: 50%; }
+#sonarqube .bar span { width: 50%; }       #sonarqube .skills-content:hover:before { width: 50%; }
 
-#tsql .bar span { width: 90%; }
-#tsql .skills-content:hover:before { width: 90%; }
+#kanban .bar span { width: 90%; }          #kanban .skills-content:hover:before { width: 90%; }
+#merise .bar span { width: 90%; }          #merise .skills-content:hover:before { width: 90%; }
 
-#plsql .bar span { width: 90%; }
-#plsql .skills-content:hover:before { width: 90%; }
+#git .bar span { width: 90%; }             #git .skills-content:hover:before { width: 90%; }
+#tfs .bar span { width: 90%; }             #tfs .skills-content:hover:before { width: 90%; }
+#gerrit .bar span { width: 70%; }          #gerrit .skills-content:hover:before { width: 70%; }
 
-#mysql .bar span { width: 90%; }
-#mysql .skills-content:hover:before { width: 90%; }
+#apache .bar span { width: 60%; }          #apache .skills-content:hover:before { width: 60%; }
+#iis .bar span { width: 70%; }             #iis .skills-content:hover:before { width: 70%; }
+/* Serveurs web -> Azure Cloud (distinct de CI/CD/azure) */
+#azurecloud .bar span { width: 80%; }      #azurecloud .skills-content:hover:before { width: 80%; }
 
-#sybase .bar span { width: 90%; }
-#sybase .skills-content:hover:before { width: 90%; }
+#linux .bar span { width: 60%; }           #linux .skills-content:hover:before { width: 60%; }
+#mac .bar span { width: 80%; }             #mac .skills-content:hover:before { width: 80%; }
+#mswin .bar span { width: 90%; }           #mswin .skills-content:hover:before { width: 90%; }
 
-#mongodb .bar span { width: 90%; }
-#mongodb .skills-content:hover:before { width: 90%; }
+#infrag .bar span { width: 90%; }          #infrag .skills-content:hover:before { width: 90%; }
+#crystrep .bar span { width: 100%; }       #crystrep .skills-content:hover:before { width: 100%; }
 
-#cs .bar span { width: 90%; }
-#cs .skills-content:hover:before { width: 90%; }
-
-#vb .bar span { width: 70%; }
-#vb .skills-content:hover:before { width: 70%; }
-
-#api .bar span { width: 90%; }
-#api .skills-content:hover:before { width: 90%; }
-
-#wcf .bar span { width: 90%; }
-#wcf .skills-content:hover:before { width: 90%; }
-
-#wwf .bar span { width: 90%; }
-#wwf .skills-content:hover:before { width: 90%; }
-
-#mvc .bar span { width: 90%; }
-#mvc .skills-content:hover:before { width: 90%; }
-
-#blaz .bar span { width: 90%; }
-#blaz .skills-content:hover:before { width: 90%; }
-
-#wpf .bar span { width: 90%; }
-#wpf .skills-content:hover:before { width: 90%; }
-
-#win .bar span { width: 90%; }
-#win .skills-content:hover:before { width: 90%; }
-
-#asp .bar span { width: 90%; }
-#asp .skills-content:hover:before { width: 90%; }
-
-#ssis .bar span { width: 80%; }
-#ssis .skills-content:hover:before { width: 80%; }
-
-#ssas .bar span { width: 70%; }
-#ssas .skills-content:hover:before { width: 70%; }
-
-#ssrs .bar span { width: 70%; }
-#ssrs .skills-content:hover:before { width: 70%; }
-
-#azure .bar span { width: 75%; }
-#azure .skills-content:hover:before { width: 75%; }
-
-#jenkins .bar span { width: 80%; }
-#jenkins .skills-content:hover:before { width: 80%; }
-
-#teamcity .bar span { width: 80%; }
-#teamcity .skills-content:hover:before { width: 80%; }
-
-#octopus .bar span { width: 80%; }
-#octopus .skills-content:hover:before { width: 80%; }
-
-#kanban .bar span { width: 90%; }
-#kanban .skills-content:hover:before { width: 90%; }
-
-#merise .bar span { width: 90%; }
-#merise .skills-content:hover:before { width: 90%; }
-
-#git .bar span { width: 90%; }
-#git .skills-content:hover:before { width: 90%; }
-
-#tfs .bar span { width: 90%; }
-#tfs .skills-content:hover:before { width: 90%; }
-
-#gerrit .bar span { width: 70%; }
-#gerrit .skills-content:hover:before { width: 70%; }
-
-#apache .bar span { width: 60%; }
-#apache .skills-content:hover:before { width: 60%; }
-
-#iis .bar span { width: 70%; }
-#iis .skills-content:hover:before { width: 70%; }
-
-#azure .bar span { width: 80%; }
-#azure .skills-content:hover:before { width: 80%; }
-
-#linux .bar span { width: 60%; }
-#linux .skills-content:hover:before { width: 60%; }
-
-#mac .bar span { width: 80%; }
-#mac .skills-content:hover:before { width: 80%; }
-
-#mswin .bar span { width: 90%; }
-#mswin .skills-content:hover:before { width: 90%; }
-
-#infrag .bar span { width: 90%; }
-#infrag .skills-content:hover:before { width: 90%; }
-
-#crystrep .bar span { width: 100%; }
-#crystrep .skills-content:hover:before { width: 100%; }
-
-/* ---------------------------------------------- education --------------------------------------- */
+/* ============================== EDUCATION ============================== */
 
 .education {
     display: flex;
@@ -544,7 +521,9 @@ p {
     width: 60%;
 }
 
-.education-row .education-column { flex: 1 1 40rem; }
+.education-row .education-column {
+    flex: 1 1 40rem;
+}
 
 .education-column .title {
     font-size: 2.5rem;
@@ -552,15 +531,22 @@ p {
     margin: 0 0 1.5rem 2rem;
 }
 
-.education-column .education-box { border-left: .2rem solid var(--main-color); }
+.education-column .education-box {
+    border-left: .2rem solid var(--main-color);
+}
 
-.education-box .education-content { position: relative; padding-left: 2rem; }
+.education-box .education-content {
+    position: relative;
+    padding-left: 2rem;
+}
 
 .education-box .education-content::before {
     content: '';
     position: absolute;
-    top: 0; left: -1.1rem;
-    width: 2rem; height: 2rem;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
     background: var(--main-color);
     border-radius: 50%;
 }
@@ -577,14 +563,18 @@ p {
 .education-content .content::before {
     content: '';
     position: absolute;
-    top: 0; left: 0;
-    width: 0; height: 100%;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
     background: var(--snd-bg-color);
     z-index: -1;
     transition: .5s ease;
 }
 
-.education-content .content:hover::before { width: 100%; }
+.education-content .content:hover::before {
+    width: 100%;
+}
 
 .education-content .content .year {
     font-size: 1.5rem;
@@ -592,18 +582,43 @@ p {
     padding-bottom: .5rem;
 }
 
-.education-content .content .year i { padding-right: .5rem; }
-.education-content .content .year span { color: var(--text-color); }
-.education-content .content h3 { font-size: 2rem; }
+.education-content .content .year i {
+    padding-right: .5rem;
+}
 
-.education-content .content .language { font-size: 1.5rem; padding-bottom: .5rem; }
-.education-content .content .language span { color: var(--text-color); }
-.education-content .content img { width: 2rem; padding-right: .5rem; }
+.education-content .content .year span {
+    color: var(--text-color);
+}
 
-/* ---------------------------------------------- testimony --------------------------------------- */
+.education-content .content h3 {
+    font-size: 2rem;
+}
 
-.testimony-box { margin-bottom: 5rem; padding: 3rem; }
-.testimony-quote { font-size: 2.6rem; min-height: 5rem; }
+.education-content .content .language {
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.education-content .content .language span {
+    color: var(--text-color);
+}
+
+.education-content .content img {
+    width: 2rem;
+    padding-right: .5rem;
+}
+
+/* ============================== TESTIMONY ============================== */
+
+.testimony-box {
+    margin-bottom: 5rem;
+    padding: 3rem;
+}
+
+.testimony-quote {
+    font-size: 2.6rem;
+    min-height: 5rem;
+}
 
 blockquote {
 	padding: 2%;
@@ -612,27 +627,53 @@ blockquote {
 	margin: 0 2.5rem;
 	position: relative;
 }
+
 blockquote::before {
 	content: "\201C";
 	font-size: 500%;
 	display: block;
 	position: absolute;
-	top: 0; left: -3rem;
+	top: 0;
+	left: -3rem;
 }
 
-.testimony-author { display: flex; flex-direction: row; align-items: baseline; }
-.testimony-author span { color: var(--text-color); margin-right: .8rem; }
+.testimony-author {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
 
-.author-name cite { display: block; font-weight: bold; font-size: 2.8rem; }
-.author-role { text-transform: capitalize; font-size: 2rem; }
-.testimony-author .date { font-size: 1.8rem; }
-.testimony-author abbr { font-size: 2.8rem; margin-left: .8rem; }
+.testimony-author span {
+    color: var(--text-color);
+    margin-right: .8rem;
+}
 
-/* ---------------------------------------------- experiences ------------------------------------- */
+.author-name cite {
+	display: block;
+    font-weight: bold;
+    font-size: 2.8rem;
+}
+
+.author-role {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.testimony-author .date {
+    font-size: 1.8rem;
+}
+
+.testimony-author abbr {
+    font-size: 2.8rem;
+    margin-left: .8rem;
+}
+
+/* ============================== EXPERIENCES (CARDS) ============================== */
+
 .experiences {
     background: var(--snd-bg-color);
     min-height: auto;
-    padding-bottom: var(--space-12);
+    padding-bottom: 7rem;
 }
 
 .experiences-row {
@@ -642,7 +683,9 @@ blockquote::before {
     gap: 2.5rem;
 }
 
-.experiences-column { overflow: hidden; }
+.experiences-column {
+    overflow: hidden;
+}
 
 .card-container {
     position: relative;
@@ -655,12 +698,11 @@ blockquote::before {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform .6s ease; /* animations point: transition scoped to transform */
+    transition: all .5s ease;
 }
 
 .card:hover {
     transform: rotateY(180deg);
-    will-change: transform; /* perf hint */
 }
 
 .card-front {
@@ -672,25 +714,30 @@ blockquote::before {
     padding-bottom: 2rem;
 }
 
-.card-front span { color: #fff; }
+.card-front span {
+    color: #fff;
+}
 
+/* Image "full top" comme avant (bord à bord, pas de fond blanc) */
 .card-front img {
     height: 50%;
     width: 100%;
-    display: block; /* remove baseline gap; no object-fit to preserve your asset framing */
 }
 
 .card-front div {
-    margin: 1rem 1rem 2.2rem; /* tighter bottom space for neatness */
+    margin: 1rem 1rem 3rem;
     font-size: 1.8rem;
     text-align: left;
 }
 
 .card-front .role span { text-transform: capitalize; }
 .card-front i { margin-right: 1rem; }
-.card-front .company-name { text-transform: uppercase; font-weight: 800; font-size: 2.0rem; }
+.card-front .company-name { text-transform: uppercase; }
 .card-front .company-location { text-transform: capitalize; }
-.card-front .duration span { font-size: 1.45rem; }
+
+.card-front .duration span {
+    font-size: 1.3rem;
+}
 
 .card-back {
     position: absolute;
@@ -698,36 +745,40 @@ blockquote::before {
     height: 100%;
     backface-visibility: hidden;
     background: var(--main-color);
+    font-size: 1.5rem;
     color: var(--text-color);
     transform: rotateY(180deg);
-    font-size: 1.65rem;        /* readability aligned with recto meta */
-    line-height: 1.55;
 }
 
 .card-back .top {
     height: 70%;
-    padding: 2.6rem 2.8rem;
-    font-size: 1.65rem;
-    overflow: auto;                    /* scrollable text (agreed) */
-    -webkit-overflow-scrolling: touch; /* smooth on iOS */
-    overscroll-behavior: contain;      /* avoid bubbling */
-    contain: content;
+    padding: 3rem;
+    font-size: 1.4rem;       /* lisibilité accrue */
+    overflow: auto;          /* évite la disparition du texte long */
 }
 
-.card-back .top a { color: var(--link-accent); font-weight: bold; }
-.card-back .top a:hover { cursor: pointer; text-decoration: underline; }
+.card-back .top a {
+    color: #ffc300;
+    font-weight: bold;
+}
+
+.card-back .top a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .card-back .top div { margin-bottom: 1rem; }
 
 .card-back .bottom {
     height: 30%;
     background: var(--bg-color);
-    padding: 1.2rem 2.8rem;
-    overflow: auto;                    /* scroll if lots of tools/professions */
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
+    padding: 1rem 3rem;
+    overflow: auto;          /* si liste d'outils très longue */
 }
 
-.card-back .bottom div { padding-bottom: 2rem; }
+.card-back .bottom div {
+    padding-bottom: 2rem;
+}
 
 .card-back .plus {
     color: var(--text-color);
@@ -744,20 +795,32 @@ blockquote::before {
 
 .card-back .bottom .profession span { color: var(--text-color); }
 
-.key { text-transform: capitalize; margin-right: 1rem; font-weight: 500; }
+.key {
+    text-transform: capitalize;
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
 .profession .value { text-transform: capitalize; }
 
-/* ---------------------------------------------- contact ----------------------------------------- */
+/* ============================== CONTACT ============================== */
 
-.contact h2 { margin-bottom: 5rem; }
+.contact h2 {
+    margin-bottom: 5rem;
+}
 
 .contact form {
     max-width: 70rem;
-    margin: 1rem auto 3rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
-.contact form .input-box { display: flex; justify-content: space-between; flex-wrap: wrap; }
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
 .contact form .input-box input,
 .contact form textarea {
@@ -770,12 +833,20 @@ blockquote::before {
     margin: .7rem 0;
 }
 
-.contact form .input-box input { width: 49%; }
-.contact form textarea { resize: none; }
+.contact form .input-box input {
+    width: 49%;
+}
 
-.contact form .btn { margin-top: 2rem; cursor: pointer; }
+.contact form textarea {
+    resize: none;
+}
 
-/* ---------------------------------------------- footer ------------------------------------------ */
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+/* ============================== FOOTER ============================== */
 
 .footer {
     padding: 2rem 9%;
@@ -785,14 +856,18 @@ blockquote::before {
     padding: 5rem;
 }
 
-.footer a { color: var(--text-color); font-size: 2.3rem; }
+.footer a {
+    color: var(--text-color);
+    font-size: 2.3rem;
+}
+
 .footer ul { list-style: none; }
 
 .footer-top {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
-    gap: var(--space-6);
+    gap: 2.5rem;
     margin-bottom: 5rem;
 }
 
@@ -805,18 +880,33 @@ blockquote::before {
 
 .footer-top div {
     text-align: center;
-    padding: var(--space-6);
+    padding: 3rem;
 }
 
-.cv { display: flex; justify-content: center; align-items: center; height: 100%; }
+.cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .footer-top .cv li { padding: 1rem; }
 .footer-top .cv i { font-size: 4.5rem; }
 
 .fa-file-word { color: #4895ef; }
 .fa-file-pdf  { color: #d00000; }
 
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-.footer-text { font-size: 1.6rem; text-align: center; }
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-text {
+    font-size: 1.6rem;
+    text-align: center;
+}
 
 .footer-text p,
 .footer-text span,
@@ -828,15 +918,25 @@ blockquote::before {
     align-items: center;
     padding: .8rem 1rem;
     background: var(--main-color);
-    border-radius: var(--radius-md);
+    border-radius: .8rem;
     transition: .5s ease;
 }
 
-.footer-iconTop a { color: var(--text-color); text-decoration: none; }
-.footer-iconTop a:hover { box-shadow: var(--shadow-main); }
-.footer-iconTop a i { font-size: 2.4rem; color: var(--snd-bg-color); }
+.footer-iconTop a {
+    color: var(--text-color);
+    text-decoration: none;
+}
 
-/* ---------------------------------------------- responsive -------------------------------------- */
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--snd-bg-color);
+}
+
+/* ============================== RESPONSIVE ============================== */
 
 @media (max-width: 1300px) {
     html { font-size: 55%; }
@@ -858,8 +958,10 @@ blockquote::before {
 @media (max-width: 872px) {
     .navbar {
         position: absolute;
-        top: 100%; left: 0;
-        width: 100%; height: auto;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
         padding: 1rem 3%;
         background: var(--bg-color);
         border-top: 1rem solid rgba(0, 0, 0, .2);
@@ -867,14 +969,16 @@ blockquote::before {
         display: none;
     }
     .navbar.active { display: block; }
-
-    .navbar a { display: block; font-size: 2rem; margin: 3rem 0; }
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
     .navbar .flags { margin: 3rem 0; }
     #menu-icon { display: block; margin-right: 6rem; }
 }
 
 @media (max-width: 768px) {
-
     .home { flex-direction: column; margin-top: 3rem; }
     .home-content h3 { font-size: 2.6rem; }
     .home-content h1 { font-size: 5rem; }
@@ -882,14 +986,17 @@ blockquote::before {
     .home-img img { width: 100vw; margin-top: 4rem; }
 
     .about { flex-direction: column; }
+
     .services h2 { margin-bottom: 3rem; }
     .services-container { flex-direction: column; }
-    .portfolio h2 { margin-bottom: 3rem; }
 
+    .portfolio h2 { margin-bottom: 3rem; }
     .portfolio-container { grid-template-columns: repeat(2, 1fr); }
+
     .experiences-row { grid-template-columns: 1fr; }
 
     .footer-top { grid-template-columns: 1fr; }
+
     .testimony-author { display: flex; flex-direction: column; }
 }
 
@@ -903,16 +1010,17 @@ blockquote::before {
     .contact form .input-box input { width: 100%; }
 }
 
-/* ===== Accessibility: hover & focus-visible improvements ===== */
-:root {
-  --focus-outline-width: 3px;
-  --focus-outline-color: var(--main-color);
-  --focus-ring: 0 0 0 3px rgba(19, 82, 103, 0.55);
-}
+/* ============================== ACCESSIBILITY (FOCUS/HOVER) ============================== */
 
 /* Global link styles */
-a { text-underline-offset: 0.2em; text-decoration-thickness: 2px; }
-a:hover, a:active { text-decoration: underline; }
+a {
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 2px;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
+}
 
 /* Keyboard focus styles on interactive elements */
 a:focus-visible,
@@ -927,8 +1035,9 @@ textarea:focus-visible,
   box-shadow: var(--focus-ring);
 }
 
-/* Navbar links */
-.navbar a:hover, .navbar a:active {
+/* Navbar links: clear hover/focus state */
+.navbar a:hover,
+.navbar a:active {
   text-decoration: underline;
   text-underline-offset: 0.25em;
 }
@@ -940,30 +1049,25 @@ textarea:focus-visible,
   box-shadow: var(--focus-ring);
 }
 
-/* Buttons */
-.btn { cursor: pointer; }
-.btn:focus-visible {
-  outline: var(--focus-outline-width) solid var(--focus-outline-color);
-  outline-offset: 3px;
-  box-shadow: var(--focus-ring);
-}
-
-/* Social icons */
+/* Social icons: mirror hover on focus for keyboard users */
 .social-media a:focus-visible {
   background-color: var(--main-color);
-  box-shadow: var(--shadow-main);
+  box-shadow: 0 0 1rem var(--main-color);
   outline: var(--focus-outline-width) solid var(--focus-outline-color);
   outline-offset: 3px;
 }
 
-/* Form fields */
-input:focus-visible, select:focus-visible, textarea:focus-visible {
+/* Form fields: visible focus */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
   outline: var(--focus-outline-width) solid var(--focus-outline-color);
   outline-offset: 2px;
 }
 
-/* Focus inside cards */
-.portfolio-layer a:focus-visible, .card-container a:focus-visible {
+/* Portfolio & cards: focus clarity */
+.portfolio-layer a:focus-visible,
+.card-container a:focus-visible {
   outline: var(--focus-outline-width) solid var(--focus-outline-color);
   outline-offset: 3px;
   box-shadow: var(--focus-ring);
@@ -971,7 +1075,9 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 
 /* High contrast users */
 @media (prefers-contrast: more) {
-  a:hover, a:active { text-decoration: underline; }
+  a:hover, a:active {
+    text-decoration: underline;
+  }
   a:focus-visible,
   button:focus-visible,
   [role="button"]:focus-visible,
@@ -983,83 +1089,19 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   }
 }
 
-/* ===== Point 4: prefers-reduced-motion ===== */
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto !important; }
-  .home-img { animation: none !important; }
-  .card { transition: none !important; }
-  .card:hover { transform: none !important; will-change: auto !important; }
-  .portfolio-box img { transition: none !important; }
-  .portfolio-box:hover img { transform: none !important; }
-}
-
-/* ===== Optional: Light theme (only if <body class="theme-light">) ===== */
-body.theme-light {
-  --bg-color: #f4f6f8;
+/* THEME: light mode variables (opt-in via [data-theme="light"]) */
+:root { transition: background-color .2s ease, color .2s ease; }
+:root[data-theme="light"] {
+  --bg-color: #f6f8fa;
   --snd-bg-color: #ffffff;
-  --text-color: #111827;
+  --text-color: #111418;
+  --main-color: #135267; /* conserve l’accent */
 }
 
-/* Light: fix experiences readability */
-body.theme-light .card-front { background: var(--snd-bg-color); }
-body.theme-light .card-front span,
-body.theme-light .card-front div,
-body.theme-light .card-front i { color: var(--text-color); }
-body.theme-light .card-front .duration span { color: var(--text-color); }
-
-body.theme-light .card-back { color: #ffffff; } /* top on --main-color */
-body.theme-light .card-back .bottom {
-  background: var(--snd-bg-color);
-  color: var(--text-color);
+/* petit contraste pour boxes en clair */
+:root[data-theme="light"] .services-box,
+:root[data-theme="light"] .education-content .content,
+:root[data-theme="light"] .skills-box .skills-content,
+:root[data-theme="light"] .portfolio-container .portfolio-box {
+  box-shadow: 0 0 .8rem rgba(0,0,0,.08);
 }
-body.theme-light .card-back .plus,
-body.theme-light .card-back .bottom .tools span,
-body.theme-light .card-back .bottom .profession span { color: var(--text-color); }
-
-/* Light: make skills hover overlay visible on light surfaces */
-body.theme-light .skills-box .skills-content::before { background: rgba(0,0,0,0.08); }
-
-/* === Robust fallback when `.card-container` is absent =====================
-   Some items appear without the wrapper in your markup. In that case, size
-   the `.card` itself so % heights (e.g., logo at 50%) resolve correctly.
-   This does NOT affect the normal `.card-container > .card` structure.
-=========================================================================== */
-.experiences-column { display: flex; justify-content: center; }
-
-.experiences-column > .card {
-  position: relative;           /* becomes the containing block */
-  width: 400px;
-  height: 520px;
-}
-
-/* =============================
-   Cards contrast & boundaries (external + internal)
-   ============================= */
-.card-front, .card-back {
-  border: 1px solid rgba(255,255,255,0.08);   /* dark theme subtle border */
-  border-radius: var(--radius-xl);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.24), 0 1px 2px rgba(0,0,0,0.30);
-  overflow: hidden; /* ensures rounded corners apply to children */
-}
-
-/* Internal divider between logo area and identity block */
-.card-front img {
-  border-bottom: 1px solid rgba(255,255,255,0.12);
-  border-top-left-radius: var(--radius-xl);
-  border-top-right-radius: var(--radius-xl);
-}
-
-/* Divider between mission content and tools */
-.card-back .bottom {
-  border-top: 1px solid rgba(255,255,255,0.12);
-}
-
-/* Light theme: stronger borders & softer shadows for readability */
-body.theme-light .card-front,
-body.theme-light .card-back {
-  border: 1px solid rgba(17,24,39,0.12);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.06);
-}
-
-body.theme-light .card-front img { border-bottom: 1px solid rgba(17,24,39,0.10); }
-body.theme-light .card-back .bottom { border-top: 1px solid rgba(17,24,39,0.10); }
