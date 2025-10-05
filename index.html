@@ -29,7 +29,7 @@
                 <a id="mn-ser" href="#services">services</a>
                 <a id="mn-tes" href="#testimony">références</a>
                 <a id="mn-exp" href="#experiences">experiences</a>
-                <a id="mn-con" href="#contact">contact</a>
+                <a id="mn-con" href="mailto:jeanlucbiah.pro@outlook.com?subject=%5BPortfolio%5D%20Contact&body=Bonjour%20Jean%20Luc%2C%0D%0A%0D%0A">contact</a>
                 <div class="flags">
                     <div class="inner">
                         <img src="resources/img/flag-france.png" id="flag-FR" alt="" srcset="">
@@ -511,30 +511,6 @@
 
             <div class="experiences-row"></div>
         </section>
-
-        <section id="contact" class="contact">
-            <h2 class="heading">Contactez <span>Moi</span></h2>
-
-            <div id="mailform" class="flex flex-col mt-2 hide">
-                <form onsubmit="sendEmail(); reset(); return false;" class="form-contact">
-                    <div class="input-box">
-                        <input type="text" id="name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="name-addon">
-                        <input type="email" id="email" class="form-control" placeholder="E-mail" aria-label="E-mail" aria-describedby="email-addon">
-                    </div>
-                    <div class="input-box">
-                        <input type="tel" id="phone" class="form-control" placeholder="Phone" aria-label="Phone" aria-describedby="phone-addon">
-                        <input type="text" id="subject" class="form-control" placeholder="Subject" aria-label="Subject" aria-describedby="name-addon">
-                    </div>
-                    <div class="input-box">
-                        <textarea id="msg-body" cols="30" rows="10" class="form-control" placeholder="Message" aria-label="With textarea"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <input type="submit" value="Envoyer" class="btn"></input>
-                    </div>            
-                </form>
-            </div>
-        </section>
-
         <footer class="footer">
             <div class="footer-top">
                 <div id="cv">
@@ -593,9 +569,6 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.48.0/apexcharts.min.js" integrity="sha512-wqcdhB5VcHuNzKcjnxN9wI5tB3nNorVX7Zz9NtKBxmofNskRC29uaQDnv71I/zhCDLZsNrg75oG8cJHuBvKWGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script type="text/javascript" src="resources/js/mail.js"></script>
         <script type="module" src="resources/js/main.js"></script>
     </body>
 </html>

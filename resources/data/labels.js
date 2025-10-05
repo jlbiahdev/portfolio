@@ -140,7 +140,7 @@ export const labels = {
 
   "contact": {
     "header": [
-      { "lang": "FR", "value": "Contactez-moi_span_" },
+      { "lang": "FR", "value": "Contactez moi_span_" },
       { "lang": "EN", "value": "Contact Me_span_" }
     ],
     "btn": [
