@@ -2,6 +2,7 @@ import * as PortfolioData from '../data/data.js';
 import * as FormProperties from '../data/labels.js';
 import './extensions.string.js';
 import './extensions.array.js';
+import { transformLabel } from './labels.helpers.js';
 import { normalizeSkills } from './skills-normalize.js';
 
 const COOKIES = {
@@ -12,14 +13,6 @@ const LANGUAGES = {
     French: "FR",
     English: "EN"
 }
-
-const KEYWORDS = {
-    Span: "_span_",
-    NewLine: "_br_",
-    Capital: "_cap_",
-    Upper: "_upr_",
-    Lower: "_lwr_",
-};
 
 $(document).ready(() => {
 
@@ -58,16 +51,16 @@ const reset = () => {
     $('#dwn_cv').html(FormProperties.labels.home.download_profile.find(e => e.lang === lang).value);
     $('#cnt_me').html(FormProperties.labels.home.contact_me.find(e => e.lang === lang).value);
 
-    $('#contact .heading').html(shape(FormProperties.labels.contact.header.find(e => e.lang === lang).value));
-    $('.form-contact .btn').val(shape(FormProperties.labels.contact.btn.find(e => e.lang === lang).value));
+    $('#contact .heading').html(shape(FormProperties.labels.contact.header.find(e => e.lang === lang).value, lang));
+    $('.form-contact .btn').val(shape(FormProperties.labels.contact.btn.find(e => e.lang === lang).value, lang));
 
-    $('footer .footer-text span').html(shape(FormProperties.labels.footer.all_rights.find(e => e.lang === lang).value));
-    $('footer #links h2').html(shape(FormProperties.labels.footer.links.find(e => e.lang === lang).value));
-    $('footer #cv h2').html(shape(FormProperties.labels.footer.cv_cpr.find(e => e.lang === lang).value));
-    $('footer #cvplus h2').html(shape(FormProperties.labels.footer.cv_plus.find(e => e.lang === lang).value));
-    $('footer #cv-dev h2').html(shape(FormProperties.labels.footer.cv_dev.find(e => e.lang === lang).value));
-    $('footer #cvplus-dev h2').html(shape(FormProperties.labels.footer.cv_dev_plus.find(e => e.lang === lang).value));
-    $('footer #references h2').html(shape(FormProperties.labels.footer.references.find(e => e.lang === lang).value));
+    $('footer .footer-text span').html(shape(FormProperties.labels.footer.all_rights.find(e => e.lang === lang).value, lang));
+    $('footer #links h2').html(shape(FormProperties.labels.footer.links.find(e => e.lang === lang).value, lang));
+    $('footer #cv h2').html(shape(FormProperties.labels.footer.cv_cpr.find(e => e.lang === lang).value, lang));
+    $('footer #cvplus h2').html(shape(FormProperties.labels.footer.cv_plus.find(e => e.lang === lang).value, lang));
+    $('footer #cv-dev h2').html(shape(FormProperties.labels.footer.cv_dev.find(e => e.lang === lang).value, lang));
+    $('footer #cvplus-dev h2').html(shape(FormProperties.labels.footer.cv_dev_plus.find(e => e.lang === lang).value, lang));
+    $('footer #references h2').html(shape(FormProperties.labels.footer.references.find(e => e.lang === lang).value, lang));
 
     $("footer #cv a.doc").attr("href", FormProperties.labels.footer.cv_cpr_doc.find(e => e.lang === lang).value);
     $("footer #cv a.pdf").attr("href", FormProperties.labels.footer.cv_cpr_pdf.find(e => e.lang === lang).value);
@@ -79,67 +72,39 @@ const reset = () => {
     $("footer #cvplus-dev a.doc").attr("href", FormProperties.labels.footer.cv_dev_plus_doc.find(e => e.lang === lang).value);
     $("footer #cvplus-dev a.pdf").attr("href", FormProperties.labels.footer.cv_dev_plus_pdf.find(e => e.lang === lang).value);
     
-    $('#about .about-content p').html(shape(PortfolioData.identity.intro.find(e => e.lang === lang).about));
-    $('#about .about-content ul').html(doList(PortfolioData.identity.intro.find(e => e.lang === lang).qualities));
-    $('#about .heading').html(shape(FormProperties.labels.about.header.find(e => e.lang === lang).value));
-    $('#skills .heading').html(shape(FormProperties.labels.skills.header.find(e => e.lang === lang).value));
+    $('#about .about-content p').html(shape(PortfolioData.identity.intro.find(e => e.lang === lang).about, lang));
+    $('#about .about-content ul').html(doList(PortfolioData.identity.intro.find(e => e.lang === lang).qualities, lang));
+    $('#about .heading').html(shape(FormProperties.labels.about.header.find(e => e.lang === lang).value, lang));
+    $('#skills .heading').html(shape(FormProperties.labels.skills.header.find(e => e.lang === lang).value, lang));
 
     $('#school-box').html(shape_schools(PortfolioData.education.schools, lang));
     $('#language-box').html(shape_languages(PortfolioData.education.languages.filter(e => e.lang === lang)));
-    $('#education .heading').html(shape(FormProperties.labels.education.header.find(e => e.lang === lang).value));
-    $('#education-label').html(shape(FormProperties.labels.education.education_label.find(e => e.lang === lang).value));
-    $('#language-label').html(shape(FormProperties.labels.education.language_label.find(e => e.lang === lang).value));
+    $('#education .heading').html(shape(FormProperties.labels.education.header.find(e => e.lang === lang).value, lang));
+    $('#education-label').html(shape(FormProperties.labels.education.education_label.find(e => e.lang === lang).value, lang));
+    $('#language-label').html(shape(FormProperties.labels.education.language_label.find(e => e.lang === lang).value, lang));
 
     $('.services-container').html(shape_services(PortfolioData.services.filter(e => e.lang === lang)));
-    $('#services .heading').html(shape(FormProperties.labels.services.header.find(e => e.lang === lang).value));
-    $('#services .services-box .btn').html(shape(FormProperties.labels.services.btn.find(e => e.lang === lang).value));
+    $('#services .heading').html(shape(FormProperties.labels.services.header.find(e => e.lang === lang).value, lang));
+    $('#services .services-box .btn').html(shape(FormProperties.labels.services.btn.find(e => e.lang === lang).value, lang));
 
     $('#portfolio-web .portfolio-container').html(shape_portfolios(PortfolioData.web_portfolios, lang));
-    $('#portfolio-web .heading').html(shape(FormProperties.labels.web_portfolios.header.find(e => e.lang === lang).value));
+    $('#portfolio-web .heading').html(shape(FormProperties.labels.web_portfolios.header.find(e => e.lang === lang).value, lang));
 
     $('#portfolio-api .portfolio-container').html(shape_portfolios(PortfolioData.api_portfolios, lang));
-    $('#portfolio-api .heading').html(shape(FormProperties.labels.api_portfolios.header.find(e => e.lang === lang).value));
+    $('#portfolio-api .heading').html(shape(FormProperties.labels.api_portfolios.header.find(e => e.lang === lang).value, lang));
 
     $('#portfolio-pro .portfolio-container').html(shape_pro_portfolios(PortfolioData.pro_portfolios, lang));
-    $('#portfolio-pro .heading').html(shape(FormProperties.labels.pro_portfolios.header.find(e => e.lang === lang).value));
+    $('#portfolio-pro .heading').html(shape(FormProperties.labels.pro_portfolios.header.find(e => e.lang === lang).value, lang));
 
-    $('#testimony .heading').html(shape(FormProperties.labels.testimonials.header.find(e => e.lang === lang).value));
+    $('#testimony .heading').html(shape(FormProperties.labels.testimonials.header.find(e => e.lang === lang).value, lang));
     $('.testimony-container').html(shape_testimonials(PortfolioData.testimonials.find(e => e.lang === lang).words));
-    
-    $('#experiences .heading').html(shape(FormProperties.labels.experiences.header.find(e => e.lang === lang).value));
+
+    $('#experiences .heading').html(shape(FormProperties.labels.experiences.header.find(e => e.lang === lang).value, lang));
     $('#experiences .experiences-row').html(shape_experiences(PortfolioData.experiences, FormProperties.labels.experiences.box.find(e => e.lang === lang), lang));
 }
 
-const shape = (str) => {
-
-    let words = str.split(' ');
-    let clone = str;
-
-    words.forEach(w => {
-        // if (w.includes(KEYWORDS.Capital)) {
-        //     let clone_w = w;
-        //     console.log(clone_w)
-        //     clone_w = clone_w.replace(KEYWORDS.Capital, '').capitalize();
-        //     clone = clone.replace(w, clone_w);
-        //     console.log(clone_w)
-        //     console.log(clone)
-        // }
-        // console.log(clone_w)
-        if (w.includes(KEYWORDS.Span)) {
-            let clone_w = w;
-            clone = clone.replace(clone_w, `<span>${clone_w.replace(KEYWORDS.Span, '')}</span>`);
-            // console.log(clone)
-        }
-        // if (w.includes(KEYWORDS.Span)) {
-        //     clone = clone.replace(w, `<span>${w.replace(KEYWORDS.Span, '')}</span>`);
-        //     // console.log(clone)
-        // }
-        // if (w.includes(KEYWORDS.Span)) {
-        //     clone = clone.replace(w, `<span>${w.replace(KEYWORDS.Span, '')}</span>`);
-        //     // console.log(clone)
-        // }
-    });
-
+const shape = (str, currentLang) => {
+    let clone = transformLabel(str, { locale: currentLang === 'EN' ? 'en-US' : 'fr-FR' });
     return clone;
 }
 
