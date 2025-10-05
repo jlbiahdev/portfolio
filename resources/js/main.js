@@ -1,9 +1,11 @@
+// resources/js/main.js
+
 import * as PortfolioData from '../data/data.js';
 import * as FormProperties from '../data/labels.js';
 import './extensions.string.js';
 import './extensions.array.js';
 import { transformLabel } from './labels.helpers.js';
-import { normalizeSkills } from './skills-normalize.js';
+// import { normalizeSkills } from './skills-normalize.js'; // non utilisé
 
 const COOKIES = {
     SelectedLanguage: "SELECTED_LANG",
@@ -12,33 +14,37 @@ const COOKIES = {
 const LANGUAGES = {
     French: "FR",
     English: "EN"
-}
+};
 
 $(document).ready(() => {
-
     reset();
 
-/* ------------------------------------------- events --------------------------------------------- */
-    $( "#menu-icon" ).on( "click", function() { menuIcononclick(); });
+    /* ------------------------------------------- events --------------------------------------------- */
+    $("#menu-icon").on("click", function () { menuIcononclick(); });
 
-    $('#flag-FR').click(function() { 
-        setCookie(COOKIES.SelectedLanguage, LANGUAGES.French, 1); 
+    $('#flag-FR').click(function () {
+        setCookie(COOKIES.SelectedLanguage, LANGUAGES.French, 1);
         reset();
     });
-    $('#flag-EN').click(function() { 
-        setCookie(COOKIES.SelectedLanguage, LANGUAGES.English, 1); 
+    $('#flag-EN').click(function () {
+        setCookie(COOKIES.SelectedLanguage, LANGUAGES.English, 1);
         reset();
     });
 });
+
 /* ---------------------------------------------- toggle icon navbar -------------------------------------- */
- 
+
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 const reset = () => {
     let lang = getCookie(COOKIES.SelectedLanguage);
-
     lang ??= LANGUAGES.French;
+
+    // Drapeau actif (optionnel : ajouter un style .active)
+    $('#flag-FR, #flag-EN').removeClass('active');
+    $('#flag-' + lang).addClass('active');
+
     $('#mn-hom').html(FormProperties.labels.menu.home.find(e => e.lang === lang).value);
     $('#mn-abo').html(FormProperties.labels.menu.about.find(e => e.lang === lang).value);
     $('#mn-edu').html(FormProperties.labels.menu.education.find(e => e.lang === lang).value);
@@ -60,18 +66,17 @@ const reset = () => {
     $('footer #cvplus h2').html(shape(FormProperties.labels.footer.cv_plus.find(e => e.lang === lang).value, lang));
     $('footer #cv-dev h2').html(shape(FormProperties.labels.footer.cv_dev.find(e => e.lang === lang).value, lang));
     $('footer #cvplus-dev h2').html(shape(FormProperties.labels.footer.cv_dev_plus.find(e => e.lang === lang).value, lang));
-    $('footer #references h2').html(shape(FormProperties.labels.footer.references.find(e => e.lang === lang).value, lang));
 
     $("footer #cv a.doc").attr("href", FormProperties.labels.footer.cv_cpr_doc.find(e => e.lang === lang).value);
     $("footer #cv a.pdf").attr("href", FormProperties.labels.footer.cv_cpr_pdf.find(e => e.lang === lang).value);
     $("footer #cvplus a.doc").attr("href", FormProperties.labels.footer.cv_cpr_plus_doc.find(e => e.lang === lang).value);
     $("footer #cvplus a.pdf").attr("href", FormProperties.labels.footer.cv_cpr_plus_pdf.find(e => e.lang === lang).value);
-    
+
     $("footer #cv-dev a.doc").attr("href", FormProperties.labels.footer.cv_dev_doc.find(e => e.lang === lang).value);
     $("footer #cv-dev a.pdf").attr("href", FormProperties.labels.footer.cv_dev_pdf.find(e => e.lang === lang).value);
     $("footer #cvplus-dev a.doc").attr("href", FormProperties.labels.footer.cv_dev_plus_doc.find(e => e.lang === lang).value);
     $("footer #cvplus-dev a.pdf").attr("href", FormProperties.labels.footer.cv_dev_plus_pdf.find(e => e.lang === lang).value);
-    
+
     $('#about .about-content p').html(shape(PortfolioData.identity.intro.find(e => e.lang === lang).about, lang));
     $('#about .about-content ul').html(doList(PortfolioData.identity.intro.find(e => e.lang === lang).qualities, lang));
     $('#about .heading').html(shape(FormProperties.labels.about.header.find(e => e.lang === lang).value, lang));
@@ -100,172 +105,157 @@ const reset = () => {
     $('.testimony-container').html(shape_testimonials(PortfolioData.testimonials.find(e => e.lang === lang).words));
 
     $('#experiences .heading').html(shape(FormProperties.labels.experiences.header.find(e => e.lang === lang).value, lang));
-    $('#experiences .experiences-row').html(shape_experiences(PortfolioData.experiences, FormProperties.labels.experiences.box.find(e => e.lang === lang), lang));
-}
+    $('#experiences .experiences-row').html(
+        shape_experiences(PortfolioData.experiences, FormProperties.labels.experiences.box.find(e => e.lang === lang), lang)
+    );
+
+    // (re)initialise Typed + ScrollReveal pour le DOM injecté
+    reset_typed();
+    reinit_reveal();
+};
 
 const shape = (str, currentLang) => {
-    let clone = transformLabel(str, { locale: currentLang === 'EN' ? 'en-US' : 'fr-FR' });
-    return clone;
-}
+    return transformLabel(str, { locale: currentLang === 'EN' ? 'en-US' : 'fr-FR' });
+};
 
 const doList = (items) => {
-    var result = '';
-
+    let result = '';
     items.forEach(item => result += `<li>${item}</li>`);
-
     return result;
-}
+};
 
 const menuIcononclick = () => {
-    // alert('meun clicked');
     menuIcon.classList.toggle('fa-xmark');
     navbar.classList.toggle('active');
-}
+};
 
 const shape_schools = (items, lang) => {
-
-    var result = '';
-
+    let result = '';
     items.forEach(e => {
         let diploma = e.diploma.find(k => k.lang === lang);
         result += school_box.replace('{year}', e.graduation_year)
-        .replace('{diploma}', diploma.name)
-        .replace('{school}', e.name)
-        .replace('{place}', `${e.place.city}, ${e.place.country}`);
+            .replace('{diploma}', diploma.name)
+            .replace('{school}', e.name)
+            .replace('{place}', `${e.place.city}, ${e.place.country}`);
     });
-
     return result;
-}
+};
 
 const shape_languages = (items) => {
-
-    var result = '';
-
+    let result = '';
     items.forEach(e => {
         result += language_box.replace('{flag}', `resources/img/${e.icon}`)
-        .replace('{tongue}', e.wormanship);
+            .replace('{tongue}', e.wormanship);
     });
-
     return result;
-}
+};
 
 const shape_services = (items) => {
-
-    var result = '';
-
+    let result = '';
     items.forEach(e => {
         result += service_box.replace('{icon}', e.icon)
-        .replace('{name}', e.name)
-        .replace('{description}', e.description)
-        ;
+            .replace('{name}', e.name)
+            .replace('{description}', e.description);
     });
-
     return result;
-}
+};
 
 const shape_portfolios = (items, lang) => {
-
-    var result = '';
-
+    let result = '';
     items.forEach(e => {
         let description = e.description.find(k => k.lang === lang);
         result += portfolio_box.replace('{image}', `resources/img/${e.image}`)
-        .replace('{url}', e.url)
-        .replace('{name}', e.name)
-        .replace('{description}', description.value);
+            .replace(/{url}/g, e.url)
+            .replace(/{name}/g, e.name)
+            .replace('{description}', description.value);
     });
-
     return result;
-}
+};
 
 const shape_pro_portfolios = (items, lang) => {
-
-    var result = '';
-
+    let result = '';
     items.forEach(e => {
         let description = e.keywords.find(k => k.lang === lang);
         result += pro_portfolio_box.replace('{image}', `resources/img/${e.image}`)
-        .replace('{name}', e.name)
-        .replace('{years}', e.years.join(', '))
-        .replace('{keywords}', description.value);
+            .replace(/{name}/g, e.name)
+            .replace('{years}', e.years.join(', '))
+            .replace('{keywords}', description.value);
     });
     return result;
-}
+};
 
 const shape_testimonials = (items) => {
-
-    var result = '';
-
+    let result = '';
     items.forEach(e => {
         result += testimony_box.replace('{testimony_quote}', e.quote)
-        .replace('{author_name}', e.author_name)
-        .replace('{author_role}', e.author_role)
-        .replace('{work_period}', e.work_period)
-        .replace('{company_name}', e.company_name)
-        .replace('{company_acronym}', e.company_acronym)
-        ;
+            .replace('{author_name}', e.author_name)
+            .replace('{author_role}', e.author_role)
+            .replace('{work_period}', e.work_period)
+            .replace('{company_name}', e.company_name)
+            .replace('{company_acronym}', e.company_acronym);
     });
-
     return result;
-}
+};
+
+// Helper période : 2021/03 - aujourd’hui | 2019/01 - 2019/09 (mois sur 2 chiffres)
+const fmtPeriod = (p, lang) => {
+    const mm = m => String(m ?? '').padStart(2, '0');
+    const nowWord = lang === 'FR' ? 'aujourd’hui' : 'present';
+    if (!p.to_year || p.to_year === 0) return `${p.from_year}/${mm(p.from_month)} - ${nowWord}`;
+    return `${p.from_year}/${mm(p.from_month)} - ${p.to_year}/${mm(p.to_month)}`;
+};
 
 const shape_experiences = (items, labels, lang) => {
-
-    var result = '';
-    console.log(items);
+    let result = '';
     items.forEach(e => {
-        let place = e.place.find(k => k.lang === lang);
-        let role = e.role.find(k => k.lang === lang);
-        let achievements = e.achievements.find(k => k.lang === lang);
-        let professions = e.profession.find(k => k.lang === lang);
+        const place        = e.place.find(k => k.lang === lang);
+        const role         = e.role.find(k => k.lang === lang);
+        const achievements = e.achievements.find(k => k.lang === lang);
+        const professions  = e.profession.find(k => k.lang === lang);
 
-        result += experience_box.replace('{company_image}', e.company_image)
+        const highlightsHtml = Array.isArray(e.highlights) && e.highlights.length
+            ? `<div class="highlights"><span class="plus">${labels.more}</span><ul>${e.highlights.map(h => `<li>${h}</li>`).join('')}</ul></div>`
+            : '';
+
+        const duration = fmtPeriod(e.period, lang);
+        const alt = `Logo ${e.company_name}`;
+
+        result += experience_box
+            .replace('{company_image}', e.company_image)
+            .replace('{company_alt}', alt)
             .replace('{company_name}', e.company_name)
             .replace('{company_city}', place.city)
             .replace('{company_country}', place.country)
-            .replace('{from_year}', e.period.from_year)
-            .replace('{from_month}', e.period.from_month)
-            .replace('{to_year}', e.period.to_year)
-            .replace('{to_month}', e.period.to_month)
+            .replace('{duration}', duration)
             .replace('{role}', role.value)
-            .replace('{achievements}', achievements.value)
-            .replace('{highlights}', e.highlights)
+            .replace('{achievements}', achievements?.value ?? '')
+            .replace('{highlights}', highlightsHtml)
             .replace('{profession}', professions.value)
-            .replace('{tools}', e.tools.join(', '))
-            .replace('{lb_more}', labels.more)
+            .replace('{tools}', (e.tools || []).join(', '))
             .replace('{lb_tools}', labels.tools)
-            .replace('{lb_profession}', labels.professions)
-        ;
+            .replace('{lb_profession}', labels.professions);
     });
     return result;
-}
+};
 
 // Cookies Start ----------------------------------------------------------------------------------
 export const setCookie = (cname, cvalue, exdays) => {
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-
-    let expires = "expires="+d.toUTCString();
+    let expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+};
 
 export const getCookie = (cname) => {
     let name = cname + "=";
     let ca = document.cookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
+    for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
-
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
     }
-
     return null;
-}
+};
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -276,11 +266,9 @@ function capitalizeFirstLetter(string) {
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-// console.log(navLinks);
-for (var i = 0; i < navLinks.length ; i++) {
-    navLinks[i].addEventListener("click", 
-        function (event) {
-            // event.preventDefault();
+for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click",
+        function () {
             menuIcon.classList.remove('fa-xmark');
             navbar.classList.remove('active');
         },
@@ -295,13 +283,10 @@ window.onscroll = () => {
         let id = sec.getAttribute('id');
 
         if (top >= offset && top < offset + height) {
-            // navLinks.forEach.apply(links => {
-            //     links.classList.remove('active');
-            //     document.querySelector('header nav a [href*=' + id + ']').classList.add('active');
-            // });
+            // Place pour un highlight du lien actif si besoin
         }
     });
-}
+};
 
 /* ---------------------------------------------- sticky navbar -------------------------------------- */
 
@@ -314,43 +299,46 @@ navbar.classList.remove('active');
 
 /* ---------------------------------------------- ScrollReveal -------------------------------------- */
 
-ScrollReveal({
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
+const reinit_reveal = () => {
+    if (!window.ScrollReveal) return;
+    try {
+        ScrollReveal().clean('.home-content, .heading, .services-container, .portfolio-box, .experiences-column, #mailform');
+    } catch { /* no-op */ }
 
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top'});
-ScrollReveal().reveal('.services-container, .portfolio-box, .experiences-column', { origin: 'bottom'});
-ScrollReveal().reveal('#mailform', { origin: 'left'});
+    ScrollReveal({
+        distance: '80px',
+        duration: 2000,
+        delay: 200,
+        reset: false
+    });
+
+    ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+    ScrollReveal().reveal('.services-container, .portfolio-box, .experiences-column', { origin: 'bottom' });
+    ScrollReveal().reveal('#mailform', { origin: 'left' });
+};
 
 /* ---------------------------------------------- TypedJs -------------------------------------- */
+
 const get_keywords = () => {
-    let lang = getCookie(COOKIES.SelectedLanguage);
+    // Les mots-clés sont à la racine de identity
+    return PortfolioData.identity.keywords.slice();
+};
 
-    lang ??= LANGUAGES.French;
-    return PortfolioData.identity.intro.find(e => e.lang === lang).keywords;
-}
-
+let typedInstance = null;
 const reset_typed = () => {
-    // new Typed('#profiles', null);
-
-    var typed = new Typed('#profiles', {
-        strings: get_keywords(),
+    if (typedInstance && typedInstance.destroy) typedInstance.destroy();
+    let words = get_keywords();
+    if (typeof words.shuffle === 'function') words = words.shuffle();
+    typedInstance = new Typed('#profiles', {
+        strings: words,
         typeSpeed: 50,
         backSpeed: 70,
         backDelay: 1000,
         loop: true
-      });
-}
+    });
+};
 
-var typed = new Typed('#profiles', {
-    strings: PortfolioData.identity.keywords.shuffle(),
-    typeSpeed: 50,
-    backSpeed: 70,
-    backDelay: 1000,
-    loop: true
-});
+/* ---------------------------------------------- Templates -------------------------------------- */
 
 const school_box = `
                         <div class="education-content">
@@ -384,11 +372,11 @@ const service_box = `
 
 const portfolio_box = `
                 <div class="portfolio-box">
-                    <img src="{image}" alt="" srcset="">
+                    <img src="{image}" alt="{name}" srcset="">
                     <div class="portfolio-layer">
                         <h4>{name}</h4>
                         <p>{description}</p>
-                        <a href="{url}" target="_blank" rel="noopener" rel="noreferrer">
+                        <a href="{url}" target="_blank" rel="noopener noreferrer">
                             <i class="fa-solid fa-up-right-from-square"></i>
                         </a>
                     </div>
@@ -397,7 +385,7 @@ const portfolio_box = `
 
 const pro_portfolio_box = `
                 <div class="portfolio-box">
-                    <img src="{image}" alt="" srcset="">
+                    <img src="{image}" alt="{name}" srcset="">
                     <div class="portfolio-layer">
                         <h4>{name}</h4>
                         <p>{keywords}</p>
@@ -424,10 +412,10 @@ const experience_box = `
     <div class="card-container">
         <div class="card">
             <div class="card-front">
-                <img src="resources/img/{company_image}" alt="" srcset="">
+                <img src="resources/img/{company_image}" alt="{company_alt}" srcset="">
                 <div class="company-name"><i class="fa-solid fa-building"></i>{company_name}</div>
                 <div class="company-location"><i class="fa-solid fa-location-pin"></i>{company_city}, {company_country}</div>
-                <div class="duration"><i class="fa-solid fa-calendar-days"></i><span>{from_year}/{from_month} - {to_year}/{to_month}</span></div>
+                <div class="duration"><i class="fa-solid fa-calendar-days"></i><span>{duration}</span></div>
                 <div class="role"><i class="fa-solid fa-user"></i><span>{role}</span></div>
             </div>
             <div class="card-back">
