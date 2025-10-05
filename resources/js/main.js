@@ -2,6 +2,7 @@ import * as PortfolioData from '../data/data.js';
 import * as FormProperties from '../data/labels.js';
 import './extensions.string.js';
 import './extensions.array.js';
+import { normalizeSkills } from './skills-normalize.js';
 
 const COOKIES = {
     SelectedLanguage: "SELECTED_LANG",
