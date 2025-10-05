@@ -713,46 +713,71 @@ export const experiences = [
       { "lang": "FR", "city": "Paris", "country": "France" },
       { "lang": "EN", "city": "Paris", "country": "France" }
     ],
-    "period": { "from_year": 2021, "from_month": 3, "to_year": 2024, "to_month": 9 },
+    "period": { "from_year": 2021, "from_month": 3, "to_year": 2025, "to_month": 7 },
     "role": [
-      { "lang": "FR", "value": "Chef de Projet, Lead Developer" },
-      { "lang": "EN", "value": "Project Manager, Lead Developer" }
+      { "lang": "FR", "value": "Application Owner, Chef de Projet, Lead Developer" },
+      { "lang": "EN", "value": "Application Owner, Project Manager, Lead Developer" }
     ],
     "achievements": [
       {
         "lang": "EN",
-        "value": `<p>Within a team of 7, I was project manager of the front team composed of 3 developers. We worked on the redesign of a calculation launch application to an <span class="bold">HPC grid</span> in a <span class="bold">web version (React)</span>.</p>
-<p><span class="bold">As a project manager:</span></p>
-<ul>
-<li>I ensured the agility of the team on a <span class="bold">SCRUM/Kanban</span> model.</li>
-<li>I was the interface with our customers (actuaries).</li>
-<li>I was the interface with our software suppliers (bugs, licenses, ...).</li>
-<li>I was the interface with the IT department (DevOps, servers, HPC, ...).</li>
-</ul>
-<p><span class="bold">As a developer:</span></p>
-<ul>
-<li>Architecture review + design patterns <span class="bold">(GoF, SOLID, Craft)</span>.</li>
-<li>Setting up unit tests <span class="bold">(NUnit)</span> and code coverage.</li>
-<li>Monitoring review (backend, <span class="bold">real-time messages</span> HPC).</li>
-</ul>`
+        "value": `
+          <p>Within a 7-people team, I acted as both <span class="bold">Application Owner</span> and <span class="bold">Tech Lead</span> of the front team (3 devs) for the <span class="bold">React</span> web redesign of a computation launcher targeting an <span class="bold">HPC grid</span>.</p>
+
+          <span class="bold">As Application Owner:</span>
+          <p><ul>
+            <li>Main interface with Group teams: actuaries, IT (DevOps, HPC) and software vendors.</li>
+            <li>Security & compliance: <span class="bold">IAM/SSO</span>, roles/permissions, audits.</li>
+            <li>Run & governance: SLAs/incidents, capacity planning, change management, release calendar.</li>
+          </ul></p>
+
+          <span class="bold">As Tech Lead:</span>
+          <p><ul>
+            <li>Target architecture & technical decisions: <span class="bold">.NET Core / React</span>, real-time messaging with <span class="bold">HPC Scheduler</span>, <span class="bold">IndexedDB</span> cache.</li>
+            <li>Team standards: Definition of Ready/Done, code reviews, mentoring, pair programming.</li>
+            <li>Quality & CI/CD: <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> quality gates, Git branching strategy.</li>
+          </ul></p>
+
+          <span class="bold">As a developer:</span>
+          <p><ul>
+            <li>UI features (React): forms, data tables and dashboards.</li>
+            <li>Real-time monitoring of HPC computations and logs via <span class="bold">HPC Scheduler</span>.</li>
+            <li>Offline & performance: <span class="bold">IndexedDB</span> caching and client-side optimizations.</li>
+            <li>Back-end: <span class="bold">.NET Core (REST)</span> services and Node/Sequelize endpoints on <span class="bold">PostgreSQL</span>.</li>
+            <li>Tests & reliability: <span class="bold">NUnit</span> unit tests, integration tests, instrumentation and logging.</li>
+          </ul></p>
+          `
       },
       {
         "lang": "FR",
-        "value": `<p>Au sein d'une équipe de 7, j’étais chef de projet de l’équipe front composée de 3 développeurs. Nous avons travaillé sur la refonte d'une application de lancement de calculs vers une <span class="bold">grille HPC</span> en une version <span class="bold">web (React)</span>.</p>
-<p><span class="bold">En tant que chef de projet :</span></p>
-<ul>
-<li>J'ai assuré l'agilité de l'équipe sur un modèle <span class="bold">SCRUM/Kanban</span>.</li>
-<li>J'étais l'interface avec nos clients (actuaires).</li>
-<li>J'étais l'interface avec nos fournisseurs de progiciels (bugs, licences, ...).</li>
-<li>J'étais l'interface avec la DSI (DevOps, serveurs, HPC, …).</li>
-</ul>
-<p><span class="bold">En tant que développeur :</span></p>
-<ul>
-<li>Revue de l’architecture + design patterns <span class="bold">(GoF, SOLID, Craft)</span>.</li>
-<li>Mise en place des TU <span class="bold">(NUnit)</span> et couverture de code.</li>
-<li>Revue du monitoring (backend, <span class="bold">messages temps réel</span> HPC).</li>
-</ul>`
+        "value": `
+          <p>Au sein d'une équipe de 7, j’étais <span class="bold">Application Owner</span> et <span class="bold">Tech Lead</span> de l’équipe front (3 devs) pour la refonte en <span class="bold">application web (React)</span> d’un lanceur de calculs vers une <span class="bold">grille HPC</span>.</p>
+
+          <span class="bold">En tant qu'Application Owner :</span>
+          <p><ul>
+            <li>Interface avec les équipes du Groupe : actuaires, DSI (DevOps, HPC), éditeurs.</li>
+            <li>Sécurité : <span class="bold">IAM/SSO</span>, habilitations/profils, conformité et audits.</li>
+            <li>Run & gouvernance : SLA/incidents, capacity planning, gestion des changements, planning de release.</li>
+          </ul></p>
+
+          <span class="bold">En tant que Tech Lead :</span>
+          <p><ul>
+            <li>Architecture cible et décisions techniques : <span class="bold">.NET Core / React</span>, messages temps réel <span class="bold">HPC Scheduler</span>, cache <span class="bold">IndexedDB</span>.</li>
+            <li>Standards d’équipe : Definition of Ready/Done, revues de code, mentoring, pair programming.</li>
+            <li>Qualité & CI/CD : <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> (quality gates), stratégie de branches Git.</li>
+          </ul></p>
+
+          <span class="bold">En tant que développeur :</span>
+          <p><ul>
+            <li>Développement de fonctionnalités UI (React) : formulaires, tableaux, dashboards.</li>
+            <li>Temps réel : supervision de l’avancement des calculs HPC et des logs via <span class="bold">HPC Scheduler</span>.</li>
+            <li>Offline & perf : mise en place d’un cache <span class="bold">IndexedDB</span> et optimisations côté client.</li>
+            <li>Back-end : services <span class="bold">.NET Core (REST)</span> et endpoints Node/Sequelize sur <span class="bold">PostgreSQL</span>.</li>
+            <li>Tests & fiabilité : <span class="bold">TU NUnit</span>, tests d’intégration, instrumentation et journalisation.</li>
+          </ul></p>
+        `
       }
+
     ],
     "highlights": [],
     "tools": [
@@ -764,7 +789,7 @@ export const experiences = [
       "React",
       "Sequelize",
       "PostgreSQL",
-      "SignalR",
+      "HPC Scheduler",
       "IndexedDB",
       "Tailwind",
       "CSS3",
