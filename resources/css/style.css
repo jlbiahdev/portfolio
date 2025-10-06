@@ -18,12 +18,30 @@
     --bg-color: #2d3436;
     --snd-bg-color: #1e272e;
     --text-color: #fff;
-    --main-color:#135267;
+    --main-color: #135267;
 
     /* Accessibility focus variables */
     --focus-outline-width: 3px;
     --focus-outline-color: var(--main-color);
     --focus-ring: 0 0 0 3px rgba(19, 82, 103, 0.55);
+
+/* THEME: light mode variables (opt-in via [data-theme="light"]) */
+    transition: background-color .2s ease, color .2s ease;
+}
+
+:root[data-theme="light"] {
+  --bg-color: #f6f8fa;
+  --snd-bg-color: #e0e1dd;
+  --text-color: #111418;
+  --main-color: #135267; /* conserve l’accent f8f9fa */
+}
+
+/* petit contraste pour boxes en clair */
+:root[data-theme="light"] .services-box,
+:root[data-theme="light"] .education-content .content,
+:root[data-theme="light"] .skills-box .skills-content,
+:root[data-theme="light"] .portfolio-container .portfolio-box {
+  box-shadow: 0 0 .8rem rgba(0,0,0,.08);
 }
 
 html {
@@ -35,6 +53,20 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+
+/* === Alternance automatique des sections (global) === */
+body > section {
+  --section-bg: var(--bg-color);        /* défaut = fond sombre */
+  background: var(--section-bg);
+}
+
+body > section:nth-of-type(even) {
+  --section-bg: var(--snd-bg-color);    /* sections paires = fond secondaire */
+}
+
+/* Forcer une section particulière si besoin */
+.section--light { --section-bg: var(--bg-color) !important; }
+.section--dark  { --section-bg: var(--snd-bg-color) !important; }
 
 section {
     min-height: 50vh;
@@ -292,9 +324,8 @@ p {
 
 /* ============================== PORTFOLIO ============================== */
 
-.portfolio {
-    background: var(--snd-bg-color);
-}
+/* .portfolio {
+} */
 
 .portfolio h2 {
     margin-bottom: 4rem;
@@ -372,7 +403,7 @@ p {
 /* ============================== SKILLS ============================== */
 
 .skills {
-    background: var(--snd-bg-color);
+    /* background: var(--snd-bg-color); */
     min-height: auto;
     padding-bottom: 7rem;
 }
@@ -671,7 +702,7 @@ blockquote::before {
 /* ============================== EXPERIENCES (CARDS) ============================== */
 
 .experiences {
-    background: var(--snd-bg-color);
+    /* background: var(--snd-bg-color); */
     min-height: auto;
     padding-bottom: 7rem;
 }
@@ -693,19 +724,20 @@ blockquote::before {
     height: 520px;
 }
 
-.card {
+.experiences .card {
     position: absolute;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: all .5s ease;
+    border: 1px solid var(--main-color);
 }
 
-.card:hover {
+.experiences .card:hover {
     transform: rotateY(180deg);
 }
 
-.card-front {
+.experiences .card .card-front {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -714,32 +746,32 @@ blockquote::before {
     padding-bottom: 2rem;
 }
 
-.card-front span {
+.experiences .card .card-front span {
     color: #fff;
 }
 
 /* Image "full top" comme avant (bord à bord, pas de fond blanc) */
-.card-front img {
+.experiences .card .card-front img {
     height: 50%;
     width: 100%;
 }
 
-.card-front div {
+.experiences .card .card-front div {
     margin: 1rem 1rem 3rem;
     font-size: 1.8rem;
     text-align: left;
 }
 
-.card-front .role span { text-transform: capitalize; }
-.card-front i { margin-right: 1rem; }
-.card-front .company-name { text-transform: uppercase; }
-.card-front .company-location { text-transform: capitalize; }
+.experiences .card .card-front .role span { text-transform: capitalize; }
+.experiences .card .card-front i { margin-right: 1rem; }
+.experiences .card .card-front .company-name { text-transform: uppercase; }
+.experiences .card .card-front .company-location { text-transform: capitalize; }
 
-.card-front .duration span {
+.experiences .card .card-front .duration span {
     font-size: 1.3rem;
 }
 
-.card-back {
+.experiences .card .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -750,50 +782,50 @@ blockquote::before {
     transform: rotateY(180deg);
 }
 
-.card-back .top {
+.experiences .card .card-back .top {
     height: 70%;
     padding: 3rem;
     font-size: 1.4rem;       /* lisibilité accrue */
     overflow: auto;          /* évite la disparition du texte long */
 }
 
-.card-back .top a {
+.experiences .card .card-back .top a {
     color: #ffc300;
     font-weight: bold;
 }
 
-.card-back .top a:hover {
+.experiences .card .card-back .top a:hover {
     cursor: pointer;
     text-decoration: underline;
 }
 
-.card-back .top div { margin-bottom: 1rem; }
+.experiences .card .card-back .top div { margin-bottom: 1rem; }
 
-.card-back .bottom {
+.experiences .card .card-back .bottom {
     height: 30%;
     background: var(--bg-color);
     padding: 1rem 3rem;
     overflow: auto;          /* si liste d'outils très longue */
 }
 
-.card-back .bottom div {
+.experiences .card .card-back .bottom div {
     padding-bottom: 2rem;
 }
 
-.card-back .plus {
+.experiences .card .card-back .plus {
     color: var(--text-color);
     font-weight: bold;
     text-transform: capitalize;
     margin-right: 1rem;
 }
 
-.card-back .bottom .tools span {
+.experiences .card .card-back .bottom .tools span {
     color: var(--text-color);
     overflow-wrap: break-word;
     text-transform: capitalize;
 }
 
-.card-back .bottom .profession span { color: var(--text-color); }
+.experiences .card .card-back .bottom .profession span { color: var(--text-color); }
 
 .key {
     text-transform: capitalize;
@@ -1087,21 +1119,4 @@ textarea:focus-visible {
   .btn:focus-visible {
     outline-width: calc(var(--focus-outline-width) + 1px);
   }
-}
-
-/* THEME: light mode variables (opt-in via [data-theme="light"]) */
-:root { transition: background-color .2s ease, color .2s ease; }
-:root[data-theme="light"] {
-  --bg-color: #f6f8fa;
-  --snd-bg-color: #ffffff;
-  --text-color: #111418;
-  --main-color: #135267; /* conserve l’accent */
-}
-
-/* petit contraste pour boxes en clair */
-:root[data-theme="light"] .services-box,
-:root[data-theme="light"] .education-content .content,
-:root[data-theme="light"] .skills-box .skills-content,
-:root[data-theme="light"] .portfolio-container .portfolio-box {
-  box-shadow: 0 0 .8rem rgba(0,0,0,.08);
 }
