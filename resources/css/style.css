@@ -533,6 +533,21 @@ p {
 #infrag .bar span { width: 90%; }          #infrag .skills-content:hover:before { width: 90%; }
 #crystrep .bar span { width: 100%; }       #crystrep .skills-content:hover:before { width: 100%; }
 
+/* Web – OpenAI */
+#openai .bar span { width: 75%; }           #openai .skills-content:hover:before { width: 75%; }
+
+/* Mobile */
+#reactnative .bar span { width: 85%; }      #reactnative .skills-content:hover:before { width: 85%; }
+
+#expo .bar span { width: 85%; }              #expo .skills-content:hover:before { width: 85%; }
+
+#gplay .bar span { width: 70%; }             #gplay .skills-content:hover:before { width: 70%; }
+
+/* Hébergement / Serveurs web */
+#vercel .bar span { width: 80%; }           #vercel .skills-content:hover:before { width: 80%; }
+
+#railway .bar span { width: 80%; }          #railway .skills-content:hover:before { width: 80%; }
+
 /* ============================== EDUCATION ============================== */
 
 .education {

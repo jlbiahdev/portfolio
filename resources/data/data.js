@@ -61,9 +61,21 @@ export const skills = [
       { "id": "nodejs", "topics": "node.js", "workmanship": "90" },
       { "id": "vuejs", "topics": "vuejs", "workmanship": "80" },
       { "id": "reactjs", "topics": "reactjs", "workmanship": "80" },
-      { "id": "bootstrap", "topics": "bootstrap", "workmanship": "90" }
+      { "id": "bootstrap", "topics": "bootstrap", "workmanship": "90" },
+      { "id": "openai", "topics": "OpenAI API (ChatGPT)", "workmanship": "75" }
     ]
   },
+
+  /* === NOUVELLE CATÉGORIE : Mobile (Lissen app) === */
+  {
+    "name": "Mobile",
+    "content": [
+      { "id": "reactnative", "topics": "react native", "workmanship": "85" },
+      { "id": "expo", "topics": "expo", "workmanship": "85" },
+      { "id": "gplay", "topics": "google play console", "workmanship": "70" }
+    ]
+  },
+
   {
     "name": "SQL & Database",
     "content": [
@@ -134,7 +146,9 @@ export const skills = [
     "content": [
       { "id": "apache", "topics": "apache", "workmanship": "60" },
       { "id": "iis", "topics": "iis", "workmanship": "70" },
-      { "id": "azurecloud", "topics": "azure cloud", "workmanship": "80" }
+      { "id": "azurecloud", "topics": "azure cloud", "workmanship": "80" },
+      { "id": "vercel", "topics": "vercel (hébergement web)", "workmanship": "80" },
+      { "id": "railway", "topics": "railway (hébergement back-end)", "workmanship": "80" }
     ]
   },
   {
