@@ -727,7 +727,7 @@ export const experiences = [
       { "lang": "FR", "city": "Paris", "country": "France" },
       { "lang": "EN", "city": "Paris", "country": "France" }
     ],
-    "period": { "from_year": 2021, "from_month": 3, "to_year": 2025, "to_month": 7 },
+    "period": { "from_year": 2021, "from_month": 3, "to_year": 2025, "to_month": 11 },
     "role": [
       { "lang": "FR", "value": "Application Owner, Chef de Projet, Lead Developer" },
       { "lang": "EN", "value": "Application Owner, Project Manager, Lead Developer" }
