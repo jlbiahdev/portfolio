@@ -64,9 +64,9 @@ let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 const reset = () => {
-    let lang = getCookie(COOKIES.SelectedLanguage);
+    const lang = getCookie(COOKIES.SelectedLanguage) || LANGUAGES.French;
+    console.log(`Langue sélectionnée : ${lang}`);
 
-    lang ??= LANGUAGES.French;
     $('#mn-hom').html(FormProperties.labels.menu.home.find(e => e.lang === lang).value);
     $('#mn-abo').html(FormProperties.labels.menu.about.find(e => e.lang === lang).value);
     $('#mn-edu').html(FormProperties.labels.menu.education.find(e => e.lang === lang).value);
