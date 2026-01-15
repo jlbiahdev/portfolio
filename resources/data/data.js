@@ -602,8 +602,8 @@ export const experiences = [
       { "lang": "EN", "city": "Tallinn", "country": "Estonia" }
     ],
     "period": {
-      "from_year": 2024, "from_month": 1,   // TODO: ajuste
-      "to_year": 0, "to_month": 0           // 0/0 = en cours si tu veux rester cohérent avec ton modèle
+      "from_year": 2025, "from_month": 3,
+      "to_year": 2025, "to_month": 8
     },
     "role": [
       { "lang": "FR", "value": "Chef de Projet, Tech Lead, Développeur FullStack" },
@@ -618,7 +618,7 @@ export const experiences = [
             <li>Application mobile (Expo / React Native) – publication via <span class="bold">Google Play Console</span></li>
             <li>Site web (Next.js/React) – hébergé sur <span class="bold">Vercel</span></li>
             <li>Back-end « Forge » (Node.js/Express, REST) – hébergé sur <span class="bold">Railway</span></li>
-            <li>Automatisations et assistance IA (<span class="bold">OpenAI / ChatGPT</span>)</li>
+            <li>Automatisations et assistance IA (<span class="bold">ChatGPT, Claude AI</span>)</li>
           </ul>
         `
       },
@@ -630,14 +630,15 @@ export const experiences = [
             <li>Mobile app (Expo / React Native) – published via <span class="bold">Google Play Console</span></li>
             <li>Website (Next.js/React) – hosted on <span class="bold">Vercel</span></li>
             <li>“Forge” backend (Node.js/Express, REST) – hosted on <span class="bold">Railway</span></li>
-            <li>Automation & AI assistance (<span class="bold">OpenAI / ChatGPT</span>)</li>
+            <li>Automation & AI assistance (<span class="bold">ChatGPT, Claude AI</span>)</li>
           </ul>
         `
       }
     ],
     "highlights": [
       "CI/CD simple (Vercel / Railway)",
-      "Suivi crash & perf (Sentry/Crashlytics)"
+      "Suivi crash & perf (Sentry/Crashlytics)",
+      "AI"
     ],
     "tools": [
       "Expo", "React Native", "React", "Next.js",
@@ -646,7 +647,8 @@ export const experiences = [
       "Railway", "Vercel",
       "Git", "GitHub",
       "Google Play Console",
-      "OpenAI / ChatGPT"
+      "OpenAI / ChatGPT",
+      "Anthropic / Claude"
     ],
     "profession": [
       { "lang": "FR", "value": "Application mobile, Web, Back-end" },
@@ -795,6 +797,7 @@ export const experiences = [
     ],
     "highlights": [],
     "tools": [
+      "OpenAI / ChatGPT",
       ".NET Core",
       "C#",
       "JS",
