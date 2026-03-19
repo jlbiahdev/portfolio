@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../resources/css/style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/9f91a51f96.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.48.0/apexcharts.min.js"
+    integrity="sha512-wqcdhB5VcHuNzKcjnxN9wI5tB3nNorVX7Zz9NtKBxmofNskRC29uaQDnv71I/zhCDLZsNrg75oG8cJHuBvKWGw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Activity Log | Jean Luc</title>
+  <meta name="description" content="Journal d'activités sportives de Jean Luc Biah — basket, marche, course à pied." />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <a href="../../index.html" class="logo">Portfolio</a>
+    <nav class="navbar">
+      <a href="../../index.html">Accueil</a>
+      <a href="index.html" class="active">Activité</a>
+      <button id="theme-toggle" class="btn" style="margin-left:2rem" aria-pressed="false" aria-label="Basculer le thème">🌓</button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <!--
+    📸 PHOTO : Ajoute une photo d'action en fond (terrain de basket, trail, route de running).
+    Remplace le style inline ci-dessous par :
+      style="background-image: url('img/hero.jpg')"
+    Une photo sombre/contrastée fonctionne mieux avec l'overlay noir.
+  -->
+  <section class="sport-hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Jean Luc · 2025 – 2026</p>
+      <h1>ACTIVITY<br>LOG</h1>
+      <p class="hero-sub">Ma vie en chiffres — basket, marche &amp; course à pied</p>
+      <div class="hero-kpis">
+        <div class="kpi-chip">
+          <span class="kpi-value" id="kpi-walk">–</span>
+          <span class="kpi-label">km marchés</span>
+        </div>
+        <div class="kpi-chip">
+          <span class="kpi-value" id="kpi-run">–</span>
+          <span class="kpi-label">km courus</span>
+        </div>
+        <div class="kpi-chip highlight">
+          <span class="kpi-value" id="kpi-vo2">–</span>
+          <span class="kpi-label">VO2max</span>
+        </div>
+        <div class="kpi-chip">
+          <span class="kpi-value" id="kpi-sessions">–</span>
+          <span class="kpi-label">sessions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TABS ===== -->
+  <div class="sport-tabs">
+    <button class="sport-tab active" data-tab="basket">🏀 Basket</button>
+    <button class="sport-tab" data-tab="walking">🚶 Walking</button>
+    <button class="sport-tab" data-tab="running">🏃 Running</button>
+  </div>
+
+  <main>
+
+    <!-- ===== BASKET ===== -->
+    <div id="tab-basket" class="tab-pane active">
+      <!--
+        📸 PHOTO : Bannière de court/salle de gym.
+        Remplace la classe .banner-placeholder par une vraie <img> ou background-image.
+        Idéalement : une photo en contre-plongée du panier, ou une action de tir.
+      -->
+      <div class="sport-banner">
+        <span class="banner-placeholder"><i class="fa-solid fa-image"></i> Photo terrain / salle de gym</span>
+      </div>
+      <div id="basket-content" class="tab-inner"></div>
+    </div>
+
+    <!-- ===== WALKING ===== -->
+    <div id="tab-walking" class="tab-pane">
+      <!--
+        📸 PHOTO : Bannière de balade (parc, rue, trail urbain).
+        Suggestion : photo en mouvement, légèrement floue, prise depuis le sol.
+      -->
+      <div class="sport-banner">
+        <span class="banner-placeholder"><i class="fa-solid fa-image"></i> Photo de balade / trail</span>
+      </div>
+      <div id="walking-stats" class="stats-grid"></div>
+      <div class="section-heading">Distance par mois</div>
+      <div class="chart-container">
+        <div id="chart-walking"></div>
+      </div>
+      <!--
+        📸 PHOTOS : Strip de 3 photos de tes itinéraires préférés côte à côte.
+        Format paysage conseillé (16/9 ou 3/2).
+      -->
+      <div class="section-heading">Quelques sorties</div>
+      <div class="photo-strip">
+        <div class="photo-placeholder"><i class="fa-solid fa-image"></i><span>Photo balade 1</span></div>
+        <div class="photo-placeholder"><i class="fa-solid fa-image"></i><span>Photo balade 2</span></div>
+        <div class="photo-placeholder"><i class="fa-solid fa-image"></i><span>Photo balade 3</span></div>
+      </div>
+    </div>
+
+    <!-- ===== RUNNING ===== -->
+    <div id="tab-running" class="tab-pane">
+      <!--
+        📸 PHOTO : Bannière de running (route, forêt, piste).
+        Suggestion : photo de coucher de soleil avec silhouette en train de courir.
+      -->
+      <div class="sport-banner">
+        <span class="banner-placeholder"><i class="fa-solid fa-image"></i> Photo running</span>
+      </div>
+      <div id="vo2max-section"></div>
+      <div id="running-stats" class="stats-grid"></div>
+      <div class="section-heading">Meilleures périodes</div>
+      <div id="running-podium" class="podium"></div>
+      <div class="section-heading">Distance par mois</div>
+      <div class="chart-container">
+        <div id="chart-running"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="sport-footer">
+    <p>&copy; 2026 Cyrano Conseil &mdash; <a href="../../index.html">Portfolio</a></p>
+    <a href="#" class="back-top" aria-label="Retour en haut"><i class="fa-solid fa-angle-up"></i></a>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
