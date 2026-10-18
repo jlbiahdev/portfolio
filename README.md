@@ -87,3 +87,8 @@ This guide standardizes **how skills are named**, and how we **deduplicate** too
 
 - La largeur des barres vient directement de `workmanship` dans `data.js` : `main.js` pose la variable CSS `--w` sur chaque `.skills-box`.
 - Ajouter une compétence ne demande donc **aucune règle CSS** : un `id`, des `topics` et un `workmanship` suffisent.
+
+## Cache navigateur
+
+Les fichiers CSS et JS sont appelés avec un numéro de version (`style.css?v=20261018`, `main.js?v=…` et les `import` de `main.js`).
+Si un navigateur garde une ancienne version malgré le `.htaccess`, changer ce numéro partout force le rechargement pour tous les visiteurs.
