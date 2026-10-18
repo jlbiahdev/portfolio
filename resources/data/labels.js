@@ -163,15 +163,15 @@ export const labels = {
     ],
     "cv": [
       { "lang": "FR", "value": "CV Tech Lead / Chef de projet technique" },
-      { "lang": "EN", "value": "Resume – Tech Lead / Technical PM (in French)" }
+      { "lang": "EN", "value": "Resume – Tech Lead / Technical Project Manager" }
     ],
     "cv_doc": [
       { "lang": "FR", "value": "resources/docs/biahprofile.docx" },
-      { "lang": "EN", "value": "resources/docs/biahprofile.docx" }
+      { "lang": "EN", "value": "resources/docs/biahprofile_en.docx" }
     ],
     "cv_pdf": [
       { "lang": "FR", "value": "resources/docs/biahprofile.pdf" },
-      { "lang": "EN", "value": "resources/docs/biahprofile.pdf" }
+      { "lang": "EN", "value": "resources/docs/biahprofile_en.pdf" }
     ],
     "references": [
       { "lang": "FR", "value": "Quelques Références" },
