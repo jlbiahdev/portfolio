@@ -665,7 +665,8 @@ blockquote::before {
 
 .card-container {
     position: relative;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 520px;
 }
 
@@ -960,7 +961,8 @@ blockquote::before {
     .home-content h3 { font-size: 2.6rem; }
     .home-content h1 { font-size: 5rem; }
 
-    .home-img img { width: 100vw; margin-top: 4rem; }
+    .home-img { width: 100%; display: flex; justify-content: center; }
+    .home-img img { width: 100%; max-width: 60rem; margin-top: 4rem; }
 
     .about { flex-direction: column; }
 
@@ -979,7 +981,7 @@ blockquote::before {
 
 @media (max-width: 617px) {
     .portfolio-container { grid-template-columns: 1fr; }
-    .home-img img { width: 80vw; margin-top: 8rem; }
+    .home-img img { width: 80%; margin-top: 8rem; }
 }
 
 @media (max-width: 450px) {
