@@ -303,7 +303,7 @@ export const web_portfolios = [
   {
     "name": "Fluxo",
     "image": "logo-fluxo.png",
-    "url": "#",
+    "url": "https://flucso.vercel.app/",
     "description": [
       {
         "lang": "FR",
