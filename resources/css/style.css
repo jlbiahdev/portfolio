@@ -661,6 +661,9 @@ blockquote::before {
 
 .experiences-column {
     overflow: hidden;
+    /* marge interne : évite que la zone rognée coupe la bordure 1px des cartes
+       sur les écrans à densité fractionnaire (smartphones) */
+    padding: 2px;
 }
 
 .card-container {
