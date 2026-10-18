@@ -85,7 +85,5 @@ This guide standardizes **how skills are named**, and how we **deduplicate** too
 
 ## CSS (Skills section)
 
-- Conserver tes IDs actuels (`#reactjs`, `#nodejs`, …) pour ne pas casser l’existant.
-- **Supprimer les doublons** (ex. `#azure` apparaissait deux fois). Garder une seule règle. 
-- Pour de nouveaux skills, privilégier des IDs **simples** : `#react`, `#node`, `#azure`, etc.
-
+- La largeur des barres vient directement de `workmanship` dans `data.js` : `main.js` pose la variable CSS `--w` sur chaque `.skills-box`.
+- Ajouter une compétence ne demande donc **aucune règle CSS** : un `id`, des `topics` et un `workmanship` suffisent.

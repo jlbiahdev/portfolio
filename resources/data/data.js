@@ -2,28 +2,27 @@ export const identity = {
   "firstname": "Jean",
   "lastname": "BIAH",
   "keywords": [
-    "Chef de projet",
-    "TechLead",
-    "Développeur FullStack",
-    "Project Manager",
-    "FullStack Developer"
+    "Tech Lead .NET & React",
+    "Chef de projet technique",
+    "Finance & Assurance",
+    "IA générative",
+    "Technical Project Manager"
   ],
   "intro": [
     {
       "lang": "FR",
-      "profile": `Professionnel du développement logiciel hautement qualifié, possédant plus de 17 années d'expérience <br>
-                        dans le domaine de la conception, du développement et de l'intégration de logiciels et applications webs.`,
-      "about": `Spécialiste C# (Blazor -wasm-, WebPage, WebForm, WinForm) en particulier et du framework .NET en général (WCF, WF). <br>
-                        Spécialiste front-end web (ReactJs, VueJs, Node.js et JavaScript, HTML5 & CSS3). <br>
-                        Spécialiste développements de bases de données relationnelles notamment MS SQL Server, mais aussi
-                        Oracle, Sybase, MySQL. <br>
-                        Possède diverses expériences front-end, middle et back-end ainsi que des
-                        expériences en BI (SSIS, SSRS, SSAS). <br><br>
-                        Fait preuve d'une grande résistance au stress et sait respecter les délais et les objectifs fixés
-                        tout en proposant un travail de grande qualité.`,
+      "profile": `Tech Lead et chef de projet technique, 20 ans d'expérience dans la banque et l'assurance. <br>
+                        Je pilote des équipes et des applications de calcul financier et actuariel, et j'intègre l'IA générative dans mes produits.`,
+      "about": `Tech Lead freelance (Cyrano Conseil), spécialiste <span class="bold">.NET (C#, .NET Core)</span> et <span class="bold">React / Next.js</span>. <br>
+                        Je pilote des applications de calcul financier et actuariel (grilles <span class="bold">ALM</span> et <span class="bold">AFM</span>, MS HPC, XGrid)
+                        et je modernise des applications legacy (WinForms, WPF, VB) vers .NET Core et React. <br>
+                        Bases de données : SQL Server, PostgreSQL, Oracle, MongoDB, et BI (SSIS, SSRS, SSAS). <br>
+                        DevOps : Docker, Kubernetes, Jenkins, GitLab CI, Azure, Vercel, Railway. <br><br>
+                        <span class="bold">IA générative</span> : intégration de l'API Claude (Anthropic) et d'OpenAI dans mes applications,
+                        et développement assisté par agents (Claude Code, GitHub Copilot) au quotidien.`,
       "qualities": [
         "Possède une capacité d'analyse et un réel souci du détail",
-        "Possède une certaine expérience en gestion d'équipes",
+        "Encadrement d'équipes de développement (jusqu'à 6 personnes) et interface avec les métiers",
         "Dédié à faire avancer les projets qui lui sont confiés, ainsi qu'à garantir un travail de qualité et une livraison dans les temps",
         "Responsable et autonome",
         "Aptitude à maîtriser rapidement de nouveaux packages logiciels et de nouvelles technologies."
@@ -31,19 +30,18 @@ export const identity = {
     },
     {
       "lang": "EN",
-      "profile": `Highly qualified software development professional with over 17 years of experience <br> in software design, development, and integration`,
-      "about": `C# specialist (Blazor -wasm-, WebPage, WebForm, WinForm) in particular and in
-                            the .NET framework in general (WCF, WF).  <br>
-                        Web Specialist (ReactJs, VueJs, Node.js and JavaScript, HTML5 & CSS3). <br>
-                        Specialist in relational database development, notably MS
-                            SQL Server, but also Oracle, Sybase, MySQL.<br>
-                        Has various front-end, middle and back-end experiences
-                            as well as experiences in BI (SSIS, SSRS, SSAS).<br>
-                        Demonstrates a great resistance to stress and knows how
-                            to meet deadlines and set objectives while offering high quality work.`,
+      "profile": `Tech Lead and technical project manager with 20 years of experience in banking and insurance. <br>
+                        I lead teams and financial / actuarial computing applications, and I build generative AI into my products.`,
+      "about": `Freelance Tech Lead (Cyrano Conseil), specialised in <span class="bold">.NET (C#, .NET Core)</span> and <span class="bold">React / Next.js</span>. <br>
+                        I lead financial and actuarial computing applications (<span class="bold">ALM</span> and <span class="bold">AFM</span> grids, MS HPC, XGrid)
+                        and modernise legacy applications (WinForms, WPF, VB) to .NET Core and React. <br>
+                        Databases: SQL Server, PostgreSQL, Oracle, MongoDB, and BI (SSIS, SSRS, SSAS). <br>
+                        DevOps: Docker, Kubernetes, Jenkins, GitLab CI, Azure, Vercel, Railway. <br><br>
+                        <span class="bold">Generative AI</span>: integrating the Claude (Anthropic) and OpenAI APIs into my applications,
+                        and agent-assisted development (Claude Code, GitHub Copilot) every day.`,
       "qualities": [
         "Has analytical skills and a real attention to detail",
-        "Has some experience in team management",
+        "Leads development teams (up to 6 people) and works directly with business users",
         "Dedicated to advancing the projects entrusted to him, as well as guaranteeing quality work and on-time delivery",
         "Responsible and autonomous",
         "Ability to quickly master new software packages and new hardware technologies."
@@ -61,8 +59,19 @@ export const skills = [
       { "id": "nodejs", "topics": "node.js", "workmanship": "90" },
       { "id": "vuejs", "topics": "vuejs", "workmanship": "80" },
       { "id": "reactjs", "topics": "reactjs", "workmanship": "80" },
-      { "id": "bootstrap", "topics": "bootstrap", "workmanship": "90" },
-      { "id": "openai", "topics": "OpenAI API (ChatGPT)", "workmanship": "75" }
+      { "id": "nextjs", "topics": "next.js, typescript", "workmanship": "75" },
+      { "id": "bootstrap", "topics": "bootstrap", "workmanship": "90" }
+    ]
+  },
+
+  /* === IA générative (Fluxo, Lissen, développement assisté par agents) === */
+  {
+    "name": "IA générative",
+    "content": [
+      { "id": "claudeapi", "topics": "API Claude (Anthropic)", "workmanship": "80" },
+      { "id": "openai", "topics": "API OpenAI (ChatGPT)", "workmanship": "75" },
+      { "id": "claudecode", "topics": "Claude Code (agents de code)", "workmanship": "90" },
+      { "id": "copilot", "topics": "GitHub Copilot", "workmanship": "80" }
     ]
   },
 
@@ -93,7 +102,8 @@ export const skills = [
       { "id": "vb", "topics": "vb.net", "workmanship": "70" },
       { "id": "api", "topics": "rest api", "workmanship": "90" },
       { "id": "wcf", "topics": "wcf", "workmanship": "90" },
-      { "id": "wf", "topics": "wf", "workmanship": "90" }
+      { "id": "wf", "topics": "wf", "workmanship": "90" },
+      { "id": "python", "topics": "python, fastapi", "workmanship": "70" }
     ]
   },
   {
@@ -290,6 +300,21 @@ export const services = [
 ];
 
 export const web_portfolios = [
+  {
+    "name": "Fluxo",
+    "image": "logo-fluxo.png",
+    "url": "#",
+    "description": [
+      {
+        "lang": "FR",
+        "value": "Pilotage financier personnel bidevise (EUR / FCFA) : budget sur année fiscale, rapprochement bancaire, dettes, épargne. Next.js, FastAPI, PostgreSQL, construit avec Claude Code."
+      },
+      {
+        "lang": "EN",
+        "value": "Dual-currency (EUR / XAF) personal finance app: fiscal-year budgeting, bank reconciliation, debts, savings. Next.js, FastAPI, PostgreSQL, built with Claude Code."
+      }
+    ]
+  },
   {
     "name": "Lissen Forge",
     "image": "logo-lissenforge.png",
@@ -595,6 +620,181 @@ export const testimonials = [
 
 export const experiences = [
   {
+    "company_name": "SOGECAP S.A.",
+    "company_image": "logo-sg.png",
+    "place": [
+      { "lang": "FR", "city": "Paris", "country": "France" },
+      { "lang": "EN", "city": "Paris", "country": "France" }
+    ],
+    "period": { "from_year": 2021, "from_month": 3, "to_year": 0, "to_month": 0 },
+    "role": [
+      { "lang": "FR", "value": "Chef de projet technique, Tech Lead, Application Owner" },
+      { "lang": "EN", "value": "Technical Project Manager, Tech Lead, Application Owner" }
+    ],
+    "achievements": [
+      {
+        "lang": "EN",
+        "value": `
+          <p>Within a 7-people team, I acted as both <span class="bold">Application Owner</span> and <span class="bold">Tech Lead</span> of the front team (3 devs) for the <span class="bold">React</span> web redesign of a computation launcher targeting an <span class="bold">ALM computing grid</span>, used by actuaries.</p>
+
+          <span class="bold">As Application Owner:</span>
+          <p><ul>
+            <li>Main interface with Group teams: actuaries, IT (DevOps, HPC) and software vendors.</li>
+            <li>Security & compliance: <span class="bold">IAM/SSO</span>, roles/permissions, audits.</li>
+            <li>Run & governance: SLAs/incidents, capacity planning, change management, release calendar.</li>
+          </ul></p>
+
+          <span class="bold">As Tech Lead:</span>
+          <p><ul>
+            <li>Target architecture & technical decisions: <span class="bold">.NET Core / React</span>, real-time job messaging, <span class="bold">IndexedDB</span> cache.</li>
+            <li>Migration of the computing engine from <span class="bold">Microsoft HPC</span> to <span class="bold">XGrid</span>, the internal grid built by Société Générale (GBTO), integrated through its <span class="bold">.NET Core API</span>.</li>
+            <li>Team standards: Definition of Ready/Done, code reviews, mentoring, pair programming.</li>
+            <li>Quality & CI/CD: <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> quality gates, Git branching strategy.</li>
+          </ul></p>
+
+          <span class="bold">As a developer:</span>
+          <p><ul>
+            <li>UI features (React): forms, data tables and dashboards.</li>
+            <li>Real-time monitoring of grid computations and logs (HPC Scheduler, then XGrid).</li>
+            <li>Offline & performance: <span class="bold">IndexedDB</span> caching and client-side optimizations.</li>
+            <li>Back-end: <span class="bold">.NET Core (REST)</span> services and Node/Sequelize endpoints on <span class="bold">PostgreSQL</span>.</li>
+            <li>Tests & reliability: <span class="bold">NUnit</span> unit tests, integration tests, instrumentation and logging.</li>
+          </ul></p>
+          `
+      },
+      {
+        "lang": "FR",
+        "value": `
+          <p>Au sein d'une équipe de 7, j’étais <span class="bold">Application Owner</span> et <span class="bold">Tech Lead</span> de l’équipe front (3 devs) pour la refonte en <span class="bold">application web (React)</span> d’un lanceur de calculs vers une <span class="bold">grille de calcul ALM</span>, utilisé par les actuaires.</p>
+
+          <span class="bold">En tant qu'Application Owner :</span>
+          <p><ul>
+            <li>Interface avec les équipes du Groupe : actuaires, DSI (DevOps, HPC), éditeurs.</li>
+            <li>Sécurité : <span class="bold">IAM/SSO</span>, habilitations/profils, conformité et audits.</li>
+            <li>Run & gouvernance : SLA/incidents, capacity planning, gestion des changements, planning de release.</li>
+          </ul></p>
+
+          <span class="bold">En tant que Tech Lead :</span>
+          <p><ul>
+            <li>Architecture cible et décisions techniques : <span class="bold">.NET Core / React</span>, messages temps réel des jobs, cache <span class="bold">IndexedDB</span>.</li>
+            <li>Migration du moteur de calcul de <span class="bold">Microsoft HPC</span> vers <span class="bold">XGrid</span>, la grille interne développée par la Société Générale (GBTO), intégrée via son <span class="bold">API .NET Core</span>.</li>
+            <li>Standards d’équipe : Definition of Ready/Done, revues de code, mentoring, pair programming.</li>
+            <li>Qualité & CI/CD : <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> (quality gates), stratégie de branches Git.</li>
+          </ul></p>
+
+          <span class="bold">En tant que développeur :</span>
+          <p><ul>
+            <li>Développement de fonctionnalités UI (React) : formulaires, tableaux, dashboards.</li>
+            <li>Temps réel : supervision de l’avancement des calculs et des logs (HPC Scheduler, puis XGrid).</li>
+            <li>Offline & perf : mise en place d’un cache <span class="bold">IndexedDB</span> et optimisations côté client.</li>
+            <li>Back-end : services <span class="bold">.NET Core (REST)</span> et endpoints Node/Sequelize sur <span class="bold">PostgreSQL</span>.</li>
+            <li>Tests & fiabilité : <span class="bold">TU NUnit</span>, tests d’intégration, instrumentation et journalisation.</li>
+          </ul></p>
+        `
+      }
+
+    ],
+    "highlights": [],
+    "tools": [
+      "OpenAI / ChatGPT",
+      ".NET Core",
+      "C#",
+      "JS",
+      "jQuery",
+      "Node.js",
+      "React",
+      "Sequelize",
+      "PostgreSQL",
+      "HPC Scheduler",
+      "IndexedDB",
+      "Tailwind",
+      "CSS3",
+      "HTML5",
+      "Bootstrap",
+      "Git",
+      "GitLab",
+      "SonarQube",
+      "Ansible",
+      "Kubernetes",
+      "Jenkins",
+      "SCRUM",
+      "KANBAN",
+      "Microsoft HPC",
+      "XGrid",
+      "Moody's",
+      "Addactis"
+    ],
+    "profession": [
+      { "lang": "FR", "value": "Assurance" },
+      { "lang": "EN", "value": "Insurance" }
+    ]
+  },
+  {
+    "company_name": "Fluxo (projet personnel)",
+    "company_image": "logo-fluxo.png",
+    "place": [
+      { "lang": "FR", "city": "Île-de-France", "country": "France" },
+      { "lang": "EN", "city": "Île-de-France", "country": "France" }
+    ],
+    "period": { "from_year": 2026, "from_month": 3, "to_year": 0, "to_month": 0 },
+    "role": [
+      { "lang": "FR", "value": "Conception, développement full-stack, IA générative" },
+      { "lang": "EN", "value": "Product design, full-stack development, generative AI" }
+    ],
+    "achievements": [
+      {
+        "lang": "FR",
+        "value": `
+          <p><span class="bold">Fluxo</span> est une application de pilotage financier personnel bidevise (EUR / FCFA), conçue et livrée seul pour remplacer un suivi Excel.</p>
+          <ul>
+            <li>Budget sur année fiscale (septembre à août), import et rapprochement des relevés bancaires (CSV, OFX), échéances récurrentes, dettes, épargne, tableaux de bord, PWA mobile.</li>
+            <li><span class="bold">Conseiller financier IA</span> sur l'<span class="bold">API Claude (Anthropic)</span> : réponses en streaming (SSE), prompt système alimenté automatiquement par le contexte financier (revenus, charges, reste à vivre, dettes, mois tendus).</li>
+            <li>Prototype retiré après évaluation : la valeur apportée ne justifiait pas le coût d'API. Une décision prise sur des critères produit, pas techniques.</li>
+            <li>Construit avec <span class="bold">Claude Code</span> : socle back et front (plus de 100 fichiers) opérationnel en deux jours, piloté par une documentation de contexte pour l'agent (CLAUDE.md, CONTEXT.md) et un journal de séquences de développement.</li>
+            <li>CI/CD GitHub Actions : lint et tests sur PostgreSQL, puis déploiement automatique sur <span class="bold">Railway</span> (API) et <span class="bold">Vercel</span> (front).</li>
+          </ul>
+        `
+      },
+      {
+        "lang": "EN",
+        "value": `
+          <p><span class="bold">Fluxo</span> is a dual-currency (EUR / XAF) personal finance application, designed and delivered on my own to replace an Excel workbook.</p>
+          <ul>
+            <li>Fiscal-year budgeting (September to August), bank statement import and reconciliation (CSV, OFX), recurring payments, debts, savings, dashboards, mobile PWA.</li>
+            <li><span class="bold">AI financial advisor</span> on the <span class="bold">Claude API (Anthropic)</span>: streamed answers (SSE), with a system prompt automatically fed with the user's financial context (income, expenses, disposable income, debts, tight months).</li>
+            <li>Prototype removed after evaluation: the value delivered did not justify the API cost. A product decision, not a technical one.</li>
+            <li>Built with <span class="bold">Claude Code</span>: back-end and front-end foundation (100+ files) up and running in two days, driven by context documentation for the agent (CLAUDE.md, CONTEXT.md) and a development sequence log.</li>
+            <li>GitHub Actions CI/CD: lint and tests against PostgreSQL, then automatic deployment to <span class="bold">Railway</span> (API) and <span class="bold">Vercel</span> (front end).</li>
+          </ul>
+        `
+      }
+    ],
+    "highlights": [],
+    "tools": [
+      "Anthropic / Claude API",
+      "Claude Code",
+      "Next.js",
+      "TypeScript",
+      "React",
+      "shadcn/ui",
+      "Recharts",
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "Redis",
+      "Celery",
+      "NextAuth",
+      "GitHub Actions",
+      "Railway",
+      "Vercel"
+    ],
+    "profession": [
+      { "lang": "FR", "value": "Finance personnelle, IA générative" },
+      { "lang": "EN", "value": "Personal finance, generative AI" }
+    ]
+  },
+  {
     "company_name": "L'association Les Rappelés",
     "company_image": "logo-lissen.png",
     "place": [
@@ -618,7 +818,7 @@ export const experiences = [
             <li>Application mobile (Expo / React Native) – publication via <span class="bold">Google Play Console</span></li>
             <li>Site web (Next.js/React) – hébergé sur <span class="bold">Vercel</span></li>
             <li>Back-end « Forge » (Node.js/Express, REST) – hébergé sur <span class="bold">Railway</span></li>
-            <li>Automatisations et assistance IA (<span class="bold">ChatGPT, Claude AI</span>)</li>
+            <li>Automatisations et assistance IA (<span class="bold">API Anthropic / Claude, API OpenAI</span>)</li>
           </ul>
         `
       },
@@ -630,7 +830,7 @@ export const experiences = [
             <li>Mobile app (Expo / React Native) – published via <span class="bold">Google Play Console</span></li>
             <li>Website (Next.js/React) – hosted on <span class="bold">Vercel</span></li>
             <li>“Forge” backend (Node.js/Express, REST) – hosted on <span class="bold">Railway</span></li>
-            <li>Automation & AI assistance (<span class="bold">ChatGPT, Claude AI</span>)</li>
+            <li>Automation & AI assistance (<span class="bold">API Anthropic / Claude, API OpenAI</span>)</li>
           </ul>
         `
       }
@@ -720,113 +920,6 @@ export const experiences = [
     "profession": [
       { "lang": "FR", "value": "Gestion Immobilière" },
       { "lang": "EN", "value": "Real Estate" }
-    ]
-  },
-  {
-    "company_name": "SOGECAP S.A.",
-    "company_image": "logo-sg.png",
-    "place": [
-      { "lang": "FR", "city": "Paris", "country": "France" },
-      { "lang": "EN", "city": "Paris", "country": "France" }
-    ],
-    "period": { "from_year": 2021, "from_month": 3, "to_year": 2025, "to_month": 11 },
-    "role": [
-      { "lang": "FR", "value": "Application Owner, Chef de Projet, Lead Developer" },
-      { "lang": "EN", "value": "Application Owner, Project Manager, Lead Developer" }
-    ],
-    "achievements": [
-      {
-        "lang": "EN",
-        "value": `
-          <p>Within a 7-people team, I acted as both <span class="bold">Application Owner</span> and <span class="bold">Tech Lead</span> of the front team (3 devs) for the <span class="bold">React</span> web redesign of a computation launcher targeting an <span class="bold">HPC grid</span>.</p>
-
-          <span class="bold">As Application Owner:</span>
-          <p><ul>
-            <li>Main interface with Group teams: actuaries, IT (DevOps, HPC) and software vendors.</li>
-            <li>Security & compliance: <span class="bold">IAM/SSO</span>, roles/permissions, audits.</li>
-            <li>Run & governance: SLAs/incidents, capacity planning, change management, release calendar.</li>
-          </ul></p>
-
-          <span class="bold">As Tech Lead:</span>
-          <p><ul>
-            <li>Target architecture & technical decisions: <span class="bold">.NET Core / React</span>, real-time messaging with <span class="bold">HPC Scheduler</span>, <span class="bold">IndexedDB</span> cache.</li>
-            <li>Team standards: Definition of Ready/Done, code reviews, mentoring, pair programming.</li>
-            <li>Quality & CI/CD: <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> quality gates, Git branching strategy.</li>
-          </ul></p>
-
-          <span class="bold">As a developer:</span>
-          <p><ul>
-            <li>UI features (React): forms, data tables and dashboards.</li>
-            <li>Real-time monitoring of HPC computations and logs via <span class="bold">HPC Scheduler</span>.</li>
-            <li>Offline & performance: <span class="bold">IndexedDB</span> caching and client-side optimizations.</li>
-            <li>Back-end: <span class="bold">.NET Core (REST)</span> services and Node/Sequelize endpoints on <span class="bold">PostgreSQL</span>.</li>
-            <li>Tests & reliability: <span class="bold">NUnit</span> unit tests, integration tests, instrumentation and logging.</li>
-          </ul></p>
-          `
-      },
-      {
-        "lang": "FR",
-        "value": `
-          <p>Au sein d'une équipe de 7, j’étais <span class="bold">Application Owner</span> et <span class="bold">Tech Lead</span> de l’équipe front (3 devs) pour la refonte en <span class="bold">application web (React)</span> d’un lanceur de calculs vers une <span class="bold">grille HPC</span>.</p>
-
-          <span class="bold">En tant qu'Application Owner :</span>
-          <p><ul>
-            <li>Interface avec les équipes du Groupe : actuaires, DSI (DevOps, HPC), éditeurs.</li>
-            <li>Sécurité : <span class="bold">IAM/SSO</span>, habilitations/profils, conformité et audits.</li>
-            <li>Run & gouvernance : SLA/incidents, capacity planning, gestion des changements, planning de release.</li>
-          </ul></p>
-
-          <span class="bold">En tant que Tech Lead :</span>
-          <p><ul>
-            <li>Architecture cible et décisions techniques : <span class="bold">.NET Core / React</span>, messages temps réel <span class="bold">HPC Scheduler</span>, cache <span class="bold">IndexedDB</span>.</li>
-            <li>Standards d’équipe : Definition of Ready/Done, revues de code, mentoring, pair programming.</li>
-            <li>Qualité & CI/CD : <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> (quality gates), stratégie de branches Git.</li>
-          </ul></p>
-
-          <span class="bold">En tant que développeur :</span>
-          <p><ul>
-            <li>Développement de fonctionnalités UI (React) : formulaires, tableaux, dashboards.</li>
-            <li>Temps réel : supervision de l’avancement des calculs HPC et des logs via <span class="bold">HPC Scheduler</span>.</li>
-            <li>Offline & perf : mise en place d’un cache <span class="bold">IndexedDB</span> et optimisations côté client.</li>
-            <li>Back-end : services <span class="bold">.NET Core (REST)</span> et endpoints Node/Sequelize sur <span class="bold">PostgreSQL</span>.</li>
-            <li>Tests & fiabilité : <span class="bold">TU NUnit</span>, tests d’intégration, instrumentation et journalisation.</li>
-          </ul></p>
-        `
-      }
-
-    ],
-    "highlights": [],
-    "tools": [
-      "OpenAI / ChatGPT",
-      ".NET Core",
-      "C#",
-      "JS",
-      "jQuery",
-      "Node.js",
-      "React",
-      "Sequelize",
-      "PostgreSQL",
-      "HPC Scheduler",
-      "IndexedDB",
-      "Tailwind",
-      "CSS3",
-      "HTML5",
-      "Bootstrap",
-      "Git",
-      "GitLab",
-      "SonarQube",
-      "Ansible",
-      "Kubernetes",
-      "Jenkins",
-      "SCRUM",
-      "KANBAN",
-      "Microsoft HPC",
-      "Moody's",
-      "Addactis"
-    ],
-    "profession": [
-      { "lang": "FR", "value": "Assurance" },
-      { "lang": "EN", "value": "Insurance" }
     ]
   },
   {
