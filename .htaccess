@@ -1,0 +1,26 @@
+# ---------------------------------------------------------------------------
+# jeanlucbiah.com — configuration Apache / LiteSpeed (Hostinger)
+# Déployé automatiquement par GitHub Actions avec le reste du site.
+# ---------------------------------------------------------------------------
+
+# Toujours servir le site en HTTPS
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Cache navigateur
+# - Pages, scripts, styles et CV : le navigateur revérifie à chaque visite
+#   (réponse 304 très légère si rien n'a changé), donc chaque mise à jour
+#   est visible tout de suite, y compris sur mobile.
+# - Images et polices : gardées 30 jours.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html?|js|mjs|css|json|pdf|docx?)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
