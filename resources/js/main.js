@@ -1,8 +1,8 @@
-import * as PortfolioData from '../data/data.js';
-import * as FormProperties from '../data/labels.js';
-import './extensions.string.js';
-import './extensions.array.js';
-import { transformLabel } from './labels.helpers.js';
+import * as PortfolioData from '../data/data.js?v=20261018';
+import * as FormProperties from '../data/labels.js?v=20261018';
+import './extensions.string.js?v=20261018';
+import './extensions.array.js?v=20261018';
+import { transformLabel } from './labels.helpers.js?v=20261018';
 
 const COOKIES = {
     SelectedLanguage: "SELECTED_LANG",
