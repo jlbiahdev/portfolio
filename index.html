@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,13 +11,21 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <title>Portfolio | Jean Luc</title>
+    <title>Jean Luc Biah – Tech Lead .NET &amp; React / Chef de projet technique</title>
     <meta
       name="description"
-      content="Ceci est ma vitrine professionnelle. Vous pouvez y télécharger mon CV sous différents formats"
+      content="Jean Luc Biah, Tech Lead .NET & React et chef de projet technique freelance : 20 ans en banque et assurance (ALM, actuariat, calcul financier), modernisation d'applications et IA générative (API Claude, agents de code)."
     />
+    <link rel="canonical" href="https://www.jeanlucbiah.com/" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://www.jeanlucbiah.com/" />
+    <meta property="og:title" content="Jean Luc Biah – Tech Lead .NET & React / Chef de projet technique" />
+    <meta property="og:description" content="20 ans en banque et assurance : pilotage d'applications de calcul financier, modernisation .NET / React et IA générative." />
+    <meta property="og:image" content="https://www.jeanlucbiah.com/resources/img/photob.jpg" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary" />
   </head>
   <body>
     <header class="header">
@@ -36,8 +44,8 @@
         <a id="mn-con" href="mailto:jeanlucbiah.pro@outlook.com?subject=%5BPortfolio%5D%20Contact&body=Bonjour%20Jean%20Luc%2C%0D%0A%0D%0A">contact</a>
         <div class="flags">
           <div class="inner">
-            <img src="resources/img/flag-france.png" id="flag-FR" alt="" srcset="" />
-            <img src="resources/img/flag-england.png" id="flag-EN" alt="" srcset="" />
+            <img src="resources/img/flag-france.png" id="flag-FR" alt="Français" />
+            <img src="resources/img/flag-england.png" id="flag-EN" alt="English" />
           </div>
         </div>
         <button id="theme-toggle" class="btn" style="margin-left:2rem" aria-pressed="false" aria-label="Basculer le thème">🌓</button>
@@ -48,7 +56,8 @@
       <div class="home-content">
         <h1>Jean Luc BIAH</h1>
         <h3><span id="profiles"></span></h3>
-        <p></p>
+        <p>Tech Lead et chef de projet technique, 20 ans d'expérience dans la banque et l'assurance.
+          Je pilote des équipes et des applications de calcul financier et actuariel, et j'intègre l'IA générative dans mes produits.</p>
         <div class="social-media">
           <a href="https://www.linkedin.com/in/jeanlucbiah" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
           <a href="https://twitter.com/bitojelx" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
@@ -61,7 +70,7 @@
       </div>
 
       <div class="home-img">
-        <img src="resources/img/photob.jpg" alt="" srcset="" />
+        <img src="resources/img/photob.jpg" alt="Jean Luc Biah" />
       </div>
     </section>
 
@@ -133,37 +142,16 @@
     <footer class="footer">
       <div class="footer-top">
         <div id="cv">
-          <h2></h2>
+          <h2>CV Tech Lead / Chef de projet technique</h2>
           <ul class="cv">
-            <li><a class="doc" href="#"><i class="fa-solid fa-file-word"></i></a></li>
-            <li><a class="pdf" href="#"><i class="fa-solid fa-file-pdf"></i></a></li>
-          </ul>
-        </div>
-        <div id="cvplus">
-          <h2></h2>
-          <ul class="cv">
-            <li><a class="doc" href="#"><i class="fa-solid fa-file-word"></i></a></li>
-            <li><a class="pdf" href="#"><i class="fa-solid fa-file-pdf"></i></a></li>
-          </ul>
-        </div>
-        <div id="cv-dev">
-          <h2>CV - Lead Dev</h2>
-          <ul class="cv">
-            <li><a class="doc" href="#"><i class="fa-solid fa-file-word"></i></a></li>
-            <li><a class="pdf" href="#"><i class="fa-solid fa-file-pdf"></i></a></li>
-          </ul>
-        </div>
-        <div id="cvplus-dev">
-          <h2>CV détaillé - Lead Dev</h2>
-          <ul class="cv">
-            <li><a class="doc" href="#"><i class="fa-solid fa-file-word"></i></a></li>
-            <li><a class="pdf" href="#"><i class="fa-solid fa-file-pdf"></i></a></li>
+            <li><a class="doc" href="resources/docs/biahprofile.docx" aria-label="CV au format Word"><i class="fa-solid fa-file-word"></i></a></li>
+            <li><a class="pdf" href="resources/docs/biahprofile.pdf" aria-label="CV au format PDF"><i class="fa-solid fa-file-pdf"></i></a></li>
           </ul>
         </div>
         <div id="references">
           <h2></h2>
           <ul class="cv">
-            <li><a href="resources/docs/biahprofile_references.pdf"><i class="fa-solid fa-file-pdf"></i></a></li>
+            <li><a href="resources/docs/biahprofile_references.pdf" aria-label="Références (PDF)"><i class="fa-solid fa-file-pdf"></i></a></li>
           </ul>
         </div>
         <div id="links">
@@ -177,7 +165,7 @@
       </div>
       <div class="footer-bottom">
         <div class="footer-text">
-          <p>&copy; 2021 Cyrano Conseil <span>Tous droits réservés</span></p>
+          <p>&copy; <span id="footer-year">2026</span> Cyrano Conseil <span>Tous droits réservés</span></p>
         </div>
 
         <div class="footer-iconTop">

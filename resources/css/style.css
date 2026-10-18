@@ -474,79 +474,9 @@ p {
     background: var(--main-color);
 }
 
-/* ---- Progress widths + effet hover (IDs alignés au JSON) ---- */
-#js .bar span { width: 90%; }              #js .skills-content:hover:before { width: 90%; }
-#htmlcss .bar span { width: 90%; }         #htmlcss .skills-content:hover:before { width: 90%; }
-#nodejs .bar span { width: 90%; }          #nodejs .skills-content:hover:before { width: 90%; }
-#vuejs .bar span { width: 80%; }           #vuejs .skills-content:hover:before { width: 80%; }
-#reactjs .bar span { width: 80%; }         #reactjs .skills-content:hover:before { width: 80%; }
-#bootstrap .bar span { width: 90%; }       #bootstrap .skills-content:hover:before { width: 90%; }
-
-#tsql .bar span { width: 90%; }            #tsql .skills-content:hover:before { width: 90%; }
-#plsql .bar span { width: 90%; }           #plsql .skills-content:hover:before { width: 90%; }
-#mysql .bar span { width: 90%; }           #mysql .skills-content:hover:before { width: 90%; }
-#sybase .bar span { width: 90%; }          #sybase .skills-content:hover:before { width: 90%; }
-#mongodb .bar span { width: 90%; }         #mongodb .skills-content:hover:before { width: 90%; }
-
-#cs .bar span { width: 90%; }              #cs .skills-content:hover:before { width: 90%; }
-#vb .bar span { width: 70%; }              #vb .skills-content:hover:before { width: 70%; }
-#api .bar span { width: 90%; }             #api .skills-content:hover:before { width: 90%; }
-#wcf .bar span { width: 90%; }             #wcf .skills-content:hover:before { width: 90%; }
-/* Corrigé : WF (Windows Workflow) */
-#wf .bar span { width: 90%; }              #wf .skills-content:hover:before { width: 90%; }
-
-#mvc .bar span { width: 90%; }             #mvc .skills-content:hover:before { width: 90%; }
-#blaz .bar span { width: 90%; }            #blaz .skills-content:hover:before { width: 90%; }
-#wpf .bar span { width: 90%; }             #wpf .skills-content:hover:before { width: 90%; }
-#win .bar span { width: 90%; }             #win .skills-content:hover:before { width: 90%; }
-#asp .bar span { width: 90%; }             #asp .skills-content:hover:before { width: 90%; }
-
-#ssis .bar span { width: 80%; }            #ssis .skills-content:hover:before { width: 80%; }
-#ssas .bar span { width: 70%; }            #ssas .skills-content:hover:before { width: 70%; }
-#ssrs .bar span { width: 70%; }            #ssrs .skills-content:hover:before { width: 70%; }
-
-/* CI/CD */
-#azure .bar span { width: 75%; }           #azure .skills-content:hover:before { width: 75%; }
-#jenkins .bar span { width: 80%; }         #jenkins .skills-content:hover:before { width: 80%; }
-#teamcity .bar span { width: 80%; }        #teamcity .skills-content:hover:before { width: 80%; }
-#octopus .bar span { width: 80%; }         #octopus .skills-content:hover:before { width: 80%; }
-#ansible .bar span { width: 50%; }         #ansible .skills-content:hover:before { width: 50%; }
-#kubernetes .bar span { width: 50%; }      #kubernetes .skills-content:hover:before { width: 50%; }
-#sonarqube .bar span { width: 50%; }       #sonarqube .skills-content:hover:before { width: 50%; }
-
-#kanban .bar span { width: 90%; }          #kanban .skills-content:hover:before { width: 90%; }
-#merise .bar span { width: 90%; }          #merise .skills-content:hover:before { width: 90%; }
-
-#git .bar span { width: 90%; }             #git .skills-content:hover:before { width: 90%; }
-#tfs .bar span { width: 90%; }             #tfs .skills-content:hover:before { width: 90%; }
-#gerrit .bar span { width: 70%; }          #gerrit .skills-content:hover:before { width: 70%; }
-
-#apache .bar span { width: 60%; }          #apache .skills-content:hover:before { width: 60%; }
-#iis .bar span { width: 70%; }             #iis .skills-content:hover:before { width: 70%; }
-/* Serveurs web -> Azure Cloud (distinct de CI/CD/azure) */
-#azurecloud .bar span { width: 80%; }      #azurecloud .skills-content:hover:before { width: 80%; }
-
-#linux .bar span { width: 60%; }           #linux .skills-content:hover:before { width: 60%; }
-#mac .bar span { width: 80%; }             #mac .skills-content:hover:before { width: 80%; }
-#mswin .bar span { width: 90%; }           #mswin .skills-content:hover:before { width: 90%; }
-
-#infrag .bar span { width: 90%; }          #infrag .skills-content:hover:before { width: 90%; }
-#crystrep .bar span { width: 100%; }       #crystrep .skills-content:hover:before { width: 100%; }
-
-/* Web – OpenAI */
-#openai .bar span { width: 75%; }           #openai .skills-content:hover:before { width: 75%; }
-
-/* Mobile */
-#reactnative .bar span { width: 85%; }      #reactnative .skills-content:hover:before { width: 85%; }
-
-#expo .bar span { width: 85%; }              #expo .skills-content:hover:before { width: 85%; }
-
-#gplay .bar span { width: 70%; }             #gplay .skills-content:hover:before { width: 70%; }
-
-/* Hébergement / Serveurs web */
-#vercel .bar span { width: 80%; }           #vercel .skills-content:hover:before { width: 80%; }
-
-#railway .bar span { width: 80%; }          #railway .skills-content:hover:before { width: 80%; }
+/* ---- Progress widths + effet hover : pilotés par data.js (variable --w posée par main.js) ---- */
+.skills-box .bar span { width: var(--w, 0); }
+.skills-box .skills-content:hover:before { width: var(--w, 0); }
 
 /* ============================== EDUCATION ============================== */
 

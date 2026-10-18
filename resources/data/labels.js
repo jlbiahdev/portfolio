@@ -161,29 +161,17 @@ export const labels = {
       { "lang": "FR", "value": "Liens utiles" },
       { "lang": "EN", "value": "Links" }
     ],
-    "cv_cpr": [
-      { "lang": "FR", "value": "CV Chef de Projet" },
-      { "lang": "EN", "value": "Project Manager CV" }
+    "cv": [
+      { "lang": "FR", "value": "CV Tech Lead / Chef de projet technique" },
+      { "lang": "EN", "value": "Resume – Tech Lead / Technical Project Manager" }
     ],
-    "cv_cpr_doc": [
-      { "lang": "FR", "value": "resources/docs/biahprofile_cpr.docx" },
-      { "lang": "EN", "value": "resources/docs/biahprofile_cpr_en.docx" }
+    "cv_doc": [
+      { "lang": "FR", "value": "resources/docs/biahprofile.docx" },
+      { "lang": "EN", "value": "resources/docs/biahprofile_en.docx" }
     ],
-    "cv_cpr_pdf": [
-      { "lang": "FR", "value": "resources/docs/biahprofile_cpr.pdf" },
-      { "lang": "EN", "value": "resources/docs/biahprofile_cpr_en.pdf" }
-    ],
-    "cv_plus": [
-      { "lang": "FR", "value": "CV détaillé Chef de Projet" },
-      { "lang": "EN", "value": "Detailed Project Manager CV" }
-    ],
-    "cv_cpr_plus_doc": [
-      { "lang": "FR", "value": "resources/docs/biahprofile_cpr_detail.docx" },
-      { "lang": "EN", "value": "resources/docs/biahprofile_cpr_en_detail.docx" }
-    ],
-    "cv_cpr_plus_pdf": [
-      { "lang": "FR", "value": "resources/docs/biahprofile_cpr_detail.pdf" },
-      { "lang": "EN", "value": "resources/docs/biahprofile_cpr_en_detail.pdf" }
+    "cv_pdf": [
+      { "lang": "FR", "value": "resources/docs/biahprofile.pdf" },
+      { "lang": "EN", "value": "resources/docs/biahprofile_en.pdf" }
     ],
     "references": [
       { "lang": "FR", "value": "Quelques Références" },
@@ -192,30 +180,6 @@ export const labels = {
     "all_rights": [
       { "lang": "FR", "value": "Tous droits réservés" },
       { "lang": "EN", "value": "All rights reserved" }
-    ],
-    "cv_dev": [
-      { "lang": "FR", "value": "CV Lead Developer" },
-      { "lang": "EN", "value": "Lead Developer CV" }
-    ],
-    "cv_dev_doc": [
-      { "lang": "FR", "value": "resources/docs/biahprofile_dev.docx" },
-      { "lang": "EN", "value": "resources/docs/biahprofile_dev_en.docx" }
-    ],
-    "cv_dev_pdf": [
-      { "lang": "FR", "value": "resources/docs/biahprofile_dev.pdf" },
-      { "lang": "EN", "value": "resources/docs/biahprofile_dev_en.pdf" }
-    ],
-    "cv_dev_plus": [
-      { "lang": "FR", "value": "CV détaillé - Lead Developer" },
-      { "lang": "EN", "value": "Detailed Lead Developer CV" }
-    ],
-    "cv_dev_plus_doc": [
-      { "lang": "FR", "value": "resources/docs/biahprofile_dev_detail.docx" },
-      { "lang": "EN", "value": "resources/docs/biahprofile_dev_en_detail.docx" }
-    ],
-    "cv_dev_plus_pdf": [
-      { "lang": "FR", "value": "resources/docs/biahprofile_dev_detail.pdf" },
-      { "lang": "EN", "value": "resources/docs/biahprofile_dev_en_detail.pdf" }
     ]
   },
   "dico": {

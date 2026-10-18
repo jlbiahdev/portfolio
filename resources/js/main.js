@@ -82,24 +82,16 @@ const reset = () => {
     $('#contact .heading').html(shape(FormProperties.labels.contact.header.find(e => e.lang === lang).value, lang));
     $('.form-contact .btn').val(shape(FormProperties.labels.contact.btn.find(e => e.lang === lang).value, lang));
 
-    $('footer .footer-text span').html(shape(FormProperties.labels.footer.all_rights.find(e => e.lang === lang).value, lang));
+    $('footer .footer-text span:not(#footer-year)').html(shape(FormProperties.labels.footer.all_rights.find(e => e.lang === lang).value, lang));
     $('footer #links h2').html(shape(FormProperties.labels.footer.links.find(e => e.lang === lang).value, lang));
-    $('footer #cv h2').html(shape(FormProperties.labels.footer.cv_cpr.find(e => e.lang === lang).value, lang));
-    $('footer #cvplus h2').html(shape(FormProperties.labels.footer.cv_plus.find(e => e.lang === lang).value, lang));
-    $('footer #cv-dev h2').html(shape(FormProperties.labels.footer.cv_dev.find(e => e.lang === lang).value, lang));
-    $('footer #cvplus-dev h2').html(shape(FormProperties.labels.footer.cv_dev_plus.find(e => e.lang === lang).value, lang));
+    $('footer #cv h2').html(shape(FormProperties.labels.footer.cv.find(e => e.lang === lang).value, lang));
     $('footer #references h2').html(shape(FormProperties.labels.footer.references.find(e => e.lang === lang).value, lang));
 
-    $("footer #cv a.doc").attr("href", FormProperties.labels.footer.cv_cpr_doc.find(e => e.lang === lang).value);
-    $("footer #cv a.pdf").attr("href", FormProperties.labels.footer.cv_cpr_pdf.find(e => e.lang === lang).value);
-    $("footer #cvplus a.doc").attr("href", FormProperties.labels.footer.cv_cpr_plus_doc.find(e => e.lang === lang).value);
-    $("footer #cvplus a.pdf").attr("href", FormProperties.labels.footer.cv_cpr_plus_pdf.find(e => e.lang === lang).value);
-    
-    $("footer #cv-dev a.doc").attr("href", FormProperties.labels.footer.cv_dev_doc.find(e => e.lang === lang).value);
-    $("footer #cv-dev a.pdf").attr("href", FormProperties.labels.footer.cv_dev_pdf.find(e => e.lang === lang).value);
-    $("footer #cvplus-dev a.doc").attr("href", FormProperties.labels.footer.cv_dev_plus_doc.find(e => e.lang === lang).value);
-    $("footer #cvplus-dev a.pdf").attr("href", FormProperties.labels.footer.cv_dev_plus_pdf.find(e => e.lang === lang).value);
-    
+    $("footer #cv a.doc").attr("href", FormProperties.labels.footer.cv_doc.find(e => e.lang === lang).value);
+    $("footer #cv a.pdf").attr("href", FormProperties.labels.footer.cv_pdf.find(e => e.lang === lang).value);
+    $('#footer-year').text(new Date().getFullYear());
+    document.documentElement.lang = lang.toLowerCase();
+
     var indentityIntro = PortfolioData.identity.intro.find(e => e.lang === lang);
     $('#home .home-content p').html(shape(indentityIntro.profile, lang));
     $('#about .about-content p').html(shape(indentityIntro.about, lang));
@@ -163,7 +155,7 @@ const menuIcononclick = () => {
 ==================================================================== */
 
 const skillBoxTpl = (id, topics, workmanship) => `
-  <div id="${id}" class="skills-box">
+  <div id="${id}" class="skills-box" style="--w: ${workmanship}%">
     <div class="skills-content">
       <div class="progress">
         <h3>${topics} <span>${workmanship}%</span></h3>
