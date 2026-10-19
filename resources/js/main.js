@@ -90,6 +90,8 @@ const reset = () => {
     $("footer #cv a.doc").attr("href", FormProperties.labels.footer.cv_doc.find(e => e.lang === lang).value);
     $("footer #cv a.pdf").attr("href", FormProperties.labels.footer.cv_pdf.find(e => e.lang === lang).value);
     $('#footer-year').text(new Date().getFullYear());
+    const glossaryLabel = FormProperties.labels.footer.glossary?.find(e => e.lang === lang)?.value;
+    if (glossaryLabel) $('#lnk-glossary').html(glossaryLabel);
     document.documentElement.lang = lang.toLowerCase();
 
     var indentityIntro = PortfolioData.identity.intro.find(e => e.lang === lang);
