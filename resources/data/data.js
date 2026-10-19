@@ -14,10 +14,11 @@ export const identity = {
       "profile": `Tech Lead et chef de projet technique, 20 ans d'expérience dans la banque et l'assurance. <br>
                         Je pilote des équipes et des applications de calcul financier et actuariel, et j'intègre l'IA générative dans mes produits.`,
       "about": `Tech Lead freelance (Cyrano Conseil), spécialiste <span class="bold">.NET (C#, .NET Core)</span> et <span class="bold">React / Next.js</span>. <br>
-                        Je pilote des applications de calcul financier et actuariel (grilles <span class="bold">ALM</span> et <span class="bold">AFM</span>, MS HPC, XGrid)
-                        et je modernise des applications legacy (WinForms, WPF, VB) vers .NET Core et React. <br>
+                        Je pilote des applications de calcul financier et actuariel (grilles <span class="bold">ALM</span> et <span class="bold">AFM</span>, MS HPC), j'en conçois l'architecture
+                        (orchestration de calcul distribué <span class="bold">HpcLite</span>) et j'industrialise leur livraison (CI/CD, déploiement automatisé). <br>
+                        Je modernise aussi des applications legacy (WinForms, WPF, VB) vers .NET Core et React. <br>
                         Bases de données : SQL Server, PostgreSQL, Oracle, MongoDB, et BI (SSIS, SSRS, SSAS). <br>
-                        DevOps : Docker, Kubernetes, Jenkins, GitLab CI, Azure, Vercel, Railway. <br><br>
+                        DevOps : PowerShell, GitLab CI, Artifactory, IIS, Docker, Kubernetes, Jenkins, Azure, Vercel, Railway. <br><br>
                         <span class="bold">IA générative</span> : intégration de l'API Claude (Anthropic) et d'OpenAI dans mes applications,
                         et développement assisté par agents (Claude Code, GitHub Copilot) au quotidien.`,
       "qualities": [
@@ -33,10 +34,11 @@ export const identity = {
       "profile": `Tech Lead and technical project manager with 20 years of experience in banking and insurance. <br>
                         I lead teams and financial / actuarial computing applications, and I build generative AI into my products.`,
       "about": `Freelance Tech Lead (Cyrano Conseil), specialised in <span class="bold">.NET (C#, .NET Core)</span> and <span class="bold">React / Next.js</span>. <br>
-                        I lead financial and actuarial computing applications (<span class="bold">ALM</span> and <span class="bold">AFM</span> grids, MS HPC, XGrid)
-                        and modernise legacy applications (WinForms, WPF, VB) to .NET Core and React. <br>
+                        I lead financial and actuarial computing applications (<span class="bold">ALM</span> and <span class="bold">AFM</span> grids, MS HPC), design their architecture
+                        (<span class="bold">HpcLite</span> distributed computing orchestration) and industrialise their delivery (CI/CD, automated deployment). <br>
+                        I also modernise legacy applications (WinForms, WPF, VB) to .NET Core and React. <br>
                         Databases: SQL Server, PostgreSQL, Oracle, MongoDB, and BI (SSIS, SSRS, SSAS). <br>
-                        DevOps: Docker, Kubernetes, Jenkins, GitLab CI, Azure, Vercel, Railway. <br><br>
+                        DevOps: PowerShell, GitLab CI, Artifactory, IIS, Docker, Kubernetes, Jenkins, Azure, Vercel, Railway. <br><br>
                         <span class="bold">Generative AI</span>: integrating the Claude (Anthropic) and OpenAI APIs into my applications,
                         and agent-assisted development (Claude Code, GitHub Copilot) every day.`,
       "qualities": [
@@ -635,7 +637,16 @@ export const experiences = [
       {
         "lang": "EN",
         "value": `
-          <p>Within a 7-people team, I acted as both <span class="bold">Application Owner</span> and <span class="bold">Tech Lead</span> of the front team (3 devs) for the <span class="bold">React</span> web redesign of a computation launcher targeting an <span class="bold">ALM computing grid</span>, used by actuaries.</p>
+          <p><span class="bold">Computing platform migration (2026)</span> — POC approved, development nearly complete.</p>
+          <p><ul>
+            <li>Designed <span class="bold">HpcLite</span>, a <span class="bold">.NET 8</span> orchestration layer that reproduces the logic of Microsoft HPC (scheduler, agents and runners as Windows Services) and submits tasks to the Group's internal computing grid.</li>
+            <li>Computation orchestration: REST API, job dependencies as a <span class="bold">DAG</span>, state machine, crash detection, safe concurrent dispatch on <span class="bold">PostgreSQL</span> (SKIP LOCKED), Dapper, least privilege (agents without database access).</li>
+            <li>Agile delivery: Epic → Feature → User Story backlog, sprints as GitLab milestones, standard <span class="bold">Jira</span> tickets with acceptance criteria; web migration workstream (plan, demos, acceptance testing, releases).</li>
+            <li>End-to-end deployment automated in <span class="bold">PowerShell</span> (Artifactory → IIS and Windows Services, pre-flight checks, rollback): 19 milestones, <span class="bold">167 test scenarios</span>, up to production.</li>
+            <li>In progress: <span class="bold">GitLab CI/CD</span> for a .NET team not covered by the Group's DevOps platform; build scripts hardened (secret removed, false successes fixed).</li>
+          </ul></p>
+
+          <p><span class="bold">Redesign of the ALM computation launcher</span> — within a 7-people team, I acted as both <span class="bold">Application Owner</span> and <span class="bold">Tech Lead</span> of the front team (3 devs) for the <span class="bold">React</span> web redesign, used by actuaries.</p>
 
           <span class="bold">As Application Owner:</span>
           <p><ul>
@@ -647,7 +658,6 @@ export const experiences = [
           <span class="bold">As Tech Lead:</span>
           <p><ul>
             <li>Target architecture & technical decisions: <span class="bold">.NET Core / React</span>, real-time job messaging, <span class="bold">IndexedDB</span> cache.</li>
-            <li>Migration of the computing engine from <span class="bold">Microsoft HPC</span> to <span class="bold">XGrid</span>, the internal grid built by Société Générale (GBTO), integrated through its <span class="bold">.NET Core API</span>.</li>
             <li>Team standards: Definition of Ready/Done, code reviews, mentoring, pair programming.</li>
             <li>Quality & CI/CD: <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> quality gates, Git branching strategy.</li>
           </ul></p>
@@ -655,7 +665,7 @@ export const experiences = [
           <span class="bold">As a developer:</span>
           <p><ul>
             <li>UI features (React): forms, data tables and dashboards.</li>
-            <li>Real-time monitoring of grid computations and logs (HPC Scheduler, then XGrid).</li>
+            <li>Real-time monitoring of grid computations and logs.</li>
             <li>Offline & performance: <span class="bold">IndexedDB</span> caching and client-side optimizations.</li>
             <li>Back-end: <span class="bold">.NET Core (REST)</span> services and Node/Sequelize endpoints on <span class="bold">PostgreSQL</span>.</li>
             <li>Tests & reliability: <span class="bold">NUnit</span> unit tests, integration tests, instrumentation and logging.</li>
@@ -665,7 +675,16 @@ export const experiences = [
       {
         "lang": "FR",
         "value": `
-          <p>Au sein d'une équipe de 7, j’étais <span class="bold">Application Owner</span> et <span class="bold">Tech Lead</span> de l’équipe front (3 devs) pour la refonte en <span class="bold">application web (React)</span> d’un lanceur de calculs vers une <span class="bold">grille de calcul ALM</span>, utilisé par les actuaires.</p>
+          <p><span class="bold">Migration de la plateforme de calcul (2026)</span> — POC validé, développement en voie d'achèvement.</p>
+          <p><ul>
+            <li>Conçu <span class="bold">HpcLite</span>, une couche d'orchestration en <span class="bold">.NET 8</span> qui reprend la logique de Microsoft HPC (ordonnanceur, agents et exécuteurs en services Windows) et soumet les tâches à la grille de calcul interne du Groupe.</li>
+            <li>Orchestration des calculs : API REST, dépendances entre jobs en <span class="bold">DAG</span>, machine à états, détection des plantages, répartition concurrente sûre sur <span class="bold">PostgreSQL</span> (SKIP LOCKED), Dapper, moindre privilège (agents sans accès à la base).</li>
+            <li>Pilotage agile : backlog Epic → Feature → User Story, sprints en milestones GitLab, tickets <span class="bold">Jira</span> standardisés avec critères d'acceptation ; chantier de migration web (plan, démos, recettes, livraisons).</li>
+            <li>Déploiement de bout en bout automatisé en <span class="bold">PowerShell</span> (Artifactory → IIS et services Windows, contrôle préalable, rollback) : 19 jalons, <span class="bold">167 scénarios de test</span>, jusqu'à la mise en production.</li>
+            <li>En cours : <span class="bold">CI/CD GitLab</span> pour une équipe .NET non couverte par la plateforme DevOps du Groupe ; scripts de build fiabilisés (secret supprimé, faux succès corrigés).</li>
+          </ul></p>
+
+          <p><span class="bold">Refonte du lanceur de calculs ALM</span> — au sein d'une équipe de 7, j'étais <span class="bold">Application Owner</span> et <span class="bold">Tech Lead</span> de l'équipe front (3 devs) pour la refonte en <span class="bold">application web (React)</span>, utilisée par les actuaires.</p>
 
           <span class="bold">En tant qu'Application Owner :</span>
           <p><ul>
@@ -677,7 +696,6 @@ export const experiences = [
           <span class="bold">En tant que Tech Lead :</span>
           <p><ul>
             <li>Architecture cible et décisions techniques : <span class="bold">.NET Core / React</span>, messages temps réel des jobs, cache <span class="bold">IndexedDB</span>.</li>
-            <li>Migration du moteur de calcul de <span class="bold">Microsoft HPC</span> vers <span class="bold">XGrid</span>, la grille interne développée par la Société Générale (GBTO), intégrée via son <span class="bold">API .NET Core</span>.</li>
             <li>Standards d’équipe : Definition of Ready/Done, revues de code, mentoring, pair programming.</li>
             <li>Qualité & CI/CD : <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> (quality gates), stratégie de branches Git.</li>
           </ul></p>
@@ -685,7 +703,7 @@ export const experiences = [
           <span class="bold">En tant que développeur :</span>
           <p><ul>
             <li>Développement de fonctionnalités UI (React) : formulaires, tableaux, dashboards.</li>
-            <li>Temps réel : supervision de l’avancement des calculs et des logs (HPC Scheduler, puis XGrid).</li>
+            <li>Temps réel : supervision de l’avancement des calculs et des logs.</li>
             <li>Offline & perf : mise en place d’un cache <span class="bold">IndexedDB</span> et optimisations côté client.</li>
             <li>Back-end : services <span class="bold">.NET Core (REST)</span> et endpoints Node/Sequelize sur <span class="bold">PostgreSQL</span>.</li>
             <li>Tests & fiabilité : <span class="bold">TU NUnit</span>, tests d’intégration, instrumentation et journalisation.</li>
@@ -696,9 +714,13 @@ export const experiences = [
     ],
     "highlights": [],
     "tools": [
-      "OpenAI / ChatGPT",
+      ".NET 8",
       ".NET Core",
+      "ASP.NET Core",
       "C#",
+      "Windows Services",
+      "Dapper",
+      "HpcLite",
       "JS",
       "jQuery",
       "Node.js",
@@ -720,7 +742,12 @@ export const experiences = [
       "SCRUM",
       "KANBAN",
       "Microsoft HPC",
-      "XGrid",
+      "PowerShell",
+      "IIS",
+      "NuGet",
+      "Artifactory",
+      "Jira",
+      "Claude Code",
       "Moody's",
       "Addactis"
     ],
