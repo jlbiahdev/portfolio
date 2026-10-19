@@ -1,4 +1,4 @@
-import { activities } from './data/activities.js';
+import { activities } from './data/activities.js?v=20261019';
 
 const CHART_COLORS = {
   primary: '#135267',
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderBasket(activities.basket);
   renderWalking(activities.walking);
   renderRunning(activities.running);
+  renderCycling(activities.cycling);
 });
 
 // ────────────────────────────────────────────────────────────────────
@@ -75,8 +76,11 @@ function fillHeroKpis() {
     activities.walking.total.distance.toLocaleString('fr-FR', { maximumFractionDigits: 0 });
   document.getElementById('kpi-run').textContent =
     Math.round(activities.running.total.distance);
+  document.getElementById('kpi-bike').textContent =
+    Math.round(activities.cycling.total.distance);
   document.getElementById('kpi-vo2').textContent = activities.running.vo2max;
-  const totalSessions = activities.walking.total.sessions + activities.running.total.sessions;
+  const totalSessions = activities.walking.total.sessions + activities.running.total.sessions
+    + activities.cycling.total.sessions;
   document.getElementById('kpi-sessions').textContent = totalSessions;
 }
 
@@ -360,6 +364,95 @@ function renderRunning(running) {
       style: { fontFamily: 'Nunito' },
     },
   }).render();
+
+  renderSessionTable('running-sessions', running.sessions, 'pace');
+}
+
+// ────────────────────────────────────────────────────────────────────
+// CYCLING
+// ────────────────────────────────────────────────────────────────────
+
+function renderCycling(cycling) {
+  const longest = cycling.sessions.reduce((max, s) => s.distance > max.distance ? s : max, cycling.sessions[0]);
+  const fastest = cycling.sessions.reduce((max, s) => speed(s) > speed(max) ? s : max, cycling.sessions[0]);
+
+  document.getElementById('cycling-stats').innerHTML = `
+    <div class="stat-card highlight">
+      <span class="stat-value">${Math.round(cycling.total.distance)} km</span>
+      <span class="stat-label">Distance totale</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">${cycling.total.sessions}</span>
+      <span class="stat-label">Sessions</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">${Math.round(cycling.total.hours)} h</span>
+      <span class="stat-label">En selle</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">${(cycling.total.calories / 1000).toFixed(1)}k</span>
+      <span class="stat-label">Calories</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">${longest.distance} km</span>
+      <span class="stat-label">Plus longue sortie</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">${speed(fastest).toFixed(1)} km/h</span>
+      <span class="stat-label">Meilleure moyenne</span>
+    </div>`;
+
+  const sorted = [...cycling.months].sort((a, b) => a.month.localeCompare(b.month));
+  new ApexCharts(document.getElementById('chart-cycling'), {
+    chart: { type: 'bar', height: 300, background: 'transparent', toolbar: { show: false } },
+    series: [{ name: 'Distance (km)', data: sorted.map(m => m.distance) }],
+    xaxis: {
+      categories: sorted.map(m => formatMonth(m.month)),
+      labels: { style: { colors: CHART_COLORS.textMuted, fontSize: '1.2rem', fontFamily: 'Nunito' } },
+    },
+    yaxis: { labels: { style: { colors: CHART_COLORS.textMuted, fontFamily: 'Nunito' } } },
+    colors: [CHART_COLORS.primaryLight],
+    plotOptions: { bar: { borderRadius: 6, columnWidth: '55%' } },
+    dataLabels: { enabled: false },
+    grid: { borderColor: CHART_COLORS.grid },
+    theme: { mode: 'dark' },
+    tooltip: { y: { formatter: v => `${v} km` }, style: { fontFamily: 'Nunito' } },
+  }).render();
+
+  renderSessionTable('cycling-sessions', cycling.sessions, 'speed');
+}
+
+// Tableau des sorties : allure (min/km) pour la course, vitesse (km/h) pour le vélo
+function renderSessionTable(id, sessions, metric) {
+  const el = document.getElementById(id);
+  if (!el || !sessions?.length) return;
+  const head = metric === 'pace' ? 'Allure' : 'Vitesse';
+  const rows = [...sessions]
+    .sort((a, b) => (b.date + b.time).localeCompare(a.date + a.time))
+    .map(s => `<tr>
+        <td>${formatDay(s.date)} <small>${s.time}</small></td>
+        <td class="num">${s.distance.toFixed(2)} km</td>
+        <td class="num">${s.duration}</td>
+        <td class="num">${metric === 'pace' ? pace(s) : speed(s).toFixed(1) + ' km/h'}</td>
+      </tr>`).join('');
+  el.innerHTML = `<table class="session-table">
+      <thead><tr><th>Date</th><th class="num">Distance</th><th class="num">Durée</th><th class="num">${head}</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
+
+function seconds(duration) {
+  const [h, m, s] = duration.split(':').map(Number);
+  return h * 3600 + m * 60 + s;
+}
+
+function speed(s) {
+  return s.distance / (seconds(s.duration) / 3600);
+}
+
+function pace(s) {
+  const secPerKm = Math.round(seconds(s.duration) / s.distance);
+  return `${Math.floor(secPerKm / 60)}'${String(secPerKm % 60).padStart(2, '0')}"/km`;
 }
 
 // ────────────────────────────────────────────────────────────────────
