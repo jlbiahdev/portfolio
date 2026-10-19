@@ -630,14 +630,14 @@ export const experiences = [
     ],
     "period": { "from_year": 2021, "from_month": 3, "to_year": 0, "to_month": 0 },
     "role": [
-      { "lang": "FR", "value": "Chef de projet technique, Tech Lead, Application Owner" },
-      { "lang": "EN", "value": "Technical Project Manager, Tech Lead, Application Owner" }
+      { "lang": "FR", "value": "Application Officer, Chef de projet technique, Tech Lead" },
+      { "lang": "EN", "value": "Application Officer, Technical Project Manager, Tech Lead" }
     ],
     "achievements": [
       {
         "lang": "EN",
         "value": `
-          <p><span class="bold">Computing platform migration (2026)</span> — POC approved, development nearly complete.</p>
+          <p><span class="bold">Computing platform migration (2026)</span> — led as <span class="bold">Application Officer</span>. POC approved, development nearly complete.</p>
           <p><ul>
             <li>Designed <span class="bold">HpcLite</span>, a <span class="bold">.NET 8</span> orchestration layer that reproduces the logic of Microsoft HPC (scheduler, agents and runners as Windows Services) and submits tasks to the Group's internal computing grid.</li>
             <li>Computation orchestration: REST API, job dependencies as a <span class="bold">DAG</span>, state machine, crash detection, safe concurrent dispatch on <span class="bold">PostgreSQL</span> (SKIP LOCKED), Dapper, least privilege (agents without database access).</li>
@@ -646,9 +646,9 @@ export const experiences = [
             <li>In progress: <span class="bold">GitLab CI/CD</span> for a .NET team not covered by the Group's DevOps platform; build scripts hardened (secret removed, false successes fixed).</li>
           </ul></p>
 
-          <p><span class="bold">Redesign of the ALM computation launcher</span> — within a 7-people team, I acted as both <span class="bold">Application Owner</span> and <span class="bold">Tech Lead</span> of the front team (3 devs) for the <span class="bold">React</span> web redesign, used by actuaries.</p>
+          <p><span class="bold">Redesign of the ALM computation launcher</span> — within a 7-people team, I acted as both <span class="bold">Application Officer</span> and <span class="bold">Tech Lead</span> of the front team (3 devs) for the <span class="bold">React</span> web redesign, used by actuaries.</p>
 
-          <span class="bold">As Application Owner:</span>
+          <span class="bold">As Application Officer:</span>
           <p><ul>
             <li>Main interface with Group teams: actuaries, IT (DevOps, HPC) and software vendors.</li>
             <li>Security & compliance: <span class="bold">IAM/SSO</span>, roles/permissions, audits.</li>
@@ -675,7 +675,7 @@ export const experiences = [
       {
         "lang": "FR",
         "value": `
-          <p><span class="bold">Migration de la plateforme de calcul (2026)</span> — POC validé, développement en voie d'achèvement.</p>
+          <p><span class="bold">Migration de la plateforme de calcul (2026)</span> — pilotée en tant qu'<span class="bold">Application Officer</span>. POC validé, développement en voie d'achèvement.</p>
           <p><ul>
             <li>Conçu <span class="bold">HpcLite</span>, une couche d'orchestration en <span class="bold">.NET 8</span> qui reprend la logique de Microsoft HPC (ordonnanceur, agents et exécuteurs en services Windows) et soumet les tâches à la grille de calcul interne du Groupe.</li>
             <li>Orchestration des calculs : API REST, dépendances entre jobs en <span class="bold">DAG</span>, machine à états, détection des plantages, répartition concurrente sûre sur <span class="bold">PostgreSQL</span> (SKIP LOCKED), Dapper, moindre privilège (agents sans accès à la base).</li>
@@ -684,9 +684,9 @@ export const experiences = [
             <li>En cours : <span class="bold">CI/CD GitLab</span> pour une équipe .NET non couverte par la plateforme DevOps du Groupe ; scripts de build fiabilisés (secret supprimé, faux succès corrigés).</li>
           </ul></p>
 
-          <p><span class="bold">Refonte du lanceur de calculs ALM</span> — au sein d'une équipe de 7, j'étais <span class="bold">Application Owner</span> et <span class="bold">Tech Lead</span> de l'équipe front (3 devs) pour la refonte en <span class="bold">application web (React)</span>, utilisée par les actuaires.</p>
+          <p><span class="bold">Refonte du lanceur de calculs ALM</span> — au sein d'une équipe de 7, j'étais <span class="bold">Application Officer</span> et <span class="bold">Tech Lead</span> de l'équipe front (3 devs) pour la refonte en <span class="bold">application web (React)</span>, utilisée par les actuaires.</p>
 
-          <span class="bold">En tant qu'Application Owner :</span>
+          <span class="bold">En tant qu'Application Officer :</span>
           <p><ul>
             <li>Interface avec les équipes du Groupe : actuaires, DSI (DevOps, HPC), éditeurs.</li>
             <li>Sécurité : <span class="bold">IAM/SSO</span>, habilitations/profils, conformité et audits.</li>
