@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../resources/css/style.css?v=20261019b" />
+  <script src="https://kit.fontawesome.com/9f91a51f96.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+  <title>Lexique – Jean Luc Biah</title>
+  <meta name="description" content="Lexique des termes techniques et métier du CV de Jean Luc Biah : finance et assurance, gestion de projet, .NET, DevOps, données et IA générative." />
+  <link rel="canonical" href="https://www.jeanlucbiah.com/pages/lexique/" />
+  <style>
+    .glossary { padding: 12rem 9% 6rem; min-height: 100vh; }
+    .glossary h1 { font-size: 5rem; margin-bottom: 1rem; }
+    .glossary h1 span { color: var(--main-color); }
+    .glossary .intro { font-size: 1.7rem; max-width: 80rem; margin-bottom: 3rem; opacity: .85; }
+    .glossary .tools { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 3rem; }
+    .glossary input[type="search"] {
+      flex: 1 1 28rem; font: inherit; font-size: 1.7rem; padding: 1.2rem 1.6rem; border-radius: .8rem;
+      border: .2rem solid var(--main-color); background: var(--snd-bg-color); color: var(--text-color);
+    }
+    .glossary .chips { display: flex; flex-wrap: wrap; gap: .8rem; margin-bottom: 3rem; }
+    .glossary .chip {
+      font: inherit; font-size: 1.4rem; padding: .6rem 1.4rem; border-radius: 2rem; cursor: pointer;
+      border: .15rem solid var(--main-color); background: transparent; color: var(--text-color);
+    }
+    .glossary .chip[aria-pressed="true"] { background: var(--main-color); color: #fff; }
+    .glossary .count { font-size: 1.4rem; opacity: .7; margin-bottom: 1.5rem; }
+    .glossary .letter { font-size: 2.6rem; color: var(--main-color); margin: 3rem 0 1rem; border-bottom: .15rem solid var(--main-color); }
+    .glossary dl { display: grid; grid-template-columns: minmax(18rem, 26rem) 1fr; gap: 1.4rem 3rem; }
+    .glossary dt { font-size: 1.7rem; font-weight: 700; overflow-wrap: anywhere; }
+    .glossary dt small { display: block; font-size: 1.2rem; font-weight: 400; opacity: .7; margin-top: .3rem; }
+    .glossary dd { font-size: 1.6rem; line-height: 1.55; }
+    .glossary dd .tag { display: inline-block; font-size: 1.15rem; padding: .1rem .8rem; margin-left: .6rem; border-radius: 1rem; border: .1rem solid var(--main-color); opacity: .8; white-space: nowrap; }
+    .glossary .empty { font-size: 1.7rem; opacity: .7; }
+    .glossary .back { display: inline-block; margin-top: 4rem; }
+    /* Mode sombre : accent éclairci pour un contraste suffisant sur --bg-color */
+    :root:not([data-theme="light"]) .glossary { --accent: #6cc4de; }
+    .glossary .letter, .glossary h1 span { color: var(--accent, var(--main-color)); border-color: var(--accent, var(--main-color)); }
+    :root:not([data-theme="light"]) .glossary .chip,
+    :root:not([data-theme="light"]) .glossary dd .tag { border-color: var(--accent); }
+    /* Contrôles natifs (accessibles au clavier) */
+    button#menu-icon, .flag-btn { background: none; border: 0; padding: 0; cursor: pointer; color: var(--text-color); line-height: 0; }
+    button#menu-icon { line-height: 1; }
+    button#menu-icon:focus-visible, .flag-btn:focus-visible, .glossary .chip:focus-visible { outline: .2rem solid var(--accent, var(--main-color)); outline-offset: .3rem; border-radius: 50%; }
+    .glossary .chip:focus-visible { border-radius: 2rem; }
+    @media (max-width: 768px) {
+      .glossary { padding: 10rem 3% 4rem; }
+      .glossary dl { grid-template-columns: 1fr; gap: .4rem; }
+      .glossary dd { margin-bottom: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="../../index.html" class="logo">Portfolio</a>
+    <button type="button" id="menu-icon" aria-label="Menu" aria-expanded="false" aria-controls="main-nav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    <nav class="navbar" id="main-nav">
+      <a href="../../index.html" data-i18n="home">Accueil</a>
+      <a href="./" class="active" data-i18n="glossary">Lexique</a>
+      <div class="flags">
+        <div class="inner">
+          <button type="button" class="flag-btn" id="flag-FR" aria-label="Français" lang="fr"><img src="../../resources/img/flag-france.png" alt="" /></button>
+          <button type="button" class="flag-btn" id="flag-EN" aria-label="English" lang="en"><img src="../../resources/img/flag-england.png" alt="" /></button>
+        </div>
+      </div>
+      <button id="theme-toggle" class="btn" style="margin-left:2rem" aria-pressed="false" aria-label="Basculer le thème">🌓</button>
+    </nav>
+  </header>
+
+  <main class="glossary">
+    <h1 data-i18n-html="title">Le <span>lexique</span></h1>
+    <p class="intro" data-i18n="intro">Les termes techniques et métier de mon CV, expliqués simplement.</p>
+
+    <div class="tools">
+      <input type="search" id="search" placeholder="Rechercher un terme…" aria-label="Rechercher un terme" />
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Thèmes"></div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div id="list"></div>
+
+    <a class="btn back" href="../../index.html" data-i18n="back">← Retour au portfolio</a>
+  </main>
+
+  <script type="module">
+    import { categories, terms } from './glossary.js?v=1';
+
+    const getCookie = (n) => document.cookie.split('; ').find(c => c.startsWith(n + '='))?.split('=')[1];
+    const setCookie = (n, v, days) => {
+      const d = new Date(); d.setTime(d.getTime() + days * 864e5);
+      document.cookie = `${n}=${v};expires=${d.toUTCString()};path=/`;
+    };
+
+    const UI = {
+      FR: { home: 'Accueil', glossary: 'Lexique', title: 'Le <span>lexique</span>',
+            intro: "Les termes techniques et métier de mon CV, expliqués simplement.",
+            search: 'Rechercher un terme…', all: 'Tous', back: '← Retour au portfolio',
+            count: n => `${n} terme${n > 1 ? 's' : ''}`, empty: 'Aucun terme ne correspond à la recherche.' },
+      EN: { home: 'Home', glossary: 'Glossary', title: 'The <span>glossary</span>',
+            intro: 'The technical and business terms used in my resume, explained simply.',
+            search: 'Search a term…', all: 'All', back: '← Back to portfolio',
+            count: n => `${n} term${n > 1 ? 's' : ''}`, empty: 'No term matches your search.' },
+    };
+
+    let lang = getCookie('SELECTED_LANG') === 'EN' ? 'EN' : 'FR';
+    let category = 'all';
+    const $ = (s) => document.querySelector(s);
+
+    const normalize = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+    const label = (t) => (lang === 'EN' && t.t_en) ? t.t_en : t.t;
+    const sortKey = (t) => normalize(label(t)).replace(/[^a-z0-9 ]/g, '').trim();
+    const catName = (id) => categories.find(c => c.id === id)?.[lang === 'EN' ? 'en' : 'fr'];
+
+    function renderChips() {
+      const ui = UI[lang];
+      const all = [{ id: 'all', fr: ui.all, en: ui.all }, ...categories];
+      $('#chips').innerHTML = all.map(c =>
+        `<button class="chip" data-cat="${c.id}" aria-pressed="${c.id === category}">${lang === 'EN' ? c.en : c.fr}</button>`).join('');
+      $('#chips').querySelectorAll('.chip').forEach(b => b.addEventListener('click', () => {
+        category = b.dataset.cat;
+        // Met à jour l'état sans recréer les boutons, pour conserver le focus clavier
+        $('#chips').querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.cat === category));
+        renderList();
+      }));
+    }
+
+    function renderList() {
+      const ui = UI[lang];
+      const q = normalize($('#search').value.trim());
+      const items = terms
+        .filter(t => category === 'all' || t.c === category)
+        .filter(t => !q || normalize(`${t.t} ${t.t_en || ''} ${t.fr} ${t.en}`).includes(q))
+        .sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
+      $('#count').textContent = ui.count(items.length);
+      if (!items.length) { $('#list').innerHTML = `<p class="empty">${ui.empty}</p>`; return; }
+      let html = '', current = '';
+      for (const t of items) {
+        const l = label(t);
+        const letter = normalize(l).replace(/[^a-z0-9]/g, '').charAt(0).toUpperCase() || '#';
+        const first = /[0-9]/.test(letter) ? '#' : letter;
+        if (first !== current) { if (current) html += '</dl>'; html += `<h2 class="letter">${first}</h2><dl>`; current = first; }
+        const alt = lang === 'EN' ? (t.t_en ? t.t : '') : (t.t_en || '');
+        html += `<dt>${l}${alt && alt !== l ? `<small>${alt}</small>` : ''}</dt>
+                 <dd>${lang === 'EN' ? t.en : t.fr}<span class="tag">${catName(t.c)}</span></dd>`;
+      }
+      $('#list').innerHTML = html + '</dl>';
+    }
+
+    function applyLang() {
+      const ui = UI[lang];
+      document.documentElement.lang = lang.toLowerCase();
+      document.title = lang === 'EN' ? 'Glossary – Jean Luc Biah' : 'Lexique – Jean Luc Biah';
+      document.querySelectorAll('[data-i18n]').forEach(e => e.textContent = ui[e.dataset.i18n]);
+      document.querySelectorAll('[data-i18n-html]').forEach(e => e.innerHTML = ui[e.dataset.i18nHtml]);
+      $('#search').placeholder = ui.search; $('#search').setAttribute('aria-label', ui.search);
+      $('#flag-FR').setAttribute('aria-pressed', lang === 'FR'); $('#flag-EN').setAttribute('aria-pressed', lang === 'EN');
+      renderChips(); renderList();
+    }
+
+    // Thème (même cookie que le portfolio)
+    const applyTheme = (th) => { document.documentElement.setAttribute('data-theme', th === 'light' ? 'light' : ''); setCookie('THEME', th, 365); $('#theme-toggle').setAttribute('aria-pressed', th === 'light'); };
+    let theme = getCookie('THEME') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    applyTheme(theme);
+    $('#theme-toggle').addEventListener('click', () => { theme = theme === 'light' ? 'dark' : 'light'; applyTheme(theme); });
+
+    // Langue (même cookie que le portfolio)
+    $('#flag-FR').addEventListener('click', () => { lang = 'FR'; setCookie('SELECTED_LANG', 'FR', 1); applyLang(); });
+    $('#flag-EN').addEventListener('click', () => { lang = 'EN'; setCookie('SELECTED_LANG', 'EN', 1); applyLang(); });
+
+    // Menu mobile
+    $('#menu-icon').addEventListener('click', () => {
+      const open = $('.navbar').classList.toggle('active');
+      $('#menu-icon i').classList.toggle('fa-xmark', open);
+      $('#menu-icon').setAttribute('aria-expanded', open);
+    });
+
+    $('#search').addEventListener('input', renderList);
+    applyLang();
+  </script>
+</body>
+</html>

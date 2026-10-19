@@ -92,3 +92,8 @@ This guide standardizes **how skills are named**, and how we **deduplicate** too
 
 Les fichiers CSS et JS sont appelés avec un numéro de version (`style.css?v=20261018`, `main.js?v=…` et les `import` de `main.js`).
 Si un navigateur garde une ancienne version malgré le `.htaccess`, changer ce numéro partout force le rechargement pour tous les visiteurs.
+
+## Lexique
+
+La page `pages/lexique/` affiche les termes définis dans `pages/lexique/glossary.js` (FR/EN, regroupés par thème, recherche intégrée).
+Pour ajouter un terme : ajouter un objet `{ t, t_en?, c, fr, en }` dans `terms` ; le tri alphabétique est automatique.

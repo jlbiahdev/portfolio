@@ -173,6 +173,10 @@ export const labels = {
       { "lang": "FR", "value": "resources/docs/biahprofile.pdf" },
       { "lang": "EN", "value": "resources/docs/biahprofile_en.pdf" }
     ],
+    "glossary": [
+      { "lang": "FR", "value": "📖 Lexique" },
+      { "lang": "EN", "value": "📖 Glossary" }
+    ],
     "references": [
       { "lang": "FR", "value": "Quelques Références" },
       { "lang": "EN", "value": "Testimonials" }
