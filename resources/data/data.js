@@ -640,13 +640,15 @@ export const experiences = [
           <p><span class="bold">Computing platform migration (2026)</span> — led as <span class="bold">Application Officer</span>. POC approved, development nearly complete.</p>
           <p><ul>
             <li>Designed <span class="bold">HpcLite</span>, a <span class="bold">.NET 8</span> orchestration layer that reproduces the logic of Microsoft HPC (scheduler, agents and runners as Windows Services) and submits tasks to the Group's internal computing grid.</li>
-            <li>Computation orchestration: REST API, job dependencies as a <span class="bold">DAG</span>, state machine, crash detection, safe concurrent dispatch on <span class="bold">PostgreSQL</span> (SKIP LOCKED), Dapper, least privilege (agents without database access).</li>
+            <li>POC back end in <span class="bold">.NET 8 / Dapper</span> on <span class="bold">PostgreSQL</span>: REST API, job dependencies as a <span class="bold">DAG</span>, state machine, crash detection, safe concurrent dispatch (SKIP LOCKED), least privilege (agents without database access).</li>
+            <li>POC front end (HTML, CSS, JavaScript): computation submission interface, <span class="bold">real-time monitoring</span> of computation progress and logs, <span class="bold">IndexedDB</span> cache and client-side optimisations, on a design system shared by two applications.</li>
+            <li>Beforehand, an exploratory POC in <span class="bold">Node.js / Sequelize</span> to map the environment; it became the sister application whose design system was reused.</li>
             <li>Agile delivery: Epic → Feature → User Story backlog, sprints as GitLab milestones, standard <span class="bold">Jira</span> tickets with acceptance criteria; web migration workstream (plan, demos, acceptance testing, releases).</li>
             <li>End-to-end deployment automated in <span class="bold">PowerShell</span> (Artifactory → IIS and Windows Services, pre-flight checks, rollback): 19 milestones, <span class="bold">167 test scenarios</span>, up to production.</li>
             <li>In progress: <span class="bold">GitLab CI/CD</span> for a .NET team not covered by the Group's DevOps platform; build scripts hardened (secret removed, false successes fixed).</li>
           </ul></p>
 
-          <p><span class="bold">Redesign of the ALM computation launcher</span> — within a 7-people team, I acted as both <span class="bold">Application Officer</span> and <span class="bold">Tech Lead</span> of the front team (3 devs) for the <span class="bold">React</span> web redesign, used by actuaries.</p>
+          <p><span class="bold">Redesign of the ALM computation launcher</span> — <span class="bold">Application Officer</span> and <span class="bold">Tech Lead</span> of the front-end team (3 developers) for the <span class="bold">React</span> web redesign, used by actuaries.</p>
 
           <span class="bold">As Application Officer:</span>
           <p><ul>
@@ -657,18 +659,9 @@ export const experiences = [
 
           <span class="bold">As Tech Lead:</span>
           <p><ul>
-            <li>Target architecture & technical decisions: <span class="bold">.NET Core / React</span>, real-time job messaging, <span class="bold">IndexedDB</span> cache.</li>
-            <li>Team standards: Definition of Ready/Done, code reviews, mentoring, pair programming.</li>
-            <li>Quality & CI/CD: <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> quality gates, Git branching strategy.</li>
-          </ul></p>
-
-          <span class="bold">As a developer:</span>
-          <p><ul>
-            <li>UI features (React): forms, data tables and dashboards.</li>
-            <li>Real-time monitoring of grid computations and logs.</li>
-            <li>Offline & performance: <span class="bold">IndexedDB</span> caching and client-side optimizations.</li>
-            <li>Back-end: <span class="bold">.NET Core (REST)</span> services and Node/Sequelize endpoints on <span class="bold">PostgreSQL</span>.</li>
-            <li>Tests & reliability: <span class="bold">NUnit</span> unit tests, integration tests, instrumentation and logging.</li>
+            <li>Target architecture and technical decisions (<span class="bold">.NET Core / React</span>).</li>
+            <li>Supervision of the React development (forms, data tables, dashboards): task breakdown, code reviews, mentoring, pair programming, Definition of Ready/Done.</li>
+            <li>Quality & CI/CD: <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> quality gates, Git branching strategy; <span class="bold">NUnit</span> unit tests, integration tests, instrumentation and logging.</li>
           </ul></p>
           `
       },
@@ -678,13 +671,15 @@ export const experiences = [
           <p><span class="bold">Migration de la plateforme de calcul (2026)</span> — pilotée en tant qu'<span class="bold">Application Officer</span>. POC validé, développement en voie d'achèvement.</p>
           <p><ul>
             <li>Conçu <span class="bold">HpcLite</span>, une couche d'orchestration en <span class="bold">.NET 8</span> qui reprend la logique de Microsoft HPC (ordonnanceur, agents et exécuteurs en services Windows) et soumet les tâches à la grille de calcul interne du Groupe.</li>
-            <li>Orchestration des calculs : API REST, dépendances entre jobs en <span class="bold">DAG</span>, machine à états, détection des plantages, répartition concurrente sûre sur <span class="bold">PostgreSQL</span> (SKIP LOCKED), Dapper, moindre privilège (agents sans accès à la base).</li>
+            <li>Back-end du POC en <span class="bold">.NET 8 / Dapper</span> sur <span class="bold">PostgreSQL</span> : API REST, dépendances entre jobs en <span class="bold">DAG</span>, machine à états, détection des plantages, répartition concurrente sûre (SKIP LOCKED), moindre privilège (agents sans accès à la base).</li>
+            <li>Front-end du POC (HTML, CSS, JavaScript) : interface de soumission des calculs, <span class="bold">supervision en temps réel</span> de l'avancement des calculs et des logs, cache <span class="bold">IndexedDB</span> et optimisations côté client, sur un design system commun à deux applications.</li>
+            <li>En amont, POC exploratoire en <span class="bold">Node.js / Sequelize</span> pour appréhender l'environnement ; il est devenu l'application sœur dont le design system a été repris.</li>
             <li>Pilotage agile : backlog Epic → Feature → User Story, sprints en milestones GitLab, tickets <span class="bold">Jira</span> standardisés avec critères d'acceptation ; chantier de migration web (plan, démos, recettes, livraisons).</li>
             <li>Déploiement de bout en bout automatisé en <span class="bold">PowerShell</span> (Artifactory → IIS et services Windows, contrôle préalable, rollback) : 19 jalons, <span class="bold">167 scénarios de test</span>, jusqu'à la mise en production.</li>
             <li>En cours : <span class="bold">CI/CD GitLab</span> pour une équipe .NET non couverte par la plateforme DevOps du Groupe ; scripts de build fiabilisés (secret supprimé, faux succès corrigés).</li>
           </ul></p>
 
-          <p><span class="bold">Refonte du lanceur de calculs ALM</span> — au sein d'une équipe de 7, j'étais <span class="bold">Application Officer</span> et <span class="bold">Tech Lead</span> de l'équipe front (3 devs) pour la refonte en <span class="bold">application web (React)</span>, utilisée par les actuaires.</p>
+          <p><span class="bold">Refonte du lanceur de calculs ALM</span> — <span class="bold">Application Officer</span> et <span class="bold">Tech Lead</span> de l'équipe front (3 développeurs) pour la refonte en <span class="bold">application web (React)</span>, utilisée par les actuaires.</p>
 
           <span class="bold">En tant qu'Application Officer :</span>
           <p><ul>
@@ -695,18 +690,9 @@ export const experiences = [
 
           <span class="bold">En tant que Tech Lead :</span>
           <p><ul>
-            <li>Architecture cible et décisions techniques : <span class="bold">.NET Core / React</span>, messages temps réel des jobs, cache <span class="bold">IndexedDB</span>.</li>
-            <li>Standards d’équipe : Definition of Ready/Done, revues de code, mentoring, pair programming.</li>
-            <li>Qualité & CI/CD : <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> (quality gates), stratégie de branches Git.</li>
-          </ul></p>
-
-          <span class="bold">En tant que développeur :</span>
-          <p><ul>
-            <li>Développement de fonctionnalités UI (React) : formulaires, tableaux, dashboards.</li>
-            <li>Temps réel : supervision de l’avancement des calculs et des logs.</li>
-            <li>Offline & perf : mise en place d’un cache <span class="bold">IndexedDB</span> et optimisations côté client.</li>
-            <li>Back-end : services <span class="bold">.NET Core (REST)</span> et endpoints Node/Sequelize sur <span class="bold">PostgreSQL</span>.</li>
-            <li>Tests & fiabilité : <span class="bold">TU NUnit</span>, tests d’intégration, instrumentation et journalisation.</li>
+            <li>Architecture cible et décisions techniques (<span class="bold">.NET Core / React</span>).</li>
+            <li>Supervision des développements React (formulaires, tableaux, dashboards) : découpage, revues de code, mentoring, pair programming, Definition of Ready/Done.</li>
+            <li>Qualité & CI/CD : <span class="bold">Jenkins/GitLab</span>, <span class="bold">SonarQube</span> (quality gates), stratégie de branches Git ; tests unitaires <span class="bold">NUnit</span>, tests d'intégration, instrumentation et journalisation.</li>
           </ul></p>
         `
       }
@@ -809,8 +795,6 @@ export const experiences = [
       "FastAPI",
       "SQLAlchemy",
       "PostgreSQL",
-      "Redis",
-      "Celery",
       "NextAuth",
       "GitHub Actions",
       "Railway",
