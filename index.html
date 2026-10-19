@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="resources/css/style.css?v=20261019c" />
+    <link rel="stylesheet" href="resources/css/style.css?v=20261019d" />
     <script src="https://kit.fontawesome.com/9f91a51f96.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,9 +31,9 @@
     <header class="header">
       <a href="#" class="logo">Portfolio</a>
 
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <button type="button" id="menu-icon" aria-label="Menu" aria-expanded="false" aria-controls="main-nav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
 
-      <nav class="navbar">
+      <nav class="navbar" id="main-nav">
         <a id="mn-hom" href="#home" class="active">accueil</a>
         <a id="mn-abo" href="#about">À propos</a>
         <a id="mn-edu" href="#education">éducation</a>
@@ -44,8 +44,8 @@
         <a id="mn-con" href="mailto:jeanlucbiah.pro@outlook.com?subject=%5BPortfolio%5D%20Contact&body=Bonjour%20Jean%20Luc%2C%0D%0A%0D%0A">contact</a>
         <div class="flags">
           <div class="inner">
-            <img src="resources/img/flag-france.png" id="flag-FR" alt="Français" />
-            <img src="resources/img/flag-england.png" id="flag-EN" alt="English" />
+            <button type="button" class="flag-btn" id="flag-FR" aria-label="Français" lang="fr"><img src="resources/img/flag-france.png" alt="" /></button>
+            <button type="button" class="flag-btn" id="flag-EN" aria-label="English" lang="en"><img src="resources/img/flag-england.png" alt="" /></button>
           </div>
         </div>
         <button id="theme-toggle" class="btn" style="margin-left:2rem" aria-pressed="false" aria-label="Basculer le thème">🌓</button>
@@ -184,6 +184,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script type="module" src="resources/js/main.js?v=20261019c"></script>
+    <script type="module" src="resources/js/main.js?v=20261019d"></script>
   </body>
 </html>

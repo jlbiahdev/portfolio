@@ -1,8 +1,8 @@
-import * as PortfolioData from '../data/data.js?v=20261019c';
-import * as FormProperties from '../data/labels.js?v=20261019c';
-import './extensions.string.js?v=20261019c';
-import './extensions.array.js?v=20261019c';
-import { transformLabel } from './labels.helpers.js?v=20261019c';
+import * as PortfolioData from '../data/data.js?v=20261019d';
+import * as FormProperties from '../data/labels.js?v=20261019d';
+import './extensions.string.js?v=20261019d';
+import './extensions.array.js?v=20261019d';
+import { transformLabel } from './labels.helpers.js?v=20261019d';
 
 const COOKIES = {
     SelectedLanguage: "SELECTED_LANG",
@@ -20,6 +20,7 @@ $(document).ready(() => {
 
     initTheme();
     reset();
+    updateFlags();
 
 /* ------------------------------------------- events --------------------------------------------- */
     $( "#menu-icon" ).on( "click", function() { menuIcononclick(); });
@@ -27,10 +28,12 @@ $(document).ready(() => {
     $('#flag-FR').click(function() { 
         setCookie(COOKIES.SelectedLanguage, LANGUAGES.French, 1); 
         reset();
+        updateFlags();
     });
     $('#flag-EN').click(function() { 
         setCookie(COOKIES.SelectedLanguage, LANGUAGES.English, 1); 
         reset();
+        updateFlags();
     });
 
     $('#theme-toggle').on('click', () => {
@@ -145,9 +148,20 @@ const doList = (items) => {
     return result;
 }
 
-const menuIcononclick = () => {
-    menuIcon.classList.toggle('fa-xmark');
-    navbar.classList.toggle('active');
+// Menu mobile : bouton natif, icône et aria-expanded synchronisés
+const setMenu = (open) => {
+    navbar.classList.toggle('active', open);
+    menuIcon.querySelector('i').classList.toggle('fa-xmark', open);
+    menuIcon.setAttribute('aria-expanded', open);
+}
+
+const menuIcononclick = () => setMenu(!navbar.classList.contains('active'));
+
+// Drapeaux : indique la langue active aux technologies d'assistance
+const updateFlags = () => {
+    const lang = getCookie(COOKIES.SelectedLanguage) === LANGUAGES.English ? 'EN' : 'FR';
+    $('#flag-FR').attr('aria-pressed', lang === 'FR');
+    $('#flag-EN').attr('aria-pressed', lang === 'EN');
 }
 
 /* ========================= SKILLS (dynamic) =========================
@@ -357,10 +371,7 @@ let navLinks = document.querySelectorAll('header nav a');
 
 for (var i = 0; i < navLinks.length ; i++) {
     navLinks[i].addEventListener("click", 
-        function () {
-            menuIcon.classList.remove('fa-xmark');
-            navbar.classList.remove('active');
-        },
+        function () { setMenu(false); },
         false);
 }
 
@@ -383,8 +394,7 @@ let header = document.querySelector('header');
 header.classList.toggle('sticky', window.scrollY > 100);
 
 /* ---------------------------------------------- remove toggle icon & navbar -------------------------------------- */
-menuIcon.classList.remove('fa-xmark');
-navbar.classList.remove('active');
+setMenu(false);
 
 /* ---------------------------------------------- ScrollReveal -------------------------------------- */
 
