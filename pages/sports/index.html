@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../../resources/css/style.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../../resources/css/style.css?v=20261019b" />
+  <link rel="stylesheet" href="style.css?v=20261019b" />
   <script src="https://kit.fontawesome.com/9f91a51f96.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,7 @@
     integrity="sha512-wqcdhB5VcHuNzKcjnxN9wI5tB3nNorVX7Zz9NtKBxmofNskRC29uaQDnv71I/zhCDLZsNrg75oG8cJHuBvKWGw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Activity Log | Jean Luc</title>
-  <meta name="description" content="Journal d'activités sportives de Jean Luc Biah — basket, marche, course à pied." />
+  <meta name="description" content="Journal d'activités sportives de Jean Luc Biah — basket, marche, course à pied et vélo." />
 </head>
 <body>
 
@@ -38,7 +38,7 @@
     <div class="hero-content">
       <p class="hero-eyebrow">Jean Luc · 2025 – 2026</p>
       <h1>ACTIVITY<br>LOG</h1>
-      <p class="hero-sub">Ma vie en chiffres — basket, marche &amp; course à pied</p>
+      <p class="hero-sub">Ma vie en chiffres — basket, marche, course à pied &amp; vélo</p>
       <div class="hero-kpis">
         <div class="kpi-chip">
           <span class="kpi-value" id="kpi-walk">–</span>
@@ -47,6 +47,10 @@
         <div class="kpi-chip">
           <span class="kpi-value" id="kpi-run">–</span>
           <span class="kpi-label">km courus</span>
+        </div>
+        <div class="kpi-chip">
+          <span class="kpi-value" id="kpi-bike">–</span>
+          <span class="kpi-label">km à vélo</span>
         </div>
         <div class="kpi-chip highlight">
           <span class="kpi-value" id="kpi-vo2">–</span>
@@ -65,6 +69,7 @@
     <button class="sport-tab active" data-tab="basket">🏀 Basket</button>
     <button class="sport-tab" data-tab="walking">🚶 Walking</button>
     <button class="sport-tab" data-tab="running">🏃 Running</button>
+    <button class="sport-tab" data-tab="cycling">🚴 Vélo</button>
   </div>
 
   <main>
@@ -125,6 +130,19 @@
       <div class="chart-container">
         <div id="chart-running"></div>
       </div>
+      <div class="section-heading">Sorties 2026</div>
+      <div id="running-sessions" class="session-table-wrap"></div>
+    </div>
+
+    <!-- ===== CYCLING ===== -->
+    <div id="tab-cycling" class="tab-pane">
+      <div id="cycling-stats" class="stats-grid"></div>
+      <div class="section-heading">Distance par mois</div>
+      <div class="chart-container">
+        <div id="chart-cycling"></div>
+      </div>
+      <div class="section-heading">Sorties 2026</div>
+      <div id="cycling-sessions" class="session-table-wrap"></div>
     </div>
 
   </main>
@@ -135,6 +153,6 @@
     <a href="#" class="back-top" aria-label="Retour en haut"><i class="fa-solid fa-angle-up"></i></a>
   </footer>
 
-  <script type="module" src="script.js"></script>
+  <script type="module" src="script.js?v=20261019"></script>
 </body>
 </html>

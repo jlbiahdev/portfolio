@@ -640,6 +640,49 @@
   background: rgba(0, 0, 0, 0.05);
 }
 
+/* ===== CHART AXES (lisibles dans les deux thèmes, suivent le basculement) ===== */
+
+.chart-container .apexcharts-xaxis-label,
+.chart-container .apexcharts-yaxis-label {
+  fill: var(--text-color);
+  fill-opacity: 0.7;
+}
+
+/* ===== SESSION TABLE ===== */
+
+.session-table-wrap {
+  background: var(--snd-bg-color);
+  border-radius: 1.4rem;
+  padding: 1rem 2rem;
+  overflow-x: auto;
+}
+
+.session-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+}
+
+.session-table th {
+  text-align: left;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  opacity: 0.65;
+  padding: 1.2rem 0.8rem;
+}
+
+.session-table td {
+  padding: 1rem 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  white-space: nowrap;
+}
+
+.session-table td small { opacity: 0.65; margin-left: 0.4rem; }
+.session-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+:root[data-theme="light"] .session-table td { border-top-color: rgba(0, 0, 0, 0.08); }
+
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
@@ -655,7 +698,11 @@
   .hero-kpis { gap: 0.8rem; }
   .kpi-chip { padding: 1rem 1.8rem; min-width: 8rem; }
   .kpi-value { font-size: 2.2rem; }
-  .sport-tabs { padding: 0 5%; }
+  .sport-tabs { padding: 0 5%; overflow-x: auto; scrollbar-width: none; }
+  .sport-tab { padding: 1.4rem 1.2rem; font-size: 1.4rem; }
+  .session-table-wrap { padding: 0.6rem 1rem; }
+  .session-table { font-size: 1.3rem; }
+  .session-table td small { display: block; margin-left: 0; }
   .tab-pane { padding: 3rem 5% 5rem; }
   .sessions-row { grid-template-columns: 1fr; }
 }
