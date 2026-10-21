@@ -23,8 +23,8 @@ export const identity = {
                         et développement assisté par agents (Claude Code, GitHub Copilot) au quotidien.`,
       "qualities": [
         "Possède une capacité d'analyse et un réel souci du détail",
-        "Encadrement d'équipes de développement (jusqu'à 6 personnes) et interface avec les métiers",
-        "Dédié à faire avancer les projets qui lui sont confiés, ainsi qu'à garantir un travail de qualité et une livraison dans les temps",
+        "Encadre des équipes de développement et interface avec les métiers",
+        "Dédié à faire avancer les projets qui me sont confiés, ainsi qu'à garantir un travail de qualité et une livraison dans les temps",
         "Responsable et autonome",
         "Aptitude à maîtriser rapidement de nouveaux packages logiciels et de nouvelles technologies."
       ]
@@ -43,10 +43,10 @@ export const identity = {
                         and agent-assisted development (Claude Code, GitHub Copilot) every day.`,
       "qualities": [
         "Has analytical skills and a real attention to detail",
-        "Leads development teams (up to 6 people) and works directly with business users",
-        "Dedicated to advancing the projects entrusted to him, as well as guaranteeing quality work and on-time delivery",
+        "Leads development teams and works directly with business users",
+        "Dedicated to advancing the projects entrusted to me, as well as guaranteeing quality work and on-time delivery",
         "Responsible and autonomous",
-        "Ability to quickly master new software packages and new hardware technologies."
+        "Ability to quickly master new software packages and new technologies."
       ]
     }
   ]
@@ -261,14 +261,14 @@ export const services = [
     "lang": "EN",
     "name": "Mobile Applications Development",
     "icon": "fa-solid fa-mobile-screen",
-    "description": "I develop mobile applications (React Native, Expo) for Android and iOS, published on stores.",
+    "description": "I develop native mobile applications (React Native, Expo) for Android and iOS, published on the stores, as well as progressive web apps (PWA) that install on a phone like an app, such as Fluxo.",
     "link": "#portfolio-mobile"
   },
   {
     "lang": "FR",
     "name": "Développement d'Applications mobiles",
     "icon": "fa-solid fa-mobile-screen",
-    "description": "Je développe des applications mobiles (React Native, Expo) pour Android et iOS, publiées sur les stores.",
+    "description": "Je développe des applications mobiles natives (React Native, Expo) pour Android et iOS, publiées sur les stores, ainsi que des applications web progressives (PWA) qui s'installent sur le téléphone comme une application, à l'image de Fluxo.",
     "link": "#portfolio-mobile"
   },
   {
