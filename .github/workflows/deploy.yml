@@ -30,3 +30,4 @@ jobs:
             **/.github/**
             **/.vscode/**
             README.md
+            CLAUDE.md
