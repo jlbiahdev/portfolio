@@ -66,7 +66,7 @@ export const skills = [
     ]
   },
 
-  /* === IA générative (Fluxo, Lissen, développement assisté par agents) === */
+  /* === IA générative (Fluxo, Bitojel, Lissen, développement assisté par agents) === */
   {
     "name": "IA générative",
     "content": [
@@ -314,6 +314,21 @@ export const web_portfolios = [
       {
         "lang": "EN",
         "value": "Dual-currency (EUR / XAF) personal finance app: fiscal-year budgeting, bank reconciliation, debts, savings. Next.js, FastAPI, PostgreSQL, built with Claude Code."
+      }
+    ]
+  },
+  {
+    "name": "Bitojel",
+    "image": "logo-bitojel.png",
+    "url": "https://x.com/bitojelx",
+    "description": [
+      {
+        "lang": "FR",
+        "value": "Média de citations publié automatiquement : visuels composés côté serveur, publication quotidienne sur X, tableau de bord de pilotage et IA éditoriale (API Claude). Node.js, PostgreSQL, construit avec Claude Code."
+      },
+      {
+        "lang": "EN",
+        "value": "Automatically published quotes media: server-side visuals, daily posting on X, control dashboard and editorial AI (Claude API). Node.js, PostgreSQL, built with Claude Code."
       }
     ]
   },
@@ -803,6 +818,67 @@ export const experiences = [
     "profession": [
       { "lang": "FR", "value": "Finance personnelle, IA générative" },
       { "lang": "EN", "value": "Personal finance, generative AI" }
+    ]
+  },
+  {
+    "company_name": "Bitojel (projet personnel)",
+    "company_image": "logo-bitojel.png",
+    "place": [
+      { "lang": "FR", "city": "Île-de-France", "country": "France" },
+      { "lang": "EN", "city": "Île-de-France", "country": "France" }
+    ],
+    "period": { "from_year": 2026, "from_month": 2, "to_year": 0, "to_month": 0 },
+    "role": [
+      { "lang": "FR", "value": "Conception, développement full-stack, automatisation, IA générative" },
+      { "lang": "EN", "value": "Product design, full-stack development, automation, generative AI" }
+    ],
+    "achievements": [
+      {
+        "lang": "FR",
+        "value": `
+          <p><span class="bold">Bitojel</span> est un média de citations de grandes personnalités, publié automatiquement chaque jour (<a href="https://x.com/bitojelx" target="_blank" rel="noopener noreferrer">@bitojelx</a>).</p>
+          <ul>
+            <li><span class="bold">Chaîne de publication automatisée</span> : planification des citations, composition des visuels côté serveur (portrait retouché, titre, filigrane et citation), publication quotidienne sur X déclenchée par un cron ; publication Facebook prête, vidéos courtes (YouTube Shorts, TikTok) en conception.</li>
+            <li><span class="bold">Tableau de bord web de pilotage</span> : vue d'ensemble et stocks par thématique, import, planification, gestion des auteurs et des citations, aperçu et republication, suivi des publications.</li>
+            <li><span class="bold">IA intégrée au travail éditorial</span> : l'<span class="bold">API Claude</span> analyse les imports (doublons, auteurs inconnus, thématiques), enrichit le planning et rédige les métadonnées YouTube ; dans la fiche auteur, un assistant conversationnel exécute lui-même des actions (mise à jour de biographie, repositionnement du filigrane).</li>
+            <li><span class="bold">API centrale</span> réutilisée par mes applications : authentification JWT avec domaines autorisés par utilisateur, relais vers l'API Claude (clé côté serveur, limitation des appels).</li>
+            <li>Traitement d'image côté serveur (Sharp, @napi-rs/canvas) ; 289 auteurs et 450 citations migrés de Google Sheets vers PostgreSQL. Développé avec <span class="bold">Claude Code</span>.</li>
+          </ul>
+        `
+      },
+      {
+        "lang": "EN",
+        "value": `
+          <p><span class="bold">Bitojel</span> is a media account of quotes from great figures, published automatically every day (<a href="https://x.com/bitojelx" target="_blank" rel="noopener noreferrer">@bitojelx</a>).</p>
+          <ul>
+            <li><span class="bold">Automated publishing pipeline</span>: quote scheduling, server-side visual composition (retouched portrait, title, watermark and quote), daily posting on X triggered by a cron job; Facebook publishing ready, short videos (YouTube Shorts, TikTok) in design.</li>
+            <li><span class="bold">Web control dashboard</span>: overview and stock by theme, import, scheduling, author and quote management, preview and republishing, publication monitoring.</li>
+            <li><span class="bold">AI built into the editorial work</span>: the <span class="bold">Claude API</span> analyses imports (duplicates, unknown authors, themes), enriches the schedule and writes YouTube metadata; in the author page, a conversational assistant carries out actions itself (biography updates, watermark repositioning).</li>
+            <li><span class="bold">Central API</span> reused by my applications: JWT authentication with authorised domains per user, Claude API relay (server-side key, rate limiting).</li>
+            <li>Server-side image processing (Sharp, @napi-rs/canvas); 289 authors and 450 quotes migrated from Google Sheets to PostgreSQL. Built with <span class="bold">Claude Code</span>.</li>
+          </ul>
+        `
+      }
+    ],
+    "highlights": [],
+    "tools": [
+      "Anthropic / Claude API",
+      "Claude Code",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "JWT",
+      "Sharp",
+      "JavaScript",
+      "X API",
+      "Netlify",
+      "Railway",
+      "Vercel"
+    ],
+    "profession": [
+      { "lang": "FR", "value": "Média, automatisation, IA générative" },
+      { "lang": "EN", "value": "Media, automation, generative AI" }
     ]
   },
   {
