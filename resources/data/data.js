@@ -841,7 +841,7 @@ export const experiences = [
             <li><span class="bold">Chaîne de publication automatisée</span> : planification des citations, composition des visuels côté serveur (portrait retouché, titre, filigrane et citation), publication quotidienne sur X déclenchée par un cron ; publication Facebook prête, vidéos courtes (YouTube Shorts, TikTok) en conception.</li>
             <li><span class="bold">Tableau de bord web de pilotage</span> : vue d'ensemble et stocks par thématique, import, planification, gestion des auteurs et des citations, aperçu et republication, suivi des publications.</li>
             <li><span class="bold">IA intégrée au travail éditorial</span> : l'<span class="bold">API Claude</span> analyse les imports (doublons, auteurs inconnus, thématiques), enrichit le planning et rédige les métadonnées YouTube ; dans la fiche auteur, un assistant conversationnel exécute lui-même des actions (mise à jour de biographie, repositionnement du filigrane).</li>
-            <li><span class="bold">API centrale</span> réutilisée par mes applications : authentification JWT avec domaines autorisés par utilisateur, relais vers l'API Claude (clé côté serveur, limitation des appels).</li>
+            <li><span class="bold">Back-end Node.js sécurisé</span> : authentification par jeton (JWT), clé de l'API Claude conservée côté serveur, limitation des appels.</li>
             <li>Traitement d'image côté serveur (Sharp, @napi-rs/canvas) ; 289 auteurs et 450 citations migrés de Google Sheets vers PostgreSQL. Développé avec <span class="bold">Claude Code</span>.</li>
           </ul>
         `
@@ -854,7 +854,7 @@ export const experiences = [
             <li><span class="bold">Automated publishing pipeline</span>: quote scheduling, server-side visual composition (retouched portrait, title, watermark and quote), daily posting on X triggered by a cron job; Facebook publishing ready, short videos (YouTube Shorts, TikTok) in design.</li>
             <li><span class="bold">Web control dashboard</span>: overview and stock by theme, import, scheduling, author and quote management, preview and republishing, publication monitoring.</li>
             <li><span class="bold">AI built into the editorial work</span>: the <span class="bold">Claude API</span> analyses imports (duplicates, unknown authors, themes), enriches the schedule and writes YouTube metadata; in the author page, a conversational assistant carries out actions itself (biography updates, watermark repositioning).</li>
-            <li><span class="bold">Central API</span> reused by my applications: JWT authentication with authorised domains per user, Claude API relay (server-side key, rate limiting).</li>
+            <li><span class="bold">Secure Node.js back end</span>: token-based authentication (JWT), Claude API key kept server-side, rate limiting.</li>
             <li>Server-side image processing (Sharp, @napi-rs/canvas); 289 authors and 450 quotes migrated from Google Sheets to PostgreSQL. Built with <span class="bold">Claude Code</span>.</li>
           </ul>
         `
