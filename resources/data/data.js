@@ -354,11 +354,11 @@ export const web_portfolios = [
     "description": [
       {
         "lang": "FR",
-        "value": "Site web backup de l'application Android Lissen. Permet la saisie et la gestion des commentaires bibliques, méditations, blogs et informations utilisateurs."
+        "value": "Application backend de Lissen : référentiel biblique, recueil de méditations, commentaires bibliques et blogs. Elle fournit les contenus de l'application mobile."
       },
       {
         "lang": "EN",
-        "value": "Website backup for the Lissen Android app. Enables input and management of Bible comments, meditations, blogs, and user information."
+        "value": "Lissen's backend application: Bible reference, collection of meditations, Bible commentaries and blogs. It supplies the mobile app's content."
       }
     ]
   },
@@ -369,11 +369,11 @@ export const web_portfolios = [
     "description": [
       {
         "lang": "FR",
-        "value": "Une application conçue pour vous accompagner chaque jour dans votre cheminement spirituel grâce à la Parole de Dieu et de bonnes pratiques spirituelles."
+        "value": "Application mobile d'accompagnement spirituel (Expo / React Native), publiée sur Google Play. Ses contenus sont fournis par Lissen Forge."
       },
       {
         "lang": "EN",
-        "value": "An application designed to accompany you every day in your spiritual journey through the Word of God and good spiritual practices."
+        "value": "Spiritual guidance mobile app (Expo / React Native), published on Google Play. Its content is supplied by Lissen Forge."
       }
     ]
   },
@@ -917,9 +917,9 @@ export const experiences = [
         "value": `
           <p>Conception et réalisation de la plateforme <span class="bold">Lissen</span> :</p>
           <ul>
-            <li>Application mobile (Expo / React Native) – publication via <span class="bold">Google Play Console</span></li>
-            <li>Site web (Next.js/React) – hébergé sur <span class="bold">Vercel</span></li>
-            <li>Back-end « Forge » (Node.js/Express, REST) – hébergé sur <span class="bold">Railway</span></li>
+            <li>Application mobile d'accompagnement spirituel (Expo / React Native) – publication via <span class="bold">Google Play Console</span></li>
+            <li><span class="bold">Lissen Forge</span>, application backend de contenus : référentiel biblique, recueil de méditations, commentaires bibliques et blogs, qui alimente l'application</li>
+            <li>Services <span class="bold">LissenSrv</span> et <span class="bold">LissenCron</span> ; stack Next.js / React, Node.js / Express, déploiement sur <span class="bold">Vercel</span> et <span class="bold">Railway</span></li>
             <li>Automatisations et assistance IA (<span class="bold">API Anthropic / Claude, API OpenAI</span>)</li>
           </ul>
         `
@@ -929,9 +929,9 @@ export const experiences = [
         "value": `
           <p>Designed and built the <span class="bold">Lissen</span> platform:</p>
           <ul>
-            <li>Mobile app (Expo / React Native) – published via <span class="bold">Google Play Console</span></li>
-            <li>Website (Next.js/React) – hosted on <span class="bold">Vercel</span></li>
-            <li>“Forge” backend (Node.js/Express, REST) – hosted on <span class="bold">Railway</span></li>
+            <li>Spiritual guidance mobile app (Expo / React Native) – published via <span class="bold">Google Play Console</span></li>
+            <li><span class="bold">Lissen Forge</span>, content backend application: Bible reference, collection of meditations, Bible commentaries and blogs, supplying the app</li>
+            <li><span class="bold">LissenSrv</span> and <span class="bold">LissenCron</span> services; Next.js / React, Node.js / Express stack, deployed on <span class="bold">Vercel</span> and <span class="bold">Railway</span></li>
             <li>Automation & AI assistance (<span class="bold">API Anthropic / Claude, API OpenAI</span>)</li>
           </ul>
         `
