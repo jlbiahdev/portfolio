@@ -289,14 +289,14 @@ export const services = [
     "lang": "EN",
     "name": "Development of Windows apps and libs",
     "icon": "fa-brands fa-windows",
-    "description": "I develop desktop applications (WPF, WinForms) with or without database as well as libraries (DLL)",
+    "description": "I develop desktop applications (WPF, WinForms, Electron for macOS and Windows) with or without database as well as libraries (DLL)",
     "link": "#portfolio-pro"
   },
   {
     "lang": "FR",
     "name": "Développement Windows et librairies",
     "icon": "fa-brands fa-windows",
-    "description": "Je développe des applications de bureau (clients lourds WPF, WinForms) avec ou sans base de données ainsi que des librairies (DLL)",
+    "description": "Je développe des applications de bureau (clients lourds WPF, WinForms, Electron pour macOS et Windows) avec ou sans base de données ainsi que des librairies (DLL)",
     "link": "#portfolio-pro"
   }
 ];
@@ -329,6 +329,21 @@ export const web_portfolios = [
       {
         "lang": "EN",
         "value": "Automatically published quotes media: server-side visuals, daily posting on X, control dashboard and editorial AI (Claude API). Node.js, PostgreSQL, built with Claude Code."
+      }
+    ]
+  },
+  {
+    "name": "GRIM",
+    "image": "logo-grim.png",
+    "url": "https://github.com/jlbiahdev/grim",
+    "description": [
+      {
+        "lang": "FR",
+        "value": "Application de bureau (macOS, Windows) de suivi des projets menés avec l'IA : chaque dépôt GitHub porte un summary.md tenu à jour par l'agent, GRIM les rassemble et rouvre le projet Claude en un clic. Electron, React, TypeScript."
+      },
+      {
+        "lang": "EN",
+        "value": "Desktop app (macOS, Windows) to track projects built with AI: each GitHub repository holds a summary.md kept up to date by the agent; GRIM gathers them and reopens the Claude project in one click. Electron, React, TypeScript."
       }
     ]
   },
@@ -475,8 +490,8 @@ export const pro_portfolios = [
     "name": "Groupe Société Générale",
     "image": "logo-sg.png",
     "keywords": [
-      { "lang": "FR", "value": "IDS, D2C, TFM, X-One, STYX, ..." },
-      { "lang": "EN", "value": "IDS, D2C, TFM, X-One, STYX, ..." }
+      { "lang": "FR", "value": "IDS, D2C, TFM, X-One, ..." },
+      { "lang": "EN", "value": "IDS, D2C, TFM, X-One, ..." }
     ],
     "years": [2021, 2019, 2010]
   },
