@@ -354,11 +354,11 @@ export const web_portfolios = [
     "description": [
       {
         "lang": "FR",
-        "value": "Application backend de Lissen : référentiel biblique, recueil de méditations, commentaires bibliques et blogs. Elle fournit les contenus de l'application mobile."
+        "value": "Backend de contenus de Lissen : référentiel biblique, recueil de méditations, commentaires bibliques et blogs, avec une interface d'administration. Node.js / Express, Sequelize, PostgreSQL, React."
       },
       {
         "lang": "EN",
-        "value": "Lissen's backend application: Bible reference, collection of meditations, Bible commentaries and blogs. It supplies the mobile app's content."
+        "value": "Lissen's content back end: Bible reference, collection of meditations, Bible commentaries and blogs, with an admin interface. Node.js / Express, Sequelize, PostgreSQL, React."
       }
     ]
   },
@@ -369,11 +369,11 @@ export const web_portfolios = [
     "description": [
       {
         "lang": "FR",
-        "value": "Application mobile d'accompagnement spirituel (Expo / React Native), publiée sur Google Play. Ses contenus sont fournis par Lissen Forge."
+        "value": "Application Android d'accompagnement spirituel, publiée sur Google Play : verset biblique du jour et rappels de prière aux heures liturgiques. Expo / React Native, notifications Firebase, serveur Node.js sur Railway."
       },
       {
         "lang": "EN",
-        "value": "Spiritual guidance mobile app (Expo / React Native), published on Google Play. Its content is supplied by Lissen Forge."
+        "value": "Android spiritual guidance app, published on Google Play: daily Bible verse and prayer reminders at liturgical hours. Expo / React Native, Firebase notifications, Node.js server on Railway."
       }
     ]
   },
@@ -915,24 +915,26 @@ export const experiences = [
       {
         "lang": "FR",
         "value": `
-          <p>Conception et réalisation de la plateforme <span class="bold">Lissen</span> :</p>
+          <p>Conception et réalisation de la plateforme <span class="bold">Lissen</span>, application Android d'accompagnement spirituel, et de ses services :</p>
           <ul>
-            <li>Application mobile d'accompagnement spirituel (Expo / React Native) – publication via <span class="bold">Google Play Console</span></li>
-            <li><span class="bold">Lissen Forge</span>, application backend de contenus : référentiel biblique, recueil de méditations, commentaires bibliques et blogs, qui alimente l'application</li>
-            <li>Services <span class="bold">LissenSrv</span> et <span class="bold">LissenCron</span> ; stack Next.js / React, Node.js / Express, déploiement sur <span class="bold">Vercel</span> et <span class="bold">Railway</span></li>
-            <li>Automatisations et assistance IA (<span class="bold">API Anthropic / Claude, API OpenAI</span>)</li>
+            <li>Application mobile <span class="bold">Expo / React Native</span> publiée sur <span class="bold">Google Play</span> : verset biblique du jour, rappels de prière aux heures liturgiques, notifications push <span class="bold">Firebase (FCM)</span></li>
+            <li><span class="bold">LissenSrv</span>, serveur Node.js / Express sur <span class="bold">Railway</span> : inscription des appareils, heures de prière, envoi des notifications à l'heure locale de chaque utilisateur</li>
+            <li><span class="bold">LissenCron</span> sur <span class="bold">Vercel</span> : déclenche l'envoi des notifications toutes les 30 minutes</li>
+            <li><span class="bold">Lissen Forge</span>, backend de contenus (référentiel biblique, méditations, commentaires bibliques, blogs) : API Node.js / Express, Sequelize, PostgreSQL et interface d'administration React</li>
+            <li>Page de téléchargement de l'application ; développement assisté par Claude</li>
           </ul>
         `
       },
       {
         "lang": "EN",
         "value": `
-          <p>Designed and built the <span class="bold">Lissen</span> platform:</p>
+          <p>Designed and built the <span class="bold">Lissen</span> platform, an Android spiritual guidance app, and its services:</p>
           <ul>
-            <li>Spiritual guidance mobile app (Expo / React Native) – published via <span class="bold">Google Play Console</span></li>
-            <li><span class="bold">Lissen Forge</span>, content backend application: Bible reference, collection of meditations, Bible commentaries and blogs, supplying the app</li>
-            <li><span class="bold">LissenSrv</span> and <span class="bold">LissenCron</span> services; Next.js / React, Node.js / Express stack, deployed on <span class="bold">Vercel</span> and <span class="bold">Railway</span></li>
-            <li>Automation & AI assistance (<span class="bold">API Anthropic / Claude, API OpenAI</span>)</li>
+            <li><span class="bold">Expo / React Native</span> mobile app published on <span class="bold">Google Play</span>: daily Bible verse, prayer reminders at liturgical hours, <span class="bold">Firebase (FCM)</span> push notifications</li>
+            <li><span class="bold">LissenSrv</span>, Node.js / Express server on <span class="bold">Railway</span>: device registration, prayer times, notifications sent at each user's local time</li>
+            <li><span class="bold">LissenCron</span> on <span class="bold">Vercel</span>: triggers the notifications every 30 minutes</li>
+            <li><span class="bold">Lissen Forge</span>, content back end (Bible reference, meditations, Bible commentaries, blogs): Node.js / Express API, Sequelize, PostgreSQL and a React admin interface</li>
+            <li>App download page; development assisted by Claude</li>
           </ul>
         `
       }
@@ -943,14 +945,13 @@ export const experiences = [
       "AI"
     ],
     "tools": [
-      "Expo", "React Native", "React", "Next.js",
-      "Node.js", "Express", "REST API",
-      "PostgreSQL", "IndexedDB",
+      "Expo", "React Native", "Firebase Cloud Messaging",
+      "Node.js", "Express", "Sequelize", "REST API",
+      "PostgreSQL", "React",
       "Railway", "Vercel",
       "Git", "GitHub",
       "Google Play Console",
-      "OpenAI / ChatGPT",
-      "Anthropic / Claude"
+      "Claude"
     ],
     "profession": [
       { "lang": "FR", "value": "Application mobile, Web, Back-end" },
