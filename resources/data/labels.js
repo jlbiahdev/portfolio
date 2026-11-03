@@ -32,6 +32,10 @@ export const labels = {
       { "lang": "FR", "value": "Expériences" },
       { "lang": "EN", "value": "Experiences" }
     ],
+    "community": [
+      { "lang": "FR", "value": "Engagement" },
+      { "lang": "EN", "value": "Community" }
+    ],
     "contact": [
       { "lang": "FR", "value": "Contact" },
       { "lang": "EN", "value": "Contact" }
@@ -142,6 +146,17 @@ export const labels = {
         "tools": "Tools",
         "professions": "Professions"
       }
+    ]
+  },
+
+  "community": {
+    "header": [
+      { "lang": "FR", "value": "Engagement_span_ associatif" },
+      { "lang": "EN", "value": "Community_span_ involvement" }
+    ],
+    "since": [
+      { "lang": "FR", "value": "Depuis" },
+      { "lang": "EN", "value": "Since" }
     ]
   },
 

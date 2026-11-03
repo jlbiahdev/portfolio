@@ -938,6 +938,103 @@ blockquote::before {
 
 /* ============================== RESPONSIVE ============================== */
 
+/* ============================== COMMUNITY ============================== */
+
+.community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.community-row {
+    width: min(100%, 100rem);
+}
+
+.community-box {
+    display: flex;
+    gap: 3rem;
+    padding: 3rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+}
+
+.community-box img {
+    flex-shrink: 0;
+    width: 12rem;
+    height: 12rem;
+    object-fit: contain;
+    border-radius: .6rem;
+}
+
+.community-content {
+    min-width: 0;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.community-content h3 {
+    font-size: 2.6rem;
+    margin-bottom: .5rem;
+}
+
+.community-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* gap plutôt que margin sur <i> : l'icône peut être remplacée par un <svg> */
+.community-meta span,
+.community-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.community-meta svg,
+.community-meta i,
+.community-content a svg,
+.community-content a i {
+    color: var(--main-color);
+}
+
+.community-content p {
+    margin-bottom: 1rem;
+}
+
+.community-content ul {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.community-content li {
+    margin-bottom: .6rem;
+}
+
+.community-content a {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--main-color);
+    text-underline-offset: .3rem;
+}
+
+@media (max-width: 617px) {
+    .community-box {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .community-box img {
+        width: 9rem;
+        height: 9rem;
+    }
+}
+
 @media (max-width: 1300px) {
     html { font-size: 55%; }
 }
