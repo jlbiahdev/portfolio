@@ -13,6 +13,6 @@ status: en cours
 - Aucun connu
 
 ## Prochaines étapes
-- Relire et merger la PR « NZUANE : affirmations limitées aux sources ».
+- Relire et merger la PR « CLAUDE.md : règle des sources ».
 - Ajouter Claude Monitor au CV une fois la v0 validée.
 - À préciser lors de la prochaine session de travail.
