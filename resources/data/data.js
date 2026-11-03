@@ -1704,14 +1704,14 @@ export const community = [
     ],
     "highlights": [
       { "lang": "FR", "values": [
-        "<span class=\"bold\">Gouvernance</span> : président de NZUANE International (France) et de NZUANE Cameroun ; plan décennal 2025–2035 et plans triennaux, rapports d’activité annuels depuis 2019, projet intégralement autofinancé.",
+        "<span class=\"bold\">Gouvernance</span> : président de NZUANE International (France) et de NZUANE Cameroun ; plan décennal 2025–2035 et plans triennaux, rapports annuels depuis 2019, projet intégralement autofinancé.",
         "<span class=\"bold\">Programmes</span> : FEMMEKMR2035 (autonomisation économique des femmes), ENSEMBLE2035 (soutien aux personnes vulnérables), JEPARTICIPE2035 (en préparation) ; coopérative agricole ROMBONE, outil économique de l’association.",
-        "<span class=\"bold\">Partenariats institutionnels</span> : convention-cadre signée avec la délégation des Affaires sociales d’Ebolowa Ier (2026), démarche engagée avec le Centre de recherche agronomique."
+        "<span class=\"bold\">Partenariats institutionnels</span> : convention-cadre signée avec la délégation des Affaires sociales d’Ebolowa Ier (2026)."
       ] },
       { "lang": "EN", "values": [
-        "<span class=\"bold\">Governance</span>: president of NZUANE International (France) and NZUANE Cameroon; 2025–2035 ten-year plan and three-year plans, annual activity reports since 2019, fully self-funded.",
+        "<span class=\"bold\">Governance</span>: president of NZUANE International (France) and NZUANE Cameroon; 2025–2035 ten-year plan and three-year plans, annual reports since 2019, fully self-funded.",
         "<span class=\"bold\">Programmes</span>: FEMMEKMR2035 (women’s economic empowerment), ENSEMBLE2035 (support for vulnerable people), JEPARTICIPE2035 (in preparation); ROMBONE agricultural cooperative, the association’s economic tool.",
-        "<span class=\"bold\">Institutional partnerships</span>: framework agreement signed with the Social Affairs delegation of Ebolowa I (2026), discussions under way with the Agricultural Research Centre."
+        "<span class=\"bold\">Institutional partnerships</span>: framework agreement signed with the Social Affairs delegation of Ebolowa I (2026)."
       ] }
     ]
   }
