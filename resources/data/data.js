@@ -1681,3 +1681,38 @@ export const experiences = [
     ]
   }
 ];
+
+/* === Engagement associatif (activité sociale, distincte des projets techniques) === */
+export const community = [
+  {
+    "name": "NZUANE",
+    "image": "logo-nzuane.png",
+    "url": "https://world.nzuane.org",
+    "url_label": "world.nzuane.org",
+    "since": 2019,
+    "role": [
+      { "lang": "FR", "value": "Président fondateur" },
+      { "lang": "EN", "value": "Founding President" }
+    ],
+    "place": [
+      { "lang": "FR", "value": "Ebolowa (Cameroun) et France" },
+      { "lang": "EN", "value": "Ebolowa (Cameroon) and France" }
+    ],
+    "description": [
+      { "lang": "FR", "value": "Association de développement territorial à Ebolowa (Sud-Cameroun), alignée sur la stratégie nationale de développement du Cameroun (SND30)." },
+      { "lang": "EN", "value": "Territorial development association in Ebolowa (South Cameroon), aligned with Cameroon’s national development strategy (SND30)." }
+    ],
+    "highlights": [
+      { "lang": "FR", "values": [
+        "<span class=\"bold\">Gouvernance</span> : président de NZUANE International (France) et de NZUANE Cameroun ; plan décennal 2025–2035 et plans triennaux, rapports d’activité annuels depuis 2019, projet intégralement autofinancé.",
+        "<span class=\"bold\">Programmes</span> : ferme ROMBONE, BIDI (approvisionnement local des cantines scolaires), FEMMEKMR2035 (autonomisation économique des femmes par un fonds rotatif).",
+        "<span class=\"bold\">Partenariats institutionnels</span> : convention-cadre signée avec la délégation des Affaires sociales d’Ebolowa Ier (2026), démarche engagée avec le Centre de recherche agronomique."
+      ] },
+      { "lang": "EN", "values": [
+        "<span class=\"bold\">Governance</span>: president of NZUANE International (France) and NZUANE Cameroon; 2025–2035 ten-year plan and three-year plans, annual activity reports since 2019, fully self-funded.",
+        "<span class=\"bold\">Programmes</span>: ROMBONE farm, BIDI (local sourcing for school canteens), FEMMEKMR2035 (women’s economic empowerment through a revolving fund).",
+        "<span class=\"bold\">Institutional partnerships</span>: framework agreement signed with the Social Affairs delegation of Ebolowa I (2026), discussions under way with the Agricultural Research Centre."
+      ] }
+    ]
+  }
+];

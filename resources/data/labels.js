@@ -43,6 +43,10 @@ export const labels = {
       { "lang": "FR", "value": "Télécharger mon CV" },
       { "lang": "EN", "value": "Download my CV" }
     ],
+    "community": [
+      { "lang": "FR", "value": "Engagement associatif" },
+      { "lang": "EN", "value": "Community involvement" }
+    ],
     "contact_me": [
       { "lang": "FR", "value": "Contactez-moi" },
       { "lang": "EN", "value": "Contact me" }
@@ -142,6 +146,17 @@ export const labels = {
         "tools": "Tools",
         "professions": "Professions"
       }
+    ]
+  },
+
+  "community": {
+    "header": [
+      { "lang": "FR", "value": "Engagement_span_ associatif" },
+      { "lang": "EN", "value": "Community_span_ involvement" }
+    ],
+    "since": [
+      { "lang": "FR", "value": "Depuis" },
+      { "lang": "EN", "value": "Since" }
     ]
   },
 

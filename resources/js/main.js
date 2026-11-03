@@ -1,8 +1,8 @@
-import * as PortfolioData from '../data/data.js?v=20261024';
-import * as FormProperties from '../data/labels.js?v=20261024';
-import './extensions.string.js?v=20261024';
-import './extensions.array.js?v=20261024';
-import { transformLabel } from './labels.helpers.js?v=20261024';
+import * as PortfolioData from '../data/data.js?v=20261103';
+import * as FormProperties from '../data/labels.js?v=20261103';
+import './extensions.string.js?v=20261103';
+import './extensions.array.js?v=20261103';
+import { transformLabel } from './labels.helpers.js?v=20261103';
 
 const COOKIES = {
     SelectedLanguage: "SELECTED_LANG",
@@ -80,6 +80,7 @@ const reset = () => {
     $('#mn-con').html(FormProperties.labels.menu.contact.find(e => e.lang === lang).value);
 
     $('#dwn_cv').html(FormProperties.labels.home.download_profile.find(e => e.lang === lang).value);
+    $('#com_lnk').html(FormProperties.labels.home.community.find(e => e.lang === lang).value);
     $('#cnt_me').html(FormProperties.labels.home.contact_me.find(e => e.lang === lang).value);
 
     $('#contact .heading').html(shape(FormProperties.labels.contact.header.find(e => e.lang === lang).value, lang));
@@ -133,6 +134,9 @@ const reset = () => {
 
     $('#experiences .heading').html(shape(FormProperties.labels.experiences.header.find(e => e.lang === lang).value, lang));
     $('#experiences .experiences-row').html(shape_experiences(PortfolioData.experiences, FormProperties.labels.experiences.box.find(e => e.lang === lang), FormProperties.labels.dico, lang));
+
+    $('#community .heading').html(shape(FormProperties.labels.community.header.find(e => e.lang === lang).value, lang));
+    $('#community .community-row').html(shape_community(PortfolioData.community, FormProperties.labels.community.since.find(e => e.lang === lang).value, lang));
 }
 
 const shape = (str, currentLang) => {
@@ -333,6 +337,19 @@ const shape_experiences = (items, labels, dico, lang) => {
     return result;
 }
 
+// Fonctions de remplacement : évite l'interprétation des motifs « $ » de String.replace
+const shape_community = (items, sinceLabel, lang) => items.map(e => community_box
+        .replace('{image}', () => `resources/img/${e.image}`)
+        .replace('{name}', () => e.name)
+        .replace('{role}', () => e.role.find(k => k.lang === lang).value)
+        .replace('{period}', () => `${sinceLabel} ${e.since}`)
+        .replace('{place}', () => e.place.find(k => k.lang === lang).value)
+        .replace('{url}', () => e.url)
+        .replace('{url_label}', () => e.url_label)
+        .replace('{description}', () => e.description.find(k => k.lang === lang).value)
+        .replace('{highlights}', () => e.highlights.find(k => k.lang === lang).values.map(v => `<li>${v}</li>`).join(''))
+    ).join('');
+
 // Cookies Start ----------------------------------------------------------------------------------
 export const setCookie = (cname, cvalue, exdays) => {
     const d = new Date();
@@ -405,7 +422,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top'});
-ScrollReveal().reveal('.services-container, .portfolio-box, .experiences-column', { origin: 'bottom'});
+ScrollReveal().reveal('.services-container, .portfolio-box, .experiences-column, .community-box', { origin: 'bottom'});
 ScrollReveal().reveal('#mailform', { origin: 'left'});
 
 /* ---------------------------------------------- TypedJs -------------------------------------- */
@@ -530,4 +547,21 @@ const experience_box = `
         </div>
     </div>
 </div>
+`;
+
+const community_box = `
+<article class="community-box">
+    <img src="{image}" alt="" />
+    <div class="community-content">
+        <h3>{name}</h3>
+        <div class="community-meta">
+            <span><i class="fa-solid fa-user" aria-hidden="true"></i>{role}</span>
+            <span><i class="fa-solid fa-calendar-days" aria-hidden="true"></i>{period}</span>
+            <span><i class="fa-solid fa-location-pin" aria-hidden="true"></i>{place}</span>
+        </div>
+        <p>{description}</p>
+        <ul>{highlights}</ul>
+        <a href="{url}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>{url_label}</a>
+    </div>
+</article>
 `;
