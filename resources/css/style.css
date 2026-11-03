@@ -255,6 +255,13 @@ button#menu-icon:focus-visible,
     box-shadow: 0 0 1rem var(--main-color);
 }
 
+/* boutons de l'accueil : espacement régulier, y compris quand ils passent à la ligne */
+.home-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;

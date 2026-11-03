@@ -77,10 +77,10 @@ const reset = () => {
     $('#mn-ser').html(FormProperties.labels.menu.services.find(e => e.lang === lang).value);
     $('#mn-tes').html(FormProperties.labels.menu.testimonials.find(e => e.lang === lang).value);
     $('#mn-exp').html(FormProperties.labels.menu.experiences.find(e => e.lang === lang).value);
-    $('#mn-com').html(FormProperties.labels.menu.community.find(e => e.lang === lang).value);
     $('#mn-con').html(FormProperties.labels.menu.contact.find(e => e.lang === lang).value);
 
     $('#dwn_cv').html(FormProperties.labels.home.download_profile.find(e => e.lang === lang).value);
+    $('#com_lnk').html(FormProperties.labels.home.community.find(e => e.lang === lang).value);
     $('#cnt_me').html(FormProperties.labels.home.contact_me.find(e => e.lang === lang).value);
 
     $('#contact .heading').html(shape(FormProperties.labels.contact.header.find(e => e.lang === lang).value, lang));
