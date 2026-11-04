@@ -1,5 +1,5 @@
 ---
-claude_project: https://claude.ai/project/<id>
+ai_project: https://claude.ai/share/951aab74-3570-4960-a823-97981ae46fcc
 status: en cours
 ---
 
