@@ -25,6 +25,8 @@ Les projets commencent souvent par une discussion avant tout code.
 9. **Annoncer d'emblée les limites de l'environnement** (actions impossibles depuis la session).
 10. Quand un projet passe sur git, écrire ces règles dans un `CLAUDE.md` à la racine du dépôt.
 
+11. **Sources** : toute affirmation publiée (site, CV) s'appuie sur un document ou une décision de Jean Luc ; sans source, poser la question, ne jamais déduire ni compléter. Ne pas reformuler un texte validé. Vérifier un fait à sa source (GitHub, Vercel, documents) plutôt que sur une description.
+
 ## Spécificités de ce dépôt (portfolio jeanlucbiah.com)
 
 - **Site statique** (HTML, CSS, jQuery, modules ES). Le contenu est dans `resources/data/data.js` et `resources/data/labels.js`, rendu par `resources/js/main.js`.

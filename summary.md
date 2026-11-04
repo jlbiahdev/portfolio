@@ -1,5 +1,5 @@
 ---
-claude_project: https://claude.ai/project/<id>
+ai_project: https://claude.ai/share/951aab74-3570-4960-a823-97981ae46fcc
 status: en cours
 ---
 
@@ -13,6 +13,6 @@ status: en cours
 - Aucun connu
 
 ## Prochaines étapes
-- Relire et merger la PR « NZUANE : affirmations limitées aux sources ».
+- Relire et merger la PR « CLAUDE.md : règle des sources ».
 - Ajouter Claude Monitor au CV une fois la v0 validée.
 - À préciser lors de la prochaine session de travail.
