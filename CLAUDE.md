@@ -31,6 +31,7 @@ Les projets commencent souvent par une discussion avant tout code.
 
 - **Site statique** (HTML, CSS, jQuery, modules ES). Le contenu est dans `resources/data/data.js` et `resources/data/labels.js`, rendu par `resources/js/main.js`.
 - **Bilingue FR / EN** : toute modification de contenu se fait dans les deux langues. Langue et thème partagés via les cookies `SELECTED_LANG` et `THEME` (path `/`).
+- **Formulaire de contact** (`#contact`) : `envoi.php`, sur l'hébergement Hostinger, envoie le message à **contact@jeanlucbiah.com** avec la fonction `mail()`. Aucun service tiers, rien n'est enregistré sur le serveur. Pot de miel `site_web`, validation côté serveur (nom, e-mail, message) ; succès vers `merci.html`, échec vers une page d'erreur bilingue avec l'adresse de contact. L'envoi réel ne se teste qu'en production. Même mécanisme que nzuane.org.
 - **Branche principale** : `master`. Chaque merge déclenche le déploiement FTP vers Hostinger (`.github/workflows/deploy.yml`, secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`). Ne jamais écrire de secret dans le dépôt.
 - **Fichiers non publics** : tout fichier ajouté au dépôt est publié sur le site, sauf s'il figure dans la liste `exclude` du workflow.
 - **Cache** : incrémenter `?v=AAAAMMJJ` sur `style.css`, `main.js` et les imports de `main.js` à chaque changement de CSS/JS/données (`.htaccess` force aussi la revalidation).

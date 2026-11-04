@@ -1,5 +1,5 @@
 ---
-ai_project: https://claude.ai/share/951aab74-3570-4960-a823-97981ae46fcc
+ai_project: https://claude.ai/project/01a14c25-291b-7261-a12a-94d3edfa8b04
 status: en cours
 ---
 
@@ -8,11 +8,12 @@ status: en cours
 - Derniers ajouts : GRIM ; rubrique « Engagement associatif » (NZUANE, président fondateur) dans le CV FR/EN et sur le site.
 - NZUANE : programmes FEMMEKMR2035, ENSEMBLE2035, JEPARTICIPE2035 ; aucun mécanisme de projet décrit publiquement.
 - Le CV n'est plus contraint à 3 pages (4 pages depuis l'ajout de NZUANE).
+- Formulaire de contact rétabli : `envoi.php` (Hostinger, fonction `mail()`) vers contact@jeanlucbiah.com, même mécanisme que nzuane.org.
 
 ## Blocages
 - Aucun connu
 
 ## Prochaines étapes
-- Relire et merger la PR « CLAUDE.md : règle des sources ».
+- Relire et merger la PR « Formulaire de contact via envoi.php » ; tester un envoi réel en production.
 - Ajouter Claude Monitor au CV une fois la v0 validée.
 - À préciser lors de la prochaine session de travail.

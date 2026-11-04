@@ -1,8 +1,8 @@
-import * as PortfolioData from '../data/data.js?v=20261103c';
-import * as FormProperties from '../data/labels.js?v=20261103c';
-import './extensions.string.js?v=20261103c';
-import './extensions.array.js?v=20261103c';
-import { transformLabel } from './labels.helpers.js?v=20261103c';
+import * as PortfolioData from '../data/data.js?v=20261104';
+import * as FormProperties from '../data/labels.js?v=20261104';
+import './extensions.string.js?v=20261104';
+import './extensions.array.js?v=20261104';
+import { transformLabel } from './labels.helpers.js?v=20261104';
 
 const COOKIES = {
     SelectedLanguage: "SELECTED_LANG",
@@ -61,6 +61,17 @@ const initTheme = () => {
   $('#theme-toggle').attr('aria-pressed', pressed);
 };
 
+/* ---------------------------------------------- formulaire de contact ---------------------------------- */
+
+// Les champs n'ont pas de libellé visible : le texte sert à la fois d'indication et de nom accessible.
+const shape_contact_fields = (lang) => {
+    const fields = FormProperties.labels.contact.fields;
+    Object.keys(fields).forEach(name => {
+        const text = fields[name].find(e => e.lang === lang).value;
+        $(`.form-contact [name="${name}"]`).attr({ placeholder: text, 'aria-label': text });
+    });
+};
+
 /* ---------------------------------------------- toggle icon navbar -------------------------------------- */
  
 let menuIcon = document.querySelector('#menu-icon');
@@ -85,6 +96,7 @@ const reset = () => {
 
     $('#contact .heading').html(shape(FormProperties.labels.contact.header.find(e => e.lang === lang).value, lang));
     $('.form-contact .btn').val(shape(FormProperties.labels.contact.btn.find(e => e.lang === lang).value, lang));
+    shape_contact_fields(lang);
 
     $('footer .footer-text span:not(#footer-year)').html(shape(FormProperties.labels.footer.all_rights.find(e => e.lang === lang).value, lang));
     $('footer #links h2').html(shape(FormProperties.labels.footer.links.find(e => e.lang === lang).value, lang));
