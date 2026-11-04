@@ -14,6 +14,6 @@ status: en cours
 - Aucun connu
 
 ## Prochaines étapes
-- Relire et merger la PR « Formulaire de contact via envoi.php » ; tester un envoi réel en production.
+- Tester un envoi réel du formulaire de contact en production (déployé le 4 novembre 2026).
 - Ajouter Claude Monitor au CV une fois la v0 validée.
 - À préciser lors de la prochaine session de travail.
