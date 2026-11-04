@@ -15,5 +15,6 @@ status: en cours
 
 ## Prochaines étapes
 - Tester un envoi réel du formulaire de contact en production (déployé le 4 novembre 2026).
+- Neutraliser le jeton SmtpJS de l'ancien `resources/js/mail.js` (supprimé en octobre 2025, encore visible dans l'historique du dépôt public) : changer le mot de passe SMTP qu'il contient (expéditeur contact.cyranoc@gmail.com).
 - Ajouter Claude Monitor au CV une fois la v0 validée.
 - À préciser lors de la prochaine session de travail.
