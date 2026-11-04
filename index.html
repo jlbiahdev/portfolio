@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="resources/css/style.css?v=20261103c" />
+    <link rel="stylesheet" href="resources/css/style.css?v=20261104" />
     <script src="https://kit.fontawesome.com/9f91a51f96.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,7 +41,7 @@
         <a id="mn-ser" href="#services">services</a>
         <a id="mn-tes" href="#testimony">références</a>
         <a id="mn-exp" href="#experiences">experiences</a>
-        <a id="mn-con" href="mailto:jeanlucbiah.pro@outlook.com?subject=%5BPortfolio%5D%20Contact&body=Bonjour%20Jean%20Luc%2C%0D%0A%0D%0A">contact</a>
+        <a id="mn-con" href="#contact">contact</a>
         <div class="flags">
           <div class="inner">
             <button type="button" class="flag-btn" id="flag-FR" aria-label="Français" lang="fr"><img src="resources/img/flag-france.png" alt="" /></button>
@@ -145,6 +145,30 @@
       <div class="community-row"></div>
     </section>
 
+    <section id="contact" class="contact">
+      <h2 class="heading"></h2>
+      <!-- Envoi par envoi.php (Hostinger, fonction mail()) vers contact@jeanlucbiah.com ; rien n'est enregistré. -->
+      <form class="form-contact" action="envoi.php" method="post">
+        <input type="hidden" name="formulaire" value="contact" />
+        <div class="champ-piege" aria-hidden="true">
+          <label for="site_web">Ne pas remplir</label>
+          <input type="text" id="site_web" name="site_web" tabindex="-1" autocomplete="off" />
+        </div>
+        <div class="input-box">
+          <input type="text" id="contact-nom" name="nom" required maxlength="200" autocomplete="name" />
+          <input type="email" id="contact-email" name="email" required maxlength="200" autocomplete="email" />
+        </div>
+        <div class="input-box">
+          <input type="tel" id="contact-telephone" name="telephone" maxlength="200" autocomplete="tel" />
+          <input type="text" id="contact-sujet" name="sujet" maxlength="200" />
+        </div>
+        <div class="input-box">
+          <textarea id="contact-message" name="message" rows="10" required maxlength="5000"></textarea>
+        </div>
+        <input type="submit" value="Envoyer" class="btn" />
+      </form>
+    </section>
+
     <footer class="footer">
       <div class="footer-top">
         <div id="cv">
@@ -190,6 +214,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script type="module" src="resources/js/main.js?v=20261103c"></script>
+    <script type="module" src="resources/js/main.js?v=20261104"></script>
   </body>
 </html>

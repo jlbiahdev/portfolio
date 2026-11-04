@@ -168,7 +168,29 @@ export const labels = {
     "btn": [
       { "lang": "FR", "value": "Envoyer" },
       { "lang": "EN", "value": "Send" }
-    ]
+    ],
+    "fields": {
+      "nom": [
+        { "lang": "FR", "value": "Nom (obligatoire)" },
+        { "lang": "EN", "value": "Name (required)" }
+      ],
+      "email": [
+        { "lang": "FR", "value": "E-mail (obligatoire)" },
+        { "lang": "EN", "value": "E-mail (required)" }
+      ],
+      "telephone": [
+        { "lang": "FR", "value": "Téléphone" },
+        { "lang": "EN", "value": "Phone" }
+      ],
+      "sujet": [
+        { "lang": "FR", "value": "Sujet" },
+        { "lang": "EN", "value": "Subject" }
+      ],
+      "message": [
+        { "lang": "FR", "value": "Message (obligatoire)" },
+        { "lang": "EN", "value": "Message (required)" }
+      ]
+    }
   },
 
   "footer": {

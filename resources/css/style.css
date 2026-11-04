@@ -853,6 +853,44 @@ blockquote::before {
     cursor: pointer;
 }
 
+/* Pot de miel anti-robots : hors écran, jamais rempli par un visiteur. */
+.contact .champ-piege {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.contact form .input-box input::placeholder,
+.contact form textarea::placeholder {
+    color: var(--text-color);
+    opacity: .75;
+}
+
+/* Pages de retour du formulaire (merci.html, page d'erreur d'envoi.php) */
+.page-retour {
+    min-height: 100vh;
+    padding: 10rem 9%;
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+.page-retour h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.page-retour p { margin-bottom: 1.5rem; }
+
+.page-retour a:not(.btn) {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.page-retour .lang-en { margin-top: 4rem; }
+
 /* ============================== FOOTER ============================== */
 
 .footer {
